@@ -18,5 +18,21 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .version import version
-from .json_serializable import JSONSerializable
+import json
+
+class JSONSerializable(json.JSONEncoder):
+    """
+    Implement common JSON methods for load from a string and dump data to a
+    string in JSON format
+    """
+    def dumps(self):
+        """
+        Dump the object to a JSON string
+        """
+        return json.dumps(self)
+
+    def loads(self, data: str):
+        """
+        Load a objects froma JSON string
+        """
+        return json.loads(data)
