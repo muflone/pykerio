@@ -1,0 +1,2240 @@
+#TODO: API Accounting
+void    get (out AccountingConfig config)
+void    set (out kerio::web::ErrorList errors, in AccountingConfig config)
+
+#TODO: API AccountingConfig
+boolean     enabled
+boolean     activityLogEnabled
+long    maxAge
+UserFormatType  userFormat
+UserReferenceList   gatheredGroups
+kerio::web::Day     startWeekDay
+long    startMonthDay
+    1..28
+string  starReportLanguage
+OptionalIdReference     validTimeRange
+OptionalIdReference     ipAddressGroup
+UserReferenceList   userExceptions
+OptionalIdReference     urlGroup
+
+#TODO: API ActiveConnection
+kerio::web::KId     id
+ConnectionPoint     src
+ConnectionPoint     dst
+string  protocol
+long    timeout
+long    age
+string  rx
+string  tx
+double  rxNum
+double  txNum
+string  info
+boolean     active
+ConnectionDirection     direction
+string  trafficRule
+string  service
+string  internetLink
+string  bandwidthRuleName
+
+#TODO: API ActiveConnections
+void    get (out ActiveConnectionList list, out long totalItems, in kerio::web::SearchQuery query, in boolean refresh, in kerio::web::KId hostId)
+void    kill (in kerio::web::KIdList ids)
+
+#TODO: API ActiveHost
+kerio::web::KId     id
+ActiveHostType  type
+kerio::web::IpAddress   ip
+Ip6AddressList  ip6Addresses
+string  hostname
+string  macAddress
+boolean     ipAddressFromDHCP
+DateTimeConfig  startTime
+long    inactivityTime
+UserReference   user
+DateTimeConfig  loginTime
+long    loginDuration
+AuthMethodType  authMethod
+long    connections
+double  totalDownload
+double  totalUpload
+double  currentDownload
+double  currentUpload
+
+#TODO: API ActiveHosts
+void    get (out ActiveHostList list, out long totalItems, in kerio::web::SearchQuery query, in boolean refresh)
+void    getActivityList (out ActivityList list, in kerio::web::KId id)
+void    getHistogram (out Histogram hist, in kerio::web::HistogramType type, in kerio::web::KId id)
+void    getHistogramInc (out Histogram hist, out kerio::web::DateTimeStamp sampleTime, in kerio::web::HistogramIntervalType type, in kerio::web::KId id, in kerio::web::DateTimeStamp startSampleTime)
+void    logout (in kerio::web::KIdList ids)
+void    login (in kerio::web::KId hostId, in string userName)
+
+#TODO: API Activity
+kerio::web::KId     id
+TimeHMS     time
+ActivityType    type
+kerio::web::LocalizableMessage  description
+string  url
+
+#TODO: API Addressee
+AddresseeType   type
+string  email
+
+#TODO: API AddResult
+KId     id
+    purposely not id - loginName is shown
+boolean     success
+    was operation successful? if yes so id is new id for this item else errorMessage tells why it failed
+LocalizableMessage  errorMessage
+    contains number of recovered user messages or error message
+
+#TODO: API AlertLogEvent
+kerio::web::KId     log
+string  name
+long    interval
+boolean     isRegex
+string  condition
+
+#TODO: API AlertRow
+kerio::web::KId     id
+string  date
+string  alert
+string  details
+
+#TODO: API AlertRuleEvent
+AlertEventRuleType  ruleType
+IdReference     rule
+
+#TODO: API Alerts
+void    get (out AlertRowList list, out long totalItems, in kerio::web::SearchQuery query)
+void    getContent (out string content, in kerio::web::KId id)
+void    getAlertTypes (out AlertTypeList types)
+void    getSettings (out AlertSettingList config)
+void    setSettings (out kerio::web::ErrorList errors, in AlertSettingList config)
+void    getDefaultLanguage (out string lang)
+void    setDefaultLanguage (in string lang)
+
+#TODO: API AlertSetting
+kerio::web::KId     id
+boolean     enabled
+Addressee   addressee
+kerio::web::KIdList     alertList
+AlertRuleEventList  ruleEventList
+AlertLogEventList   logEventList
+IdReference     validTimeRange
+
+#TODO: API AlertType
+kerio::web::KId     id
+string  name
+
+#TODO: API AntiHammering
+void    set (in AntiHammeringConfig config)
+void    get (out AntiHammeringConfig antihammeringCfg)
+void    getBlockedIpCount (out long count)
+void    unblockAll ()
+
+#TODO: API AntiHammeringConfig
+boolean     enabled
+boolean     whitelistEnabled
+IdReference     whitelist
+long    lockedTime
+
+#TODO: API AntiSpoofingConfig
+boolean     enabled
+boolean     log
+
+#TODO: API Antivirus
+void    get (out AntivirusConfig config)
+void    set (out kerio::web::ErrorList errors, in AntivirusConfig config)
+void    update ()
+void    getUpdateStatus (out InternalUpdateStatus status)
+
+#TODO: API AntivirusConfig
+AntivirusSetting    antivirus
+ScannedProtocols    protocols
+kerio::web::OptionalLong    fileSizeLimit
+HttpFtpScanningConfig   httpFtpScanning
+EmailScanningConfig     emailScanning
+
+#TODO: API AntivirusOption
+string  name
+string  content
+string  defaultValue
+    read only value
+
+#TODO: API AntivirusSetting
+boolean     internalEnabled
+    integrated antivirus is used?
+boolean     externalEnabled
+    an external antivirus is used? note: both internal and extenal can be used together
+AntivirusStatus     status
+    status of antivirus to be used for informative message
+ExternalAntivirusList   externalList
+    list of available antivirus plugins
+string  selectedExternalId
+    identifier of currently selected antivirus plugin
+InternalAntivirus   internal
+    integrated engine settings
+
+#TODO: API ApiApplication
+string  name
+string  vendor
+string  version
+
+#TODO: API ApiException
+string  message
+    text with placeholders %1, %2
+long    code
+    -32767..-1 (JSON-RPC) or 1..32767 (application)
+LocalizableMessageParameters    messageParameters
+    strings to replace placeholders in message, and message plurality. More
+
+#TODO: API Authentication
+void    get (out AuthenticationConfig config)
+void    set (in AuthenticationConfig config)
+void    join (out kerio::web::LocalizableMessage message, out JoinStatus status, in string hostName, in string domainName, in CredentialsConfig credentials, in string server)
+void    isJoinServerNeeded (out boolean needServer, in string domainName)
+void    leave (out kerio::web::LocalizableMessage message, out JoinStatus status, in CredentialsConfig credentials)
+void    getJoinStatus (out JoinStatus status, out string domainName)
+void    getTotpConfig (out TotpConfig config)
+void    setTotpConfig (in TotpConfig config)
+
+#TODO: API AuthenticationConfig
+boolean     authenticationRequired
+boolean     ntlmEnabled
+HttpProxyAuth   httpProxyAuth
+Radius  radius
+GuestConfig     guest
+kerio::web::OptionalLong    inactivityTimeout
+    in minutes
+
+#TODO: API AutoLogin
+OptionalStringList  macAddresses
+OptionalIpAddressList   addresses
+kerio::web::OptionalEntity  addressGroup
+
+#TODO: API BandwidthManagement
+void    get (out BandwidthManagementConfig config)
+void    set (out kerio::web::ErrorList errors, in BandwidthManagementConfig config)
+void    getBandwidth (out InternetBandwidthList list)
+void    setBandwidth (out kerio::web::ErrorList errors, in InternetBandwidthList list)
+
+#TODO: API BandwidthManagementConfig
+boolean     decryptVpnTunnels
+BMRuleList  rules
+    >Traffic in VPN tunnels will be matched against rules decrypted
+
+#TODO: API BandwidthSetting
+boolean     enabled
+long    value
+BandwidthUnit   unit
+
+#TODO: API BlackList
+kerio::web::KId     id
+string  name
+string  url
+IntrusionPreventionAction   action
+
+#TODO: API BMCondition
+BMConditionType     type
+IdReference     valueId
+IpServiceReference  service
+long    dscp
+BMTrafficType   trafficType
+UserReference   user
+long    appId
+
+#TODO: API BMRule
+kerio::web::KId     id
+boolean     enabled
+string  name
+string  description
+string  color
+BMConditionList     traffic
+BandwidthSetting    reservedDownload
+BandwidthSetting    reservedUpload
+BandwidthSetting    maximumDownload
+BandwidthSetting    maximumUpload
+IdReference     interfaceId
+IdReference     validTimeRange
+boolean     chart
+
+#TODO: API ByteValueWithUnits
+long    value
+ByteUnits   units
+
+#TODO: API CentralManagement
+void    get (out CentralManagementConfig config)
+void    set (in CentralManagementConfig config)
+void    getStatus (out CentralManagementStatus status)
+void    reset ()
+
+#TODO: API CentralManagementConfig
+boolean     enabled
+string  appUrl
+
+#TODO: API CentralManagementStatus
+boolean     connected
+boolean     paired
+kerio::web::OptionalString  url
+
+#TODO: API CertificateDn
+IdReference     certificate
+string  value
+
+#TODO: API Certificates
+void    generateEx (out kerio::web::KId id, in kerio::web::NamedValueList subject, in string name, in kerio::web::CertificateType type, in kerio::web::ValidPeriod period, in kerio::web::NamedMultiValueList subjectAlternativeNameList)
+void    detect (out kerio::web::Certificate certificate, in string host)
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+void    importCertificateP12 (out kerio::web::KId id, in string fileId, in string name, in kerio::web::CertificateType type, in string password)
+void    exportCertificateP12 (out kerio::web::Download fileDownload, in kerio::web::KId id, in string password, in boolean includeCa)
+void    importCertificateUrl (in string url)
+void    setDistrusted (out kerio::web::ErrorList errors, in kerio::web::KIdList ids)
+
+#TODO: API ClientTimestamp
+string  name
+long    timestamp
+
+#TODO: API Collision
+IdReference     rule
+IdReference     overlappedRule
+
+#TODO: API Configuration
+void    exportConfig (out kerio::web::Download fileDownload, in ExportOptions options)
+void    getImportInfo (out kerio::web::ErrorList errors, out boolean fullImportPossible, out boolean needIfaceMapping, out ImportedInterfaceList importedInterfaces, out CurrentInterfaceList currentInterfaces, in string fileId)
+void    apply (out kerio::web::ErrorList errors, in ImportedInterfaceList interfaces, in string id, in boolean fullImport, in[Opt] boolean keepIdInFullImport)
+
+#TODO: API ConfigurationBackup
+void    get (out ConfigurationBackupConfig config)
+void    set (in ConfigurationBackupConfig config)
+void    backupNow ()
+void    getStatus (out ConfigurationBackupStatus status)
+
+#TODO: API ConfigurationBackupConfig
+boolean     enabled
+Target  target
+string  username
+string  password
+string  url
+
+#TODO: API ConfigurationBackupStatus
+ConfigurationBackupPhase    phase
+TimeSpan    lastBackup
+string  url
+string  errorMessage
+
+#TODO: API ConnectionLimit
+boolean     enabled
+long    soft
+long    value
+kerio::web::OptionalLong    rate
+OptionalIdReference     exclusions
+long    exclSoft
+long    exclValue
+kerio::web::OptionalLong    exclRate
+
+#TODO: API ConnectionPoint
+string  host
+kerio::web::IpAddress   ip
+kerio::web::KId     country
+long    port
+
+#TODO: API ConnectivityAssistant
+void    set (out kerio::web::ErrorList errors, in ConnectivityAssistantConfig config, in long revertTimeout)
+
+#TODO: API ConnectivityAssistantConfig
+ConnectivityType    type
+    only Persistent, Failover, LoadBalancing
+WanInterfaceConfigList  wans
+LanInterfaceConfig  lan
+
+#TODO: API ConnectivityConfig
+ConnectivityType    mode
+kerio::web::OptionalString  probeHosts
+boolean     reconnectTunnelsWhenPrimaryGoesBack
+boolean     lazyFailover
+
+#TODO: API ConnLimit
+void    get (out ConnLimitSettings config)
+void    set (in ConnLimitSettings config)
+
+#TODO: API ConnLimitSettings
+kerio::web::OptionalLong    srcLimit
+kerio::web::OptionalLong    srcRateLimit
+kerio::web::OptionalLong    dstLimit
+kerio::web::OptionalLong    dstPerSrcLimit
+OptionalIdReference     exclusions
+kerio::web::OptionalLong    exclSrcLimit
+kerio::web::OptionalLong    exclSrcRateLimit
+
+#TODO: API ContentApplication
+long    id
+boolean     heuristic
+string  group
+string  subGroup
+string  name
+string  description
+ApplicationTypeList     types
+
+#TODO: API ContentCondition
+RuleConditionType   type
+ContentConditionEntityList  entities
+
+#TODO: API ContentConditionEntity
+ContentConditionEntityType  type
+ApplicationList     applications
+string  value
+ContentEntityUrlType    urlType
+boolean     matchSecured
+IdReference     urlGroup
+
+#TODO: API ContentFilter
+void    get (out ContentRuleList list)
+void    set (out kerio::web::ErrorList errors, in ContentRuleList rules)
+void    getCollisions (out CollisionList list)
+void    getContentApplicationList (out ContentApplicationList categories)
+void    getFilenameGroups (out FilenameGroupList groups)
+void    getUrlFilterConfig (out UrlFilterConfig config)
+void    setUrlFilterConfig (in UrlFilterConfig config)
+void    reportMiscategorizedUrl (in string url, in kerio::web::IntegerList categoryIds)
+void    getUrlCategories (out kerio::web::IntegerList categoryIds, in string url)
+void    getHttpsConfig (out HttpsConfig config)
+void    setHttpsConfig (in HttpsConfig config)
+void    getSafeSearchConfig (out SafeSearchConfig config)
+void    setSafeSearchConfig (in SafeSearchConfig config)
+void    clearHttpsCertCache ()
+
+#TODO: API ContentRule
+kerio::web::KId     id
+boolean     enabled
+string  name
+string  description
+string  color
+RuleAction  action
+boolean     logEnabled
+boolean     skipAvScan
+boolean     skipKeywords
+boolean     skipAuthentication
+DenialCondition     denialCondition
+ContentCondition    contentCondition
+SourceCondition     sourceCondition
+IdReference     validTimeRange
+
+#TODO: API CoreDump
+kerio::web::ByteValueWithUnits  size
+DateTimeStamp   timestamp
+
+#TODO: API CoreDumpWithImportance
+kerio::web::ByteValueWithUnits  size
+DateTimeStamp   timestamp
+kerio::assist::Importance   importance
+
+#TODO: API CreateResult
+long    inputIndex
+    0-based index to input array, e.g. 3 means that the relates to the 4th element of the input parameter array
+KId     id
+    ID of created item.
+
+#TODO: API Credentials
+string  userName
+    UserName.
+string  password
+    Password.
+
+#TODO: API CredentialsConfig
+string  userName
+string  password
+boolean     passwordChanged
+
+#TODO: API CurrentInterface
+IdReference     id
+kerio::web::IpAddress   ip
+string  MAC
+InterfaceType   type
+boolean     useForFullImport
+boolean     wifi
+
+#TODO: API CustomizedBrand
+boolean     enabled
+string  pageTitle
+
+#TODO: API DataStatistic
+double  today
+double  todayIn
+double  todayOut
+double  week
+double  weekIn
+double  weekOut
+double  month
+double  monthIn
+double  monthOut
+double  total
+double  totalIn
+double  totalOut
+
+#TODO: API Date
+long    year
+long    month
+    0-11
+long    day
+    1-31 max day is limited by month
+
+#TODO: API DateTimeConfig
+kerio::web::Date    date
+TimeHMS     time
+
+#TODO: API DenialCondition
+string  denialText
+kerio::web::OptionalString  redirectUrl
+boolean     sendEmail
+
+#TODO: API DetailsConfig
+boolean     localizable
+string  fixedMessage
+kerio::web::LocalizableMessage  localizableMessage
+
+#TODO: API Dhcp
+void    get (out DhcpScopeList list, out long totalItems, in kerio::web::SearchQuery query)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in DhcpScopeList scopes)
+void    set (out kerio::web::ErrorList errors, in kerio::web::StringList scopeIds, in DhcpScope details)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::StringList scopeIds)
+void    getInterfaceTemplate (out DhcpScope details, in kerio::web::KId ifaceId)
+void    getLeases (out DhcpLeaseList list, out long totalItems, in kerio::web::SearchQuery query, in kerio::web::KIdList scopeIds)
+void    createLeases (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in DhcpLeaseList leases)
+void    setLeases (out kerio::web::ErrorList errors, in kerio::web::StringList leaseIds, in DhcpLease details)
+void    removeLeases (out kerio::web::ErrorList errors, in kerio::web::StringList leaseIds)
+void    getMode (out DhcpMode mode)
+void    setMode (in DhcpMode mode)
+void    getConfig (out DhcpConfig config)
+void    setConfig (in DhcpConfig config)
+void    getOptionList (out DhcpOptionList options)
+void    getDeclinedLeases (out long count, in kerio::web::KIdList scopeIds)
+void    removeDeclinedLeases (in kerio::web::KIdList scopeIds)
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+
+#TODO: API DhcpConfig
+boolean     enabled
+
+#TODO: API DhcpExclusion
+string  description
+kerio::web::IpAddress   ipStart
+kerio::web::IpAddress   ipEnd
+
+#TODO: API DhcpLease
+kerio::web::KId     id
+kerio::web::KId     leaseId
+kerio::web::KId     scopeId
+    for internal purposes
+kerio::web::StoreStatus     status
+DhcpLeaseType   type
+boolean     leased
+boolean     isRas
+string  cardManufacturer
+kerio::web::IpAddress   ipAddress
+string  name
+boolean     macDefined
+string  macAddress
+string  hostName
+string  userName
+kerio::web::Date    expirationDate
+kerio::web::Time    expirationTime
+kerio::web::Date    requestDate
+kerio::web::Time    requestTime
+DhcpOptionList  options
+
+#TODO: API DhcpMode
+DhcpModeType    type
+
+#TODO: API DhcpOption
+DhcpOptionType  type
+long    optionId
+string  name
+string  value
+IpListList  ipListList
+
+#TODO: API DhcpScope
+kerio::web::KId     id
+kerio::web::StoreStatus     status
+boolean     enabled
+string  name
+kerio::web::IpAddress   ipStart
+kerio::web::IpAddress   ipEnd
+kerio::web::IpAddress   ipMask
+DhcpExclusionList   exclusions
+DhcpOptionList  options
+
+#TODO: API DhcpScopes
+boolean     blockUnknownIp
+boolean     log
+kerio::web::OptionalString  blockScopeId
+
+#TODO: API DirectoryService
+boolean     enabled
+DirectoryServiceType    type
+string  domainName
+string  userName
+string  password
+boolean     useSpecificServers
+    valid for type WindowsActiveDirectory
+string  primaryServer
+string  secondaryServer
+
+#TODO: API DirectoryServiceAdvanced
+boolean     ldapSecure
+kerio::web::OptionalString  kerberosRealm
+    valid for type AppleDirectoryKerberos
+kerio::web::OptionalString  ldapSearchSuffix
+    valid for type AppleDirectory*
+
+#TODO: API DirectoryServiceConfiguration
+kerio::web::KId     id
+DirectoryService    service
+DirectoryServiceAdvanced    advanced
+
+#TODO: API Dns
+void    get (out DnsConfig config)
+void    getHosts (out DnsHostList hosts)
+void    set (out kerio::web::ErrorList errors, in DnsConfig config)
+void    setHosts (out kerio::web::ErrorList errors, in DnsHostList hosts)
+void    importHosts (in string fileId, in boolean clean)
+void    clearCache ()
+
+#TODO: API DnsConfig
+boolean     forwarderEnabled
+boolean     cacheEnabled
+boolean     customForwardingEnabled
+DnsForwarderList    customForwarders
+kerio::web::OptionalString  useDomainControler
+boolean     hostsEnabled
+boolean     dhcpLookupEnabled
+string  domainName
+
+#TODO: API DnsForwarder
+boolean     enabled
+string  domain
+    network/mask for Reverse DNS query, other for Name DNS query
+string  forwarders
+    empty for Do not forward
+
+#TODO: API DnsHost
+boolean     enabled
+kerio::web::KId     id
+kerio::web::IpAddress   ip
+string  hosts
+string  description
+
+#TODO: API Domain
+kerio::web::KId     id
+kerio::web::StoreStatus     status
+string  description
+boolean     primary
+UserData    templateData
+DirectoryService    service
+DirectoryServiceAdvanced    advanced
+boolean     authenticationOnly
+boolean     ntAuthMode
+boolean     adAutoImport
+
+#TODO: API Domains
+void    get (out DomainList list, out long totalItems, in kerio::web::SearchQuery query)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in DomainList domains)
+void    set (out kerio::web::ErrorList errors, in kerio::web::KIdList domainIds, in Domain pattern)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::KIdList domainIds)
+void    testDomainController (out kerio::web::ErrorList errors, in kerio::web::StringList hostnames, in DirectoryServiceConfiguration directory)
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+
+#TODO: API Download
+string  url
+    download url
+string  name
+    filename
+long    length
+    file size in bytes
+
+#TODO: API Dumps
+void    get (out DumpList dumps)
+void    getWithImportance (out DumpListWithImportance dumps)
+void    remove ()
+void    send (in string description, in string email)
+
+#TODO: API DynamicDns
+void    get (out DynamicDnsConfig config)
+void    set (in DynamicDnsConfig config)
+void    update ()
+void    getStatus (out kerio::web::LocalizableMessage message, out DynamicDnsStatus status)
+void    getProviders (out kerio::web::StringList providers)
+
+#TODO: API DynamicDnsConfig
+boolean     enabled
+string  provider
+string  hostname
+CredentialsConfig   credentials
+DynamicDnsAddressType   addressType
+IdReference     customIface
+
+#TODO: API EmailScanningConfig
+boolean     moveToQuarantine
+    not available on Linux
+kerio::web::OptionalString  prependText
+boolean     allowTls
+boolean     allowNotScanned
+
+#TODO: API Error
+long    inputIndex
+    0-based index to input array, e.g. 3 means that the relates to the 4th element of the input parameter array
+long    code
+    -32767..-1 (JSON-RPC) or 1..32767 (application)
+string  message
+    text with placeholders %1, %2, etc., e.g. "User %1 cannot be deleted."
+LocalizableMessageParameters    messageParameters
+    strings to replace placeholders in message, and message plurality.
+
+#TODO: API ExpireInfo
+ExpireType  type
+    type of expiration
+boolean     isUnlimited
+    is it a special license with expiration == never ?
+long    remainingDays
+    days remaining to subscription expiration
+long    date
+    last date of subscription
+
+#TODO: API ExportOptions
+boolean     certificates
+boolean     dhcpLeases
+boolean     stats
+
+#TODO: API Extension
+string  name
+    extension name
+
+#TODO: API ExternalAntivirus
+string  id
+    example: avir_avg
+string  description
+    example: AVG Email Server Edition
+boolean     areOptionsAvailable
+AntivirusOptionList     options
+
+#TODO: API FilenameGroup
+string  name
+string  pattern
+
+#TODO: API FilenameGroups
+void    get (out FilenameGroupList groups)
+
+#TODO: API ForbiddenWord
+kerio::web::StoreStatus     status
+kerio::web::KId     id
+string  groupName
+kerio::web::KId     groupId
+boolean     enabled
+long    weight
+string  keyword
+string  description
+
+#TODO: API ForbiddenWordGroup
+string  name
+kerio::web::KId     id
+
+#TODO: API ForbiddenWords
+void    get (out ForbiddenWordList list, out long totalItems, in kerio::web::SearchQuery query)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in ForbiddenWordList items)
+void    set (out kerio::web::ErrorList errors, in kerio::web::StringList ids, in ForbiddenWord details)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::StringList ids)
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+void    getConfig (out ForbiddenWordsConfig config)
+void    setConfig (in ForbiddenWordsConfig config)
+
+#TODO: API ForbiddenWordsConfig
+long    limit
+boolean     enabled
+
+#TODO: API Geoip
+void    get (out GeoipConfig config)
+void    set (in GeoipConfig config)
+void    getCountries (out kerio::web::KIdList geoipCountries)
+
+#TODO: API GeoipConfig
+boolean     enabled
+kerio::web::KIdList     blockedCountries
+
+#TODO: API GuestConfig
+kerio::web::OptionalString  password
+string  message
+
+#TODO: API HardwareInfo
+boolean     getBoxSerialNumber (out string serialNumber)
+
+#TODO: API HighlightItem
+KId     id
+    global identification
+boolean     enabled
+    Rule is [dis|en]abled.
+string  description
+    Text description.
+string  condition
+    Match condition.
+boolean     isRegex
+    Is condition held as regular expression? (server does NOT check if regex is valid)
+HighlightColor  color
+    Highlight matching log lines by this color.
+boolean     isOrderChanged
+    True if item order was changed by user.
+
+#TODO: API Histogram
+kerio::web::ByteUnits   units
+double  averageIn
+double  averageOut
+double  maxIn
+double  maxOut
+HistogramDataList   data
+
+#TODO: API HistogramData
+double  inbound
+double  outbound
+
+#TODO: API HttpCache
+void    get (out HttpCacheConfig config)
+void    set (in HttpCacheConfig config)
+void    getUrlSpecificTtl (out UrlSpecificTtlList list)
+void    setUrlSpecificTtl (out kerio::web::ErrorList errors, in UrlSpecificTtlList list)
+void    clearCache ()
+
+#TODO: API HttpCacheConfig
+boolean     transparentEnabled
+boolean     nonTransparentEnabled
+boolean     reverseEnabled
+long    cacheSize
+    in MB
+long    httpTtl
+    in days
+HttpCacheStatus     status
+    read-only
+
+#TODO: API HttpCacheStatus
+double  used
+    in B
+long    files
+long    hit
+long    miss
+
+#TODO: API HttpFtpScanningConfig
+boolean     moveToQuarantine
+    not available on Linux
+boolean     alertClient
+boolean     allowNotScanned
+ScanRuleConfigList  scanRuleList
+
+#TODO: API HttpProxyAuth
+boolean     enabled
+kerio::web::OptionalEntity  addressGroup
+
+#TODO: API HttpsConfig
+boolean     enabled
+boolean     isExclusionMode
+OptionalIdReference     ipAddressGroup
+UserReferenceList   userExceptions
+boolean     disclaimer
+
+#TODO: API IdReference
+kerio::web::KId     id
+string  name
+boolean     invalid
+
+#TODO: API ImportedInterface
+kerio::web::KId     importedId
+string  name
+InterfaceGroupType  group
+kerio::web::IpAddress   ip
+InterfaceType   type
+boolean     useForFullImport
+IdReference     currentInterface
+kerio::web::KId     portId
+boolean     wifi
+
+#TODO: API Inspector
+string  name
+    unique name for the inspector
+long    ipProtocol
+    IP protocol (only 6 for TCP or 17 for UDP)
+
+#TODO: API Inspectors
+void    get (out InspectorList list)
+
+#TODO: API Interface
+boolean     enabled
+InterfaceType   type
+kerio::web::StoreStatus     status
+boolean     dhcpServerEnabled
+InterfaceConnectivityParameters     connectivityParameters
+InterfaceFlags  flags
+kerio::web::KId     id
+InterfaceGroupType  group
+string  name
+InterfaceStatusType     linkStatus
+DetailsConfig   details
+string  mac
+string  systemName
+boolean     ip4Enabled
+InterfaceModeType   mode
+kerio::web::IpAddress   ip
+kerio::web::IpAddress   subnetMask
+IpAddressMaskList   secondaryAddresses
+boolean     dnsAutodetected
+string  dnsServers
+boolean     gatewayAutodetected
+kerio::web::IpAddress   gateway
+boolean     ip6Enabled
+InterfaceModeType   ip6Mode
+Ip6AddressMaskList  ip6Addresses
+Ip6Address  linkIp6Address
+kerio::web::IpAddress   ip6Gateway
+boolean     routedIp6PrefixAutodetected
+string  routedIp6Prefix
+InterfaceEncapType  encap
+kerio::web::OptionalLong    mtuOverride
+kerio::web::OptionalString  macOverride
+RasConfig   ras
+VpnServerConfig     server
+VpnTunnelConfig     tunnel
+kerio::web::KIdList     ports
+boolean     stp
+long    vlanId
+kerio::web::KId     ssidId
+
+#TODO: API InterfaceCondition
+InterfaceConditionType  type
+InterfaceType   interfaceType
+IdReference     selectedInterface
+    invalid - interface is no more in the configuration (nothing)
+boolean     enabled
+    interface is present, but disabled/down
+
+#TODO: API InterfaceConnectivityParameters
+FailoverRoleType    failoverRole
+boolean     onDemand
+kerio::web::OptionalLong    loadBalancingWeight
+
+#TODO: API InterfaceFlags
+boolean     deletable
+boolean     dialable
+boolean     hangable
+boolean     virtualSwitch
+boolean     wifi
+boolean     vlan
+
+#TODO: API Interfaces
+void    get (out InterfaceList list, out long totalItems, in kerio::web::SearchQuery query, in boolean sortByGroup)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in InterfaceList list)
+void    set (out kerio::web::ErrorList errors, in kerio::web::KIdList ids, in Interface details)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::KIdList ids)
+void    checkIpCollision (out IpCollisionList collisions)
+void    getWarnings (out NotificationTypeList warnings)
+void    getConnectivityConfig (out ConnectivityConfig config)
+void    setConnectivityConfig (in ConnectivityConfig config)
+void    startConnectivityTest ()
+void    connectivityTestStatus (out ConnectivityStatus status)
+void    cancelConnectivityTest ()
+void    dial (in kerio::web::KId id)
+void    hangup (in kerio::web::KId id)
+void    getIpsecPeerIdConfig (out IpsecPeerIdConfig config)
+void    getWifiConfig (out WifiConfig config)
+void    setWifiConfig (out kerio::web::ErrorList errors, in WifiConfig config)
+void    getWifiCountries (out WifiCountryList countries)
+void    apply (out kerio::web::ErrorList errors, in long revertTimeout)
+void    reset ()
+
+#TODO: API InternalAntivirus
+kerio::web::OptionalLong    updateCheckInterval
+    should we periodically ask for a new version? + update checking period in hours
+boolean     available
+    license is valid for internal antivirus, it is present: true - checkbox "Use integrated..." is enabled
+boolean     expired
+    license is not valid for McAfee: message "McAfee(R) antivirus subscription expired." is displayed
+
+#TODO: API InternalUpdateStatus
+AntivirusUpdatePhases   phase
+    state of update process
+long    percentage
+    percent of progress, valid for: AntivirusUpdateChecking, AntivirusUpdateDownload, AntivirusUpdateDownloadEngine
+TimeSpan    databaseAge
+    how old is virus database
+TimeSpan    lastUpdateCheck
+    how long is since last database update check
+string  databaseVersion
+    virus database version
+string  engineVersion
+    scanning engine version
+
+#TODO: API InternetBandwidth
+kerio::web::KId     id
+string  name
+InterfaceType   type
+    name of the interface
+boolean     online
+    (e.g. ethernet, ras, etc.)
+InternetBandwidthData   download
+    false = interface is offline (values download and upload should be ignored)
+InternetBandwidthData   upload
+
+#TODO: API InternetBandwidthData
+long    speed
+BandwidthUnit   unit
+    maximum speed of the link (defined in Interfaces); zero means "undefined"
+
+#TODO: API IntrusionPrevention
+void    get (out IntrusionPreventionConfig config)
+void    set (out kerio::web::ErrorList errors, in IntrusionPreventionConfig config)
+void    getSignatureDescription (out string description, in string id)
+void    getIgnoredRules (out RuleReferenceList ignored)
+void    setIgnoredRules (out kerio::web::ErrorList errors, in RuleReferenceList ignored)
+void    update (in boolean force)
+void    getUpdateStatus (out IntrusionPreventionInfo status)
+
+#TODO: API IntrusionPreventionConfig
+boolean     enabled
+IntrusionPreventionAction   high
+IntrusionPreventionAction   medium
+IntrusionPreventionAction   low
+kerio::web::OptionalLong    updateCheckInterval
+BlackListList   blackLists
+kerio::web::NamedValueList  ports
+
+#TODO: API IntrusionPreventionInfo
+TimeSpan    lastUpdateCheck
+string  databaseVersion
+IntrusionPreventionUpdatePhases     phase
+string  errorMessage
+
+#TODO: API Ip6AddressMask
+Ip6Address  ip
+long    prefixLength
+
+#TODO: API IpAddressGroups
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+
+#TODO: API IpAddressMask
+kerio::web::IpAddress   ip
+kerio::web::IpAddress   subnetMask
+
+#TODO: API IpsecPeerIdConfig
+string  defaultLocalIdValue
+string  defaultCipherIke
+string  defaultCipherEsp
+CertificateDnList   certificateDnValues
+    values for IpsecPeerIdCertDn, based on choosen certificate
+
+#TODO: API IpService
+kerio::web::KId     id
+    never updated in store
+kerio::web::StoreStatus     status
+string  name
+    unique name for the service, max 23 chars
+string  description
+    brief description of the service, max 63 chars, can be empty
+long    protocol
+    ICMP 1, TCP - 6, UDP - 17, other - 128, TCP_UDP - 129.
+boolean     group
+PortCondition   srcPort
+    port(s) on client-side
+PortCondition   dstPort
+    port(s) on server-side
+string  inspector
+    name of Protocol Inspector,
+long    protoNumber
+    1-255
+kerio::web::StringList  icmpTypes
+    "any" or list of numbers
+IdReferenceList     members
+    for group = true list of member IpService ids
+
+#TODO: API IpServiceReference
+kerio::web::KId     id
+string  name
+boolean     isGroup
+boolean     invalid
+
+#TODO: API IpServices
+void    get (out IpServiceList list, out long totalItems, in kerio::web::SearchQuery query)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in IpServiceList services)
+void    set (out kerio::web::ErrorList errors, in kerio::web::StringList serviceIds, in IpService details)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::StringList serviceIds)
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+
+#TODO: API IpTools
+void    getStatus (out ActiveTool activeTool, out kerio::web::StringList lines)
+void    stop ()
+void    ping (in string target, in IpVersion ipv, in boolean infinite, in long packetSize, in boolean allowFragmentation)
+void    traceRoute (in string target, in IpVersion ipv, in boolean resolveHostnames)
+void    whois (in string target)
+void    dns (in string name, in string server, in DnsTool tool, in DnsType type)
+void    getDnsServers (out kerio::web::StringList servers)
+
+#TODO: API IPv6Config
+boolean     blockNative
+boolean     blockTunnels
+kerio::web::OptionalEntity  addressGroupException
+
+#TODO: API LanInterfaceConfig
+kerio::web::KId     id
+    not used on Box
+kerio::web::IpAddress   ip
+kerio::web::IpAddress   subnetMask
+boolean     dhcpServerEnabled
+
+#TODO: API LicenseDetail
+string  organization
+    compulsory
+string  person
+    compulsory
+string  email
+    compulsory
+string  phone
+    compulsory
+string  web
+string  country
+    compulsory
+string  state
+    compulsory for countries such as USA, Canada, Australia etc.
+string  city
+    compulsory
+string  street
+    compulsory
+string  zip
+    compulsory
+string  comment
+
+#TODO: API LocalizableMessage
+string  message
+    text with placeholders %1, %2, etc., e.g. "User %1 cannot be deleted."
+StringList  positionalParameters
+    additional strings to replace the placeholders in message (first string replaces %1 etc.)
+long    plurality
+    count of items, used to distinguish among singular/paucal/plural; 1 for messages with no counted items
+
+#TODO: API LocalizableMessageParameters
+StringList  positionalParameters
+    additional strings to replace the placeholders in message (first string replaces %1 etc.)
+long    plurality
+    count of items, used to distinguish among singular/paucal/plural; 1 for messages with no counted items
+
+#TODO: API LogFileSettings
+boolean     enabled
+    Is logging to file enabled.
+string  fileName
+    log file name
+
+#TODO: API Logger
+void    logWrite (in kerio::web::LogType type, in string message)
+void    getStatusFunctionList (out StatusFunctionList functions)
+void    callStatusFunction (in kerio::web::KId id)
+void    getHttpLogType (out HttpLogType logType)
+void    setHttpLogType (in HttpLogType logType)
+void    getLogExpression (out string expression)
+void    setLogExpression (in string expression)
+void    getPacketLogFormat (out string format)
+void    setPacketLogFormat (in string format)
+
+#TODO: API LogItem
+LogType     logName
+    name of the log
+boolean     hasMessages
+    has the log messages?
+
+#TODO: API LogRotationSettings
+RotationPeriod  period
+    How often does log rotate?
+long    maxLogSize
+    Maximum log file size [MegaBytes]; Unlimited CAN be used.
+long    rotateCount
+    How many rotated files can be kept at most?; Unlimited CANNOT be used.
+
+#TODO: API LogRow
+string  content
+    1 data row
+HighlightColor  highlight
+    appropriate highlight color
+
+#TODO: API Logs
+void    cancelSearch (in string searchId)
+void    clear (in LogType logName)
+void    exportLog (out Download fileDownload, in LogType logName, in long fromLine, in long countLines, in ExportFormat type)
+void    exportLogRelative (out Download fileDownload, in LogType logName, in long fromLine, in long countLines, in ExportFormat type)
+void    get (out LogRowList viewport, out long totalItems, in LogType logName, in long fromLine, in long countLines)
+void    getHighlightRules (out HighlightRules rules)
+void    getLogSet (out LogSet logSet)
+void    getMessages (out TreeLeafList messages)
+void    getSearchProgress (out LogRowList viewport, out long firstLine, out long totalItems, out SearchStatus status, out long percentage, in long countLines, in string searchId)
+void    getSettings (out LogSettings currentSettings, in LogType logName)
+void    search (out string searchId, in LogType logName, in string what, in long fromLine, in long toLine, in boolean forward)
+void    setHighlightRules (in HighlightRules rules)
+void    setMessages (in TreeLeafList messages)
+void    setSettings (in LogType logName, in LogSettings newSettings)
+
+#TODO: API LogSettings
+LogFileSettings     general
+    general log settings
+LogRotationSettings     rotation
+    log rotation settings
+SyslogSettings  syslog
+    syslog settings
+
+#TODO: API MacAccessItem
+string  macAddress
+string  description
+
+#TODO: API MacFilterConfig
+boolean     enabled
+IdReferenceList     interfaces
+MacFilterActionType     macFilterAction
+MacAccessList   macAccessItems
+boolean     allowReserved
+
+#TODO: API ManipulationError
+KId     id
+    entity KId, can be user, group, alias, ML...
+LocalizableMessage  errorMessage
+
+#TODO: API MiscSettingsConfig
+AntiSpoofingConfig  antiSpoofing
+ConnectionLimit     connectionLimit
+UpnpConfig  upnp
+IPv6Config  ipv6
+DhcpScopes  dhcpScopes
+
+#TODO: API NamedMultiValue
+string  name
+StringList  value
+
+#TODO: API NamedValue
+string  name
+string  value
+
+#TODO: API Notification
+NotificationType    type
+NotificationSeverity    severity
+string  value
+long    code
+
+#TODO: API Notifications
+void    get (out NotificationList notifications, in NotificationList lastNotifications, in long timeout)
+void    clear (in Notification notification)
+
+#TODO: API NtpUpdateStatus
+NtpUpdatePhase  phase
+string  errorMessage
+
+#TODO: API OptionalEntity
+boolean     enabled
+KId     id
+    global identifier
+string  name
+
+#TODO: API OptionalIdReference
+boolean     enabled
+IdReference     value
+
+#TODO: API OptionalLong
+boolean     enabled
+long    value
+
+#TODO: API OptionalString
+boolean     enabled
+string  value
+
+#TODO: API OptionalStringList
+boolean     enabled
+kerio::web::StringList  value
+
+#TODO: API P2pEliminator
+void    get (out P2pEliminatorConfig config)
+void    set (out kerio::web::ErrorList errors, in P2pEliminatorConfig config)
+
+#TODO: API P2pEliminatorConfig
+string  ports
+long    connectionCount
+kerio::web::KIdList     trustedServiceIdList
+
+#TODO: API PacketDump
+void    getExpression (out string expression)
+void    setExpression (in string expression)
+void    start ()
+void    stop ()
+void    clear ()
+void    download (out kerio::web::Download fileDownload)
+void    getStatus (out PacketDumpStatus status)
+
+#TODO: API PacketDumpStatus
+long    sizeKb
+boolean     running
+boolean     exists
+
+#TODO: API ParentProxyConfig
+boolean     enabled
+string  server
+long    port
+boolean     authEnabled
+CredentialsConfig   credentials
+
+#TODO: API Password
+string  value
+boolean     isSet
+
+#TODO: API PortCondition
+PortComparator  comparator
+    does the list contains either single port (equal/greater/etc.), range or list of ports
+PortList    ports
+
+#TODO: API PortConfig
+kerio::web::KId     id
+PortType    type
+string  name
+PortAssignmentType  assignment
+kerio::web::OptionalString  vlans
+SpeedDuplexType     speedDuplex
+SpeedDuplexMayNotWorkList   speedDuplexMayNotWork
+
+#TODO: API Ports
+void    get (out PortConfigList list)
+void    set (out kerio::web::ErrorList errors, in PortConfigList ports, in long revertTimeout)
+
+#TODO: API ProductInfo
+void    getAcknowledgmentsUrl (out string url)
+void    get (out ProductInformation productInfo)
+void    getWarnings (out WarningInfoList warnings)
+void    disableWarning (in WarningType type)
+void    getSystemHostname (out string hostname)
+void    configUpdate ()
+void    uploadLicense (in string fileId)
+void    acceptUnregisteredTrial ()
+void    getSupportInfo (out kerio::web::Download fileDownload)
+void    getClientStatistics (out boolean setting)
+void    setClientStatistics (in boolean setting)
+void    setStatisticsData (in StatisticsData data)
+void    getUptime (out long uptime)
+void    getUsedDevicesCount (out long devices, out long accounts)
+void    accountUsage (in ApiEntity apiEntity)
+
+#TODO: API ProductInfo
+string  productVersion
+string  productName
+string  operatingSystem
+string  licenseNumber
+
+#TODO: API ProductInformation
+string  versionString
+string  osDescription
+boolean     finalVersion
+string  boxEdition
+string  boxName
+boolean     wifiAvailable
+boolean     ip6Available
+boolean     licenseSet
+boolean     passwordSet
+boolean     clientStatisticsSet
+boolean     centralManagementSet
+
+#TODO: API ProductRegistration
+void    finish (in string token, in string baseId, in Registration registrationInfo, in RegistrationFinishType finishType)
+void    get (out Registration registrationInfo, out boolean newRegistration, in string token, in string securityCode, in string baseId, out boolean trial)
+void    getFullStatus (out RegistrationFullStatus status)
+void    getStatus (out RegistrationStatus status)
+void    start (out string token, out string image, out boolean showImage, in string langId)
+void    verifyNumber (out ErrorList errors, out RegistrationNumberList regNumberInfo, out boolean allowFinish, out long users, out RegDate expirationDate, in string token, in string baseId, in RegStringList regNumbersToVerify)
+
+#TODO: API ProxyServer
+void    get (out ProxyServerConfig config)
+void    set (in ProxyServerConfig config)
+
+#TODO: API ProxyServerConfig
+boolean     enabled
+long    port
+boolean     allowAllPorts
+ParentProxyConfig   parentProxy
+boolean     automaticScriptDirect
+boolean     automaticScriptEnabled
+
+#TODO: API Quota
+QuotaInterval   daily
+QuotaInterval   weekly
+QuotaInterval   monthly
+boolean     blockTraffic
+boolean     notifyUser
+
+#TODO: API QuotaInterval
+boolean     enabled
+QuotaType   type
+kerio::web::ByteValueWithUnits  limit
+
+#TODO: API Radius
+boolean     enabled
+Password    password
+IdReference     certificate
+
+#TODO: API RasConfig
+boolean     dead
+string  entryName
+boolean     useOwnCredentials
+CredentialsConfig   credentials
+kerio::web::OptionalLong    timeout
+kerio::web::OptionalEntity  connectTime
+kerio::web::OptionalEntity  noConnectTime
+boolean     bdScriptEnabled
+boolean     adScriptEnabled
+boolean     bhScriptEnabled
+boolean     ahScriptEnabled
+RasType     rasType
+string  pppoeIfaceId
+string  server
+boolean     papEnabled
+boolean     chapEnabled
+boolean     mschapEnabled
+boolean     mschapv2Enabled
+MppeType    mppe
+boolean     mppeStateful
+
+#TODO: API RegDate
+long    year
+    year
+long    month
+    1-12
+long    day
+    1-31 max day is limited by month
+
+#TODO: API Registration
+LicenseDetail   details
+    Information about user.
+RegDate     expirationDate
+    Expiration date.
+long    subscribers
+    A count of Subscribers (typically users) of the product.
+boolean     showQuestions
+    Have to show questions?
+long    registrationType
+    is it edu/gov registration?
+string  eduInfo
+    information special for EDUcational type of organization
+RegistrationNumberList  regNumbers
+    All registration numbers included in registration.
+SurveyAnswerList    surveyAnswers
+    Survey answers - Answers should be sent in the same order as the questions are displayed.
+ExtensionList   extensions
+    list of extensions
+
+#TODO: API RegistrationFullStatus
+egistrationType     regType
+    The registration type of the current prooduct.
+string  Id
+    Base or trial ID used for registration.
+string  company
+    Company name.
+long    users
+    Users count.
+LicenseExpireInfo   expirations
+    sequence of expire information
+
+#TODO: API RegistrationNumber
+string  key
+    Registration number.
+string  type
+    A type of the reg. number (base id, addon...)
+string  description
+    A description of the reg. number.
+
+#TODO: API RegistrationStatus
+RegistrationType    regType
+    The registration type of the current prooduct.
+string  Id
+    Base or trial ID used for registration.
+
+#TODO: API ReportConfig
+boolean     dailyEnabled
+boolean     weeklyEnabled
+boolean     monthlyEnabled
+boolean     onlineAccess
+
+#TODO: API Restriction
+string  entityName
+    was of type Entity
+RestrictionTupleList    tuples
+    Restriction tuples.
+
+#TODO: API RestrictionTuple
+string  name
+kerio::web::RestrictionKind     kind
+kerio::web::StringList  values
+
+#TODO: API ReverseProxy
+void    get (out ReverseProxyConfig config)
+void    set (out kerio::web::ErrorList errors, in ReverseProxyConfig config)
+
+#TODO: API ReverseProxyConfig
+boolean     enabled
+IdReference     defaultCertificate
+ReverseProxyRuleList    rules
+
+#TODO: API ReverseProxyRule
+string  serverHostname
+boolean     serverHttp
+HttpsServerMode     httpsMode
+IdReference     customCertificate
+string  targetServer
+boolean     targetHttps
+boolean     antivirus
+boolean     enabled
+string  description
+kerio::web::KId     id
+
+#TODO: API Route
+boolean     enabled
+    valid only for RouteStatic
+string  name
+    valid only for RouteStatic
+RouteType   type
+kerio::web::IpAddress   network
+kerio::web::IpAddress   mask
+    used for IPv4
+long    prefixLen
+    used for IPv6
+kerio::web::IpAddress   gateway
+InterfaceType   interfaceType
+IdReference     interfaceId
+long    metric
+
+#TODO: API RouterAdvertisement
+kerio::web::KId     id
+boolean     enabled
+IdReference     interfaceId
+Ip6AddressMask  prefix
+
+#TODO: API RouterAdvertisements
+void    get (out RouterAdvertisementList list)
+void    set (out kerio::web::ErrorList errors, in RouterAdvertisementList advertisements)
+void    getConfig (out RouterAdvertisementsConfig config)
+void    setConfig (in RouterAdvertisementsConfig config)
+void    getMode (out RouterAdvertisementsModeType mode)
+void    setMode (in RouterAdvertisementsModeType mode)
+
+#TODO: API RouterAdvertisementsConfig
+boolean     enabled
+
+#TODO: API RoutingTable
+void    get (out RouteList routes, in[Opt] boolean ipv6)
+void    getStaticRoutes (out RouteList routes, in[Opt] boolean ipv6)
+void    setStaticRoutes (out kerio::web::ErrorList errors, in RouteList routes, in[Opt] boolean ipv6)
+
+#TODO: API RuleReference
+string  id
+string  description
+
+#TODO: API SafeSearchConfig
+boolean     enabled
+UserReferenceList   userExceptions
+
+#TODO: API ScannedProtocols
+boolean     http
+boolean     ftp
+boolean     smtp
+boolean     pop3
+
+#TODO: API ScanRuleConfig
+kerio::web::KId     id
+boolean     enabled
+ScanRuleType    type
+string  pattern
+boolean     scan
+string  description
+
+#TODO: API SearchQuery
+StringList  fields
+    empty = give me all fields, applicable constants: ADD_USERS, LIST_USERS
+SubConditionList    conditions
+    empty = without condition
+LogicalOperator     combining
+    the list of conditions can be either combined by 'ORs' or 'ANDs'
+long    start
+    how many items to skip before filling a result list (0 means skip none)
+long    limit
+    how many items to put to a result list (if there are enough items); applicable constant: Unlimited
+SortOrderList   orderBy
+
+#TODO: API SecuritySettings
+void    get (out SecuritySettingsConfig config)
+void    set (out kerio::web::ErrorList errors, in SecuritySettingsConfig config)
+
+#TODO: API SecuritySettingsConfig
+MiscSettingsConfig  miscSettings
+MacFilterConfig     macFilter
+ZeroConfigNetwork   zeroConfigNetwork
+
+#TODO: API Server
+void    getOs (out ServerOs os)
+void    getRestrictionList (out RestrictionList restrictions)
+
+#TODO: API Session
+void    getCsrfToken (out string token)
+void    getUserName (out string name)
+void    login (out string token, in string userName, in string password, in ApiApplication application)
+void    logout ()
+void    getSessionVariable (in string name, out string value)
+void    setSessionVariable (in string name, in string value)
+void    reset ()
+void    getConfigTimestamp (out ClientTimestampList clientTimestampList)
+void    confirmConfig (out boolean confirmed, in ClientTimestampList clientTimestampList)
+void    getConnectedInterface (out kerio::web::KId id)
+void    getLoginType (out LoginType type)
+
+#TODO: API SharedDefinitionInfo
+SharedDefinitionType    type
+long    version
+
+#TODO: API SharedDefinitions
+void    getVersions (out SharedDefinitionInfoList list)
+void    setVersions (in SharedDefinitionInfoList list)
+
+#TODO: API SignOn
+boolean     isEnabled
+string  hostName
+    Hostname to the Kerio Unity Sign On server. Non default port can be added Eg: example.com:4444.
+string  userName
+    Administrator username.
+string  password
+    [WRITE-ONLY] Administrator password
+
+#TODO: API SizeLimit
+boolean     isActive
+ByteValueWithUnits  limit
+
+#TODO: API SmtpRelay
+void    get (out SmtpRelayConfig config)
+void    set (in SmtpRelayConfig config)
+void    test (out kerio::web::ErrorList errors, in SmtpRelayConfig config, in string address)
+void    getStatus (out kerio::web::ErrorList errors)
+
+#TODO: API SmtpRelayConfig
+boolean     useKManager
+string  server
+boolean     requireSecureConnection
+boolean     authenticationRequired
+CredentialsConfig   credentials
+kerio::web::OptionalString  fromAddress
+
+#TODO: API Snmp
+void    get (out SnmpSettings settings)
+void    set (in SnmpSettings settings)
+
+#TODO: API SnmpSettings
+boolean     enabled
+string  location
+string  contact
+SnmpVersion     version
+Password    community
+string  username
+Password    password
+
+#TODO: API SortOrder
+string  columnName
+SortDirection   direction
+boolean     caseSensitive
+
+#TODO: API SourceCondition
+RuleConditionType   type
+SourceConditonEntityList    entities
+
+#TODO: API SourceConditonEntity
+SourceConditonEntityType    type
+IdReference     ipAddressGroup
+UserConditionType   userType
+UserReference   user
+
+#TODO: API StarReport
+kerio::web::KId     id
+boolean     enabled
+Addressee   addressee
+UserReferenceList   users
+boolean     allData
+ReportConfig    reportConfig
+
+#TODO: API StarReports
+void    get (out StarReportList list, out ReportConfig allUsers)
+void    set (out kerio::web::ErrorList errors, in StarReportList reports, in ReportConfig allUsers)
+void    send (out kerio::web::ErrorList errors, in StarReportList reports, in string language)
+
+#TODO: API StatisticsData
+long    screenWidth
+long    screenHeight
+string  localization
+long    loadTime
+long    initTime
+
+#TODO: API StatusFunction
+kerio::web::KId     id
+string  name
+
+#TODO: API Storage
+void    get (out StorageDataList data)
+void    remove (in StorageDataType type)
+
+#TODO: API StorageData
+StorageDataType     type
+double  size
+
+#TODO: API SubCondition
+string  fieldName
+    left side of condition
+CompareOperator     comparator
+    middle of condition
+string  value
+    right side of condition
+
+#TODO: API SurveyAnswer
+string  questionID
+    ID of the question.
+string  answer
+    answer to the question
+
+#TODO: API SyslogSettings
+boolean     enabled
+    Syslog is [dis|en]abled.
+string  serverUrl
+    Path to syslog server.
+FacilityUnit    facility
+    which facility is message sent from
+SeverityUnit    severity
+    read-only; severity level of message
+string  application
+    user defined application name; it is 1*48PRINTUSASCII where PRINTUSASCII = d33-126.
+
+#TODO: API SystemConfig
+void    get (out SystemConfiguration config)
+void    set (in SystemConfiguration config)
+void    getTimeZones (out TimeZoneConfigList timeZones, in kerio::web::Date currentDate)
+void    getDateTime (out DateTimeConfig config)
+void    setDateTime (in DateTimeConfig config)
+void    setTimeFromNtp ()
+void    getNtpStatus (out NtpUpdateStatus status)
+
+#TODO: API SystemConfiguration
+string  hostname
+kerio::web::OptionalString  ntpServer
+kerio::web::KId     timeZoneId
+
+#TODO: API SystemHealth
+void    get (out SystemHealthData data, in HistogramType type)
+void    getInc (out SystemHealthData data, out DateTimeStamp sampleTime, in HistogramIntervalType type, in kerio::web::DateTimeStamp startSampleTime)
+
+#TODO: API SystemHealthData
+PercentHistogram    cpu
+PercentHistogram    memory
+double  memoryTotal
+    memory histogram has to have fixed maximum to this value
+double  diskTotal
+    total number of bytes on data partition (install dir on windows)
+double  diskFree
+
+#TODO: API SystemInfo
+AdditionalFiles     files
+string  description
+
+#TODO: API SystemTasks
+void    getSsh (out boolean running)
+void    setSsh (in boolean enable)
+void    reboot ()
+void    shutdown ()
+
+#TODO: API TechnicalSupport
+void    getInfo (out UserInfo userInfo, out ProductInfo productInfo, out SystemInfo systemInfo, out boolean isUploadServerAvailable)
+void    addSystemInfoToTicket (in string ticketId, in string email)
+
+#TODO: API TestResult
+boolean     successful
+string  errorMessage
+
+#TODO: API Time
+long    hour
+    0-23
+long    min
+    0-59
+
+#TODO: API TimeHMS
+long    hour
+long    min
+long    sec
+
+#TODO: API TimeRanges
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+
+#TODO: API TimeSpan
+boolean     isValid
+long    days
+long    hours
+long    minutes
+
+#TODO: API TimeZoneConfig
+kerio::web::KId     id
+string  name
+long    currentOffset
+long    winterOffset
+long    summerOffset
+
+#TODO: API TotpConfig
+boolean     required
+boolean     remoteConfig
+
+#TODO: API TrafficCondition
+RuleConditionType   type
+boolean     firewall
+TrafficEntityList   entities
+
+#TODO: API TrafficEntity
+TrafficEntityType   type
+string  host
+kerio::web::IpAddress   addr1
+kerio::web::IpAddress   addr2
+IdReference     addressGroup
+InterfaceCondition  interfaceCondition
+VpnCondition    vpnCondition
+UserConditionType   userType
+UserReference   user
+
+#TODO: API TrafficPolicy
+void    get (out TrafficRuleList list, out long totalItems)
+void    set (out kerio::web::ErrorList errors, in TrafficRuleList rules, in TrafficRule defaultRule)
+void    getCollisions (out CollisionList list)
+void    getDefaultRule (out TrafficRule rule)
+void    filterRules (out kerio::web::KIdList idList, in TrafficPolicyFilter condition)
+void    normalizeTrafficEntity (out kerio::web::ErrorList errors, out TrafficEntity result, in TrafficEntity input)
+
+#TODO: API TrafficPolicyFilter
+kerio::web::IpAddress   sourceIp
+kerio::web::IpAddress   destinationIp
+long    port
+
+#TODO: API TrafficRule
+kerio::web::KId     id
+boolean     enabled
+string  name
+string  description
+string  color
+TrafficCondition    source
+TrafficCondition    destination
+TrafficService  service
+TrafficIpVersion    ipVersion
+RuleAction  action
+LogEnabled  logEnabled
+boolean     graphEnabled
+kerio::web::OptionalLong    dscp
+boolean     natIpv4Only
+boolean     enableSourceNat
+SourceNatMode   natMode
+boolean     allowReverseConnection
+NatBalancing    balancing
+IdReference     natInterface
+boolean     allowFailover
+string  ipAddress
+string  ipv6Address
+boolean     enableDestinationNat
+string  translatedHost
+string  translatedIpv6Host
+kerio::web::OptionalLong    translatedPort
+IdReference     validTimeRange
+string  inspector
+    name of Protocol Inspector,
+TimeSpan    lastUsed
+    last time when connection matched, read-only
+
+#TODO: API TrafficService
+RuleConditionType   type
+TrafficServiceEntityList    entries
+
+#TODO: API TrafficServiceEntity
+boolean     definedService
+IpServiceReference  service
+long    protocol
+    TCP - 6, UDP - 17.
+PortCondition   port
+
+#TODO: API TrafficStatistic
+kerio::web::KId     id
+string  name
+TrafficStatisticsType   type
+kerio::web::KId     componentId
+InterfaceType   interfaceType
+DataStatistic   data
+
+#TODO: API TrafficStatistics
+void    get (out TrafficStatisticList list, out long totalItems, in kerio::web::SearchQuery query, in boolean refresh)
+void    remove (in kerio::web::KIdList ids)
+void    getHistogram (out Histogram hist, in kerio::web::HistogramType type, in kerio::web::KId id)
+void    getHistogramInc (out Histogram hist, out kerio::web::DateTimeStamp sampleTime, in kerio::web::HistogramIntervalType type, in kerio::web::KId id, in kerio::web::DateTimeStamp startSampleTime)
+
+#TODO: API TreeLeaf
+long    id
+    leaf identification
+string  parentName
+    name of the group
+string  description
+    text after checkbox
+boolean     enabled
+    leaf is [not] enabled
+
+#TODO: API UnitySignOn
+void    get (out SignOn settings)
+void    set (in SignOn settings)
+void    testConnection (out ErrorList errors, in StringList hostNames, in Credentials credentials)
+
+#TODO: API UpdateChecker
+void    get (out UpdateCheckerConfig config)
+void    set (in UpdateCheckerConfig config)
+void    check (in CheckVersionType type)
+void    getStatus (out UpdateCheckerInfo status)
+void    getProgressStatus (out long percentage)
+void    download (in CheckVersionType type)
+void    uploadImage (out kerio::web::KId id, in string fileId)
+void    performCustomUpgrade (in kerio::web::KId id)
+void    performUpgrade ()
+void    cancelDownload ()
+
+#TODO: API UpdateCheckerConfig
+boolean     enabled
+boolean     betaVersion
+boolean     download
+OptionalIdReference     autoUpdateTimeRange
+
+#TODO: API UpdateCheckerInfo
+UpdateStatus    status
+boolean     newVersion
+long    lastCheckTime
+TimeSpan    lastUpdateCheck
+string  packageCode
+string  description
+string  downloadUrl
+string  infoUrl
+string  updateErrorDescr
+boolean     autoUpdatePlanned
+string  autoUpdateDateTime
+
+#TODO: API UpnpConfig
+boolean     enabled
+boolean     logPackets
+boolean     logConnections
+
+#TODO: API UrlEntry
+kerio::web::KId     id
+kerio::web::KId     groupId
+kerio::web::KId     sharedId
+    read-only; filled when the item is shared in MyKerio
+string  groupName
+string  description
+UrlEntryType    type
+boolean     enabled
+kerio::web::StoreStatus     status
+string  url
+boolean     isRegex
+kerio::web::KId     childGroupId
+string  childGroupName
+
+#TODO: API UrlFilterConfig
+UrlWhiteList    whiteList
+UrlFilterStatus     status
+string  activationErrorDescr
+boolean     enabled
+boolean     statisticsEnabled
+boolean     allowMiscategorizedReporting
+boolean     appidEnabled
+
+#TODO: API UrlGroup
+kerio::web::KId     id
+string  name
+
+#TODO: API UrlGroups
+void    get (out UrlEntryList list, out long totalItems, in kerio::web::SearchQuery query)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in UrlEntryList groups)
+void    set (out kerio::web::ErrorList errors, in kerio::web::StringList groupIds, in UrlEntry details)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::StringList groupIds)
+void    apply (out kerio::web::ErrorList errors)
+void    reset ()
+void    getGroupList (out UrlGroupList groups)
+
+#TODO: API UrlSpecificTtl
+long    ttl
+    in hours
+string  url
+string  description
+
+#TODO: API UrlWhiteListEntry
+string  url
+string  description
+
+#TODO: API User
+kerio::web::KId     id
+kerio::web::KId     externalId
+CredentialsConfig   credentials
+string  fullName
+string  description
+string  email
+AuthType    authType
+boolean     localEnabled
+boolean     adEnabled
+boolean     useTemplate
+UserData    data
+AutoLogin   autoLogin
+OptionalIpAddress   vpnAddress
+UserReferenceList   groups
+boolean     conflictWithLocal
+boolean     totpConfigured
+
+#TODO: API UserCondition
+UserConditionType   type
+UserReferenceList   users
+
+#TODO: API UserData
+UserRights  rights
+Quota   quota
+WwwFilter   wwwFilter
+string  language
+
+#TODO: API UserGroup
+kerio::web::KId     id
+string  name
+string  description
+UserRights  rights
+UserReferenceList   members
+
+#TODO: API UserGroups
+void    get (out UserGroupList list, out long totalItems, in kerio::web::SearchQuery query, in kerio::web::KId domainId)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in UserGroupList groups, in kerio::web::KId domainId)
+void    set (out kerio::web::ErrorList errors, in kerio::web::StringList groupIds, in UserGroup details, in kerio::web::KId domainId)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::StringList groupIds, in kerio::web::KId domainId)
+
+#TODO: API UserInfo
+string  name
+string  email
+
+#TODO: API UserReference
+kerio::web::KId     id
+string  name
+boolean     isGroup
+string  domainName
+
+#TODO: API UserRights
+boolean     readConfig
+boolean     writeConfig
+boolean     overrideWwwFilter
+boolean     unlockRule
+boolean     dialRasConnection
+boolean     connectVpn
+boolean     useP2p
+
+#TODO: API Users
+void    get (out kerio::web::ErrorList warnings, out UserList list, out long totalItems, in kerio::web::SearchQuery query, in kerio::web::KId domainId)
+void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in UserList users, in kerio::web::KId domainId)
+void    set (out kerio::web::ErrorList errors, in kerio::web::KIdList userIds, in User details, in kerio::web::KId domainId)
+void    remove (out kerio::web::ErrorList errors, in kerio::web::KIdList userIds, in kerio::web::KId domainId)
+void    convertLocalUsers (in kerio::web::KId domainId)
+void    getAdUsers (out UserList users, in string domainName, in string server, in CredentialsConfig credentials, in boolean ldapSecure)
+void    getNtUsers (out UserList users, in string domainName)
+void    getSupportedLanguages (out kerio::web::NamedValueList languages)
+void    getMySettings (out UserSettings settings)
+void    setMySettings (in UserSettings settings)
+void    checkWarnings (out kerio::web::ErrorList errors, in User user)
+
+#TODO: API UserSettings
+string  calculatedLanguage
+string  language
+string  detectedLanguage
+UserRoleList    roles
+UserReference   user
+string  fullName
+string  email
+
+#TODO: API UserStatistic
+kerio::web::KId     id
+string  userName
+UserStatisticType   type
+string  fullName
+long    quota
+DataStatistic   data
+
+#TODO: API UserStatistics
+void    get (out UserStatisticList list, out long totalItems, in kerio::web::SearchQuery query, in boolean refresh)
+void    remove (in kerio::web::KIdList ids)
+
+#TODO: API UserVoice
+void    getUrl (out string url)
+void    set (in UserVoiceSettings settings)
+
+#TODO: API UserVoiceSettings
+string  name
+string  email
+
+#TODO: API VpnClientInfo
+kerio::web::KId     id
+VpnType     type
+string  userName
+string  hostName
+kerio::web::IpAddress   ip
+kerio::web::IpAddress   clientIp
+VpnClientState  state
+long    loginTime
+string  version
+OsCodeType  osCode
+string  osName
+
+#TODO: API VpnClients
+void    get (out VpnClientList list, out long totalItems, in kerio::web::SearchQuery query, in boolean refresh)
+void    kill (in kerio::web::KIdList ids)
+
+#TODO: API VpnCondition
+VpnConditionType    type
+IdReference     tunnel
+    invalid - tunnel is no more in the configuration (nothing)
+boolean     enabled
+    tunnel is present, but disabled/down
+
+#TODO: API VpnRoute
+kerio::web::KId     id
+boolean     enabled
+string  description
+kerio::web::IpAddress   network
+kerio::web::IpAddress   mask
+
+#TODO: API VpnServerConfig
+VpnRouteList    routes
+kerio::web::IpAddress   network
+kerio::web::IpAddress   mask
+boolean     localDns
+kerio::web::IpAddress   primaryDns
+kerio::web::IpAddress   secondaryDns
+boolean     autodetectDomainSuffix
+string  domainSuffix
+boolean     localWins
+kerio::web::IpAddress   primaryWins
+kerio::web::IpAddress   secondaryWins
+boolean     kerioVpnEnabled
+IdReference     kerioVpnCertificate
+long    port
+boolean     defaultRoute
+boolean     ipsecVpnEnabled
+boolean     mschapv2Enabled
+IdReference     ipsecVpnCertificate
+string  cipherIke
+    read-only
+string  cipherEsp
+    read-only
+boolean     useCertificate
+kerio::web::OptionalString  psk
+
+#TODO: API VpnTunnelConfig
+VpnType     type
+kerio::web::OptionalString  peer
+    hostname or ip, passive if disabled
+VpnRouteList    localRoutes
+    IPsec only.
+VpnRouteList    remoteRoutes
+string  remoteFingerprint
+boolean     useRemoteAutomaticRoutes
+boolean     useRemoteCustomRoutes
+kerio::web::OptionalString  psk
+    use certificate if disabled
+IdReference     certificate
+    empty ID for "Remote certificate"
+string  cipherIke
+string  cipherEsp
+string  localIdValue
+string  remoteIdValue
+boolean     useLocalAutomaticRoutes
+boolean     useLocalCustomRoutes
+
+#TODO: API WanInterfaceConfig
+ kerio::web::KId    id
+    not used on Box
+InterfaceEncapType  encap
+InterfaceModeType   mode
+kerio::web::IpAddress   ip
+kerio::web::IpAddress   subnetMask
+boolean     gatewayAutodetected
+kerio::web::IpAddress   gateway
+boolean     dnsAutodetected
+string  dnsServers
+    ipaddr;ipaddr
+kerio::web::OptionalLong    loadBalancingWeight
+    balancing
+CredentialsConfig   credentials
+    for Pppoe mode
+
+#TODO: API WarningInfo
+WarningType     type
+boolean     suppressable
+string  property
+
+#TODO: API WebInterface
+void    get (out WebInterfaceConfig config)
+void    set (in WebInterfaceConfig config, in long revertTimeout)
+void    uploadImage (in string fileId, in boolean isFavicon)
+void    reset ()
+
+#TODO: API WebInterfaceConfig
+boolean     useSsl
+kerio::web::OptionalString  hostname
+string  detectedHostname
+string  adminPath
+long    port
+long    sslPort
+IdReference     certificate
+CustomizedBrand     customizedBrand
+
+#TODO: API WifiChannelInfo
+string  name
+string  name80211n
+long    value
+
+#TODO: API WifiConfig
+kerio::web::KId     country
+    Country code in ISO_3166-1_alpha-2.
+WifiBandType    band
+boolean     band80211n
+long    channel
+WifiSsidConfigList  ssids
+
+#TODO: API WifiCountryConfig
+kerio::web::KId     country
+    Country code in ISO_3166-1_alpha-2.
+WifiModeChannelList     channels
+
+#TODO: API WifiModeChannelConfig
+WifiBandType    band
+WifiChannelList     channels
+
+#TODO: API WifiSsidConfig
+kerio::web::KId     id
+boolean     enabled
+PortAssignmentType  assignment
+    PortAssignmentSwitch or PortAssignmentStandalone.
+string  ssid
+InterfaceGroupType  group
+WifiEncryptionType  encryption
+string  wpaPassword
+    valid only for WifiEncryptionWpaPsk and WifiEncryptionWpa2Psk
+
+#TODO: API WwwFilter
+boolean     javaApplet
+boolean     embedObject
+boolean     script
+boolean     popup
+boolean     referer
+
+#TODO: API ZeroConfigItem
+ZeroConfigItemType  type
+IdReference     item
+
+#TODO: API ZeroConfigNetwork
+boolean     enabled
+ZeroConfigList  items
