@@ -18,7 +18,8 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
-from .ClientTimestampList import ClientTimestampList
+from ..json_serializable import JSONSerializable
+
+
+class ClientTimestampList(list, JSONSerializable):
+    pass
