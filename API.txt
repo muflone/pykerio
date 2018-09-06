@@ -1118,7 +1118,7 @@ StringList  positionalParameters
 long    plurality
     count of items, used to distinguish among singular/paucal/plural; 1 for messages with no counted items
 
-#TODO: API LocalizableMessageParameters
+#DONE: API LocalizableMessageParameters
 StringList  positionalParameters
     additional strings to replace the placeholders in message (first string replaces %1 etc.)
 long    plurality
