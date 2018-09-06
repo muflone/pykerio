@@ -18,6 +18,19 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
+from ..json_serializable import JSONSerializable
+
+
+class LoginType(JSONSerializable):
+    def __init__(self, name):
+        self.name = name
+        self.value = {'LoginRegular': 0,
+                      'LoginAutomatic': 1,
+                      'LoginReactivation': 2
+                     }.get(name)
+
+    def dump(self):
+        """JSON serializable representation"""
+        return {'name': self.name,
+                'value': self.value
+               }
