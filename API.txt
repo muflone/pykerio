@@ -175,7 +175,7 @@ string  selectedExternalId
 InternalAntivirus   internal
     integrated engine settings
 
-#TODO: API ApiApplication
+#DONE: API ApiApplication
 string  name
 string  vendor
 string  version
@@ -186,7 +186,7 @@ string  message
 long    code
     -32767..-1 (JSON-RPC) or 1..32767 (application)
 LocalizableMessageParameters    messageParameters
-    strings to replace placeholders in message, and message plurality. More
+    strings to replace placeholders in message, and message plurality.
 
 #TODO: API Authentication
 void    get (out AuthenticationConfig config)

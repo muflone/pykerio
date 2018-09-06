@@ -18,5 +18,21 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
+from ..json_serializable import JSONSerializable
+
 from .LocalizableMessageParameters import LocalizableMessageParameters
+
+
+class ApiException(JSONSerializable):
+    def __init__(self, data: dict):
+        self.message = data['message']
+        self.code = data['code']
+        self.messageParameters = LocalizableMessageParameters(
+            data['data']['messageParameters'])
+
+    def dump(self):
+        """JSON serializable representation"""
+        return {'message': self.message,
+                'code': self.code,
+                'messageParameters': self.messageParameters
+               }
