@@ -18,6 +18,23 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .version import version
 from .json_serializable import JSONSerializable
-from .rpc_response import RPCResponse
+
+from .shared.ApiException import ApiException
+
+
+class RPCResponse(JSONSerializable):
+    def __init__(self, data: dict):
+        self.jsonrpc = data['jsonrpc']
+        self.id = data['id']
+        self.error = (ApiException(data.get('error'))
+                      if 'error' in data else None)
+        self.result = data.get('result')
+
+    def dump(self):
+        """JSON serializable representation"""
+        return {'jsonrpc': self.jsonrpc,
+                'id': self.id,
+                'error': self.error,
+                'result': self.result
+               }
