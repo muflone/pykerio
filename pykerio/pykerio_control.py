@@ -19,7 +19,8 @@
 ##
 
 from .pykerio import PyKerio
-from .pykerio_control import PyKerioControl
-from .version import version
-from .json_serializable import JSONSerializable
-from .rpc_response import RPCResponse
+
+
+class PyKerioControl(PyKerio):
+    def __init__(self, server: str, port: int):
+        PyKerio.__init__(self, server, port)
