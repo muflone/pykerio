@@ -180,7 +180,7 @@ string  name
 string  vendor
 string  version
 
-#TODO: API ApiException
+#DONE: API ApiException
 string  message
     text with placeholders %1, %2
 long    code
