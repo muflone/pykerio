@@ -1577,7 +1577,7 @@ ZeroConfigNetwork   zeroConfigNetwork
 void    getOs (out ServerOs os)
 void    getRestrictionList (out RestrictionList restrictions)
 
-#TODO: API Session
+#DONE: API Session
 void    getCsrfToken (out string token)
 void    getUserName (out string name)
 void    login (out string token, in string userName, in string password, in ApiApplication application)
