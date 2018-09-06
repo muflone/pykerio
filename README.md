@@ -14,4 +14,4 @@ PyKerio
 System Requirements
 -------------------
 
-* Python 2.x or 3.x
+* Python 3.x
