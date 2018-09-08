@@ -19,7 +19,7 @@
 ##
 
 from ..json_serializable import JSONSerializable
-from . import StringList
+from .StringList import StringList
 
 class LocalizableMessageParameters(JSONSerializable):
     """
