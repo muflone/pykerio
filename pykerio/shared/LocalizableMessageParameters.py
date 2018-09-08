@@ -21,6 +21,7 @@
 from ..json_serializable import JSONSerializable
 from .StringList import StringList
 
+
 class LocalizableMessageParameters(JSONSerializable):
     """
     Message can contain replacement marks:
