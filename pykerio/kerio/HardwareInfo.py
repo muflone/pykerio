@@ -18,6 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiApplication import ApiApplication
-from .Session import Session
-from .HardwareInfo import HardwareInfo
+from ..pykerio import PyKerio
+
+
+class HardwareInfo(object):
+    def __init__(self, api: PyKerio):
+        self.api = api
+
+    def getBoxSerialNumber(self):
+        """
+        return information about serialnumber of hardware box
+        """
+        response = self.api.request_rpc(
+            method='HardwareInfo.getBoxSerialNumber',
+            params={})
+        return response.result['serialNumber']

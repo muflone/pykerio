@@ -766,7 +766,7 @@ kerio::web::KIdList     blockedCountries
 kerio::web::OptionalString  password
 string  message
 
-#TODO: API HardwareInfo
+#DONE: API HardwareInfo
 boolean     getBoxSerialNumber (out string serialNumber)
 
 #TODO: API HighlightItem
