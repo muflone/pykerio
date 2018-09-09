@@ -18,7 +18,7 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .version import VERSION
+from .constants import *
 from .pykerio import PyKerio
 from .pykerio_control import PyKerioControl
 from .json_serializable import JSONSerializable
