@@ -1,6 +1,8 @@
 PyKerio
 -------
 
+[![PyPI version](https://badge.fury.io/py/PyKerio.svg)](https://badge.fury.io/py/PyKerio)
+
 **Description:** API for Kerio products
 
 **Copyright:** 2018 Fabio Castelli (Muflone) <muflone(at)vbsimple.net>
