@@ -1,7 +1,7 @@
 ##
 #     Project: PyKerio
 # Description: API for Kerio products
-#      Author: Fabio Castelli (Muflone) <muflone@vbsimple.net>
+#      Author: Fabio Castelli (Muflone) <muflone@muflone.com>
 #   Copyright: 2018 Fabio Castelli
 #     License: GPL-2+
 #  This program is free software; you can redistribute it and/or modify it
