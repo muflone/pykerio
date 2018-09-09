@@ -1,1 +1,7 @@
+# Ignore Python compiled files
 *.pyc
+__pycache__/
+
+# Ignore build and dist folders for PyPI
+/build/
+/dist/
