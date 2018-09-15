@@ -1,6 +1,7 @@
 PyKerio
 -------
 
+[![Build Status](https://travis-ci.org/muflone/pykerio.svg?branch=master)](https://travis-ci.org/muflone/pykerio)
 [![PyPI version](https://badge.fury.io/py/PyKerio.svg)](https://badge.fury.io/py/PyKerio)
 [![Coverage Status](https://coveralls.io/repos/github/muflone/pykerio/badge.svg?branch=master)](https://coveralls.io/github/muflone/pykerio?branch=master)
 
