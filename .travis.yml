@@ -7,6 +7,4 @@ python:
 install: "pip install -r requirements.txt"
 script:
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage
-  - exit 0
-after_success:
   - coveralls
