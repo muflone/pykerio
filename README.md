@@ -9,7 +9,7 @@ PyKerio
 
 **Description:** API for Kerio products
 
-**Copyright:** 2018 Fabio Castelli (Muflone) <muflone(at)vbsimple.net>
+**Copyright:** 2018 Fabio Castelli (Muflone) <muflone@muflone.com>
 
 **License:** GPL-2+
 
