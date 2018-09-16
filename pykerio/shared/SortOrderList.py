@@ -18,11 +18,8 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .ClientTimestampList import ClientTimestampList
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .SortOrder import SortOrder
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+from ..json_serializable import JSONSerializable
+
+
+class SortOrderList(list):
+    pass
