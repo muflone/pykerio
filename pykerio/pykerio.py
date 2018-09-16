@@ -39,7 +39,6 @@ class PyKerio(object):
             urllib.request.HTTPCookieProcessor(cookies))
         urllib.request.install_opener(opener)
 
-
     def request(self, method: str, params: dict):
         """
         Remotely calls given method with given params.

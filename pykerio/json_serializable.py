@@ -20,6 +20,7 @@
 
 import json
 
+
 class JSONSerializable(json.JSONEncoder):
     """
     Implement common JSON methods for load from a string and dump data to a
@@ -29,7 +30,7 @@ class JSONSerializable(json.JSONEncoder):
         """
         Dump the object to a JSON string
         """
-        return json.dumps(self)
+        return json.dumps(self.dump())
 
     def loads(self, data: str):
         """

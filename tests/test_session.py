@@ -22,6 +22,7 @@ import os
 import ssl
 import unittest
 
+import pykerio.constants
 import pykerio
 import pykerio.kerio
 
@@ -46,9 +47,10 @@ class TestCase_Session(unittest.TestCase):
         Test Session login
         """
         password = os.environ.get('KERIO_PASSWORD', '')
-        application = pykerio.kerio.ApiApplication(name=pykerio.APP_NAME,
-                                                   vendor=pykerio.APP_AUTHOR,
-                                                   version=pykerio.APP_VERSION)
+        application = pykerio.kerio.ApiApplication(
+            name=pykerio.constants.APP_NAME,
+            vendor=pykerio.constants.APP_AUTHOR,
+            version=pykerio.constants.APP_VERSION)
         self.__class__.session.login(userName=self.username,
                                      password=password,
                                      application=application)
