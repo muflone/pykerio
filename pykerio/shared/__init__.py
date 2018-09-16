@@ -19,7 +19,7 @@
 ##
 
 from .ApiException import ApiException
+from .ClientTimestampList import ClientTimestampList
 from .LocalizableMessageParameters import LocalizableMessageParameters
 from .LoginType import LoginType
 from .StringList import StringList
-from .ClientTimestampList import ClientTimestampList
