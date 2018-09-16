@@ -18,10 +18,23 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .ClientTimestampList import ClientTimestampList
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
+from ..json_serializable import JSONSerializable
+
 from .SortDirection import SortDirection
-from .SortOrder import SortOrder
-from .StringList import StringList
+
+
+class SortOrder(JSONSerializable):
+    def __init__(self,
+                 columnName: str,
+                 direction: SortDirection,
+                 caseSensitive: bool):
+        self.columnName = columnName
+        self.direction = direction
+        self.caseSensitive = caseSensitive
+
+    def dump(self):
+        """JSON serializable representation"""
+        return {'columnName': self.columnName,
+                'direction': self.direction.dump(),
+                'caseSensitive': self.caseSensitive
+               }

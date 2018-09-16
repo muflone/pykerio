@@ -18,10 +18,22 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .ClientTimestampList import ClientTimestampList
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .SortOrder import SortOrder
-from .StringList import StringList
+import unittest
+
+import pykerio.shared
+
+
+class TestCase_SortOrder(unittest.TestCase):
+    def test_01_SortOrder(self):
+        """
+        Test SortOrder
+        """
+        sort_direction = pykerio.shared.SortDirection(value='Asc')
+        sort_order = pykerio.shared.SortOrder(columnName='foo',
+                                              direction=sort_direction,
+                                              caseSensitive=False)
+        self.assertEquals(sort_order.dump(), {
+                            'columnName': 'foo',
+                            'direction': 'Asc',
+                            'caseSensitive': False
+                          })
