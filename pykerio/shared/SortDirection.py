@@ -18,9 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .ClientTimestampList import ClientTimestampList
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .StringList import StringList
+from ..json_serializable import JSONSerializable
+
+
+class SortDirection(JSONSerializable):
+    VALUES = {'Asc': 0,
+              'Desc': 1,
+             }
+
+    def __init__(self, value):
+        assert(value in self.VALUES)
+        self.value = value
+
+    def dump(self):
+        """JSON serializable representation"""
+        return self.value
