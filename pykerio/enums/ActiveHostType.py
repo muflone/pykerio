@@ -18,8 +18,12 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .CompareOperator import CompareOperator
-from .LoginType import LoginType
-from .SortDirection import SortDirection
+from . import BaseEnumeration
+
+
+class ActiveHostType(BaseEnumeration):
+    VALUES = {'ActiveHostFirevall': 0,
+              'ActiveHostVpnClient': 1,
+              'ActiveHostHost': 2,
+              'ActiveHostGuest': 3
+             }
