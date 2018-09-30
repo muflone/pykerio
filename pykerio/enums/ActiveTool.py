@@ -26,5 +26,5 @@ class ActiveTool(BaseEnumeration):
               'ActiveToolPing': 1,
               'ActiveToolTraceRoute': 2,
               'ActiveToolDns': 3,
-              'ActiveToolWhois ': 4
+              'ActiveToolWhois': 4
              }

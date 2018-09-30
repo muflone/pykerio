@@ -22,8 +22,8 @@ import os
 import ssl
 import unittest
 
-import pykerio.constants
 import pykerio
+import pykerio.constants
 import pykerio.kerio
 
 
