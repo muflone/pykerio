@@ -18,11 +18,19 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .CompareOperator import CompareOperator
-from .DnsTool import DnsTool
-from .DnsType import DnsType
-from .LoginType import LoginType
-from .SortDirection import SortDirection
+from . import BaseEnumeration
+
+
+class DnsType(BaseEnumeration):
+    VALUES = {'DnsTypeAny': 0,
+              'DnsTypeA': 1,
+              'DnsTypeAAAA': 2,
+              'DnsTypeCname': 3,
+              'DnsTypeMx': 4,
+              'DnsTypeNs': 5,
+              'DnsTypePtr': 6,
+              'DnsTypeSoa': 7,
+              'DnsTypeSpf': 8,
+              'DnsTypeSrv': 9,
+              'DnsTypeTxt': 10
+             }
