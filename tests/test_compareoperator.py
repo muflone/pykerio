@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.shared
+import pykerio.enums
 
 
 class TestCase_CompareOperator(unittest.TestCase):
@@ -28,7 +28,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with Eq
         """
-        compare_operator = pykerio.shared.CompareOperator(value='Eq')
+        compare_operator = pykerio.enums.CompareOperator(value='Eq')
         self.assertEquals(compare_operator.value, 'Eq')
         self.assertEquals(compare_operator.dump(), 'Eq')
 
@@ -36,7 +36,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with NotEq
         """
-        compare_operator = pykerio.shared.CompareOperator(value='NotEq')
+        compare_operator = pykerio.enums.CompareOperator(value='NotEq')
         self.assertEquals(compare_operator.value, 'NotEq')
         self.assertEquals(compare_operator.dump(), 'NotEq')
 
@@ -44,7 +44,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with LessThan
         """
-        compare_operator = pykerio.shared.CompareOperator(value='LessThan')
+        compare_operator = pykerio.enums.CompareOperator(value='LessThan')
         self.assertEquals(compare_operator.value, 'LessThan')
         self.assertEquals(compare_operator.dump(), 'LessThan')
 
@@ -52,7 +52,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with GreaterThan
         """
-        compare_operator = pykerio.shared.CompareOperator(value='GreaterThan')
+        compare_operator = pykerio.enums.CompareOperator(value='GreaterThan')
         self.assertEquals(compare_operator.value, 'GreaterThan')
         self.assertEquals(compare_operator.dump(), 'GreaterThan')
 
@@ -60,7 +60,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with LessEq
         """
-        compare_operator = pykerio.shared.CompareOperator(value='LessEq')
+        compare_operator = pykerio.enums.CompareOperator(value='LessEq')
         self.assertEquals(compare_operator.value, 'LessEq')
         self.assertEquals(compare_operator.dump(), 'LessEq')
 
@@ -68,7 +68,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with GreaterEq
         """
-        compare_operator = pykerio.shared.CompareOperator(value='GreaterEq')
+        compare_operator = pykerio.enums.CompareOperator(value='GreaterEq')
         self.assertEquals(compare_operator.value, 'GreaterEq')
         self.assertEquals(compare_operator.dump(), 'GreaterEq')
 
@@ -76,7 +76,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with Like
         """
-        compare_operator = pykerio.shared.CompareOperator(value='Like')
+        compare_operator = pykerio.enums.CompareOperator(value='Like')
         self.assertEquals(compare_operator.value, 'Like')
         self.assertEquals(compare_operator.dump(), 'Like')
 
@@ -85,6 +85,6 @@ class TestCase_CompareOperator(unittest.TestCase):
         """
         Test CompareOperator with FAIL
         """
-        compare_operator = pykerio.shared.CompareOperator(value='FAIL')
+        compare_operator = pykerio.enums.CompareOperator(value='FAIL')
         self.assertEquals(compare_operator.value, 'FAIL')
         self.assertEquals(compare_operator.dump(), 'FAIL')

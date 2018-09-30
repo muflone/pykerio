@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.shared
+import pykerio.enums
 
 
 class TestCase_SortDirection(unittest.TestCase):
@@ -28,7 +28,7 @@ class TestCase_SortDirection(unittest.TestCase):
         """
         Test SortDirection with Asc
         """
-        sort_direction = pykerio.shared.SortDirection(value='Asc')
+        sort_direction = pykerio.enums.SortDirection(value='Asc')
         self.assertEquals(sort_direction.value, 'Asc')
         self.assertEquals(sort_direction.dump(), 'Asc')
 
@@ -36,7 +36,7 @@ class TestCase_SortDirection(unittest.TestCase):
         """
         Test SortDirection with Desc
         """
-        sort_direction = pykerio.shared.SortDirection(value='Desc')
+        sort_direction = pykerio.enums.SortDirection(value='Desc')
         self.assertEquals(sort_direction.value, 'Desc')
         self.assertEquals(sort_direction.dump(), 'Desc')
 
@@ -45,6 +45,6 @@ class TestCase_SortDirection(unittest.TestCase):
         """
         Test SortDirection with FAIL
         """
-        sort_direction = pykerio.shared.SortDirection(value='FAIL')
+        sort_direction = pykerio.enums.SortDirection(value='FAIL')
         self.assertEquals(sort_direction.value, 'FAIL')
         self.assertEquals(sort_direction.dump(), 'FAIL')

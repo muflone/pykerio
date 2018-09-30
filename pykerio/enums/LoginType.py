@@ -18,18 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseEnumeration
 
 
-class SortDirection(JSONSerializable):
-    VALUES = {'Asc': 0,
-              'Desc': 1,
+class LoginType(BaseEnumeration):
+    VALUES = {'LoginRegular': 0,
+              'LoginAutomatic': 1,
+              'LoginReactivation': 2
              }
-
-    def __init__(self, value):
-        assert(value in self.VALUES)
-        self.value = value
-
-    def dump(self):
-        """JSON serializable representation"""
-        return self.value

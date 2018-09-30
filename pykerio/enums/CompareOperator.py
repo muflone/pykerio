@@ -18,23 +18,15 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
-
-from ..enums.SortDirection import SortDirection
+from . import BaseEnumeration
 
 
-class SortOrder(JSONSerializable):
-    def __init__(self,
-                 columnName: str,
-                 direction: SortDirection,
-                 caseSensitive: bool):
-        self.columnName = columnName
-        self.direction = direction
-        self.caseSensitive = caseSensitive
-
-    def dump(self):
-        """JSON serializable representation"""
-        return {'columnName': self.columnName,
-                'direction': self.direction.dump(),
-                'caseSensitive': self.caseSensitive
-               }
+class CompareOperator(BaseEnumeration):
+    VALUES = {'Eq': 0,
+              'NotEq': 1,
+              'LessThan': 2,
+              'GreaterThan': 3,
+              'LessEq': 4,
+              'GreaterEq': 5,
+              'Like': 6
+             }

@@ -79,4 +79,4 @@ class TestCase_Session(unittest.TestCase):
         """
         Test Session login type
         """
-        self.assertEquals(self.session.getLoginType().name, 'LoginRegular')
+        self.assertEquals(self.session.getLoginType().dump(), 'LoginRegular')

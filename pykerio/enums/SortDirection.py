@@ -18,23 +18,10 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseEnumeration
 
 
-class CompareOperator(JSONSerializable):
-    VALUES = {'Eq': 0,
-              'NotEq': 1,
-              'LessThan': 2,
-              'GreaterThan': 3,
-              'LessEq': 4,
-              'GreaterEq': 5,
-              'Like': 6,
+class SortDirection(BaseEnumeration):
+    VALUES = {'Asc': 0,
+              'Desc': 1
              }
-
-    def __init__(self, value):
-        assert(value in self.VALUES)
-        self.value = value
-
-    def dump(self):
-        """JSON serializable representation"""
-        return self.value

@@ -19,11 +19,8 @@
 ##
 
 from .ApiException import ApiException
-from .CompareOperator import CompareOperator
 from .ClientTimestampList import ClientTimestampList
 from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
-from .SortDirection import SortDirection
 from .SortOrder import SortOrder
 from .SortOrderList import SortOrderList
 from .StringList import StringList

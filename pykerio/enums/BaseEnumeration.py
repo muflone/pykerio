@@ -20,21 +20,14 @@
 
 from ..json_serializable import JSONSerializable
 
-from ..enums.SortDirection import SortDirection
 
+class BaseEnumeration(JSONSerializable):
+    VALUES = {}
 
-class SortOrder(JSONSerializable):
-    def __init__(self,
-                 columnName: str,
-                 direction: SortDirection,
-                 caseSensitive: bool):
-        self.columnName = columnName
-        self.direction = direction
-        self.caseSensitive = caseSensitive
+    def __init__(self, value):
+        assert(value in self.VALUES)
+        self.value = value
 
     def dump(self):
         """JSON serializable representation"""
-        return {'columnName': self.columnName,
-                'direction': self.direction.dump(),
-                'caseSensitive': self.caseSensitive
-               }
+        return self.value

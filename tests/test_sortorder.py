@@ -20,6 +20,7 @@
 
 import unittest
 
+import pykerio.enums
 import pykerio.shared
 
 
@@ -28,7 +29,7 @@ class TestCase_SortOrder(unittest.TestCase):
         """
         Test SortOrder
         """
-        sort_direction = pykerio.shared.SortDirection(value='Asc')
+        sort_direction = pykerio.enums.SortDirection(value='Asc')
         sort_order = pykerio.shared.SortOrder(columnName='foo',
                                               direction=sort_direction,
                                               caseSensitive=False)
