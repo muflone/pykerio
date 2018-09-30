@@ -28,32 +28,32 @@ class TestCase_LoginType(unittest.TestCase):
         """
         Test LoginType with LoginRegular
         """
-        login_type = pykerio.enums.LoginType(value='LoginRegular')
-        self.assertEquals(login_type.value, 'LoginRegular')
-        self.assertEquals(login_type.dump(), 'LoginRegular')
+        value = pykerio.enums.LoginType(value='LoginRegular')
+        self.assertEquals(value.value, 'LoginRegular')
+        self.assertEquals(value.dump(), 'LoginRegular')
 
     def test_02_LoginType_LoginAutomatic(self):
         """
         Test LoginType with LoginAutomatic
         """
-        login_type = pykerio.enums.LoginType(value='LoginAutomatic')
-        self.assertEquals(login_type.value, 'LoginAutomatic')
-        self.assertEquals(login_type.dump(), 'LoginAutomatic')
+        value = pykerio.enums.LoginType(value='LoginAutomatic')
+        self.assertEquals(value.value, 'LoginAutomatic')
+        self.assertEquals(value.dump(), 'LoginAutomatic')
 
 
     def test_03_LoginType_LoginReactivation(self):
         """
         Test LoginType with LoginReactivation
         """
-        login_type = pykerio.enums.LoginType(value='LoginReactivation')
-        self.assertEquals(login_type.value, 'LoginReactivation')
-        self.assertEquals(login_type.dump(), 'LoginReactivation')
+        value = pykerio.enums.LoginType(value='LoginReactivation')
+        self.assertEquals(value.value, 'LoginReactivation')
+        self.assertEquals(value.dump(), 'LoginReactivation')
 
     @unittest.expectedFailure
     def test_99_LoginType_FAIL(self):
         """
         Test LoginType with FAIL
         """
-        login_type = pykerio.enums.LoginType(value='FAIL')
-        self.assertEquals(login_type.value, 'FAIL')
-        self.assertEquals(login_type.dump(), 'FAIL')
+        value = pykerio.enums.LoginType(value='FAIL')
+        self.assertEquals(value.value, 'FAIL')
+        self.assertEquals(value.dump(), 'FAIL')
