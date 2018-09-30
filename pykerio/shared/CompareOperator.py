@@ -18,12 +18,23 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .CompareOperator import CompareOperator
-from .ClientTimestampList import ClientTimestampList
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .SortOrder import SortOrder
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+from ..json_serializable import JSONSerializable
+
+
+class CompareOperator(JSONSerializable):
+    VALUES = {'Eq': 0,
+              'NotEq': 1,
+              'LessThan': 2,
+              'GreaterThan': 3,
+              'LessEq': 4,
+              'GreaterEq': 5,
+              'Like': 6,
+             }
+
+    def __init__(self, value):
+        assert(value in self.VALUES)
+        self.value = value
+
+    def dump(self):
+        """JSON serializable representation"""
+        return self.value
