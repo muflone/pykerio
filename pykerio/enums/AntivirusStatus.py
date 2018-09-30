@@ -18,18 +18,14 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .ActivityType import ActivityType
-from .AlertEventRuleType import AlertEventRuleType
-from .AntivirusStatus import AntivirusStatus
-from .AuthMethodType import AuthMethodType
-from .CompareOperator import CompareOperator
-from .ConnectionDirection import ConnectionDirection
-from .DnsTool import DnsTool
-from .DnsType import DnsType
-from .IpVersion import IpVersion
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .UserFormatType import UserFormatType
+from . import BaseEnumeration
+
+
+class AntivirusStatus(BaseEnumeration):
+    VALUES = {'AntivirusOk': 0,
+              'AntivirusNotActive': 1,
+              'AntivirusInternalFailed': 2,
+              'AntivirusExternalFailed': 3,
+              'AntivirusBothFailed': 4,
+              'AntivirusWaitingForInitialDb': 5
+             }
