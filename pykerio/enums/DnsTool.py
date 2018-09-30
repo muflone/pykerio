@@ -18,10 +18,10 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .CompareOperator import CompareOperator
-from .DnsTool import DnsTool
-from .LoginType import LoginType
-from .SortDirection import SortDirection
+from . import BaseEnumeration
+
+
+class DnsTool(BaseEnumeration):
+    VALUES = {'DnsToolNslookup': 0,
+              'DnsToolDig': 1
+             }
