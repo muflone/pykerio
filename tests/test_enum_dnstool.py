@@ -24,27 +24,30 @@ import pykerio.enums
 
 
 class TestCase_DnsTool(unittest.TestCase):
-    def test_01_DnsTool_DnsToolNslookup(self):
+    def test_00_DnsTool_DnsToolNslookup(self):
         """
         Test DnsTool with DnsToolNslookup
         """
-        value = pykerio.enums.DnsTool(value='DnsToolNslookup')
-        self.assertEquals(value.value, 'DnsToolNslookup')
+        value = pykerio.enums.DnsTool(name='DnsToolNslookup')
         self.assertEquals(value.dump(), 'DnsToolNslookup')
+        self.assertEquals(value.get_name(), 'DnsToolNslookup')
+        self.assertEquals(value.get_value(), 0)
 
-    def test_02_DnsTool_DnsToolDig(self):
+    def test_01_DnsTool_DnsToolDig(self):
         """
         Test DnsTool with DnsToolDig
         """
-        value = pykerio.enums.DnsTool(value='DnsToolDig')
-        self.assertEquals(value.value, 'DnsToolDig')
+        value = pykerio.enums.DnsTool(name='DnsToolDig')
         self.assertEquals(value.dump(), 'DnsToolDig')
+        self.assertEquals(value.get_name(), 'DnsToolDig')
+        self.assertEquals(value.get_value(), 1)
 
     @unittest.expectedFailure
     def test_99_DnsTool_FAIL(self):
         """
         Test DnsTool with FAIL
         """
-        value = pykerio.enums.DnsTool(value='FAIL')
-        self.assertEquals(value.value, 'FAIL')
+        value = pykerio.enums.DnsTool(name='FAIL')
         self.assertEquals(value.dump(), 'FAIL')
+        self.assertEquals(value.get_name(), 'FAIL')
+        self.assertEquals(value.get_value(), 99)

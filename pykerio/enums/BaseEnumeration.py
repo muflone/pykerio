@@ -24,10 +24,18 @@ from ..json_serializable import JSONSerializable
 class BaseEnumeration(JSONSerializable):
     VALUES = {}
 
-    def __init__(self, value):
-        assert(value in self.VALUES)
-        self.value = value
+    def __init__(self, name):
+        assert(name in self.VALUES)
+        self._name = name
 
     def dump(self):
         """JSON serializable representation"""
-        return self.value
+        return self.get_name()
+
+    def get_name(self):
+        """Return the enumeration name"""
+        return self._name
+
+    def get_value(self):
+        """Return the enumeration value"""
+        return self.VALUES[self._name]

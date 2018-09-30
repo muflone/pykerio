@@ -24,67 +24,75 @@ import pykerio.enums
 
 
 class TestCase_CompareOperator(unittest.TestCase):
-    def test_01_CompareOperator_Eq(self):
+    def test_00_CompareOperator_Eq(self):
         """
         Test CompareOperator with Eq
         """
-        value = pykerio.enums.CompareOperator(value='Eq')
-        self.assertEquals(value.value, 'Eq')
+        value = pykerio.enums.CompareOperator(name='Eq')
         self.assertEquals(value.dump(), 'Eq')
+        self.assertEquals(value.get_name(), 'Eq')
+        self.assertEquals(value.get_value(), 0)
 
-    def test_02_CompareOperator_NotEq(self):
+    def test_01_CompareOperator_NotEq(self):
         """
         Test CompareOperator with NotEq
         """
-        value = pykerio.enums.CompareOperator(value='NotEq')
-        self.assertEquals(value.value, 'NotEq')
+        value = pykerio.enums.CompareOperator(name='NotEq')
         self.assertEquals(value.dump(), 'NotEq')
+        self.assertEquals(value.get_name(), 'NotEq')
+        self.assertEquals(value.get_value(), 1)
 
-    def test_03_CompareOperator_LessThan(self):
+    def test_02_CompareOperator_LessThan(self):
         """
         Test CompareOperator with LessThan
         """
-        value = pykerio.enums.CompareOperator(value='LessThan')
-        self.assertEquals(value.value, 'LessThan')
+        value = pykerio.enums.CompareOperator(name='LessThan')
         self.assertEquals(value.dump(), 'LessThan')
+        self.assertEquals(value.get_name(), 'LessThan')
+        self.assertEquals(value.get_value(), 2)
 
-    def test_04_CompareOperator_GreaterThan(self):
+    def test_03_CompareOperator_GreaterThan(self):
         """
         Test CompareOperator with GreaterThan
         """
-        value = pykerio.enums.CompareOperator(value='GreaterThan')
-        self.assertEquals(value.value, 'GreaterThan')
+        value = pykerio.enums.CompareOperator(name='GreaterThan')
         self.assertEquals(value.dump(), 'GreaterThan')
+        self.assertEquals(value.get_name(), 'GreaterThan')
+        self.assertEquals(value.get_value(), 3)
 
-    def test_05_CompareOperator_LessEq(self):
+    def test_04_CompareOperator_LessEq(self):
         """
         Test CompareOperator with LessEq
         """
-        value = pykerio.enums.CompareOperator(value='LessEq')
-        self.assertEquals(value.value, 'LessEq')
+        value = pykerio.enums.CompareOperator(name='LessEq')
         self.assertEquals(value.dump(), 'LessEq')
+        self.assertEquals(value.get_name(), 'LessEq')
+        self.assertEquals(value.get_value(), 4)
 
-    def test_06_CompareOperator_GreaterEq(self):
+    def test_05_CompareOperator_GreaterEq(self):
         """
         Test CompareOperator with GreaterEq
         """
-        value = pykerio.enums.CompareOperator(value='GreaterEq')
-        self.assertEquals(value.value, 'GreaterEq')
+        value = pykerio.enums.CompareOperator(name='GreaterEq')
         self.assertEquals(value.dump(), 'GreaterEq')
+        self.assertEquals(value.get_name(), 'GreaterEq')
+        self.assertEquals(value.get_value(), 5)
 
-    def test_07_CompareOperator_Like(self):
+    def test_06_CompareOperator_Like(self):
         """
         Test CompareOperator with Like
         """
-        value = pykerio.enums.CompareOperator(value='Like')
-        self.assertEquals(value.value, 'Like')
+        value = pykerio.enums.CompareOperator(name='Like')
         self.assertEquals(value.dump(), 'Like')
+        self.assertEquals(value.get_name(), 'Like')
+        self.assertEquals(value.get_value(), 6)
 
     @unittest.expectedFailure
     def test_99_CompareOperator_FAIL(self):
         """
         Test CompareOperator with FAIL
         """
-        value = pykerio.enums.CompareOperator(value='FAIL')
-        self.assertEquals(value.value, 'FAIL')
+        value = pykerio.enums.CompareOperator(name='FAIL')
         self.assertEquals(value.dump(), 'FAIL')
+        self.assertEquals(value.get_name(), 'FAIL')
+        self.assertEquals(value.get_value(), 99)

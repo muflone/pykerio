@@ -24,44 +24,48 @@ import pykerio.enums
 
 
 class TestCase_ActiveHostType(unittest.TestCase):
-    def test_01_ActiveHostType_ActiveHostFirevall(self):
+    def test_00_ActiveHostType_ActiveHostFirevall(self):
         """
         Test ActiveHostType with ActiveHostFirevall
         """
-        value = pykerio.enums.ActiveHostType(value='ActiveHostFirevall')
-        self.assertEquals(value.value, 'ActiveHostFirevall')
+        value = pykerio.enums.ActiveHostType(name='ActiveHostFirevall')
         self.assertEquals(value.dump(), 'ActiveHostFirevall')
+        self.assertEquals(value.get_name(), 'ActiveHostFirevall')
+        self.assertEquals(value.get_value(), 0)
 
-    def test_02_ActiveHostType_ActiveHostVpnClient(self):
+    def test_01_ActiveHostType_ActiveHostVpnClient(self):
         """
         Test ActiveHostType with ActiveHostVpnClient
         """
-        value = pykerio.enums.ActiveHostType(value='ActiveHostVpnClient')
-        self.assertEquals(value.value, 'ActiveHostVpnClient')
+        value = pykerio.enums.ActiveHostType(name='ActiveHostVpnClient')
         self.assertEquals(value.dump(), 'ActiveHostVpnClient')
+        self.assertEquals(value.get_name(), 'ActiveHostVpnClient')
+        self.assertEquals(value.get_value(), 1)
 
-
-    def test_03_ActiveHostType_ActiveHostHost(self):
+    def test_02_ActiveHostType_ActiveHostHost(self):
         """
         Test ActiveHostType with ActiveHostHost
         """
-        value = pykerio.enums.ActiveHostType(value='ActiveHostHost')
-        self.assertEquals(value.value, 'ActiveHostHost')
+        value = pykerio.enums.ActiveHostType(name='ActiveHostHost')
         self.assertEquals(value.dump(), 'ActiveHostHost')
+        self.assertEquals(value.get_name(), 'ActiveHostHost')
+        self.assertEquals(value.get_value(), 2)
 
-    def test_04_ActiveHostType_ActiveHostGuest(self):
+    def test_03_ActiveHostType_ActiveHostGuest(self):
         """
         Test ActiveHostType with ActiveHostGuest
         """
-        value = pykerio.enums.ActiveHostType(value='ActiveHostGuest')
-        self.assertEquals(value.value, 'ActiveHostGuest')
+        value = pykerio.enums.ActiveHostType(name='ActiveHostGuest')
         self.assertEquals(value.dump(), 'ActiveHostGuest')
+        self.assertEquals(value.get_name(), 'ActiveHostGuest')
+        self.assertEquals(value.get_value(), 3)
 
     @unittest.expectedFailure
     def test_99_ActiveHostType_FAIL(self):
         """
         Test ActiveHostType with FAIL
         """
-        value = pykerio.enums.ActiveHostType(value='FAIL')
-        self.assertEquals(value.value, 'FAIL')
+        value = pykerio.enums.ActiveHostType(name='FAIL')
         self.assertEquals(value.dump(), 'FAIL')
+        self.assertEquals(value.get_name(), 'FAIL')
+        self.assertEquals(value.get_value(), 99)

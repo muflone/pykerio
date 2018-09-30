@@ -24,91 +24,102 @@ import pykerio.enums
 
 
 class TestCase_AuthMethodType(unittest.TestCase):
-    def test_01_AuthMethodType_AuthMethodWeb(self):
+    def test_00_AuthMethodType_AuthMethodWeb(self):
         """
         Test AuthMethodType with AuthMethodWeb
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodWeb')
-        self.assertEquals(value.value, 'AuthMethodWeb')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodWeb')
         self.assertEquals(value.dump(), 'AuthMethodWeb')
+        self.assertEquals(value.get_name(), 'AuthMethodWeb')
+        self.assertEquals(value.get_value(), 0)
 
-    def test_02_AuthMethodType_AuthMethodSslWeb(self):
+    def test_01_AuthMethodType_AuthMethodSslWeb(self):
         """
         Test AuthMethodType with AuthMethodSslWeb
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodSslWeb')
-        self.assertEquals(value.value, 'AuthMethodSslWeb')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodSslWeb')
         self.assertEquals(value.dump(), 'AuthMethodSslWeb')
+        self.assertEquals(value.get_name(), 'AuthMethodSslWeb')
+        self.assertEquals(value.get_value(), 1)
 
-    def test_03_AuthMethodType_AuthMethodNtlm(self):
+    def test_02_AuthMethodType_AuthMethodNtlm(self):
         """
         Test AuthMethodType with AuthMethodNtlm
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodNtlm')
-        self.assertEquals(value.value, 'AuthMethodNtlm')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodNtlm')
         self.assertEquals(value.dump(), 'AuthMethodNtlm')
+        self.assertEquals(value.get_name(), 'AuthMethodNtlm')
+        self.assertEquals(value.get_value(), 2)
 
-    def test_04_AuthMethodType_AuthMethodProxy(self):
+    def test_03_AuthMethodType_AuthMethodProxy(self):
         """
         Test AuthMethodType with AuthMethodProxy
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodProxy')
-        self.assertEquals(value.value, 'AuthMethodProxy')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodProxy')
         self.assertEquals(value.dump(), 'AuthMethodProxy')
+        self.assertEquals(value.get_name(), 'AuthMethodProxy')
+        self.assertEquals(value.get_value(), 3)
 
-    def test_05_AuthMethodType_AuthMethodAutomatic(self):
+    def test_04_AuthMethodType_AuthMethodAutomatic(self):
         """
         Test AuthMethodType with AuthMethodAutomatic
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodAutomatic')
-        self.assertEquals(value.value, 'AuthMethodAutomatic')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodAutomatic')
         self.assertEquals(value.dump(), 'AuthMethodAutomatic')
+        self.assertEquals(value.get_name(), 'AuthMethodAutomatic')
+        self.assertEquals(value.get_value(), 4)
 
-    def test_06_AuthMethodType_AuthMethodVpnClient(self):
+    def test_05_AuthMethodType_AuthMethodVpnClient(self):
         """
         Test AuthMethodType with AuthMethodVpnClient
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodVpnClient')
-        self.assertEquals(value.value, 'AuthMethodVpnClient')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodVpnClient')
         self.assertEquals(value.dump(), 'AuthMethodVpnClient')
+        self.assertEquals(value.get_name(), 'AuthMethodVpnClient')
+        self.assertEquals(value.get_value(), 5)
 
-    def test_07_AuthMethodType_AuthMethodSso(self):
+    def test_06_AuthMethodType_AuthMethodSso(self):
         """
         Test AuthMethodType with AuthMethodSso
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodSso')
-        self.assertEquals(value.value, 'AuthMethodSso')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodSso')
         self.assertEquals(value.dump(), 'AuthMethodSso')
+        self.assertEquals(value.get_name(), 'AuthMethodSso')
+        self.assertEquals(value.get_value(), 6)
 
-    def test_08_AuthMethodType_AuthMethodApi(self):
+    def test_07_AuthMethodType_AuthMethodApi(self):
         """
         Test AuthMethodType with AuthMethodApi
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodApi')
-        self.assertEquals(value.value, 'AuthMethodApi')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodApi')
         self.assertEquals(value.dump(), 'AuthMethodApi')
+        self.assertEquals(value.get_name(), 'AuthMethodApi')
+        self.assertEquals(value.get_value(), 7)
 
-    def test_09_AuthMethodType_AuthMethodRadius(self):
+    def test_08_AuthMethodType_AuthMethodRadius(self):
         """
         Test AuthMethodType with AuthMethodRadius
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodRadius')
-        self.assertEquals(value.value, 'AuthMethodRadius')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodRadius')
         self.assertEquals(value.dump(), 'AuthMethodRadius')
+        self.assertEquals(value.get_name(), 'AuthMethodRadius')
+        self.assertEquals(value.get_value(), 8)
 
-    def test_10_AuthMethodType_AuthMethodNone(self):
+    def test_09_AuthMethodType_AuthMethodNone(self):
         """
         Test AuthMethodType with AuthMethodNone
         """
-        value = pykerio.enums.AuthMethodType(value='AuthMethodNone')
-        self.assertEquals(value.value, 'AuthMethodNone')
+        value = pykerio.enums.AuthMethodType(name='AuthMethodNone')
         self.assertEquals(value.dump(), 'AuthMethodNone')
+        self.assertEquals(value.get_name(), 'AuthMethodNone')
+        self.assertEquals(value.get_value(), 9)
 
     @unittest.expectedFailure
     def test_99_AuthMethodType_FAIL(self):
         """
         Test AuthMethodType with FAIL
         """
-        value = pykerio.enums.AuthMethodType(value='FAIL')
-        self.assertEquals(value.value, 'FAIL')
+        value = pykerio.enums.AuthMethodType(name='FAIL')
         self.assertEquals(value.dump(), 'FAIL')
+        self.assertEquals(value.get_name(), 'FAIL')
+        self.assertEquals(value.get_value(), 99)

@@ -24,27 +24,30 @@ import pykerio.enums
 
 
 class TestCase_SortDirection(unittest.TestCase):
-    def test_01_SortDirection_Asc(self):
+    def test_00_SortDirection_Asc(self):
         """
         Test SortDirection with Asc
         """
-        value = pykerio.enums.SortDirection(value='Asc')
-        self.assertEquals(value.value, 'Asc')
+        value = pykerio.enums.SortDirection(name='Asc')
         self.assertEquals(value.dump(), 'Asc')
+        self.assertEquals(value.get_name(), 'Asc')
+        self.assertEquals(value.get_value(), 0)
 
-    def test_02_SortDirection_Desc(self):
+    def test_01_SortDirection_Desc(self):
         """
         Test SortDirection with Desc
         """
-        value = pykerio.enums.SortDirection(value='Desc')
-        self.assertEquals(value.value, 'Desc')
+        value = pykerio.enums.SortDirection(name='Desc')
         self.assertEquals(value.dump(), 'Desc')
+        self.assertEquals(value.get_name(), 'Desc')
+        self.assertEquals(value.get_value(), 1)
 
     @unittest.expectedFailure
     def test_99_SortDirection_FAIL(self):
         """
         Test SortDirection with FAIL
         """
-        value = pykerio.enums.SortDirection(value='FAIL')
-        self.assertEquals(value.value, 'FAIL')
+        value = pykerio.enums.SortDirection(name='FAIL')
         self.assertEquals(value.dump(), 'FAIL')
+        self.assertEquals(value.get_name(), 'FAIL')
+        self.assertEquals(value.get_value(), 99)

@@ -24,36 +24,39 @@ import pykerio.enums
 
 
 class TestCase_LoginType(unittest.TestCase):
-    def test_01_LoginType_LoginRegular(self):
+    def test_00_LoginType_LoginRegular(self):
         """
         Test LoginType with LoginRegular
         """
-        value = pykerio.enums.LoginType(value='LoginRegular')
-        self.assertEquals(value.value, 'LoginRegular')
+        value = pykerio.enums.LoginType(name='LoginRegular')
         self.assertEquals(value.dump(), 'LoginRegular')
+        self.assertEquals(value.get_name(), 'LoginRegular')
+        self.assertEquals(value.get_value(), 0)
 
-    def test_02_LoginType_LoginAutomatic(self):
+    def test_01_LoginType_LoginAutomatic(self):
         """
         Test LoginType with LoginAutomatic
         """
-        value = pykerio.enums.LoginType(value='LoginAutomatic')
-        self.assertEquals(value.value, 'LoginAutomatic')
+        value = pykerio.enums.LoginType(name='LoginAutomatic')
         self.assertEquals(value.dump(), 'LoginAutomatic')
+        self.assertEquals(value.get_name(), 'LoginAutomatic')
+        self.assertEquals(value.get_value(), 1)
 
-
-    def test_03_LoginType_LoginReactivation(self):
+    def test_02_LoginType_LoginReactivation(self):
         """
         Test LoginType with LoginReactivation
         """
-        value = pykerio.enums.LoginType(value='LoginReactivation')
-        self.assertEquals(value.value, 'LoginReactivation')
+        value = pykerio.enums.LoginType(name='LoginReactivation')
         self.assertEquals(value.dump(), 'LoginReactivation')
+        self.assertEquals(value.get_name(), 'LoginReactivation')
+        self.assertEquals(value.get_value(), 2)
 
     @unittest.expectedFailure
     def test_99_LoginType_FAIL(self):
         """
         Test LoginType with FAIL
         """
-        value = pykerio.enums.LoginType(value='FAIL')
-        self.assertEquals(value.value, 'FAIL')
+        value = pykerio.enums.LoginType(name='FAIL')
         self.assertEquals(value.dump(), 'FAIL')
+        self.assertEquals(value.get_name(), 'FAIL')
+        self.assertEquals(value.get_value(), 99)
