@@ -41,7 +41,7 @@ class TestCase_SortDirection(unittest.TestCase):
         self.assertEquals(sort_direction.dump(), 'Desc')
 
     @unittest.expectedFailure
-    def test_03_SortDirection_FAIL(self):
+    def test_99_SortDirection_FAIL(self):
         """
         Test SortDirection with FAIL
         """

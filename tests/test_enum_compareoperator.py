@@ -81,7 +81,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEquals(compare_operator.dump(), 'Like')
 
     @unittest.expectedFailure
-    def test_08_CompareOperator_FAIL(self):
+    def test_99_CompareOperator_FAIL(self):
         """
         Test CompareOperator with FAIL
         """
