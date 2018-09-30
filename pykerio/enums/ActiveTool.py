@@ -18,9 +18,13 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .CompareOperator import CompareOperator
-from .LoginType import LoginType
-from .SortDirection import SortDirection
+from . import BaseEnumeration
+
+
+class ActiveTool(BaseEnumeration):
+    VALUES = {'ActiveToolNone': 0,
+              'ActiveToolPing': 1,
+              'ActiveToolTraceRoute': 2,
+              'ActiveToolDns': 3,
+              'ActiveToolWhois ': 4
+             }
