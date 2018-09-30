@@ -18,16 +18,26 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .ActivityType import ActivityType
-from .AuthMethodType import AuthMethodType
-from .CompareOperator import CompareOperator
-from .ConnectionDirection import ConnectionDirection
-from .DnsTool import DnsTool
-from .DnsType import DnsType
-from .IpVersion import IpVersion
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .UserFormatType import UserFormatType
+from . import BaseEnumeration
+
+
+class ActivityType(BaseEnumeration):
+    VALUES = {'ActivityTypeWeb': 0,
+              'ActivityTypeWebSearch': 1,
+              'ActivityTypeMail': 2,
+              'ActivityTypeDownload': 3,
+              'ActivityTypeUpload': 4,
+              'ActivityTypeMultimedia': 5,
+              'ActivityTypeP2p': 6,
+              'ActivityTypeRemoteAccess': 7,
+              'ActivityTypeVpn': 8,
+              'ActivityTypeInstantMessaging': 9,
+              'ActivityTypeHugeConnection': 10,
+              'ActivityTypeMailConnection': 11,
+              'ActivityTypeP2pAttempt': 12,
+              'ActivityTypeWebConnection': 13,
+              'ActivityTypeHTTPConnection': 14,
+              'ActivityTypeWebMultimedia': 15,
+              'ActivityTypeSip': 16,
+              'ActivityTypeSocialNetwork': 17
+             }
