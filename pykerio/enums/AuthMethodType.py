@@ -18,15 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .AuthMethodType import AuthMethodType
-from .CompareOperator import CompareOperator
-from .ConnectionDirection import ConnectionDirection
-from .DnsTool import DnsTool
-from .DnsType import DnsType
-from .IpVersion import IpVersion
-from .LoginType import LoginType
-from .SortDirection import SortDirection
-from .UserFormatType import UserFormatType
+from . import BaseEnumeration
+
+
+class AuthMethodType(BaseEnumeration):
+    VALUES = {'AuthMethodWeb': 0,
+              'AuthMethodSslWeb': 1,
+              'AuthMethodNtlm': 2,
+              'AuthMethodProxy': 3,
+              'AuthMethodAutomatic': 4,
+              'AuthMethodVpnClient': 5,
+              'AuthMethodSso': 6,
+              'AuthMethodApi': 7,
+              'AuthMethodRadius': 8,
+              'AuthMethodNone': 9
+             }
