@@ -18,12 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .CompareOperator import CompareOperator
-from .DnsTool import DnsTool
-from .DnsType import DnsType
-from .IpVersion import IpVersion
-from .LoginType import LoginType
-from .SortDirection import SortDirection
+from . import BaseEnumeration
+
+
+class IpVersion(BaseEnumeration):
+    VALUES = {'IpVersion4': 0,
+              'IpVersion6': 1,
+              'IpVersionAny': 2
+             }
