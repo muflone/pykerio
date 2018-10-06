@@ -72,6 +72,7 @@ from .ItemName import ItemName
 from .JoinStatus import JoinStatus
 from .LogicalOperator import LogicalOperator
 from .LoginType import LoginType
+from .MacFilterActionType import MacFilterActionType
 from .MppeType import MppeType
 from .NatBalancing import NatBalancing
 from .QuotaType import QuotaType
