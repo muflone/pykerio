@@ -20,7 +20,5 @@
 
 from .BaseList import BaseList
 from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .InterfaceList import InterfaceList
 from .SortOrderList import SortOrderList
 from .StringList import StringList
