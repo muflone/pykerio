@@ -34,6 +34,7 @@ from .BandwidthUnit import BandwidthUnit
 from .BMConditionType import BMConditionType
 from .BMTrafficType import BMTrafficType
 from .ByteUnits import ByteUnits
+from .CheckVersionType import CheckVersionType
 from .CompareOperator import CompareOperator
 from .ConnectionDirection import ConnectionDirection
 from .ConnectivityStatus import ConnectivityStatus
