@@ -18,14 +18,20 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ByteValueWithUnits import ByteValueWithUnits
+from . import BaseStruct
+
 from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
+
+from ..shared.KId import KId
+
+
+class AddResult(BaseStruct):
+    """
+    Result of the add operation
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'id': KId,
+                                   'success': bool,
+                                   'errorMessage': LocalizableMessage},
+                            data=data)
