@@ -92,6 +92,7 @@ from .UpdateStatus import UpdateStatus
 from .UserConditionType import UserConditionType
 from .UserFormatType import UserFormatType
 from .UserRoleType import UserRoleType
+from .VpnConditionType import VpnConditionType
 from .WarningType import WarningType
 from .WifiBandType import WifiBandType
 from .WifiEncryptionType import WifiEncryptionType
