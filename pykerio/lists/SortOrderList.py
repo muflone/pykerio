@@ -24,5 +24,8 @@ from ..structs.SortOrder import SortOrder
 
 
 class SortOrderList(BaseList):
+    """
+    List of Sorting Orders
+    """
     def __init__(self, *args, **kwargs):
         BaseList.__init__(self, SortOrder, *args, **kwargs)
