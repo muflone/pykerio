@@ -68,6 +68,7 @@ from .RasType import RasType
 from .RegistrationFinishType import RegistrationFinishType
 from .RegistrationType import RegistrationType
 from .RestrictionKind import RestrictionKind
+from .RotationPeriod import RotationPeriod
 from .ScanRuleType import ScanRuleType
 from .ServerOs import ServerOs
 from .SortDirection import SortDirection
