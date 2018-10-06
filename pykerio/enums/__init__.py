@@ -75,6 +75,7 @@ from .LoginType import LoginType
 from .MacFilterActionType import MacFilterActionType
 from .MppeType import MppeType
 from .NatBalancing import NatBalancing
+from .NotificationSeverity import NotificationSeverity
 from .NotificationType import NotificationType
 from .QuotaType import QuotaType
 from .RasType import RasType
