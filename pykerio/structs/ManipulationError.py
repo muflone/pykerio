@@ -18,11 +18,20 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
+from . import BaseStruct
+
+from ..shared.KId import KId
+
+from ..structs.LocalizableMessage import LocalizableMessage
+
+
+class ManipulationError(BaseStruct):
+    """
+    Error structure to be used when manipulating with globally addressable
+    list items
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'id': KId,
+                                   'errorMessage': LocalizableMessage},
+                            data=data)
