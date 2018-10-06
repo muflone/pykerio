@@ -85,6 +85,7 @@ from .SourceConditonEntityType import SourceConditonEntityType
 from .SourceNatMode import SourceNatMode
 from .StoreStatus import StoreStatus
 from .Target import Target
+from .TrafficIpVersion import TrafficIpVersion
 from .UrlFilterStatus import UrlFilterStatus
 from .UpdateStatus import UpdateStatus
 from .UserConditionType import UserConditionType
