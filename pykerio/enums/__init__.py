@@ -81,6 +81,7 @@ from .ServerOs import ServerOs
 from .SeverityUnit import SeverityUnit
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
+from .SourceNatMode import SourceNatMode
 from .StoreStatus import StoreStatus
 from .Target import Target
 from .UrlFilterStatus import UrlFilterStatus
