@@ -108,6 +108,7 @@ from .Target import Target
 from .TrafficEntityType import TrafficEntityType
 from .TrafficIpVersion import TrafficIpVersion
 from .TrafficStatisticsType import TrafficStatisticsType
+from .UrlEntryType import UrlEntryType
 from .UrlFilterStatus import UrlFilterStatus
 from .UpdateStatus import UpdateStatus
 from .UserConditionType import UserConditionType
