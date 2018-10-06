@@ -77,6 +77,7 @@ from .MppeType import MppeType
 from .NatBalancing import NatBalancing
 from .NotificationSeverity import NotificationSeverity
 from .NotificationType import NotificationType
+from .NtpUpdatePhase import NtpUpdatePhase
 from .QuotaType import QuotaType
 from .RasType import RasType
 from .RegistrationFinishType import RegistrationFinishType
