@@ -45,6 +45,7 @@ from .ContentEntityUrlType import ContentEntityUrlType
 from .DhcpLeaseType import DhcpLeaseType
 from .DhcpModeType import DhcpModeType
 from .DhcpOptionType import DhcpOptionType
+from .DynamicDnsAddressType import DynamicDnsAddressType
 from .DynamicDnsStatus import DynamicDnsStatus
 from .DirectoryServiceType import DirectoryServiceType
 from .DnsTool import DnsTool
