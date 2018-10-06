@@ -18,8 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseList
+
+from ..shared.SortOrder import SortOrder
 
 
-class SortOrderList(list):
-    pass
+class SortOrderList(BaseList):
+    def __init__(self):
+        BaseList.__init__(self, SortOrder)
