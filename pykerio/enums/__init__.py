@@ -114,6 +114,7 @@ from .UpdateStatus import UpdateStatus
 from .UserConditionType import UserConditionType
 from .UserFormatType import UserFormatType
 from .UserRoleType import UserRoleType
+from .UserStatisticType import UserStatisticType
 from .VpnClientState import VpnClientState
 from .VpnConditionType import VpnConditionType
 from .VpnType import VpnType
