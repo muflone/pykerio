@@ -18,23 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseStruct
 
 from ..enums.SortDirection import SortDirection
 
 
-class SortOrder(JSONSerializable):
-    def __init__(self,
-                 columnName: str,
-                 direction: SortDirection,
-                 caseSensitive: bool):
-        self.columnName = columnName
-        self.direction = direction
-        self.caseSensitive = caseSensitive
-
-    def dump(self):
-        """JSON serializable representation"""
-        return {'columnName': self.columnName,
-                'direction': self.direction.dump(),
-                'caseSensitive': self.caseSensitive
-               }
+class SortOrder(BaseStruct):
+    """
+    Sorting Order
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'columnName': str,
+                                   'direction': SortDirection,
+                                   'caseSensitive': bool},
+                            data=data)

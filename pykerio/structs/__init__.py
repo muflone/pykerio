@@ -21,4 +21,5 @@
 from .BaseStruct import BaseStruct
 from .NamedValue import NamedValue
 from .NamedMultiValue import NamedMultiValue
+from .SortOrder import SortOrder
 from .SubCondition import SubCondition

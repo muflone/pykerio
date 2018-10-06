@@ -21,4 +21,3 @@
 from .ApiException import ApiException
 from .KId import KId
 from .LocalizableMessageParameters import LocalizableMessageParameters
-from .SortOrder import SortOrder

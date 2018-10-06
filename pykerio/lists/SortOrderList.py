@@ -20,7 +20,7 @@
 
 from . import BaseList
 
-from ..shared.SortOrder import SortOrder
+from ..structs.SortOrder import SortOrder
 
 
 class SortOrderList(BaseList):

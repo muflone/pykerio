@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.enums
-import pykerio.shared
+import pykerio.structs
 
 
 class TestCase_SortOrder(unittest.TestCase):
@@ -30,11 +30,15 @@ class TestCase_SortOrder(unittest.TestCase):
         Test SortOrder
         """
         sort_direction = pykerio.enums.SortDirection(name='Asc')
-        sort_order = pykerio.shared.SortOrder(columnName='foo',
-                                              direction=sort_direction,
-                                              caseSensitive=False)
-        self.assertEquals(sort_order.dump(), {
-                            'columnName': 'foo',
-                            'direction': 'Asc',
-                            'caseSensitive': False
-                          })
+        teststruct = pykerio.structs.SortOrder({'columnName': 'foo',
+                                                'direction': sort_direction,
+                                                'caseSensitive': False})
+        self.assertEquals(len(teststruct.keys()), 3)
+        self.assertEquals(len(teststruct.values()), 3)
+
+        self.assertEquals(teststruct['columnName'], 'foo')
+        self.assertEquals(teststruct['direction'], sort_direction)
+        self.assertEquals(teststruct['caseSensitive'], False)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)
