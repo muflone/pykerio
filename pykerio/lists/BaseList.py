@@ -22,8 +22,9 @@ from ..json_serializable import JSONSerializable
 
 
 class BaseList(list, JSONSerializable):
-    def __init__(self, class_):
+    def __init__(self, class_, *args, **kwargs):
         self._class = class_
+        list.__init__(self, *args, **kwargs)
 
     def append(self, value):
         assert(isinstance(value, self._class))

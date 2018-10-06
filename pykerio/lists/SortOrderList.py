@@ -24,5 +24,5 @@ from ..shared.SortOrder import SortOrder
 
 
 class SortOrderList(BaseList):
-    def __init__(self):
-        BaseList.__init__(self, SortOrder)
+    def __init__(self, *args, **kwargs):
+        BaseList.__init__(self, SortOrder, *args, **kwargs)

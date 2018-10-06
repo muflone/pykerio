@@ -22,5 +22,5 @@ from . import BaseList
 
 
 class StringList(BaseList):
-    def __init__(self):
-        BaseList.__init__(self, str)
+    def __init__(self, *args, **kwargs):
+        BaseList.__init__(self, str, *args, **kwargs)
