@@ -59,6 +59,7 @@ from .RestrictionKind import RestrictionKind
 from .ScanRuleType import ScanRuleType
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
+from .StoreStatus import StoreStatus
 from .UrlFilterStatus import UrlFilterStatus
 from .UserConditionType import UserConditionType
 from .UserFormatType import UserFormatType
