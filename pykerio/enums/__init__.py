@@ -66,6 +66,7 @@ from .QuotaType import QuotaType
 from .RasType import RasType
 from .RestrictionKind import RestrictionKind
 from .ScanRuleType import ScanRuleType
+from .ServerOs import ServerOs
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
 from .StoreStatus import StoreStatus
