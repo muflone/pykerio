@@ -48,6 +48,7 @@ from .InterfaceModeType import InterfaceModeType
 from .InterfaceStatusType import InterfaceStatusType
 from .InterfaceType import InterfaceType
 from .IpVersion import IpVersion
+from .LogicalOperator import LogicalOperator
 from .LoginType import LoginType
 from .MppeType import MppeType
 from .QuotaType import QuotaType
