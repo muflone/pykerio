@@ -18,21 +18,10 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseEnumeration import BaseEnumeration
-from .ActiveHostType import ActiveHostType
-from .ActiveTool import ActiveTool
-from .ActivityType import ActivityType
-from .AddresseeType import AddresseeType
-from .AlertEventRuleType import AlertEventRuleType
-from .AntivirusStatus import AntivirusStatus
-from .AntivirusUpdatePhases import AntivirusUpdatePhases
-from .AuthMethodType import AuthMethodType
-from .CompareOperator import CompareOperator
-from .ConnectionDirection import ConnectionDirection
-from .DnsTool import DnsTool
-from .DnsType import DnsType
-from .IpVersion import IpVersion
-from .LoginType import LoginType
-from .ScanRuleType import ScanRuleType
-from .SortDirection import SortDirection
-from .UserFormatType import UserFormatType
+from . import BaseEnumeration
+
+
+class AddresseeType(BaseEnumeration):
+    VALUES = {'AddresseeEmail': 0,
+              'AddresseeUser': 1
+             }
