@@ -59,3 +59,4 @@ from .UserFormatType import UserFormatType
 from .UserRoleType import UserRoleType
 from .WarningType import WarningType
 from .WifiBandType import WifiBandType
+from .WifiEncryptionType import WifiEncryptionType
