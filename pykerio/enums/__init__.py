@@ -52,6 +52,7 @@ from .DnsTool import DnsTool
 from .DnsType import DnsType
 from .Entity import Entity
 from .ExpireType import ExpireType
+from .ExportFormat import ExportFormat
 from .FacilityUnit import FacilityUnit
 from .FailoverRoleType import FailoverRoleType
 from .InterfaceEncapType import InterfaceEncapType
