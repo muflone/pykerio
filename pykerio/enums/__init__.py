@@ -104,6 +104,7 @@ from .UserFormatType import UserFormatType
 from .UserRoleType import UserRoleType
 from .VpnClientState import VpnClientState
 from .VpnConditionType import VpnConditionType
+from .VpnType import VpnType
 from .WarningType import WarningType
 from .WifiBandType import WifiBandType
 from .WifiEncryptionType import WifiEncryptionType
