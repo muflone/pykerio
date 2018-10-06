@@ -18,13 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
+from . import BaseStruct
+
 from .ByteValueWithUnits import ByteValueWithUnits
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
+
+
+class SizeLimit(BaseStruct):
+    """
+    Stores size of very large values of bytes e.g. for user quota
+    Note: all fields must be assigned if used in set methods
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'isActive': bool,
+                                   'limit': ByteValueWithUnits},
+                            data=data)

@@ -18,13 +18,29 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .ByteValueWithUnits import ByteValueWithUnits
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
+import unittest
+
+import pykerio.enums
+import pykerio.structs
+
+
+class TestCase_SizeLimit(unittest.TestCase):
+    def test_01_SizeLimit(self):
+        """
+        Test SizeLimit
+        """
+        units = pykerio.enums.ByteUnits('GigaBytes')
+        value = 12345
+        limit = pykerio.structs.ByteValueWithUnits({
+            'value': value,
+            'units': units})
+        teststruct = pykerio.structs.SizeLimit({'isActive': True,
+                                                'limit': limit})
+        self.assertEquals(len(teststruct.keys()), 2)
+        self.assertEquals(len(teststruct.values()), 2)
+
+        self.assertEquals(teststruct['isActive'], True)
+        self.assertEquals(teststruct['limit'], limit)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)
