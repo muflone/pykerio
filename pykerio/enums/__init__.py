@@ -55,6 +55,7 @@ from .ExpireType import ExpireType
 from .ExportFormat import ExportFormat
 from .FacilityUnit import FacilityUnit
 from .FailoverRoleType import FailoverRoleType
+from .HistogramIntervalType import HistogramIntervalType
 from .HistogramType import HistogramType
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
