@@ -101,3 +101,4 @@ from .VpnConditionType import VpnConditionType
 from .WarningType import WarningType
 from .WifiBandType import WifiBandType
 from .WifiEncryptionType import WifiEncryptionType
+from .ZeroConfigItemType import ZeroConfigItemType
