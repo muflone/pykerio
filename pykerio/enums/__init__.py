@@ -59,6 +59,7 @@ from .HistogramIntervalType import HistogramIntervalType
 from .HistogramType import HistogramType
 from .HttpLogType import HttpLogType
 from .HttpsServerMode import HttpsServerMode
+from .InterfaceConditionType import InterfaceConditionType
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
 from .InterfaceModeType import InterfaceModeType
