@@ -97,6 +97,7 @@ from .SeverityUnit import SeverityUnit
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
 from .SourceNatMode import SourceNatMode
+from .SpeedDuplexType import SpeedDuplexType
 from .StoreStatus import StoreStatus
 from .Target import Target
 from .TrafficEntityType import TrafficEntityType
