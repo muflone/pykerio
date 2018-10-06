@@ -61,6 +61,7 @@ from .ScanRuleType import ScanRuleType
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
 from .StoreStatus import StoreStatus
+from .Target import Target
 from .UrlFilterStatus import UrlFilterStatus
 from .UpdateStatus import UpdateStatus
 from .UserConditionType import UserConditionType
