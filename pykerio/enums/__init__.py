@@ -97,6 +97,7 @@ from .SearchStatus import SearchStatus
 from .ServerOs import ServerOs
 from .SeverityUnit import SeverityUnit
 from .SharedDefinitionType import SharedDefinitionType
+from .SnmpVersion import SnmpVersion
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
 from .SourceNatMode import SourceNatMode
