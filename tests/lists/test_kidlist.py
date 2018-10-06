@@ -18,11 +18,26 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .KIdList import KIdList
-from .NamedMultiValueList import NamedMultiValueList
-from .NamedValueList import NamedValueList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+import unittest
+
+import pykerio.lists
+import pykerio.shared
+
+
+class TestCase_KIdList(unittest.TestCase):
+    def test_01_KIdList(self):
+        """
+        Test KIdList
+        """
+        testlist = pykerio.lists.KIdList()
+        self.assertEquals(len(testlist), 0)
+
+        value = 'Hello world'
+        kid = pykerio.shared.KId(value)
+        testlist.append(kid)
+        self.assertEquals(len(testlist), 1)
+
+        self.assertEquals(testlist[-1], kid)
+
+        testlist.clear()
+        self.assertEquals(len(testlist), 0)

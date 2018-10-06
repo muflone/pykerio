@@ -18,11 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .KIdList import KIdList
-from .NamedMultiValueList import NamedMultiValueList
-from .NamedValueList import NamedValueList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+from . import BaseList
+
+from ..shared.KId import KId
+
+
+class KIdList(BaseList):
+    def __init__(self, *args, **kwargs):
+        BaseList.__init__(self, KId, *args, **kwargs)
