@@ -62,6 +62,7 @@ from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
 from .StoreStatus import StoreStatus
 from .UrlFilterStatus import UrlFilterStatus
+from .UpdateStatus import UpdateStatus
 from .UserConditionType import UserConditionType
 from .UserFormatType import UserFormatType
 from .UserRoleType import UserRoleType
