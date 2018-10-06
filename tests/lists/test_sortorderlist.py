@@ -30,23 +30,23 @@ class TestCase_SortOrderList(unittest.TestCase):
         """
         Test SortOrderList
         """
-        sort_order_list = pykerio.lists.SortOrderList()
-        self.assertEquals(len(sort_order_list), 0)
+        testlist = pykerio.lists.SortOrderList()
+        self.assertEquals(len(testlist), 0)
 
         sort_direction = pykerio.enums.SortDirection(name='Asc')
         sort_order = pykerio.shared.SortOrder(columnName='foo',
                                               direction=sort_direction,
                                               caseSensitive=False)
-        sort_order_list.append(sort_order)
+        testlist.append(sort_order)
 
         sort_direction = pykerio.enums.SortDirection(name='Asc')
         sort_order = pykerio.shared.SortOrder(columnName='bar',
                                               direction=sort_direction,
                                               caseSensitive=True)
-        sort_order_list.append(sort_order)
+        testlist.append(sort_order)
 
-        self.assertEquals(len(sort_order_list), 2)
-        self.assertEquals(sort_order_list[-1], sort_order)
+        self.assertEquals(len(testlist), 2)
+        self.assertEquals(testlist[-1], sort_order)
 
-        sort_order_list.clear()
-        self.assertEquals(len(sort_order_list), 0)
+        testlist.clear()
+        self.assertEquals(len(testlist), 0)

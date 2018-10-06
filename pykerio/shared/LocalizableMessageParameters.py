@@ -29,7 +29,12 @@ class LocalizableMessageParameters(JSONSerializable):
     This is the parameters structure.
     """
     def __init__(self, data: dict):
+        # additional strings to replace the placeholders in message
+        # (first string replaces %1 etc.)
+        data['positionalParameters'].append('ciao')
         self.positionalParameters = StringList(data['positionalParameters'])
+        # count of items, used to distinguish among singular/paucal/plural;
+        # 1 for messages with no counted items
         self.plurality = data['plurality']
 
     def dump(self):
