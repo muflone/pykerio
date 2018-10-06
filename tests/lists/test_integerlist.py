@@ -18,8 +18,24 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+import unittest
+
+import pykerio.lists
+
+
+class TestCase_IntegerList(unittest.TestCase):
+    def test_01_IntegerList(self):
+        """
+        Test IntegerList
+        """
+        testlist = pykerio.lists.IntegerList()
+        self.assertEquals(len(testlist), 0)
+
+        testlist.append(111)
+        testlist.append(222)
+
+        self.assertEquals(len(testlist), 2)
+        self.assertEquals(testlist[-1], 222)
+
+        testlist.clear()
+        self.assertEquals(len(testlist), 0)
