@@ -32,6 +32,7 @@ from .AuthMethodType import AuthMethodType
 from .AuthType import AuthType
 from .CompareOperator import CompareOperator
 from .ConnectionDirection import ConnectionDirection
+from .ConnectivityType import ConnectivityType
 from .ContentConditionEntityType import ContentConditionEntityType
 from .ContentEntityUrlType import ContentEntityUrlType
 from .DnsTool import DnsTool
