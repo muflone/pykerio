@@ -18,9 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .NamedValueList import NamedValueList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+from . import BaseList
+
+from ..structs.NamedValue import NamedValue
+
+
+class NamedValueList(BaseList):
+    def __init__(self, *args, **kwargs):
+        BaseList.__init__(self, NamedValue, *args, **kwargs)

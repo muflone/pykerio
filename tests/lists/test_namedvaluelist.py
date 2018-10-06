@@ -18,9 +18,29 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .NamedValueList import NamedValueList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+import unittest
+
+import pykerio.lists
+import pykerio.structs
+
+
+class TestCase_NamedValueList(unittest.TestCase):
+    def test_01_NamedValueList(self):
+        """
+        Test NamedValueList
+        """
+        testlist = pykerio.lists.NamedValueList()
+        self.assertEquals(len(testlist), 0)
+
+        name = 'foo'
+        value = 'bar'
+        teststruct = pykerio.structs.NamedValue({'name': name,
+                                                 'value': value,
+                                                 'IGNORED': 'FOO'})
+        testlist.append(teststruct)
+        self.assertEquals(len(testlist), 1)
+
+        self.assertEquals(testlist[-1], teststruct)
+
+        testlist.clear()
+        self.assertEquals(len(testlist), 0)
