@@ -42,6 +42,7 @@ from .ConnectivityStatus import ConnectivityStatus
 from .ConnectivityType import ConnectivityType
 from .ContentConditionEntityType import ContentConditionEntityType
 from .ContentEntityUrlType import ContentEntityUrlType
+from .DhcpLeaseType import DhcpLeaseType
 from .DhcpOptionType import DhcpOptionType
 from .DnsTool import DnsTool
 from .DnsType import DnsType
