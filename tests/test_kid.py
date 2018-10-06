@@ -18,7 +18,17 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .KId import KId
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .SortOrder import SortOrder
+import unittest
+
+import pykerio.shared
+
+
+class TestCase_KId(unittest.TestCase):
+    def test_01_KId(self):
+        """
+        Test KId
+        """
+        value = 'Hello world'
+        kid = pykerio.shared.KId(value)
+        self.assertEquals(kid, value)
+        self.assertEquals(kid.dump(), value)
