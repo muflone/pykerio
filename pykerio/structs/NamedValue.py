@@ -18,5 +18,16 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .NamedValue import NamedValue
+from . import BaseStruct
+
+
+class NamedValue(BaseStruct):
+    """
+    Name-value pair
+    Note: all fields must be assigned if used in set methods
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'name': str,
+                                   'value': str},
+                            data=data)
