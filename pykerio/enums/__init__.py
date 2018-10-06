@@ -38,6 +38,7 @@ from .ContentEntityUrlType import ContentEntityUrlType
 from .DnsTool import DnsTool
 from .DnsType import DnsType
 from .InterfaceEncapType import InterfaceEncapType
+from .InterfaceGroupType import InterfaceGroupType
 from .InterfaceModeType import InterfaceModeType
 from .InterfaceType import InterfaceType
 from .IpVersion import IpVersion
