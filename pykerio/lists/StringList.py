@@ -18,8 +18,9 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseList
 
 
-class StringList(list, JSONSerializable):
-    pass
+class StringList(BaseList):
+    def __init__(self):
+        BaseList.__init__(self, str)
