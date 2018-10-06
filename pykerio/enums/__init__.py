@@ -69,6 +69,7 @@ from .ItemName import ItemName
 from .LogicalOperator import LogicalOperator
 from .LoginType import LoginType
 from .MppeType import MppeType
+from .NatBalancing import NatBalancing
 from .QuotaType import QuotaType
 from .RasType import RasType
 from .RegistrationFinishType import RegistrationFinishType
