@@ -65,6 +65,7 @@ from .MppeType import MppeType
 from .QuotaType import QuotaType
 from .RasType import RasType
 from .RegistrationFinishType import RegistrationFinishType
+from .RegistrationType import RegistrationType
 from .RestrictionKind import RestrictionKind
 from .ScanRuleType import ScanRuleType
 from .ServerOs import ServerOs
