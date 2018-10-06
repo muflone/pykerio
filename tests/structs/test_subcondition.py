@@ -18,7 +18,30 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SubCondition import SubCondition
+import unittest
+
+import pykerio.enums
+import pykerio.structs
+
+
+class TestCase_SubCondition(unittest.TestCase):
+    def test_01_SubCondition(self):
+        """
+        Test SubCondition
+        """
+        fieldName = 'date'
+        comparator = pykerio.enums.CompareOperator('Like')
+        value = '2'
+        teststruct = pykerio.structs.SubCondition({'fieldName': fieldName,
+                                                   'comparator': comparator,
+                                                   'value': value})
+
+        self.assertEquals(len(teststruct.keys()), 3)
+        self.assertEquals(len(teststruct.values()), 3)
+
+        self.assertEquals(teststruct['fieldName'], fieldName)
+        self.assertEquals(teststruct['comparator'], comparator)
+        self.assertEquals(teststruct['value'], value)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)

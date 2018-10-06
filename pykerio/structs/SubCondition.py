@@ -18,7 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SubCondition import SubCondition
+from . import BaseStruct
+
+from ..enums.CompareOperator import CompareOperator
+
+
+class SubCondition(BaseStruct):
+    """
+    A Part of a Condition
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'fieldName': str,
+                                   'comparator': CompareOperator,
+                                   'value': str},
+                            data=data)
