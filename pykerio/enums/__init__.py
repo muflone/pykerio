@@ -66,6 +66,7 @@ from .InterfaceModeType import InterfaceModeType
 from .InterfaceStatusType import InterfaceStatusType
 from .InterfaceType import InterfaceType
 from .IntrusionPreventionAction import IntrusionPreventionAction
+from .IntrusionPreventionUpdatePhases import IntrusionPreventionUpdatePhases
 from .IpVersion import IpVersion
 from .ItemName import ItemName
 from .LogicalOperator import LogicalOperator
