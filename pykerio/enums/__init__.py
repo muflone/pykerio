@@ -85,6 +85,7 @@ from .RegistrationFinishType import RegistrationFinishType
 from .RegistrationType import RegistrationType
 from .RestrictionKind import RestrictionKind
 from .RotationPeriod import RotationPeriod
+from .RuleAction import RuleAction
 from .ScanRuleType import ScanRuleType
 from .SearchStatus import SearchStatus
 from .ServerOs import ServerOs
