@@ -20,11 +20,11 @@
 
 from . import BaseStruct
 
+from ..enums.LogicalOperator import LogicalOperator
+
 from ..lists.SortOrderList import SortOrderList
 from ..lists.StringList import StringList
 from ..lists.SubConditionList import SubConditionList
-from ..enums.CompareOperator import CompareOperator
-from ..enums.LogicalOperator import LogicalOperator
 
 
 class SearchQuery(BaseStruct):
