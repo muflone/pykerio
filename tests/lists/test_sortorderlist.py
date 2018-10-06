@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio.enums
+import pykerio.lists
 import pykerio.shared
 
 
@@ -29,7 +30,7 @@ class TestCase_SortOrderList(unittest.TestCase):
         """
         Test SortOrderList
         """
-        sort_order_list = pykerio.shared.SortOrderList()
+        sort_order_list = pykerio.lists.SortOrderList()
         self.assertEquals(len(sort_order_list), 0)
 
         sort_direction = pykerio.enums.SortDirection(name='Asc')

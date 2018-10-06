@@ -21,9 +21,9 @@
 from ..pykerio import PyKerio
 from ..json_serializable import JSONSerializable
 
-from ..enums.LoginType import LoginType
+from ..enums import LoginType
 
-from ..shared.ClientTimestampList import ClientTimestampList
+from ..lists import ClientTimestampList
 
 from .ApiApplication import ApiApplication
 
