@@ -18,9 +18,17 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .InterfaceList import InterfaceList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
+from ..json_serializable import JSONSerializable
+
+
+class BaseList(list, JSONSerializable):
+    def __init__(self, class_):
+        self._class = class_
+
+    def append(self, value):
+        assert(isinstance(value, self._class))
+        list.append(self, value)
+
+    def insert(self, index, value):
+        assert(isinstance(value, self._class))
+        list.insert(self, index, value)
