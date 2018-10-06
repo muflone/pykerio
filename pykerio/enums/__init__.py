@@ -27,6 +27,7 @@ from .AlertEventRuleType import AlertEventRuleType
 from .AntivirusStatus import AntivirusStatus
 from .AntivirusUpdatePhases import AntivirusUpdatePhases
 from .ApiEntity import ApiEntity
+from .ApplicationType import ApplicationType
 from .AuthMethodType import AuthMethodType
 from .AuthType import AuthType
 from .CompareOperator import CompareOperator
