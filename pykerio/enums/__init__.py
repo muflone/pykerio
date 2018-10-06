@@ -40,6 +40,7 @@ from .DnsType import DnsType
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
 from .InterfaceModeType import InterfaceModeType
+from .InterfaceStatusType import InterfaceStatusType
 from .InterfaceType import InterfaceType
 from .IpVersion import IpVersion
 from .LoginType import LoginType
