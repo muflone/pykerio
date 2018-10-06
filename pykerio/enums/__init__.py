@@ -41,6 +41,7 @@ from .LoginType import LoginType
 from .QuotaType import QuotaType
 from .ScanRuleType import ScanRuleType
 from .SortDirection import SortDirection
+from .SourceConditonEntityType import SourceConditonEntityType
 from .UrlFilterStatus import UrlFilterStatus
 from .UserConditionType import UserConditionType
 from .UserFormatType import UserFormatType
