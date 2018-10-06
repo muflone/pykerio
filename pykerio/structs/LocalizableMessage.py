@@ -18,10 +18,19 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .LocalizableMessage import LocalizableMessage
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
+from . import BaseStruct
+
+from ..lists.StringList import StringList
+
+
+class LocalizableMessage(BaseStruct):
+    """
+    Message can contain replacement marks:
+    { "User %1 cannot be deleted.", ["jsmith"], 1 }
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'message': str,
+                                   'positionalParameters': StringList,
+                                   'plurality': int},
+                            data=data)
