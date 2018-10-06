@@ -43,6 +43,7 @@ from .InterfaceType import InterfaceType
 from .IpVersion import IpVersion
 from .LoginType import LoginType
 from .QuotaType import QuotaType
+from .RasType import RasType
 from .ScanRuleType import ScanRuleType
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
