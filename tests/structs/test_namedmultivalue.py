@@ -18,6 +18,28 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
+import unittest
+
+import pykerio.lists
+import pykerio.structs
+
+
+class TestCase_NamedMultiValue(unittest.TestCase):
+    def test_01_NamedMultiValue(self):
+        """
+        Test NamedMultiValue
+        """
+        name = 'foo'
+        value = pykerio.lists.StringList(['hello', 'world'])
+        teststruct = pykerio.structs.NamedMultiValue({'name': name,
+                                                      'value': value,
+                                                      'IGNORED': 'FOO'})
+
+        self.assertEquals(len(teststruct.keys()), 2)
+        self.assertEquals(len(teststruct.values()), 2)
+
+        self.assertEquals(teststruct['name'], name)
+        self.assertEquals(teststruct['value'], value)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)

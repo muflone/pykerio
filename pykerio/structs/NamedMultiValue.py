@@ -18,6 +18,18 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
+from . import BaseStruct
+
+from ..lists.StringList import StringList
+
+
+class NamedMultiValue(BaseStruct):
+    """
+    Name-multivalue pair
+    Note: all fields must be assigned if used in set methods
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'name': str,
+                                   'value': StringList},
+                            data=data)
