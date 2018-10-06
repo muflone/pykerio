@@ -89,6 +89,7 @@ from .RegistrationType import RegistrationType
 from .RestrictionKind import RestrictionKind
 from .RotationPeriod import RotationPeriod
 from .RouterAdvertisementsModeType import RouterAdvertisementsModeType
+from .RouteType import RouteType
 from .RuleAction import RuleAction
 from .RuleConditionType import RuleConditionType
 from .ScanRuleType import ScanRuleType
