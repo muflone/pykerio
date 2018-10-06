@@ -36,6 +36,7 @@ from .BMTrafficType import BMTrafficType
 from .ByteUnits import ByteUnits
 from .CheckVersionType import CheckVersionType
 from .CompareOperator import CompareOperator
+from .ConfigurationBackupPhase import ConfigurationBackupPhase
 from .ConnectionDirection import ConnectionDirection
 from .ConnectivityStatus import ConnectivityStatus
 from .ConnectivityType import ConnectivityType
