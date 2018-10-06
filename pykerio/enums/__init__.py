@@ -32,6 +32,7 @@ from .AuthMethodType import AuthMethodType
 from .AuthType import AuthType
 from .BandwidthUnit import BandwidthUnit
 from .BMConditionType import BMConditionType
+from .BMTrafficType import BMTrafficType
 from .CompareOperator import CompareOperator
 from .ConnectionDirection import ConnectionDirection
 from .ConnectivityStatus import ConnectivityStatus
