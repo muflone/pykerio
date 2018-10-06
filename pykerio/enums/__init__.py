@@ -57,6 +57,7 @@ from .FacilityUnit import FacilityUnit
 from .FailoverRoleType import FailoverRoleType
 from .HistogramIntervalType import HistogramIntervalType
 from .HistogramType import HistogramType
+from .HttpLogType import HttpLogType
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
 from .InterfaceModeType import InterfaceModeType
