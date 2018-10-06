@@ -51,6 +51,7 @@ from .DirectoryServiceType import DirectoryServiceType
 from .DnsTool import DnsTool
 from .DnsType import DnsType
 from .Entity import Entity
+from .ExpireType import ExpireType
 from .FailoverRoleType import FailoverRoleType
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
