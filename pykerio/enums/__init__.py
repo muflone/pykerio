@@ -86,6 +86,7 @@ from .RegistrationType import RegistrationType
 from .RestrictionKind import RestrictionKind
 from .RotationPeriod import RotationPeriod
 from .RuleAction import RuleAction
+from .RuleConditionType import RuleConditionType
 from .ScanRuleType import ScanRuleType
 from .SearchStatus import SearchStatus
 from .ServerOs import ServerOs
