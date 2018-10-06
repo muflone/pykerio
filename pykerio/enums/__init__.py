@@ -30,6 +30,7 @@ from .ApiEntity import ApiEntity
 from .ApplicationType import ApplicationType
 from .AuthMethodType import AuthMethodType
 from .AuthType import AuthType
+from .BandwidthUnit import BandwidthUnit
 from .CompareOperator import CompareOperator
 from .ConnectionDirection import ConnectionDirection
 from .ConnectivityType import ConnectivityType
