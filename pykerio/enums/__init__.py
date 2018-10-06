@@ -81,6 +81,7 @@ from .NtpUpdatePhase import NtpUpdatePhase
 from .OsCodeType import OsCodeType
 from .PortAssignmentType import PortAssignmentType
 from .PortComparator import PortComparator
+from .PortType import PortType
 from .QuotaType import QuotaType
 from .RasType import RasType
 from .RegistrationFinishType import RegistrationFinishType
