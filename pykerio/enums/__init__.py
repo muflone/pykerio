@@ -72,6 +72,7 @@ from .RestrictionKind import RestrictionKind
 from .RotationPeriod import RotationPeriod
 from .ScanRuleType import ScanRuleType
 from .ServerOs import ServerOs
+from .SeverityUnit import SeverityUnit
 from .SortDirection import SortDirection
 from .SourceConditonEntityType import SourceConditonEntityType
 from .StoreStatus import StoreStatus
