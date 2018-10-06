@@ -58,6 +58,7 @@ from .FailoverRoleType import FailoverRoleType
 from .HistogramIntervalType import HistogramIntervalType
 from .HistogramType import HistogramType
 from .HttpLogType import HttpLogType
+from .HttpsServerMode import HttpsServerMode
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
 from .InterfaceModeType import InterfaceModeType
