@@ -69,6 +69,7 @@ from .IntrusionPreventionAction import IntrusionPreventionAction
 from .IntrusionPreventionUpdatePhases import IntrusionPreventionUpdatePhases
 from .IpVersion import IpVersion
 from .ItemName import ItemName
+from .JoinStatus import JoinStatus
 from .LogicalOperator import LogicalOperator
 from .LoginType import LoginType
 from .MppeType import MppeType
