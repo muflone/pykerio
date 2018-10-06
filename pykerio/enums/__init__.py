@@ -33,6 +33,7 @@ from .AuthType import AuthType
 from .BandwidthUnit import BandwidthUnit
 from .CompareOperator import CompareOperator
 from .ConnectionDirection import ConnectionDirection
+from .ConnectivityStatus import ConnectivityStatus
 from .ConnectivityType import ConnectivityType
 from .ContentConditionEntityType import ContentConditionEntityType
 from .ContentEntityUrlType import ContentEntityUrlType
