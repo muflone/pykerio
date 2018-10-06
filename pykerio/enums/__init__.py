@@ -37,6 +37,7 @@ from .ContentConditionEntityType import ContentConditionEntityType
 from .ContentEntityUrlType import ContentEntityUrlType
 from .DnsTool import DnsTool
 from .DnsType import DnsType
+from .FailoverRoleType import FailoverRoleType
 from .InterfaceEncapType import InterfaceEncapType
 from .InterfaceGroupType import InterfaceGroupType
 from .InterfaceModeType import InterfaceModeType
