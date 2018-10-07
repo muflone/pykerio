@@ -25,6 +25,7 @@ from .ApiException import ApiException
 from .ByteValueWithUnits import ByteValueWithUnits
 from .CreateResult import CreateResult
 from .Credentials import Credentials
+from .CredentialsConfig import CredentialsConfig
 from .Date import Date
 from .Download import Download
 from .Error import Error
