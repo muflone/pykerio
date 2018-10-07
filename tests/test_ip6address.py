@@ -18,7 +18,17 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .DateTimeStamp import DateTimeStamp
-from .Ip6Address import Ip6Address
-from .IpAddress import IpAddress
-from .KId import KId
+import unittest
+
+import pykerio.shared
+
+
+class TestCase_Ip6Address(unittest.TestCase):
+    def test_01_Ip6Address(self):
+        """
+        Test Ip6Address
+        """
+        value = '::1'
+        ip6address = pykerio.shared.Ip6Address(value)
+        self.assertEquals(ip6address, value)
+        self.assertEquals(ip6address.dump(), value)
