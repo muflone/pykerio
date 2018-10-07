@@ -32,6 +32,7 @@ from .Date import Date
 from .DateTimeConfig import DateTimeConfig
 from .Download import Download
 from .Error import Error
+from .FilenameGroup import FilenameGroup
 from .Histogram import Histogram
 from .HistogramData import HistogramData
 from .IdReference import IdReference
