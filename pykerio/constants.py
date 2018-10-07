@@ -26,3 +26,5 @@ APP_URL = 'http://www.muflone.com/pykerio/'
 APP_AUTHOR = 'Fabio Castelli'
 APP_AUTHOR_EMAIL = 'muflone@muflone.com'
 APP_COPYRIGHT = 'Copyright 2018 %s' % APP_AUTHOR
+
+UNLIMITED = -1

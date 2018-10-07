@@ -20,6 +20,7 @@
 
 import unittest
 
+import pykerio.constants
 import pykerio.enums
 import pykerio.lists
 import pykerio.structs
@@ -59,7 +60,7 @@ class TestCase_SearchQuery(unittest.TestCase):
                                                   'conditions': conditions,
                                                   'combining': combining,
                                                   'start': 0,
-                                                  'limit': -1,
+                                                  'limit': pykerio.constants.UNLIMITED,
                                                   'orderBy': orderbylist})
         self.assertEquals(len(teststruct.keys()), 6)
         self.assertEquals(len(teststruct.values()), 6)
@@ -68,7 +69,7 @@ class TestCase_SearchQuery(unittest.TestCase):
         self.assertEquals(teststruct['conditions'], conditions)
         self.assertEquals(teststruct['combining'], combining)
         self.assertEquals(teststruct['start'], 0)
-        self.assertEquals(teststruct['limit'], -1)
+        self.assertEquals(teststruct['limit'], pykerio.constants.UNLIMITED)
         self.assertEquals(teststruct['orderBy'], orderbylist)
 
         teststruct.clear()
