@@ -18,7 +18,16 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .ApiException import ApiException
-from .IpAddress import IpAddress
-from .KId import KId
-from .LocalizableMessageParameters import LocalizableMessageParameters
+from ..json_serializable import JSONSerializable
+
+
+class IpAddress(str, JSONSerializable):
+    def __init__(self, value: str):
+        JSONSerializable.__init__(self)
+
+    def __new__(class_, value: str):
+        return str.__new__(class_, value)
+
+    def dump(self):
+        """JSON serializable representation"""
+        return str(self)
