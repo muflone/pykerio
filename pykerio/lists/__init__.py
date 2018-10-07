@@ -21,6 +21,7 @@
 from .BaseList import BaseList
 from .AddResultList import AddResultList
 from .ClientTimestampList import ClientTimestampList
+from .CollisionList import CollisionList
 from .CreateResultList import CreateResultList
 from .ErrorList import ErrorList
 from .HistogramDataList import HistogramDataList
