@@ -24,6 +24,7 @@ from .ApiApplication import ApiApplication
 from .ApiException import ApiException
 from .ByteValueWithUnits import ByteValueWithUnits
 from .Collision import Collision
+from .ConnectivityConfig import ConnectivityConfig
 from .CreateResult import CreateResult
 from .Credentials import Credentials
 from .CredentialsConfig import CredentialsConfig
