@@ -41,6 +41,7 @@ from .LocalizableMessageParameters import LocalizableMessageParameters
 from .ManipulationError import ManipulationError
 from .NamedValue import NamedValue
 from .NamedMultiValue import NamedMultiValue
+from .Notification import Notification
 from .OptionalEntity import OptionalEntity
 from .OptionalIdReference import OptionalIdReference
 from .OptionalIpAddress import OptionalIpAddress
