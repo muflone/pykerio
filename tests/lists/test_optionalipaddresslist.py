@@ -18,20 +18,28 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .AddResultList import AddResultList
-from .ClientTimestampList import ClientTimestampList
-from .CreateResultList import CreateResultList
-from .ErrorList import ErrorList
-from .IntegerList import IntegerList
-from .IpAddressList import IpAddressList
-from .KIdList import KIdList
-from .LocalizableMessageList import LocalizableMessageList
-from .ManipulationErrorList import ManipulationErrorList
-from .NamedMultiValueList import NamedMultiValueList
-from .NamedValueList import NamedValueList
-from .OptionalIpAddressList import OptionalIpAddressList
-from .OptionalStringList import OptionalStringList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
-from .SubConditionList import SubConditionList
+import unittest
+
+import pykerio.lists
+import pykerio.structs
+
+
+class TestCase_OptionalIpAddressList(unittest.TestCase):
+    def test_01_OptionalIpAddressList(self):
+        """
+        Test OptionalIpAddressList
+        """
+        testlist = pykerio.lists.OptionalIpAddressList()
+        self.assertEquals(len(testlist), 0)
+
+        enabled = True
+        value = '127.0.0.1'
+        teststruct = pykerio.structs.OptionalIpAddress({'enabled': enabled,
+                                                        'value': value})
+        testlist.append(teststruct)
+        self.assertEquals(len(testlist), 1)
+
+        self.assertEquals(testlist[-1], teststruct)
+
+        testlist.clear()
+        self.assertEquals(len(testlist), 0)
