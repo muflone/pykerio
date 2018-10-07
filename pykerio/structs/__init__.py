@@ -23,6 +23,7 @@ from .AddResult import AddResult
 from .ApiApplication import ApiApplication
 from .ApiException import ApiException
 from .ByteValueWithUnits import ByteValueWithUnits
+from .Collision import Collision
 from .CreateResult import CreateResult
 from .Credentials import Credentials
 from .CredentialsConfig import CredentialsConfig
