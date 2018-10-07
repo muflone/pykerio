@@ -46,3 +46,4 @@ from .SizeLimit import SizeLimit
 from .SortOrder import SortOrder
 from .SubCondition import SubCondition
 from .Time import Time
+from .TimeHMS import TimeHMS
