@@ -29,6 +29,7 @@ from .CredentialsConfig import CredentialsConfig
 from .Date import Date
 from .Download import Download
 from .Error import Error
+from .IdReference import IdReference
 from .LocalizableMessage import LocalizableMessage
 from .LocalizableMessageParameters import LocalizableMessageParameters
 from .ManipulationError import ManipulationError
