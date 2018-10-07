@@ -74,5 +74,5 @@ class PyKerio(object):
                                 params=params)
         response_rpc = RPCResponse(response)
         if response_rpc.error:
-            raise Exception(response_rpc.error.message)
+            raise Exception(response_rpc.error['message'])
         return response_rpc

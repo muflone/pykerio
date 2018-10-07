@@ -20,6 +20,7 @@
 
 from .BaseStruct import BaseStruct
 from .AddResult import AddResult
+from .ApiException import ApiException
 from .ByteValueWithUnits import ByteValueWithUnits
 from .Date import Date
 from .Error import Error

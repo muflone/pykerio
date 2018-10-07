@@ -20,15 +20,29 @@
 
 from .json_serializable import JSONSerializable
 
-from .shared.ApiException import ApiException
+from .structs.ApiException import ApiException
+from .structs.LocalizableMessageParameters import LocalizableMessageParameters
+
+from .lists.StringList import StringList
 
 
 class RPCResponse(JSONSerializable):
     def __init__(self, data: dict):
         self.jsonrpc = data['jsonrpc']
         self.id = data['id']
-        self.error = (ApiException(data.get('error'))
-                      if 'error' in data else None)
+        if 'error' in data:
+            errordata = data['error']['data']['messageParameters']
+            messageparameters = LocalizableMessageParameters({
+                'positionalParameters': StringList(
+                    errordata['positionalParameters']),
+                'plurality': errordata['plurality']})
+
+            self.error = ApiException({
+                'message': data['error']['message'],
+                'code': data['error']['code'],
+                'messageParameters': messageparameters})
+        else:
+            self.error = None
         self.result = data.get('result')
 
     def dump(self):

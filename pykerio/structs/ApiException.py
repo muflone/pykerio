@@ -18,21 +18,15 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseStruct
 
-from ..structs.LocalizableMessageParameters import LocalizableMessageParameters
+from .LocalizableMessageParameters import LocalizableMessageParameters
 
 
-class ApiException(JSONSerializable):
+class ApiException(BaseStruct):
     def __init__(self, data: dict):
-        self.message = data['message']
-        self.code = data['code']
-        self.messageParameters = LocalizableMessageParameters(
-            data['data']['messageParameters'])
-
-    def dump(self):
-        """JSON serializable representation"""
-        return {'message': self.message,
-                'code': self.code,
-                'messageParameters': self.messageParameters
-               }
+        BaseStruct.__init__(self,
+                            types={'message': str,
+                                   'code': int,
+                                   'messageParameters': LocalizableMessageParameters},
+                            data=data)
