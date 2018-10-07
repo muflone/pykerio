@@ -18,26 +18,26 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ApiApplication import ApiApplication
-from .ApiException import ApiException
-from .ByteValueWithUnits import ByteValueWithUnits
-from .CreateResult import CreateResult
-from .Credentials import Credentials
-from .Date import Date
-from .Download import Download
-from .Error import Error
-from .LocalizableMessage import LocalizableMessage
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .OptionalEntity import OptionalEntity
-from .OptionalLong import OptionalLong
-from .OptionalString import OptionalString
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+import unittest
+
+import pykerio.constants
+import pykerio.structs
+
+
+class TestCase_Credentials(unittest.TestCase):
+    def test_01_Credentials(self):
+        """
+        Test Credentials
+        """
+        password = 'something'
+        teststruct = pykerio.structs.Credentials({
+            'userName': pykerio.constants.APP_AUTHOR,
+            'password': password})
+        self.assertEquals(len(teststruct.keys()), 2)
+        self.assertEquals(len(teststruct.values()), 2)
+
+        self.assertEquals(teststruct['userName'], pykerio.constants.APP_AUTHOR)
+        self.assertEquals(teststruct['password'], password)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)
