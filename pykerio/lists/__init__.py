@@ -40,3 +40,4 @@ from .OptionalStringList import OptionalStringList
 from .SortOrderList import SortOrderList
 from .StringList import StringList
 from .SubConditionList import SubConditionList
+from .VpnRouteList import VpnRouteList
