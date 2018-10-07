@@ -18,16 +18,26 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .AddResultList import AddResultList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .IpAddressList import IpAddressList
-from .KIdList import KIdList
-from .LocalizableMessageList import LocalizableMessageList
-from .ManipulationErrorList import ManipulationErrorList
-from .NamedMultiValueList import NamedMultiValueList
-from .NamedValueList import NamedValueList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
-from .SubConditionList import SubConditionList
+import unittest
+
+import pykerio.lists
+import pykerio.shared
+
+
+class TestCase_IpAddressList(unittest.TestCase):
+    def test_01_IpAddressList(self):
+        """
+        Test IpAddressList
+        """
+        testlist = pykerio.lists.IpAddressList()
+        self.assertEquals(len(testlist), 0)
+
+        address = '192.168.1.1'
+        ipaddress = pykerio.shared.IpAddress(address)
+        testlist.append(ipaddress)
+        self.assertEquals(len(testlist), 1)
+
+        self.assertEquals(testlist[-1], ipaddress)
+
+        testlist.clear()
+        self.assertEquals(len(testlist), 0)

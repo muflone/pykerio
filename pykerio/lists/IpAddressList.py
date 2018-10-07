@@ -18,16 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseList import BaseList
-from .AddResultList import AddResultList
-from .ClientTimestampList import ClientTimestampList
-from .IntegerList import IntegerList
-from .IpAddressList import IpAddressList
-from .KIdList import KIdList
-from .LocalizableMessageList import LocalizableMessageList
-from .ManipulationErrorList import ManipulationErrorList
-from .NamedMultiValueList import NamedMultiValueList
-from .NamedValueList import NamedValueList
-from .SortOrderList import SortOrderList
-from .StringList import StringList
-from .SubConditionList import SubConditionList
+from . import BaseList
+
+from ..shared.IpAddress import IpAddress
+
+
+class IpAddressList(BaseList):
+    def __init__(self, *args, **kwargs):
+        BaseList.__init__(self, IpAddress, *args, **kwargs)
