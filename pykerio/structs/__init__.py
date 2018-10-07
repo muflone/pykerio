@@ -57,3 +57,4 @@ from .SubCondition import SubCondition
 from .Time import Time
 from .TimeHMS import TimeHMS
 from .TimeSpan import TimeSpan
+from .VpnRoute import VpnRoute
