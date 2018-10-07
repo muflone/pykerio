@@ -18,19 +18,28 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ByteValueWithUnits import ByteValueWithUnits
-from .Date import Date
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .OptionalEntity import OptionalEntity
-from .OptionalLong import OptionalLong
-from .OptionalString import OptionalString
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+import unittest
+
+import pykerio.structs
+
+
+class TestCase_OptionalEntity(unittest.TestCase):
+    def test_01_OptionalEntity(self):
+        """
+        Test OptionalEntity
+        """
+        enabled = True
+        kid = pykerio.shared.KId('Object name')
+        name = 'Object name'
+        teststruct = pykerio.structs.OptionalEntity({'enabled': enabled,
+                                                     'id': kid,
+                                                     'name': name})
+        self.assertEquals(len(teststruct.keys()), 3)
+        self.assertEquals(len(teststruct.values()), 3)
+
+        self.assertEquals(teststruct['enabled'], enabled)
+        self.assertEquals(teststruct['id'], kid)
+        self.assertEquals(teststruct['name'], name)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)
