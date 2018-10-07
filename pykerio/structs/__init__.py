@@ -45,6 +45,7 @@ from .OptionalIdReference import OptionalIdReference
 from .OptionalIpAddress import OptionalIpAddress
 from .OptionalLong import OptionalLong
 from .OptionalString import OptionalString
+from .Password import Password
 from .SearchQuery import SearchQuery
 from .SizeLimit import SizeLimit
 from .SortOrder import SortOrder
