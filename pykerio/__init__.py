@@ -18,6 +18,10 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
+from . import enums
+from . import lists
+from . import structs
+
 from .constants import *
 from .pykerio import PyKerio
 from .pykerio_control import PyKerioControl

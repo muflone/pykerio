@@ -23,6 +23,7 @@ from .AddResult import AddResult
 from .ByteValueWithUnits import ByteValueWithUnits
 from .Date import Date
 from .LocalizableMessage import LocalizableMessage
+from .LocalizableMessageParameters import LocalizableMessageParameters
 from .ManipulationError import ManipulationError
 from .NamedValue import NamedValue
 from .NamedMultiValue import NamedMultiValue

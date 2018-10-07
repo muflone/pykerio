@@ -18,26 +18,19 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
-from ..lists import StringList
+from . import BaseStruct
+
+from ..lists.StringList import StringList
 
 
-class LocalizableMessageParameters(JSONSerializable):
+class LocalizableMessageParameters(BaseStruct):
     """
     Message can contain replacement marks:
-    { "User %1 cannot be deleted.", ["jsmith"], 1 }.
+    { "User %1 cannot be deleted.", ["jsmith"], 1 }
     This is the parameters structure.
     """
     def __init__(self, data: dict):
-        # additional strings to replace the placeholders in message
-        # (first string replaces %1 etc.)
-        self.positionalParameters = StringList(data['positionalParameters'])
-        # count of items, used to distinguish among singular/paucal/plural;
-        # 1 for messages with no counted items
-        self.plurality = data['plurality']
-
-    def dump(self):
-        """JSON serializable representation"""
-        return {'positionalParameters': self.positionalParameters,
-                'plurality': self.plurality
-               }
+        BaseStruct.__init__(self,
+                            types={'positionalParameters': StringList,
+                                   'plurality': int},
+                            data=data)

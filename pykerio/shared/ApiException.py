@@ -20,7 +20,7 @@
 
 from ..json_serializable import JSONSerializable
 
-from .LocalizableMessageParameters import LocalizableMessageParameters
+from ..structs.LocalizableMessageParameters import LocalizableMessageParameters
 
 
 class ApiException(JSONSerializable):

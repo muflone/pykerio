@@ -21,4 +21,3 @@
 from .ApiException import ApiException
 from .IpAddress import IpAddress
 from .KId import KId
-from .LocalizableMessageParameters import LocalizableMessageParameters
