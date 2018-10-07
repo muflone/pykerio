@@ -18,6 +18,17 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .DateTimeStamp import DateTimeStamp
-from .IpAddress import IpAddress
-from .KId import KId
+import unittest
+
+import pykerio.shared
+
+
+class TestCase_DateTimeStamp(unittest.TestCase):
+    def test_01_DateTimeStamp(self):
+        """
+        Test DateTimeStamp
+        """
+        value = 123456789
+        timestamp = pykerio.shared.DateTimeStamp(value)
+        self.assertEquals(timestamp, value)
+        self.assertEquals(timestamp.dump(), value)

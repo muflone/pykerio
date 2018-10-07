@@ -18,6 +18,16 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .DateTimeStamp import DateTimeStamp
-from .IpAddress import IpAddress
-from .KId import KId
+from ..json_serializable import JSONSerializable
+
+
+class DateTimeStamp(int, JSONSerializable):
+    def __init__(self, value: int):
+        JSONSerializable.__init__(self)
+
+    def __new__(class_, value: int):
+        return int.__new__(class_, value)
+
+    def dump(self):
+        """JSON serializable representation"""
+        return int(self)
