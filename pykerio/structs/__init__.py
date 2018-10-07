@@ -36,6 +36,7 @@ from .ManipulationError import ManipulationError
 from .NamedValue import NamedValue
 from .NamedMultiValue import NamedMultiValue
 from .OptionalEntity import OptionalEntity
+from .OptionalIdReference import OptionalIdReference
 from .OptionalIpAddress import OptionalIpAddress
 from .OptionalLong import OptionalLong
 from .OptionalString import OptionalString
