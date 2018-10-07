@@ -31,6 +31,7 @@ from .Date import Date
 from .DateTimeConfig import DateTimeConfig
 from .Download import Download
 from .Error import Error
+from .HistogramData import HistogramData
 from .IdReference import IdReference
 from .LocalizableMessage import LocalizableMessage
 from .LocalizableMessageParameters import LocalizableMessageParameters
