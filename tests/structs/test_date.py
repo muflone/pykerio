@@ -18,16 +18,29 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ByteValueWithUnits import ByteValueWithUnits
-from .Date import Date
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+import unittest
+
+import pykerio.enums
+import pykerio.structs
+
+
+class TestCase_Date(unittest.TestCase):
+    def test_01_Date(self):
+        """
+        Test Date
+        """
+        year = 2018
+        month = 10
+        day = 7
+        teststruct = pykerio.structs.Date({'year': year,
+                                           'month': month,
+                                           'day': day})
+        self.assertEquals(len(teststruct.keys()), 3)
+        self.assertEquals(len(teststruct.values()), 3)
+
+        self.assertEquals(teststruct['year'], year)
+        self.assertEquals(teststruct['month'], month)
+        self.assertEquals(teststruct['day'], day)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)

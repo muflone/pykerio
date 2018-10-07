@@ -18,16 +18,16 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ByteValueWithUnits import ByteValueWithUnits
-from .Date import Date
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+from . import BaseStruct
+
+
+class Date(BaseStruct):
+    """
+    Note: all fields must be assigned if used in set methods
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'year': int,
+                                   'month': int,
+                                   'day': int},
+                            data=data)
