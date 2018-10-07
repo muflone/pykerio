@@ -18,22 +18,17 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseStruct
 
 
-class ApiApplication(JSONSerializable):
+class ApiApplication(BaseStruct):
     """
     Describes client (third-party) application or script which uses the
     Administration API.
     """
-    def __init__(self, name: str, vendor: str, version: str):
-        self.name = name
-        self.vendor = vendor
-        self.version = version
-
-    def dump(self):
-        """JSON serializable representation"""
-        return {'name': self.name,
-                'vendor': self.vendor,
-                'version': self.version
-               }
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'name': str,
+                                   'vendor': str,
+                                   'version': str},
+                            data=data)

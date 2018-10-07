@@ -25,7 +25,7 @@ from ..enums import LoginType
 
 from ..lists import ClientTimestampList
 
-from .ApiApplication import ApiApplication
+from ..structs.ApiApplication import ApiApplication
 
 
 class Session(JSONSerializable):

@@ -47,10 +47,10 @@ class TestCase_Session(unittest.TestCase):
         Test Session login
         """
         password = os.environ.get('KERIO_PASSWORD', '')
-        application = pykerio.kerio.ApiApplication(
-            name=pykerio.constants.APP_NAME,
-            vendor=pykerio.constants.APP_AUTHOR,
-            version=pykerio.constants.APP_VERSION)
+        application = pykerio.structs.ApiApplication({
+            'name': pykerio.constants.APP_NAME,
+            'vendor': pykerio.constants.APP_AUTHOR,
+            'version': pykerio.constants.APP_VERSION})
         self.__class__.session.login(userName=self.username,
                                      password=password,
                                      application=application)

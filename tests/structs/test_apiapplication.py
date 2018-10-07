@@ -18,5 +18,27 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .Session import Session
-from .HardwareInfo import HardwareInfo
+import unittest
+
+import pykerio.constants
+import pykerio.structs
+
+
+class TestCase_ApiApplication(unittest.TestCase):
+    def test_01_ApiApplication(self):
+        """
+        Test ApiApplication
+        """
+        teststruct = pykerio.structs.ApiApplication({
+            'name': pykerio.constants.APP_NAME,
+            'vendor': pykerio.constants.APP_AUTHOR,
+            'version': pykerio.constants.APP_VERSION})
+        self.assertEquals(len(teststruct.keys()), 3)
+        self.assertEquals(len(teststruct.values()), 3)
+
+        self.assertEquals(teststruct['name'], pykerio.constants.APP_NAME)
+        self.assertEquals(teststruct['vendor'], pykerio.constants.APP_AUTHOR)
+        self.assertEquals(teststruct['version'], pykerio.constants.APP_VERSION)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)
