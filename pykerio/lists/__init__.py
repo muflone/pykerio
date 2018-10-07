@@ -24,6 +24,7 @@ from .ClientTimestampList import ClientTimestampList
 from .CollisionList import CollisionList
 from .CreateResultList import CreateResultList
 from .ErrorList import ErrorList
+from .FilenameGroupList import FilenameGroupList
 from .HistogramDataList import HistogramDataList
 from .IdReferenceList import IdReferenceList
 from .IntegerList import IntegerList
