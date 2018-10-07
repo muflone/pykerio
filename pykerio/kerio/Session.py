@@ -43,7 +43,7 @@ class Session(JSONSerializable):
             method='Session.login',
             params={'userName': userName,
                     'password': password,
-                    'application': application.dump()
+                    'application': application
                    })
         self.api.token = response.result['token']
 
