@@ -28,6 +28,7 @@ from .Credentials import Credentials
 from .CredentialsConfig import CredentialsConfig
 from .DataStatistic import DataStatistic
 from .Date import Date
+from .DateTimeConfig import DateTimeConfig
 from .Download import Download
 from .Error import Error
 from .IdReference import IdReference
