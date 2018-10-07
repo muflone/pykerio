@@ -49,6 +49,7 @@ from .OptionalIpAddress import OptionalIpAddress
 from .OptionalLong import OptionalLong
 from .OptionalString import OptionalString
 from .Password import Password
+from .RasConfig import RasConfig
 from .SearchQuery import SearchQuery
 from .SizeLimit import SizeLimit
 from .SortOrder import SortOrder
