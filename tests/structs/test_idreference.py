@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.enums
-import pykerio.shared
+import pykerio.types
 import pykerio.structs
 
 
@@ -30,7 +30,7 @@ class TestCase_IdReference(unittest.TestCase):
         """
         Test IdReference
         """
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
         name = 'User 1'
         teststruct = pykerio.structs.IdReference({
             'id': kid,

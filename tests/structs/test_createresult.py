@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.enums
-import pykerio.shared
+import pykerio.types
 import pykerio.structs
 
 
@@ -31,7 +31,7 @@ class TestCase_CreateResult(unittest.TestCase):
         Test CreateResult
         """
         index = 12
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
         teststruct = pykerio.structs.CreateResult({
             'inputIndex': index,
             'id': kid})

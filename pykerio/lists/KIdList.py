@@ -20,7 +20,7 @@
 
 from . import BaseList
 
-from ..shared.KId import KId
+from ..types.KId import KId
 
 
 class KIdList(BaseList):

@@ -28,11 +28,11 @@ class TestCase_Collision(unittest.TestCase):
         """
         Test Collision
         """
-        rule1 = pykerio.shared.KId('rule1')
+        rule1 = pykerio.types.KId('rule1')
         idref1 = pykerio.structs.IdReference({'id': rule1,
                                               'name': 'Rule 1',
                                               'invalid': False})
-        rule2 = pykerio.shared.KId('rule2')
+        rule2 = pykerio.types.KId('rule2')
         idref2 = pykerio.structs.IdReference({'id': rule2,
                                               'name': 'Rule 2',
                                               'invalid': False})

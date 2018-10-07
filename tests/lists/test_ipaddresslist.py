@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.lists
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_IpAddressList(unittest.TestCase):
@@ -33,7 +33,7 @@ class TestCase_IpAddressList(unittest.TestCase):
         self.assertEquals(len(testlist), 0)
 
         address = '192.168.1.1'
-        ipaddress = pykerio.shared.IpAddress(address)
+        ipaddress = pykerio.types.IpAddress(address)
         testlist.append(ipaddress)
         self.assertEquals(len(testlist), 1)
 

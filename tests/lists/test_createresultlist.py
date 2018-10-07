@@ -32,7 +32,7 @@ class TestCase_CreateResultList(unittest.TestCase):
         self.assertEquals(len(testlist), 0)
 
         index = 12
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
         teststruct = pykerio.structs.CreateResult({
             'inputIndex': index,
             'id': kid})

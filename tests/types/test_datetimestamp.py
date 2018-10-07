@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_DateTimeStamp(unittest.TestCase):
@@ -29,6 +29,6 @@ class TestCase_DateTimeStamp(unittest.TestCase):
         Test DateTimeStamp
         """
         value = 123456789
-        timestamp = pykerio.shared.DateTimeStamp(value)
+        timestamp = pykerio.types.DateTimeStamp(value)
         self.assertEquals(timestamp, value)
         self.assertEquals(timestamp.dump(), value)

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_IpAddress(unittest.TestCase):
@@ -29,6 +29,6 @@ class TestCase_IpAddress(unittest.TestCase):
         Test IpAddress
         """
         value = '127.0.0.1'
-        ipaddress = pykerio.shared.IpAddress(value)
+        ipaddress = pykerio.types.IpAddress(value)
         self.assertEquals(ipaddress, value)
         self.assertEquals(ipaddress.dump(), value)

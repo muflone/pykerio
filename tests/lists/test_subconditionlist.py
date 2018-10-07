@@ -22,7 +22,7 @@ import unittest
 
 import pykerio.enums
 import pykerio.lists
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_SubConditionList(unittest.TestCase):

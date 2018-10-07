@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_KId(unittest.TestCase):
@@ -29,6 +29,6 @@ class TestCase_KId(unittest.TestCase):
         Test KId
         """
         value = 'Hello world'
-        kid = pykerio.shared.KId(value)
+        kid = pykerio.types.KId(value)
         self.assertEquals(kid, value)
         self.assertEquals(kid.dump(), value)

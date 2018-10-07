@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.enums
-import pykerio.shared
+import pykerio.types
 import pykerio.structs
 
 
@@ -30,7 +30,7 @@ class TestCase_AddResult(unittest.TestCase):
         """
         Test AddResult
         """
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
 
         positional_parameters = pykerio.lists.StringList()
         positional_parameters.append('User1')

@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.lists
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_KIdList(unittest.TestCase):
@@ -33,7 +33,7 @@ class TestCase_KIdList(unittest.TestCase):
         self.assertEquals(len(testlist), 0)
 
         value = 'Hello world'
-        kid = pykerio.shared.KId(value)
+        kid = pykerio.types.KId(value)
         testlist.append(kid)
         self.assertEquals(len(testlist), 1)
 

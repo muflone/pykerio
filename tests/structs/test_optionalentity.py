@@ -29,7 +29,7 @@ class TestCase_OptionalEntity(unittest.TestCase):
         Test OptionalEntity
         """
         enabled = True
-        kid = pykerio.shared.KId('Object name')
+        kid = pykerio.types.KId('Object name')
         name = 'Object name'
         teststruct = pykerio.structs.OptionalEntity({'enabled': enabled,
                                                      'id': kid,

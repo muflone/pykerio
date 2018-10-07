@@ -40,7 +40,7 @@ class TestCase_ManipulationErrorList(unittest.TestCase):
             'message': message,
             'positionalParameters': positional_parameters,
             'plurality': 1})
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
         teststruct = pykerio.structs.ManipulationError({
             'id': kid,
             'errorMessage': errormessage})

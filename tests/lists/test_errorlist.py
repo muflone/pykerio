@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.lists
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_ErrorList(unittest.TestCase):

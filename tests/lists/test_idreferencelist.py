@@ -32,7 +32,7 @@ class TestCase_IdReferenceList(unittest.TestCase):
         testlist = pykerio.lists.IdReferenceList()
         self.assertEquals(len(testlist), 0)
 
-        kid = pykerio.shared.KId('User1')
+        kid = pykerio.types.KId('User1')
         name = 'User 1'
         teststruct = pykerio.structs.IdReference({
             'id': kid,

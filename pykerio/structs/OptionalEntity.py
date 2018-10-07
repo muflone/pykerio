@@ -20,7 +20,7 @@
 
 from . import BaseStruct
 
-from ..shared.KId import KId
+from ..types.KId import KId
 
 
 class OptionalEntity(BaseStruct):

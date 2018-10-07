@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.lists
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_AddResultList(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestCase_AddResultList(unittest.TestCase):
         testlist = pykerio.lists.AddResultList()
         self.assertEquals(len(testlist), 0)
 
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
 
         positional_parameters = pykerio.lists.StringList()
         positional_parameters.append('User1')

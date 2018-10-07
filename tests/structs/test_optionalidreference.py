@@ -29,7 +29,7 @@ class TestCase_OptionalIdReference(unittest.TestCase):
         Test OptionalIdReference
         """
         enabled = True
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
         name = 'User 1'
         idref = pykerio.structs.IdReference({'id': kid,
                                              'name': name,

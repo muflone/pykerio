@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.shared
+import pykerio.types
 
 
 class TestCase_Ip6Address(unittest.TestCase):
@@ -29,6 +29,6 @@ class TestCase_Ip6Address(unittest.TestCase):
         Test Ip6Address
         """
         value = '::1'
-        ip6address = pykerio.shared.Ip6Address(value)
+        ip6address = pykerio.types.Ip6Address(value)
         self.assertEquals(ip6address, value)
         self.assertEquals(ip6address.dump(), value)

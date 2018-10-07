@@ -21,7 +21,7 @@
 import unittest
 
 import pykerio.enums
-import pykerio.shared
+import pykerio.types
 import pykerio.structs
 
 
@@ -38,7 +38,7 @@ class TestCase_ManipulationError(unittest.TestCase):
             'message': message,
             'positionalParameters': positional_parameters,
             'plurality': 1})
-        kid = pykerio.shared.KId('user1')
+        kid = pykerio.types.KId('user1')
         teststruct = pykerio.structs.ManipulationError({
             'id': kid,
             'errorMessage': errormessage})

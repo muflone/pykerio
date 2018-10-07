@@ -20,7 +20,7 @@
 
 from . import BaseList
 
-from ..shared.Ip6Address import Ip6Address
+from ..types.Ip6Address import Ip6Address
 
 
 class Ip6AddressList(BaseList):

@@ -22,7 +22,7 @@ from . import BaseStruct
 
 from .LocalizableMessage import LocalizableMessage
 
-from ..shared.KId import KId
+from ..types.KId import KId
 
 
 class AddResult(BaseStruct):
