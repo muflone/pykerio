@@ -18,27 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ApiApplication import ApiApplication
-from .ApiException import ApiException
-from .ByteValueWithUnits import ByteValueWithUnits
-from .CreateResult import CreateResult
-from .Credentials import Credentials
-from .Date import Date
-from .Download import Download
-from .Error import Error
-from .LocalizableMessage import LocalizableMessage
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .OptionalEntity import OptionalEntity
-from .OptionalIpAddress import OptionalIpAddress
-from .OptionalLong import OptionalLong
+from ..json_serializable import JSONSerializable
+
 from .OptionalString import OptionalString
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+
+
+class OptionalIpAddress(OptionalString):
+    def __init__(self, data: dict):
+        OptionalString.__init__(self, data)
