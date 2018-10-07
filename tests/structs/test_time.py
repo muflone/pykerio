@@ -18,15 +18,25 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ByteValueWithUnits import ByteValueWithUnits
-from .LocalizableMessage import LocalizableMessage
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+import unittest
+
+import pykerio.structs
+
+
+class TestCase_Time(unittest.TestCase):
+    def test_01_Time(self):
+        """
+        Test Time
+        """
+        hour = 12
+        minutes = 34
+        teststruct = pykerio.structs.Time({'hour': hour,
+                                           'min': minutes})
+        self.assertEquals(len(teststruct.keys()), 2)
+        self.assertEquals(len(teststruct.values()), 2)
+
+        self.assertEquals(teststruct['hour'], hour)
+        self.assertEquals(teststruct['min'], minutes)
+
+        teststruct.clear()
+        self.assertEquals(len(teststruct.keys()), 0)
