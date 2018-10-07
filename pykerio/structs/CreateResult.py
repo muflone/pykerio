@@ -18,24 +18,17 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ApiException import ApiException
-from .ByteValueWithUnits import ByteValueWithUnits
-from .CreateResult import CreateResult
-from .Date import Date
-from .Download import Download
-from .Error import Error
-from .LocalizableMessage import LocalizableMessage
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .OptionalEntity import OptionalEntity
-from .OptionalLong import OptionalLong
-from .OptionalString import OptionalString
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .SubCondition import SubCondition
-from .Time import Time
+from . import BaseStruct
+
+from ..shared.KId import KId
+
+
+class CreateResult(BaseStruct):
+    """
+    Details about a particular item created.
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'inputIndex': int,
+                                   'id': KId},
+                            data=data)
