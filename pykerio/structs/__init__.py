@@ -39,6 +39,7 @@ from .FilenameGroup import FilenameGroup
 from .Histogram import Histogram
 from .HistogramData import HistogramData
 from .IdReference import IdReference
+from .IpsecPeerIdConfig import IpsecPeerIdConfig
 from .LocalizableMessage import LocalizableMessage
 from .LocalizableMessageParameters import LocalizableMessageParameters
 from .ManipulationError import ManipulationError
