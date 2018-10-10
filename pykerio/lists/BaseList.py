@@ -34,3 +34,8 @@ class BaseList(list, JSONSerializable):
     def insert(self, index, value):
         assert(isinstance(value, self._class))
         list.insert(self, index, value)
+
+    def dump(self):
+        """JSON serializable representation"""
+        return [value.dump() if isinstance(value, JSONSerializable) else value
+                for value in self]
