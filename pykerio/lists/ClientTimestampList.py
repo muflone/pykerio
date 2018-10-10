@@ -18,8 +18,11 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from ..json_serializable import JSONSerializable
+from . import BaseList
+
+from ..structs import ClientTimestamp
 
 
-class ClientTimestampList(list, JSONSerializable):
-    pass
+class ClientTimestampList(BaseList):
+    def __init__(self, *args, **kwargs):
+        BaseList.__init__(self, ClientTimestamp, *args, **kwargs)
