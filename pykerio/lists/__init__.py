@@ -29,6 +29,7 @@ from .FilenameGroupList import FilenameGroupList
 from .HistogramDataList import HistogramDataList
 from .IdReferenceList import IdReferenceList
 from .IntegerList import IntegerList
+from .InterfaceList import InterfaceList
 from .Ip6AddressList import Ip6AddressList
 from .IpAddressList import IpAddressList
 from .IpAddressMaskList import IpAddressMaskList
