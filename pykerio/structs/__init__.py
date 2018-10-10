@@ -40,6 +40,7 @@ from .FilenameGroup import FilenameGroup
 from .Histogram import Histogram
 from .HistogramData import HistogramData
 from .IdReference import IdReference
+from .Interface import Interface
 from .InterfaceConnectivityParameters import InterfaceConnectivityParameters
 from .InterfaceFlags import InterfaceFlags
 from .IpAddressMask import IpAddressMask
