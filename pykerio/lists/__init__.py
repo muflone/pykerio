@@ -34,6 +34,7 @@ from .Ip6AddressList import Ip6AddressList
 from .IpAddressList import IpAddressList
 from .IpAddressMaskList import IpAddressMaskList
 from .Ip6AddressMaskList import Ip6AddressMaskList
+from .IpCollisionList import IpCollisionList
 from .KIdList import KIdList
 from .LocalizableMessageList import LocalizableMessageList
 from .ManipulationErrorList import ManipulationErrorList
