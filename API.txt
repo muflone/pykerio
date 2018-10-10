@@ -79,14 +79,6 @@ string  url
 AddresseeType   type
 string  email
 
-#TODO: API AddResult
-KId     id
-    purposely not id - loginName is shown
-boolean     success
-    was operation successful? if yes so id is new id for this item else errorMessage tells why it failed
-LocalizableMessage  errorMessage
-    contains number of recovered user messages or error message
-
 #TODO: API AlertLogEvent
 kerio::web::KId     log
 string  name
@@ -258,7 +250,7 @@ IdReference     interfaceId
 IdReference     validTimeRange
 boolean     chart
 
-#TODO: API ByteValueWithUnits
+#DONE: API ByteValueWithUnits
 long    value
 ByteUnits   units
 
@@ -277,7 +269,7 @@ boolean     connected
 boolean     paired
 kerio::web::OptionalString  url
 
-#TODO: API CertificateDn
+#DONE: API CertificateDn
 IdReference     certificate
 string  value
 
@@ -291,7 +283,7 @@ void    exportCertificateP12 (out kerio::web::Download fileDownload, in kerio::w
 void    importCertificateUrl (in string url)
 void    setDistrusted (out kerio::web::ErrorList errors, in kerio::web::KIdList ids)
 
-#TODO: API ClientTimestamp
+#DONE: API ClientTimestamp
 string  name
 long    timestamp
 
@@ -348,7 +340,7 @@ ConnectivityType    type
 WanInterfaceConfigList  wans
 LanInterfaceConfig  lan
 
-#TODO: API ConnectivityConfig
+#DONE: API ConnectivityConfig
 ConnectivityType    mode
 kerio::web::OptionalString  probeHosts
 boolean     reconnectTunnelsWhenPrimaryGoesBack
@@ -429,19 +421,19 @@ kerio::web::ByteValueWithUnits  size
 DateTimeStamp   timestamp
 kerio::assist::Importance   importance
 
-#TODO: API CreateResult
+#DONE: API CreateResult
 long    inputIndex
     0-based index to input array, e.g. 3 means that the relates to the 4th element of the input parameter array
 KId     id
     ID of created item.
 
-#TODO: API Credentials
+#DONE: API Credentials
 string  userName
     UserName.
 string  password
     Password.
 
-#TODO: API CredentialsConfig
+#DONE: API CredentialsConfig
 string  userName
 string  password
 boolean     passwordChanged
@@ -458,7 +450,7 @@ boolean     wifi
 boolean     enabled
 string  pageTitle
 
-#TODO: API DataStatistic
+#DONE: API DataStatistic
 double  today
 double  todayIn
 double  todayOut
@@ -472,14 +464,14 @@ double  total
 double  totalIn
 double  totalOut
 
-#TODO: API Date
+#DONE: API Date
 long    year
 long    month
     0-11
 long    day
     1-31 max day is limited by month
 
-#TODO: API DateTimeConfig
+#DONE: API DateTimeConfig
 kerio::web::Date    date
 TimeHMS     time
 
@@ -488,7 +480,7 @@ string  denialText
 kerio::web::OptionalString  redirectUrl
 boolean     sendEmail
 
-#TODO: API DetailsConfig
+#DONE: API DetailsConfig
 boolean     localizable
 string  fixedMessage
 kerio::web::LocalizableMessage  localizableMessage
@@ -645,7 +637,7 @@ void    testDomainController (out kerio::web::ErrorList errors, in kerio::web::S
 void    apply (out kerio::web::ErrorList errors)
 void    reset ()
 
-#TODO: API Download
+#DONE: API Download
 string  url
     download url
 string  name
@@ -681,7 +673,7 @@ kerio::web::OptionalString  prependText
 boolean     allowTls
 boolean     allowNotScanned
 
-#TODO: API Error
+#DONE: API Error
 long    inputIndex
     0-based index to input array, e.g. 3 means that the relates to the 4th element of the input parameter array
 long    code
@@ -718,7 +710,7 @@ string  description
 boolean     areOptionsAvailable
 AntivirusOptionList     options
 
-#TODO: API FilenameGroup
+#DONE: API FilenameGroup
 string  name
 string  pattern
 
@@ -785,7 +777,7 @@ HighlightColor  color
 boolean     isOrderChanged
     True if item order was changed by user.
 
-#TODO: API Histogram
+#DONE: API Histogram
 kerio::web::ByteUnits   units
 double  averageIn
 double  averageOut
@@ -793,7 +785,7 @@ double  maxIn
 double  maxOut
 HistogramDataList   data
 
-#TODO: API HistogramData
+#DONE: API HistogramData
 double  inbound
 double  outbound
 
@@ -840,7 +832,7 @@ OptionalIdReference     ipAddressGroup
 UserReferenceList   userExceptions
 boolean     disclaimer
 
-#TODO: API IdReference
+#DONE: API IdReference
 kerio::web::KId     id
 string  name
 boolean     invalid
@@ -865,7 +857,7 @@ long    ipProtocol
 #TODO: API Inspectors
 void    get (out InspectorList list)
 
-#TODO: API Interface
+#DONE: API Interface
 boolean     enabled
 InterfaceType   type
 kerio::web::StoreStatus     status
@@ -914,12 +906,12 @@ IdReference     selectedInterface
 boolean     enabled
     interface is present, but disabled/down
 
-#TODO: API InterfaceConnectivityParameters
+#DONE: API InterfaceConnectivityParameters
 FailoverRoleType    failoverRole
 boolean     onDemand
 kerio::web::OptionalLong    loadBalancingWeight
 
-#TODO: API InterfaceFlags
+#DONE: API InterfaceFlags
 boolean     deletable
 boolean     dialable
 boolean     hangable
@@ -946,7 +938,7 @@ void    getWifiConfig (out WifiConfig config)
 void    setWifiConfig (out kerio::web::ErrorList errors, in WifiConfig config)
 void    getWifiCountries (out WifiCountryList countries)
 void    apply (out kerio::web::ErrorList errors, in long revertTimeout)
-void    reset ()
+    void    reset ()
 
 #TODO: API InternalAntivirus
 kerio::web::OptionalLong    updateCheckInterval
@@ -1010,7 +1002,7 @@ string  databaseVersion
 IntrusionPreventionUpdatePhases     phase
 string  errorMessage
 
-#TODO: API Ip6AddressMask
+#DONE: API Ip6AddressMask
 Ip6Address  ip
 long    prefixLength
 
@@ -1018,11 +1010,11 @@ long    prefixLength
 void    apply (out kerio::web::ErrorList errors)
 void    reset ()
 
-#TODO: API IpAddressMask
+#DONE: API IpAddressMask
 kerio::web::IpAddress   ip
 kerio::web::IpAddress   subnetMask
 
-#TODO: API IpsecPeerIdConfig
+#DONE: API IpsecPeerIdConfig
 string  defaultLocalIdValue
 string  defaultCipherIke
 string  defaultCipherEsp
@@ -1110,7 +1102,7 @@ string  zip
     compulsory
 string  comment
 
-#TODO: API LocalizableMessage
+#DONE: API LocalizableMessage
 string  message
     text with placeholders %1, %2, etc., e.g. "User %1 cannot be deleted."
 StringList  positionalParameters
@@ -1196,7 +1188,7 @@ MacFilterActionType     macFilterAction
 MacAccessList   macAccessItems
 boolean     allowReserved
 
-#TODO: API ManipulationError
+#DONE: API ManipulationError
 KId     id
     entity KId, can be user, group, alias, ML...
 LocalizableMessage  errorMessage
@@ -1208,15 +1200,15 @@ UpnpConfig  upnp
 IPv6Config  ipv6
 DhcpScopes  dhcpScopes
 
-#TODO: API NamedMultiValue
+#DONE: API NamedMultiValue
 string  name
 StringList  value
 
-#TODO: API NamedValue
+#DONE: API NamedValue
 string  name
 string  value
 
-#TODO: API Notification
+#DONE: API Notification
 NotificationType    type
 NotificationSeverity    severity
 string  value
@@ -1230,21 +1222,21 @@ void    clear (in Notification notification)
 NtpUpdatePhase  phase
 string  errorMessage
 
-#TODO: API OptionalEntity
+#DONE: API OptionalEntity
 boolean     enabled
 KId     id
     global identifier
 string  name
 
-#TODO: API OptionalIdReference
+#DONE: API OptionalIdReference
 boolean     enabled
 IdReference     value
 
-#TODO: API OptionalLong
+#DONE: API OptionalLong
 boolean     enabled
 long    value
 
-#TODO: API OptionalString
+#DONE: API OptionalString
 boolean     enabled
 string  value
 
@@ -1282,7 +1274,7 @@ long    port
 boolean     authEnabled
 CredentialsConfig   credentials
 
-#TODO: API Password
+#DONE: API Password
 string  value
 boolean     isSet
 
@@ -1377,7 +1369,7 @@ boolean     enabled
 Password    password
 IdReference     certificate
 
-#TODO: API RasConfig
+#DONE: API RasConfig
 boolean     dead
 string  entryName
 boolean     useOwnCredentials
@@ -1551,7 +1543,7 @@ string  pattern
 boolean     scan
 string  description
 
-#TODO: API SearchQuery
+#DONE: API SearchQuery
 StringList  fields
     empty = give me all fields, applicable constants: ADD_USERS, LIST_USERS
 SubConditionList    conditions
@@ -1607,7 +1599,7 @@ string  userName
 string  password
     [WRITE-ONLY] Administrator password
 
-#TODO: API SizeLimit
+#DONE: API SizeLimit
 boolean     isActive
 ByteValueWithUnits  limit
 
@@ -1638,7 +1630,7 @@ Password    community
 string  username
 Password    password
 
-#TODO: API SortOrder
+#DONE: API SortOrder
 string  columnName
 SortDirection   direction
 boolean     caseSensitive
@@ -1685,7 +1677,7 @@ void    remove (in StorageDataType type)
 StorageDataType     type
 double  size
 
-#TODO: API SubCondition
+#DONE: API SubCondition
 string  fieldName
     left side of condition
 CompareOperator     comparator
@@ -1756,13 +1748,13 @@ void    addSystemInfoToTicket (in string ticketId, in string email)
 boolean     successful
 string  errorMessage
 
-#TODO: API Time
+#DONE: API Time
 long    hour
     0-23
 long    min
     0-59
 
-#TODO: API TimeHMS
+#DONE: API TimeHMS
 long    hour
 long    min
 long    sec
@@ -1771,7 +1763,7 @@ long    sec
 void    apply (out kerio::web::ErrorList errors)
 void    reset ()
 
-#TODO: API TimeSpan
+#DONE: API TimeSpan
 boolean     isValid
 long    days
 long    hours
@@ -2099,25 +2091,14 @@ IdReference     tunnel
 boolean     enabled
     tunnel is present, but disabled/down
 
-#TODO: API VpnRoute
+#DONE: API VpnRoute
 kerio::web::KId     id
 boolean     enabled
 string  description
 kerio::web::IpAddress   network
 kerio::web::IpAddress   mask
 
-#TODO: API VpnServerConfig
-VpnRouteList    routes
-kerio::web::IpAddress   network
-kerio::web::IpAddress   mask
-boolean     localDns
-kerio::web::IpAddress   primaryDns
-kerio::web::IpAddress   secondaryDns
-boolean     autodetectDomainSuffix
-string  domainSuffix
-boolean     localWins
-kerio::web::IpAddress   primaryWins
-kerio::web::IpAddress   secondaryWins
+#DONE: API VpnServerConfig
 boolean     kerioVpnEnabled
 IdReference     kerioVpnCertificate
 long    port
@@ -2131,8 +2112,19 @@ string  cipherEsp
     read-only
 boolean     useCertificate
 kerio::web::OptionalString  psk
+VpnRouteList    routes
+kerio::web::IpAddress   network
+kerio::web::IpAddress   mask
+boolean     localDns
+kerio::web::IpAddress   primaryDns
+kerio::web::IpAddress   secondaryDns
+boolean     autodetectDomainSuffix
+string  domainSuffix
+boolean     localWins
+kerio::web::IpAddress   primaryWins
+kerio::web::IpAddress   secondaryWins
 
-#TODO: API VpnTunnelConfig
+#DONE: API VpnTunnelConfig
 VpnType     type
 kerio::web::OptionalString  peer
     hostname or ip, passive if disabled
@@ -2191,12 +2183,12 @@ long    sslPort
 IdReference     certificate
 CustomizedBrand     customizedBrand
 
-#TODO: API WifiChannelInfo
+#DONE: API WifiChannelInfo
 string  name
 string  name80211n
 long    value
 
-#TODO: API WifiConfig
+#DONE: API WifiConfig
 kerio::web::KId     country
     Country code in ISO_3166-1_alpha-2.
 WifiBandType    band
@@ -2204,16 +2196,16 @@ boolean     band80211n
 long    channel
 WifiSsidConfigList  ssids
 
-#TODO: API WifiCountryConfig
+#DONE: API WifiCountryConfig
 kerio::web::KId     country
     Country code in ISO_3166-1_alpha-2.
 WifiModeChannelList     channels
 
-#TODO: API WifiModeChannelConfig
+#DONE: API WifiModeChannelConfig
 WifiBandType    band
 WifiChannelList     channels
 
-#TODO: API WifiSsidConfig
+#DONE: API WifiSsidConfig
 kerio::web::KId     id
 boolean     enabled
 PortAssignmentType  assignment
