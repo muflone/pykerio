@@ -20,6 +20,8 @@
 
 from . import BaseStruct
 
+from ..enums.VpnType import VpnType
+
 from ..lists.VpnRouteList import VpnRouteList
 
 from ..structs.IdReference import IdReference
@@ -29,7 +31,8 @@ from ..structs.OptionalString import OptionalString
 class VpnTunnelConfig(BaseStruct):
     def __init__(self, data: dict):
         BaseStruct.__init__(self,
-                            types={'peer': OptionalString,
+                            types={'type': VpnType,
+                                   'peer': OptionalString,
                                    'localRoutes': VpnRouteList,
                                    'remoteRoutes': VpnRouteList,
                                    'remoteFingerprint': str,

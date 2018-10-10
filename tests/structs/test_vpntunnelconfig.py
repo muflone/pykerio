@@ -65,6 +65,7 @@ class TestCase_VpnTunnelConfig(unittest.TestCase):
         routes.append(route)
 
         teststruct = pykerio.structs.VpnTunnelConfig({
+            'type': pykerio.enums.VpnType(name='VpnKerio'),
             'peer': peer,
             'localRoutes': routes,
             'remoteRoutes': routes,
@@ -79,8 +80,8 @@ class TestCase_VpnTunnelConfig(unittest.TestCase):
             'remoteIdValue': '192.168.110.0',
             'useLocalAutomaticRoutes': False,
             'useLocalCustomRoutes': False})
-        self.assertEquals(len(teststruct.keys()), 14)
-        self.assertEquals(len(teststruct.values()), 14)
+        self.assertEquals(len(teststruct.keys()), 15)
+        self.assertEquals(len(teststruct.values()), 15)
 
         self.assertEquals(teststruct['peer'], peer)
         self.assertEquals(teststruct['psk'], psk)
