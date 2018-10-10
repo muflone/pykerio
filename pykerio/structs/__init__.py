@@ -72,3 +72,4 @@ from .VpnTunnelConfig import VpnTunnelConfig
 from .WifiChannelInfo import WifiChannelInfo
 from .WifiCountryConfig import WifiCountryConfig
 from .WifiModeChannelConfig import WifiModeChannelConfig
+from .WifiSsidConfig import WifiSsidConfig
