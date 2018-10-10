@@ -33,6 +33,7 @@ from .CredentialsConfig import CredentialsConfig
 from .DataStatistic import DataStatistic
 from .Date import Date
 from .DateTimeConfig import DateTimeConfig
+from .DetailsConfig import DetailsConfig
 from .Download import Download
 from .Error import Error
 from .FilenameGroup import FilenameGroup
