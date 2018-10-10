@@ -33,4 +33,5 @@ class BaseStruct(dict, JSONSerializable):
 
     def dump(self):
         """JSON serializable representation"""
-        return str(self)
+        return dict((key, value.dump() if isinstance(value, JSONSerializable)
+                     else value) for (key, value) in self.items())
