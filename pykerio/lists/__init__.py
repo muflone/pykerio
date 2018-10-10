@@ -31,6 +31,7 @@ from .IdReferenceList import IdReferenceList
 from .IntegerList import IntegerList
 from .Ip6AddressList import Ip6AddressList
 from .IpAddressList import IpAddressList
+from .IpAddressMaskList import IpAddressMaskList
 from .KIdList import KIdList
 from .LocalizableMessageList import LocalizableMessageList
 from .ManipulationErrorList import ManipulationErrorList
