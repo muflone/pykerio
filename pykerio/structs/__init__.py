@@ -69,3 +69,4 @@ from .TimeSpan import TimeSpan
 from .VpnRoute import VpnRoute
 from .VpnServerConfig import VpnServerConfig
 from .VpnTunnelConfig import VpnTunnelConfig
+from .WifiChannelInfo import WifiChannelInfo
