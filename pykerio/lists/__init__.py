@@ -47,4 +47,5 @@ from .StringList import StringList
 from .SubConditionList import SubConditionList
 from .VpnRouteList import VpnRouteList
 from .WifiChannelList import WifiChannelList
+from .WifiCountryList import WifiCountryList
 from .WifiModeChannelList import WifiModeChannelList
