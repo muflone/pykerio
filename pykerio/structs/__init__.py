@@ -43,6 +43,7 @@ from .IdReference import IdReference
 from .InterfaceConnectivityParameters import InterfaceConnectivityParameters
 from .InterfaceFlags import InterfaceFlags
 from .IpAddressMask import IpAddressMask
+from .Ip6AddressMask import Ip6AddressMask
 from .IpsecPeerIdConfig import IpsecPeerIdConfig
 from .LocalizableMessage import LocalizableMessage
 from .LocalizableMessageParameters import LocalizableMessageParameters
