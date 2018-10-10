@@ -49,3 +49,4 @@ from .VpnRouteList import VpnRouteList
 from .WifiChannelList import WifiChannelList
 from .WifiCountryList import WifiCountryList
 from .WifiModeChannelList import WifiModeChannelList
+from .WifiSsidConfigList import WifiSsidConfigList
