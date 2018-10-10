@@ -70,4 +70,5 @@ from .VpnRoute import VpnRoute
 from .VpnServerConfig import VpnServerConfig
 from .VpnTunnelConfig import VpnTunnelConfig
 from .WifiChannelInfo import WifiChannelInfo
+from .WifiCountryConfig import WifiCountryConfig
 from .WifiModeChannelConfig import WifiModeChannelConfig

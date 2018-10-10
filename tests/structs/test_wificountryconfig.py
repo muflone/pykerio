@@ -20,16 +20,16 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.lists
 import pykerio.structs
 
 
-class TestCase_WifiModeChannelConfig(unittest.TestCase):
-    def test_01_WifiModeChannelConfig(self):
+class TestCase_WifiCountryConfig(unittest.TestCase):
+    def test_01_WifiCountryConfig(self):
         """
-        Test WifiModeChannelConfig
+        Test WifiCountryConfig
         """
+        kid = pykerio.types.KId('IT')
+
         channels = pykerio.lists.WifiChannelList()
         name = 'Channel 11'
         value = 11
@@ -37,16 +37,21 @@ class TestCase_WifiModeChannelConfig(unittest.TestCase):
                                                    'name80211n': name,
                                                    'value': value})
         channels.append(channel)
-        band = pykerio.enums.WifiBandType('WifiBandBG')
 
-        teststruct = pykerio.structs.WifiModeChannelConfig({
-            'band': band,
+        channelsconfig = pykerio.structs.WifiModeChannelConfig({
+            'band': pykerio.enums.WifiBandType('WifiBandBG'),
             'channels': channels})
+        channelslist = pykerio.lists.WifiModeChannelList()
+        channelslist.append(channelsconfig)
+
+        teststruct = pykerio.structs.WifiCountryConfig({
+            'country': kid,
+            'channels': channelslist})
         self.assertEquals(len(teststruct.keys()), 2)
         self.assertEquals(len(teststruct.values()), 2)
 
-        self.assertEquals(teststruct['band'], band)
-        self.assertEquals(teststruct['channels'], channels)
+        self.assertEquals(teststruct['country'], kid)
+        self.assertEquals(teststruct['channels'], channelslist)
 
         teststruct.clear()
         self.assertEquals(len(teststruct.keys()), 0)
