@@ -23,6 +23,7 @@ from .AddResult import AddResult
 from .ApiApplication import ApiApplication
 from .ApiException import ApiException
 from .ByteValueWithUnits import ByteValueWithUnits
+from .ClientTimestamp import ClientTimestamp
 from .Collision import Collision
 from .ConnectivityConfig import ConnectivityConfig
 from .CreateResult import CreateResult
