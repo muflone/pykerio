@@ -20,6 +20,7 @@
 
 from .BaseList import BaseList
 from .AddResultList import AddResultList
+from .CertificateDnList import CertificateDnList
 from .ClientTimestampList import ClientTimestampList
 from .CollisionList import CollisionList
 from .CreateResultList import CreateResultList
