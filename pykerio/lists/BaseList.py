@@ -46,3 +46,8 @@ class BaseList(list, JSONSerializable):
         """JSON serializable representation"""
         return [value.dump() if isinstance(value, JSONSerializable) else value
                 for value in self]
+
+    def load(self, data):
+        """Append a list of items"""
+        for item in data:
+            self.append(item)
