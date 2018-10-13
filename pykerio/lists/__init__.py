@@ -40,6 +40,7 @@ from .LocalizableMessageList import LocalizableMessageList
 from .ManipulationErrorList import ManipulationErrorList
 from .NamedMultiValueList import NamedMultiValueList
 from .NamedValueList import NamedValueList
+from .NotificationTypeList import NotificationTypeList
 from .OptionalIpAddressList import OptionalIpAddressList
 from .OptionalStringList import OptionalStringList
 from .SortOrderList import SortOrderList
