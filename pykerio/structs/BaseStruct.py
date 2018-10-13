@@ -24,11 +24,29 @@ from ..json_serializable import JSONSerializable
 class BaseStruct(dict, JSONSerializable):
     def __init__(self, types: dict, data: dict):
         # Check members type
-        assert(not [key for key, value in types.items()
-               if type(data[key]) is not types[key]])
+        new_data = {}
+        for key in types:
+            if key in types:
+                item = data[key]
+                if type(item) is not types[key]:
+                    #print('Type casting for argument {KEY} '
+                    #      'from {ACTUAL} to {REQUIRED}'.format(
+                    #          KEY=key,
+                    #          ACTUAL=type(item),
+                    #          REQUIRED=types[key]))
+                    item = types[key](data[key])
+                if type(item) is not types[key]:
+                    print('Type clashing for argument {KEY}'.format(KEY=key))
+                    print('  required type: {REQUIRED}'.format(
+                        REQUIRED=types[key]))
+                    print('  actual type: {ACTUAL}'.format(ACTUAL=type(item)))
+                    assert(type(item) is types[key])
+                else:
+                    new_data[key] = item
         # Limit members to only those listed in keys
-        dict.__init__(self, dict([(key, value) for key, value in data.items()
-                                  if key in types.keys()]))
+        dict.__init__(self,
+                      dict([(key, value) for key, value in new_data.items()
+                      if key in types.keys()]))
         JSONSerializable.__init__(self)
 
     def dump(self):

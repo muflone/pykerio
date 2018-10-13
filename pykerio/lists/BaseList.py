@@ -28,6 +28,13 @@ class BaseList(list, JSONSerializable):
         self._class = class_
 
     def append(self, value):
+        if not isinstance(value, self._class):
+            #print('Type casting for list {TYPE} '
+            #      'from {ACTUAL} to {REQUIRED}'.format(
+            #          TYPE=self.__class__,
+            #          ACTUAL=type(value),
+            #          REQUIRED=self._class))
+            value = self._class(value)
         assert(isinstance(value, self._class))
         list.append(self, value)
 
