@@ -42,12 +42,3 @@ class TestCase_NamedValue(unittest.TestCase):
 
         teststruct.clear()
         self.assertEquals(len(teststruct.keys()), 0)
-
-    @unittest.expectedFailure
-    def test_99_NamedValue_FAIL(self):
-        """
-        Test NamedValue failure
-        """
-        teststruct = pykerio.structs.NamedValue({'name': 'string',
-                                                 'value': 123,
-                                                 'IGNORED': 'FOO'})
