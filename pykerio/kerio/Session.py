@@ -130,7 +130,6 @@ class Session(JSONSerializable):
             params={})
         return ClientTimestampList(response.result['clientTimestampList'])
 
-    # FIXME: needs testing
     def confirmConfig(self, clientTimestampList: ClientTimestampList):
         """
         Confirm the new configuration
