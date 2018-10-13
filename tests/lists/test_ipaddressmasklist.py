@@ -29,11 +29,11 @@ class TestCase_IpAddressMaskList(unittest.TestCase):
         """
         Test IpAddressMaskList
         """
-        testlist = pykerio.lists.IpAddressList()
+        testlist = pykerio.lists.IpAddressMaskList()
         self.assertEquals(len(testlist), 0)
 
-        ip = '192.168.1.1'
-        netmask = '255.255.255.0'
+        ip = pykerio.types.IpAddress('192.168.1.1')
+        netmask = pykerio.types.IpAddress('255.255.255.0')
         teststruct = pykerio.structs.IpAddressMask({'ip': ip,
                                                     'subnetMask': netmask})
         testlist.append(teststruct)

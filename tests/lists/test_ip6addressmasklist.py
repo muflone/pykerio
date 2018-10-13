@@ -29,7 +29,7 @@ class TestCase_Ip6AddressMaskList(unittest.TestCase):
         """
         Test Ip6AddressMaskList
         """
-        testlist = pykerio.lists.Ip6AddressList()
+        testlist = pykerio.lists.Ip6AddressMaskList()
         self.assertEquals(len(testlist), 0)
 
         ip = pykerio.types.Ip6Address('fe80::a0c0:52ff:fe2f:7aad')
