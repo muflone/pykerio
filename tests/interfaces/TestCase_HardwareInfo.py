@@ -34,8 +34,9 @@ class TestCase_HardwareInfo(unittest.TestCase):
         # Ignore invalid certificates
         ssl._create_default_https_context = ssl._create_unverified_context
         # API object
-        api = pykerio.PyKerioControl(server='control-demo.kerio.com',
-                                     port=4081)
+        api = pykerio.PyKerioControl(
+            server=os.environ.get('KERIO_SERVER', 'control-demo.kerio.com'),
+            port=int(os.environ.get('KERIO_PORT', '4081')))
         # ApiApplication object
         application = pykerio.structs.ApiApplication({
             'name': cls.__name__,
