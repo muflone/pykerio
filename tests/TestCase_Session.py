@@ -37,7 +37,7 @@ class TestCase_Session(unittest.TestCase):
         # Ignore invalid certificates
         ssl._create_default_https_context = ssl._create_unverified_context
         # API object
-        api = pykerio.PyKerioControl(server='firewall.cc32.local',
+        api = pykerio.PyKerioControl(server='firewall.muflone.lan',
                                      port=4081)
         # Session object
         cls.session = pykerio.kerio.Session(api)
@@ -48,19 +48,13 @@ class TestCase_Session(unittest.TestCase):
         """
         password = os.environ.get('KERIO_PASSWORD', '')
         application = pykerio.structs.ApiApplication({
-            'name': pykerio.constants.APP_NAME,
-            'vendor': pykerio.constants.APP_AUTHOR,
+            'name': self.__class__.__name__,
+            'vendor': pykerio.constants.APP_NAME,
             'version': pykerio.constants.APP_VERSION})
         self.__class__.session.login(userName=self.username,
                                      password=password,
                                      application=application)
         self.assertNotEquals(self.__class__.session.api.token, '')
-
-    def test_99_logout(self):
-        """
-        Test Session logout
-        """
-        self.__class__.session.logout()
 
     def test_02_getUserName(self):
         """
@@ -80,3 +74,9 @@ class TestCase_Session(unittest.TestCase):
         Test Session login type
         """
         self.assertEquals(self.session.getLoginType().dump(), 'LoginRegular')
+
+    def test_99_logout(self):
+        """
+        Test Session logout
+        """
+        self.__class__.session.logout()
