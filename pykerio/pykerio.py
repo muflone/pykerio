@@ -22,6 +22,7 @@ import http.cookiejar
 import json
 import urllib.request
 
+from .json_serializable import JSONSerializable
 from .rpc_response import RPCResponse
 
 
@@ -57,7 +58,10 @@ class PyKerio(object):
         data = json.dumps({'method': method,
                            'id': 1,
                            'jsonrpc': '2.0',
-                           'params': params
+                           'params': dict((key, value.dump()
+                                     if isinstance(value, JSONSerializable)
+                                     else value)
+                                     for (key, value) in params.items())
                           }).encode()
         httpResponse = urllib.request.urlopen(url=request,
                                               data=data)
