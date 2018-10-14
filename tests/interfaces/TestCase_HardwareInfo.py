@@ -49,7 +49,7 @@ class TestCase_HardwareInfo(unittest.TestCase):
                           application=application)
 
         # HardwareInfo
-        cls.hardware_info = pykerio.api.HardwareInfo(api)
+        cls.hardware_info = pykerio.interfaces.HardwareInfo(api)
 
     @classmethod
     def tearDownClass(cls):
