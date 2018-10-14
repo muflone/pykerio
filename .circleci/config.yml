@@ -39,4 +39,8 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage || true
+            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/types/
+            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/enums/
+            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/structs/
+            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/lists/
+            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/interfaces/ || true
