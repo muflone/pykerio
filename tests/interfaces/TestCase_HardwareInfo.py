@@ -59,6 +59,8 @@ class TestCase_HardwareInfo(unittest.TestCase):
         """
         cls.session.logout()
 
+    @unittest.skipIf(os.environ.get('KERIO_BOX', 'YES').upper() != 'YES',
+                     'Not a Kerio Box with Serial number')
     def test_01_getBoxSerialNumber(self):
         """
         Test HardwareInfo getBoxSerialNumber

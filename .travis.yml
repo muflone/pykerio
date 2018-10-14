@@ -8,10 +8,11 @@ install: "pip install -r requirements.txt"
 script:
   - export KERIO_USERNAME='admin-en'
   - export KERIO_PASSWORD='kerio'
+  - export KERIO_KERIO_BOX='NO'
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/types/
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/enums/
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/structs/
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/lists/
-  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/interfaces/ || true
+  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/interfaces/
 after_success:
   - coveralls
