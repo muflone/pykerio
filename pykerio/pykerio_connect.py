@@ -18,14 +18,9 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from . import enums
-from . import lists
-from . import structs
-from . import interfaces
-
-from .constants import *
 from .pykerio import PyKerio
-from .pykerio_control import PyKerioControl
-from .pykerio_connect import PyKerioConnect
-from .json_serializable import JSONSerializable
-from .rpc_response import RPCResponse
+
+
+class PyKerioConnect(PyKerio):
+    def __init__(self, server: str, port: int):
+        PyKerio.__init__(self, server, port)
