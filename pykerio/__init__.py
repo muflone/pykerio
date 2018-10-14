@@ -21,6 +21,7 @@
 from . import enums
 from . import lists
 from . import structs
+from . import interfaces
 
 from .constants import *
 from .pykerio import PyKerio

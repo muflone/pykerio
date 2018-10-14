@@ -23,46 +23,58 @@ import ssl
 import unittest
 
 import pykerio
-import pykerio.constants
-import pykerio.kerio
 
 
-class TestCase_HardwareInfo(unittest.TestCase):
+class TestCase_Session(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """
-        Prepares session
+        Prepares Session tests
         """
+        cls.username = os.environ.get('KERIO_USERNAME', '')
         # Ignore invalid certificates
         ssl._create_default_https_context = ssl._create_unverified_context
         # API object
-        api = pykerio.PyKerioControl(server='firewall.muflone.lan',
+        api = pykerio.PyKerioControl(server='control-demo.kerio.com',
                                      port=4081)
-        # ApiApplication object
+        # Session object
+        cls.session = pykerio.interfaces.Session(api)
+
+    def test_01_login(self):
+        """
+        Test Session login
+        """
+        password = os.environ.get('KERIO_PASSWORD', '')
         application = pykerio.structs.ApiApplication({
-            'name': cls.__name__,
+            'name': self.__class__.__name__,
             'vendor': pykerio.constants.APP_NAME,
             'version': pykerio.constants.APP_VERSION})
+        self.__class__.session.login(userName=self.username,
+                                     password=password,
+                                     application=application)
+        self.assertNotEquals(self.__class__.session.api.token, '')
 
-        # Session login
-        cls.session = pykerio.kerio.Session(api)
-        cls.session.login(userName=os.environ.get('KERIO_USERNAME', ''),
-                          password=os.environ.get('KERIO_PASSWORD', ''),
-                          application=application)
+    def test_02_getUserName(self):
+        """
+        Test Session username
+        """
+        self.assertNotEquals(self.__class__.session.api.token, '')
+        self.assertEquals(self.__class__.session.getUserName(), self.username)
 
-        # HardwareInfo
-        cls.hardware_info = pykerio.kerio.HardwareInfo(api)
+    def test_03_getCsrfToken(self):
+        """
+        Test Session Csrf token
+        """
+        self.assertNotEquals(self.session.getCsrfToken(), '')
 
-    @classmethod
-    def tearDownClass(cls):
+    def test_04_getLoginType(self):
         """
-        Closes session
+        Test Session login type
         """
-        cls.session.logout()
+        self.assertEquals(self.session.getLoginType().dump(), 'LoginRegular')
 
-    def test_01_getBoxSerialNumber(self):
+    def test_99_logout(self):
         """
-        Test HardwareInfo getBoxSerialNumber
+        Test Session logout
         """
-        self.assertNotEquals(
-            self.__class__.hardware_info.getBoxSerialNumber(), '')
+        self.__class__.session.logout()
