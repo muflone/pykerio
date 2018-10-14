@@ -163,6 +163,9 @@ classes.
 The next step is to login to the server using valid username and password.
 Every other commands require a successful login session.
 
+Many usage examples can be found in the ```tests``` folder as they are used
+to test the API operation.
+
 ### Login
 
     >>> import pykerio
