@@ -32,7 +32,10 @@ class TestCase_HardwareInfo(unittest.TestCase):
         Prepares session
         """
         # Ignore invalid certificates
-        ssl._create_default_https_context = ssl._create_unverified_context
+        try:
+            ssl._create_default_https_context = ssl._create_unverified_context
+        except AttributeError:
+            pass
         # API object
         api = pykerio.PyKerioControl(
             server=os.environ.get('KERIO_SERVER', 'control-demo.kerio.com'),
