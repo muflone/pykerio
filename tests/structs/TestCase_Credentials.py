@@ -20,8 +20,7 @@
 
 import unittest
 
-import pykerio.constants
-import pykerio.structs
+import pykerio
 
 
 class TestCase_Credentials(unittest.TestCase):

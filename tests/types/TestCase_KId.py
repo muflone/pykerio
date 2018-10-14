@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.types
+import pykerio
 
 
 class TestCase_KId(unittest.TestCase):

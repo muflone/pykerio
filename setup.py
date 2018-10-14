@@ -21,7 +21,7 @@
 import os.path
 import setuptools
 
-import pykerio.constants
+import pykerio
 
 
 with open(os.path.join(os.path.abspath(os.path.dirname(__file__)),

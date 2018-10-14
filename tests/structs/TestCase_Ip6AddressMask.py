@@ -20,8 +20,7 @@
 
 import unittest
 
-import pykerio.structs
-import pykerio.types
+import pykerio
 
 
 class TestCase_Ip6AddressMask(unittest.TestCase):

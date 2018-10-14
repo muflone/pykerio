@@ -20,10 +20,7 @@
 
 import unittest
 
-import pykerio.constants
-import pykerio.enums
-import pykerio.lists
-import pykerio.structs
+import pykerio
 
 
 class TestCase_SearchQuery(unittest.TestCase):

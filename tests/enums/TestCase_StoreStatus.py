@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.enums
+import pykerio
 
 
 class TestCase_StoreStatus(unittest.TestCase):

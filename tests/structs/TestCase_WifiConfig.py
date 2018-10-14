@@ -20,9 +20,7 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.types
-import pykerio.structs
+import pykerio
 
 
 class TestCase_WifiConfig(unittest.TestCase):

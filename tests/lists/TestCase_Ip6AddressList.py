@@ -20,8 +20,7 @@
 
 import unittest
 
-import pykerio.lists
-import pykerio.types
+import pykerio
 
 
 class TestCase_Ip6AddressList(unittest.TestCase):

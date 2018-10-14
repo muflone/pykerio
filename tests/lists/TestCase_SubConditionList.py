@@ -20,9 +20,7 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.lists
-import pykerio.types
+import pykerio
 
 
 class TestCase_SubConditionList(unittest.TestCase):

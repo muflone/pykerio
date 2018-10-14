@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.structs
+import pykerio
 
 
 class TestCase_OptionalEntity(unittest.TestCase):

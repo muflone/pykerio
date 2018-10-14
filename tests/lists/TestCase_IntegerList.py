@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio.lists
+import pykerio
 
 
 class TestCase_IntegerList(unittest.TestCase):

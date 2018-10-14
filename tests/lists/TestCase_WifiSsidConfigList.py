@@ -20,9 +20,7 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.lists
-import pykerio.structs
+import pykerio
 
 
 class TestCase_WifiSsidConfigList(unittest.TestCase):

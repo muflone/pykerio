@@ -20,8 +20,7 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.lists
+import pykerio
 
 
 class TestCase_SortOrderList(unittest.TestCase):

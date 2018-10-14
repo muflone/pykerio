@@ -20,9 +20,7 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.structs
-import pykerio.types
+import pykerio
 
 
 class TestCase_Interface(unittest.TestCase):

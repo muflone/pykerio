@@ -20,8 +20,7 @@
 
 import unittest
 
-import pykerio.enums
-import pykerio.structs
+import pykerio
 
 
 class TestCase_RasConfig(unittest.TestCase):

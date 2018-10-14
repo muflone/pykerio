@@ -20,8 +20,7 @@
 
 import unittest
 
-import pykerio.lists
-import pykerio.structs
+import pykerio
 
 
 class TestCase_LocalizableMessageParameters(unittest.TestCase):
