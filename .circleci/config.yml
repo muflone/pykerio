@@ -39,6 +39,8 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            export KERIO_USERNAME='admin-en'
+            export KERIO_PASSWORD='kerio'
             nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/types/
             nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/enums/
             nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/structs/
