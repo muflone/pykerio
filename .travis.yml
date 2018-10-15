@@ -9,6 +9,7 @@ script:
   - export KERIO_USERNAME='admin-en'
   - export KERIO_PASSWORD='kerio'
   - export KERIO_BOX='NO'
+  - export KERIO_READONLY='YES'
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/types/
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/enums/
   - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/structs/
