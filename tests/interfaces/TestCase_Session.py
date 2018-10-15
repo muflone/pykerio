@@ -78,6 +78,8 @@ class TestCase_Session(unittest.TestCase):
         self.assertEquals(self.__class__.session.getLoginType().dump(),
                           'LoginRegular')
 
+    @unittest.skipIf(os.environ.get('KERIO_READONLY', 'NO').upper() == 'YES',
+                     'Insufficient rights')
     def test_05_apply(self):
         """
         Test Session apply
