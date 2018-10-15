@@ -138,3 +138,10 @@ class Session(JSONSerializable):
             method='Session.confirmConfig',
             params={'clientTimestampList': clientTimestampList})
         return response.result['confirmed']
+
+    def apply(self):
+        """
+        Confirm changes application
+        """
+        return self.confirmConfig(
+            clientTimestampList=self.getConfigTimestamp())

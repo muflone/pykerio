@@ -78,6 +78,12 @@ class TestCase_Session(unittest.TestCase):
         self.assertEquals(self.__class__.session.getLoginType().dump(),
                           'LoginRegular')
 
+    def test_05_apply(self):
+        """
+        Test Session apply
+        """
+        self.__class__.session.apply()
+
     def test_99_logout(self):
         """
         Test Session logout
