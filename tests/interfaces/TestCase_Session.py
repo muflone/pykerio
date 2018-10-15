@@ -69,13 +69,14 @@ class TestCase_Session(unittest.TestCase):
         """
         Test Session Csrf token
         """
-        self.assertNotEquals(self.session.getCsrfToken(), '')
+        self.assertNotEquals(self.__class__.session.getCsrfToken(), '')
 
     def test_04_getLoginType(self):
         """
         Test Session login type
         """
-        self.assertEquals(self.session.getLoginType().dump(), 'LoginRegular')
+        self.assertEquals(self.__class__.session.getLoginType().dump(),
+                          'LoginRegular')
 
     def test_99_logout(self):
         """
