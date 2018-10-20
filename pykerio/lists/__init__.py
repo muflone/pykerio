@@ -45,6 +45,7 @@ from .NotificationTypeList import NotificationTypeList
 from .OptionalIpAddressList import OptionalIpAddressList
 from .OptionalStringList import OptionalStringList
 from .SortOrderList import SortOrderList
+from .SpeedDuplexMayNotWorkList import SpeedDuplexMayNotWorkList
 from .StringList import StringList
 from .SubConditionList import SubConditionList
 from .VpnRouteList import VpnRouteList
