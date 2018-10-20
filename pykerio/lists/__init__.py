@@ -44,6 +44,7 @@ from .NotificationList import NotificationList
 from .NotificationTypeList import NotificationTypeList
 from .OptionalIpAddressList import OptionalIpAddressList
 from .OptionalStringList import OptionalStringList
+from .PortConfigList import PortConfigList
 from .SortOrderList import SortOrderList
 from .SpeedDuplexMayNotWorkList import SpeedDuplexMayNotWorkList
 from .StringList import StringList
