@@ -919,7 +919,7 @@ boolean     virtualSwitch
 boolean     wifi
 boolean     vlan
 
-#TODO: API Interfaces
+#DONE: API Interfaces
 void    get (out InterfaceList list, out long totalItems, in kerio::web::SearchQuery query, in boolean sortByGroup)
 void    create (out kerio::web::ErrorList errors, out kerio::web::CreateResultList result, in InterfaceList list)
 void    set (out kerio::web::ErrorList errors, in kerio::web::KIdList ids, in Interface details)
@@ -938,7 +938,7 @@ void    getWifiConfig (out WifiConfig config)
 void    setWifiConfig (out kerio::web::ErrorList errors, in WifiConfig config)
 void    getWifiCountries (out WifiCountryList countries)
 void    apply (out kerio::web::ErrorList errors, in long revertTimeout)
-    void    reset ()
+void    reset ()
 
 #TODO: API InternalAntivirus
 kerio::web::OptionalLong    updateCheckInterval

@@ -20,3 +20,4 @@
 
 from .Session import Session
 from .HardwareInfo import HardwareInfo
+from .Interfaces import Interfaces
