@@ -1292,7 +1292,7 @@ kerio::web::OptionalString  vlans
 SpeedDuplexType     speedDuplex
 SpeedDuplexMayNotWorkList   speedDuplexMayNotWork
 
-#TODO: API Ports
+#DONE: API Ports
 void    get (out PortConfigList list)
 void    set (out kerio::web::ErrorList errors, in PortConfigList ports, in long revertTimeout)
 
