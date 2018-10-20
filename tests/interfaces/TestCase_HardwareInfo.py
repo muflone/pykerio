@@ -48,8 +48,8 @@ class TestCase_HardwareInfo(unittest.TestCase):
 
         # Session login
         cls.session = pykerio.interfaces.Session(api)
-        cls.session.login(userName=os.environ.get('KERIO_USERNAME', ''),
-                          password=os.environ.get('KERIO_PASSWORD', ''),
+        cls.session.login(userName=os.environ.get('KERIO_USERNAME', 'admin-en'),
+                          password=os.environ.get('KERIO_PASSWORD', 'kerio'),
                           application=application)
 
         # HardwareInfo

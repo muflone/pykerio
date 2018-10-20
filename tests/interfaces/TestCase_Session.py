@@ -31,7 +31,7 @@ class TestCase_Session(unittest.TestCase):
         """
         Prepares Session tests
         """
-        cls.username = os.environ.get('KERIO_USERNAME', '')
+        cls.username = os.environ.get('KERIO_USERNAME', 'admin-en')
         # Ignore invalid certificates
         try:
             ssl._create_default_https_context = ssl._create_unverified_context
@@ -48,7 +48,7 @@ class TestCase_Session(unittest.TestCase):
         """
         Test Session login
         """
-        password = os.environ.get('KERIO_PASSWORD', '')
+        password = os.environ.get('KERIO_PASSWORD', 'kerio')
         application = pykerio.structs.ApiApplication({
             'name': self.__class__.__name__,
             'vendor': pykerio.constants.APP_NAME,
