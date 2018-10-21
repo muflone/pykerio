@@ -65,6 +65,7 @@ from .RestrictionTuple import RestrictionTuple
 from .SearchQuery import SearchQuery
 from .SizeLimit import SizeLimit
 from .SortOrder import SortOrder
+from .StorageData import StorageData
 from .SubCondition import SubCondition
 from .Time import Time
 from .TimeHMS import TimeHMS
