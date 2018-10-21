@@ -37,6 +37,5 @@ class FilenameGroups(object):
             method='FilenameGroups.get',
             params={})
         results = FilenameGroupList()
-        for group in response.result['groups']:
-            results.append(FilenameGroup(group))
+        results.load(response.result['groups'])
         return results
