@@ -13,7 +13,7 @@
 | BandwidthManagement  |     |              |         |            | API for Bandwidth Management
 | CentralManagement    |     |              |         |            | Central management API
 | Certificates         |     |              |         |            | API for certificate handling
-| common               |  ?  | INCOMPLETE   | 0.2.0   | 2018-10-07 | Common Kerio Control structures, enums and types
+| common               |  ?  | COMPLETE     | 0.3.0   | 2018-10-21 | Common Kerio Control structures, enums and types
 | Configuration        |     |              |         |            | API for Configuration export/import
 | ConfigurationBackup  |     |              |         |            | Configuration backup API
 | ConnLimit            |     |              |         |            | API for Connection limit settings

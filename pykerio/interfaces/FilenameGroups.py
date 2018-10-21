@@ -18,8 +18,25 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .FilenameGroups import FilenameGroups
-from .HardwareInfo import HardwareInfo
-from .Interfaces import Interfaces
-from .Ports import Ports
-from .Session import Session
+from ..pykerio import PyKerio
+
+from ..structs import FilenameGroup
+
+from ..lists import FilenameGroupList
+
+
+class FilenameGroups(object):
+    def __init__(self, api: PyKerio):
+        self.api = api
+
+    def get(self):
+        """
+        Returns the list of filename groups
+        """
+        response = self.api.request_rpc(
+            method='FilenameGroups.get',
+            params={})
+        results = FilenameGroupList()
+        for group in response.result['groups']:
+            results.append(FilenameGroup(group))
+        return results
