@@ -270,7 +270,6 @@ class Interfaces(object):
         """
         Find interfaces by name, type or group
         """
-        results = InterfaceList()
         conditions = SubConditionList()
         if name:
             conditions.append(SubCondition({'fieldName': 'name',
@@ -299,7 +298,6 @@ class Interfaces(object):
             'limit': UNLIMITED,
             'orderBy': orderbylist})
         (ifaces, count) = self.get(query=search_query, sortByGroup=True)
-        # Add results
-        for iface in ifaces:
-            results.append(Interface(iface))
+        results = InterfaceList()
+        results.load(ifaces)
         return results

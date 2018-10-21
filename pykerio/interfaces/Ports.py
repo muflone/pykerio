@@ -38,8 +38,7 @@ class Ports(object):
             method='Ports.get',
             params={})
         results = PortConfigList()
-        for port in response.result['list']:
-            results.append(PortConfig(port))
+        results.load(response.result['list'])
         return results
 
     def set(self, ports: PortConfigList, revertTimeout: int):

@@ -68,6 +68,8 @@ class TestCase_Ports(unittest.TestCase):
         """
         ports_list = self.__class__.ports.get()
         self.assertNotEquals(len(ports_list), 0)
+        for port in ports_list:
+            self.assertEquals(type(port), pykerio.structs.PortConfig)
 
     @unittest.skipIf(os.environ.get('KERIO_READONLY', 'NO').upper() == 'YES',
                      'Insufficient rights')
