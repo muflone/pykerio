@@ -60,6 +60,7 @@ from .OptionalString import OptionalString
 from .Password import Password
 from .PortConfig import PortConfig
 from .RasConfig import RasConfig
+from .RestrictionTuple import RestrictionTuple
 from .SearchQuery import SearchQuery
 from .SizeLimit import SizeLimit
 from .SortOrder import SortOrder
