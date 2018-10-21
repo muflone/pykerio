@@ -18,10 +18,32 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .FilenameGroups import FilenameGroups
-from .HardwareInfo import HardwareInfo
-from .Interfaces import Interfaces
-from .Ports import Ports
-from .Server import Server
-from .Session import Session
-from .Storage import Storage
+from ..pykerio import PyKerio
+
+from ..enums import StorageDataType
+
+from ..lists import StorageDataList
+
+
+class Storage(object):
+    def __init__(self, api: PyKerio):
+        self.api = api
+
+    def get(self):
+        """
+        Returns list of data present on storage.
+        """
+        response = self.api.request_rpc(
+            method='Storage.get',
+            params={})
+        results = StorageDataList()
+        results.load(response.result['data'])
+        return results
+
+    def remove(self, storage_type: StorageDataType):
+        """
+        Delete data specified by type from storage.
+        """
+        response = self.api.request_rpc(
+            method='Storage.remove',
+            params={'type': storage_type.dump()})

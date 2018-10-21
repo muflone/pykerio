@@ -52,7 +52,7 @@
 | SmtpRelay            |     |              |         |            | API for Smtp relay
 | Snmp                 |     |              |         |            | SNMP API
 | StarReports          |     |              |         |            | StaR reports API
-| Storage              |     |              |         |            | API for Storage
+| Storage              |  2  | COMPLETE     | 0.3.0   | 2018-10-21 | API for Storage
 | SystemConfig         |     |              |         |            | System Configuration API
 | SystemHealth         |     |              |         |            | State of the operating system the product is running on
 | SystemTasks          |     |              |         |            | API for System tasks on Linux

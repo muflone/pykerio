@@ -152,6 +152,7 @@ The following interfaces are implemented under ```pykerio.interfaces```:
 - Ports
 - FilenameGroups
 - Server
+- Storage
 
 Every needed simple type, structure, enumeration or list to implement or use
 these interfaces it's also present, ready to be used.
