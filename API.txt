@@ -45,7 +45,7 @@
 | RouterAdvertisements |     |              |         |            | Router Advertisements API
 | RoutingTable         |     |              |         |            | API for Rounting Table
 | SecuritySettings     |     |              |         |            | Security settings API
-| Server               |     |              |         |            | Server properties
+| Server               |  2  | COMPLETE     | 0.3.0   | 2018-10-21 | Server properties
 | Session              |  2  | COMPLETE     | 0.1.0   | 2018-09-07 | Session for webadmin
 | SharedDefinitions    |     |              |         |            | API for definitions shared with MyKerio
 | SharedStructures     |  ?  | COMPLETE     | 0.2.0   | 2018-10-07 | Shared data structures without an interface

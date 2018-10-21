@@ -18,9 +18,33 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .FilenameGroups import FilenameGroups
-from .HardwareInfo import HardwareInfo
-from .Interfaces import Interfaces
-from .Ports import Ports
-from .Server import Server
-from .Session import Session
+from ..pykerio import PyKerio
+
+from ..enums import ServerOs
+
+from ..lists import RestrictionList
+
+
+class Server(object):
+    def __init__(self, api: PyKerio):
+        self.api = api
+
+    def getOs(self):
+        """
+        engine OS.
+        I would like to enumerate where client depends on engine OS but such
+        list will become obsolete soon
+        """
+        response = self.api.request_rpc(
+            method='Server.getOs',
+            params={})
+        results = ServerOs(response.result['os'])
+        return results
+
+    def getRestrictionList(self):
+        response = self.api.request_rpc(
+            method='Server.getRestrictionList',
+            params={})
+        results = RestrictionList()
+        results.load(response.result['restrictions'])
+        return results
