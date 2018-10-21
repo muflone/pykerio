@@ -49,6 +49,7 @@ from .RestrictionList import RestrictionList
 from .RestrictionTupleList import RestrictionTupleList
 from .SortOrderList import SortOrderList
 from .SpeedDuplexMayNotWorkList import SpeedDuplexMayNotWorkList
+from .StorageDataList import StorageDataList
 from .StringList import StringList
 from .SubConditionList import SubConditionList
 from .VpnRouteList import VpnRouteList
