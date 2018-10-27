@@ -7,7 +7,6 @@
 | Alerts               |     |              |         |            | Alert Messages API
 | AntiHammering        |     |              |         |            | API for anti-hammering
 | Antivirus            |     |              |         |            | API for Antivirus page
-| Assist               |     |              |         |            | Contains enum which specifies dump importance
 | Assistant            |     |              |         |            | API for Assistants support
 | Authentication       |     |              |         |            | API for authentication
 | BandwidthManagement  |     |              |         |            | API for Bandwidth Management
