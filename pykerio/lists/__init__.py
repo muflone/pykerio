@@ -24,6 +24,7 @@ from .CertificateDnList import CertificateDnList
 from .ClientTimestampList import ClientTimestampList
 from .CollisionList import CollisionList
 from .CreateResultList import CreateResultList
+from .DnsForwarderList import DnsForwarderList
 from .ErrorList import ErrorList
 from .FilenameGroupList import FilenameGroupList
 from .HistogramDataList import HistogramDataList
