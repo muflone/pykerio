@@ -32,7 +32,7 @@
 | IpAddressGroups      |     |              |         |            | API for IP address groups
 | IpServices           |     |              |         |            | API for services administration
 | IpTools              |     |              |         |            | IP Tools API
-| Logger               |     |              |         |            | API for writing to logs and handling Kerio Control specified functions related to logs
+| Logger               |  1  | COMPLETE     | 0.4.0   | 2018-10-27 | API for writing to logs and handling Kerio Control specified functions related to logs
 | Logs                 |     |              |         |            | Application logs
 | Notifications        |     |              |         |            | Pending Messages API
 | P2pEliminator        |     |              |         |            |

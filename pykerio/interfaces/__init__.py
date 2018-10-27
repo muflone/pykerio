@@ -21,6 +21,7 @@
 from .FilenameGroups import FilenameGroups
 from .HardwareInfo import HardwareInfo
 from .Interfaces import Interfaces
+from .IpTools import IpTools
 from .Ports import Ports
 from .Server import Server
 from .Session import Session

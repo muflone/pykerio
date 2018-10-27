@@ -28,3 +28,4 @@ APP_AUTHOR_EMAIL = 'muflone@muflone.com'
 APP_COPYRIGHT = 'Copyright 2018 %s' % APP_AUTHOR
 
 UNLIMITED = -1
+DEFAULT_PING_SIZE = 56

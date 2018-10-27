@@ -153,6 +153,7 @@ The following interfaces are implemented under ```pykerio.interfaces```:
 - FilenameGroups
 - Server
 - Storage
+- IpTools
 
 Every needed simple type, structure, enumeration or list to implement or use
 these interfaces it's also present, ready to be used.
