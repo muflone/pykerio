@@ -19,7 +19,7 @@
 ##
 
 APP_NAME = 'PyKerio'
-APP_VERSION = '0.4.0'
+APP_VERSION = '0.5.0'
 APP_DESCRIPTION = 'API for Kerio products'
 APP_ID = 'pykerio.muflone.com'
 APP_URL = 'http://www.muflone.com/pykerio/'
