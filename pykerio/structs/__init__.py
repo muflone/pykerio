@@ -34,6 +34,7 @@ from .DataStatistic import DataStatistic
 from .Date import Date
 from .DateTimeConfig import DateTimeConfig
 from .DetailsConfig import DetailsConfig
+from .DnsForwarder import DnsForwarder
 from .Download import Download
 from .Error import Error
 from .FilenameGroup import FilenameGroup
