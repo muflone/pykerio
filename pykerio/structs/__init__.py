@@ -35,6 +35,7 @@ from .Date import Date
 from .DateTimeConfig import DateTimeConfig
 from .DetailsConfig import DetailsConfig
 from .DnsConfig import DnsConfig
+from .DnsHost import DnsHost
 from .DnsForwarder import DnsForwarder
 from .Download import Download
 from .Error import Error
