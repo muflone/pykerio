@@ -25,6 +25,7 @@ from .ClientTimestampList import ClientTimestampList
 from .CollisionList import CollisionList
 from .CreateResultList import CreateResultList
 from .DnsForwarderList import DnsForwarderList
+from .DnsHostList import DnsHostList
 from .ErrorList import ErrorList
 from .FilenameGroupList import FilenameGroupList
 from .HistogramDataList import HistogramDataList
