@@ -68,6 +68,7 @@ from .port_config import PortConfig                                # noqa: F401
 from .ras_config import RasConfig                                  # noqa: F401
 from .restriction import Restriction                               # noqa: F401
 from .restriction_tuple import RestrictionTuple                    # noqa: F401
+from .reverse_proxy_config import ReverseProxyConfig               # noqa: F401
 from .reverse_proxy_rule import ReverseProxyRule                   # noqa: F401
 from .search_query import SearchQuery                              # noqa: F401
 from .size_limit import SizeLimit                                  # noqa: F401
