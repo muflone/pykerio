@@ -65,6 +65,7 @@ from .PortConfig import PortConfig
 from .RasConfig import RasConfig
 from .Restriction import Restriction
 from .RestrictionTuple import RestrictionTuple
+from .ReverseProxyConfig import ReverseProxyConfig
 from .ReverseProxyRule import ReverseProxyRule
 from .SearchQuery import SearchQuery
 from .SizeLimit import SizeLimit
