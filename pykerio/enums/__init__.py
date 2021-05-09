@@ -34,6 +34,7 @@ from .BandwidthUnit import BandwidthUnit
 from .BMConditionType import BMConditionType
 from .BMTrafficType import BMTrafficType
 from .ByteUnits import ByteUnits
+from .CertificateType import CertificateType
 from .CheckVersionType import CheckVersionType
 from .CompareOperator import CompareOperator
 from .ConfigurationBackupPhase import ConfigurationBackupPhase
