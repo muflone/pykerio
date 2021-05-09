@@ -121,6 +121,7 @@ from .user_condition_type import UserConditionType                 # noqa: F401
 from .user_format_type import UserFormatType                       # noqa: F401
 from .user_role_type import UserRoleType                           # noqa: F401
 from .user_statistic_type import UserStatisticType                 # noqa: F401
+from .valid_type import ValidType                                  # noqa: F401
 from .vpn_client_state import VpnClientState                       # noqa: F401
 from .vpn_condition_type import VpnConditionType                   # noqa: F401
 from .vpn_type import VpnType                                      # noqa: F401
