@@ -23,6 +23,7 @@ from .HardwareInfo import HardwareInfo
 from .Interfaces import Interfaces
 from .IpTools import IpTools
 from .Ports import Ports
+from .ReverseProxy import ReverseProxy
 from .Server import Server
 from .Session import Session
 from .Storage import Storage
