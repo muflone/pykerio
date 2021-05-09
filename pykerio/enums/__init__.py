@@ -34,6 +34,7 @@ from .BandwidthUnit import BandwidthUnit
 from .BMConditionType import BMConditionType
 from .BMTrafficType import BMTrafficType
 from .ByteUnits import ByteUnits
+from .CertificateType import CertificateType
 from .CheckVersionType import CheckVersionType
 from .CompareOperator import CompareOperator
 from .ConfigurationBackupPhase import ConfigurationBackupPhase
@@ -115,6 +116,7 @@ from .UserConditionType import UserConditionType
 from .UserFormatType import UserFormatType
 from .UserRoleType import UserRoleType
 from .UserStatisticType import UserStatisticType
+from .ValidType import ValidType
 from .VpnClientState import VpnClientState
 from .VpnConditionType import VpnConditionType
 from .VpnType import VpnType

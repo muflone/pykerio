@@ -1,7 +1,7 @@
 ##
 #     Project: PyKerio
 # Description: API for Kerio products
-#      Author: Fabio Castelli (Muflone) <muflone@muflone.com>
+#      Author: Kostiantyn Kostiuk <kostyanf14@live.com>
 #   Copyright: 2018 Fabio Castelli
 #     License: GPL-2+
 #  This program is free software; you can redistribute it and/or modify it
@@ -18,12 +18,15 @@
 #  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
-from .FilenameGroups import FilenameGroups
-from .HardwareInfo import HardwareInfo
-from .Interfaces import Interfaces
-from .IpTools import IpTools
-from .Ports import Ports
-from .ReverseProxy import ReverseProxy
-from .Server import Server
-from .Session import Session
-from .Storage import Storage
+from . import BaseEnumeration
+
+
+class CertificateType(BaseEnumeration):
+    VALUES = {'ActiveCertificate': 0,
+              'InactiveCertificate': 1,
+              'CertificateRequest': 2,
+              'Authority': 3,
+              'LocalAuthority': 4,
+              'BuiltInAuthority': 5,
+              'ServerCertificate': 6,
+             }

@@ -49,6 +49,7 @@ from .OptionalStringList import OptionalStringList
 from .PortConfigList import PortConfigList
 from .RestrictionList import RestrictionList
 from .RestrictionTupleList import RestrictionTupleList
+from .ReverseProxyRuleList import ReverseProxyRuleList
 from .SortOrderList import SortOrderList
 from .SpeedDuplexMayNotWorkList import SpeedDuplexMayNotWorkList
 from .StorageDataList import StorageDataList

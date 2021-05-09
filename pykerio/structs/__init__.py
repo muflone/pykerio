@@ -65,6 +65,8 @@ from .PortConfig import PortConfig
 from .RasConfig import RasConfig
 from .Restriction import Restriction
 from .RestrictionTuple import RestrictionTuple
+from .ReverseProxyConfig import ReverseProxyConfig
+from .ReverseProxyRule import ReverseProxyRule
 from .SearchQuery import SearchQuery
 from .SizeLimit import SizeLimit
 from .SortOrder import SortOrder
@@ -73,6 +75,7 @@ from .SubCondition import SubCondition
 from .Time import Time
 from .TimeHMS import TimeHMS
 from .TimeSpan import TimeSpan
+from .ValidPeriod import ValidPeriod
 from .VpnRoute import VpnRoute
 from .VpnServerConfig import VpnServerConfig
 from .VpnTunnelConfig import VpnTunnelConfig
