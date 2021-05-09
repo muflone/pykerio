@@ -34,6 +34,7 @@ from .base_enumeration import BaseEnumeration                      # noqa: F401
 from .bm_condition_type import BMConditionType                     # noqa: F401
 from .bm_traffic_type import BMTrafficType                         # noqa: F401
 from .byte_units import ByteUnits                                  # noqa: F401
+from .certificate_type import CertificateType                      # noqa: F401
 from .check_version_type import CheckVersionType                   # noqa: F401
 from .compare_operator import CompareOperator                      # noqa: F401
 from .configuration_backup_phase import ConfigurationBackupPhase   # noqa: F401
