@@ -75,6 +75,7 @@ from .SubCondition import SubCondition
 from .Time import Time
 from .TimeHMS import TimeHMS
 from .TimeSpan import TimeSpan
+from .ValidPeriod import ValidPeriod
 from .VpnRoute import VpnRoute
 from .VpnServerConfig import VpnServerConfig
 from .VpnTunnelConfig import VpnTunnelConfig
