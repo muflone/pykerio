@@ -78,6 +78,7 @@ from .sub_condition import SubCondition                            # noqa: F401
 from .time import Time                                             # noqa: F401
 from .time_hms import TimeHMS                                      # noqa: F401
 from .time_span import TimeSpan                                    # noqa: F401
+from .valid_period import ValidPeriod                              # noqa: F401
 from .vpn_route import VpnRoute                                    # noqa: F401
 from .vpn_server_config import VpnServerConfig                     # noqa: F401
 from .vpn_tunnel_config import VpnTunnelConfig                     # noqa: F401
