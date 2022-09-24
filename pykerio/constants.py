@@ -21,11 +21,14 @@
 APP_NAME = 'PyKerio'
 APP_VERSION = '0.5.0'
 APP_DESCRIPTION = 'API for Kerio products'
-APP_ID = 'pykerio.muflone.com'
-APP_URL = 'http://www.muflone.com/pykerio/'
+APP_DOMAIN = 'pykerio'
+APP_ID = f'{APP_DOMAIN}.muflone.com'
 APP_AUTHOR = 'Fabio Castelli'
 APP_AUTHOR_EMAIL = 'muflone@muflone.com'
-APP_COPYRIGHT = 'Copyright 2018-2022 %s' % APP_AUTHOR
+APP_COPYRIGHT = f'Copyright 2018-2022 {APP_AUTHOR}'
+URL_AUTHOR = 'http://www.muflone.com/'
+URL_APPLICATION = f'{URL_AUTHOR}{APP_DOMAIN}/'
+URL_SOURCES = f'https://github.com/muflone/{APP_DOMAIN}/'
 
 UNLIMITED = -1
 DEFAULT_PING_SIZE = 56
