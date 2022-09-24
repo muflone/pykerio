@@ -18,11 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .FilenameGroups import FilenameGroups
-from .HardwareInfo import HardwareInfo
-from .Interfaces import Interfaces
-from .IpTools import IpTools
-from .Ports import Ports
-from .Server import Server
-from .Session import Session
-from .Storage import Storage
+from .filename_groups import FilenameGroups                        # noqa: F401
+from .hardware_info import HardwareInfo                            # noqa: F401
+from .interfaces import Interfaces                                 # noqa: F401
+from .ip_tools import IpTools                                      # noqa: F401
+from .ports import Ports                                           # noqa: F401
+from .server import Server                                         # noqa: F401
+from .session import Session                                       # noqa: F401
+from .storage import Storage                                       # noqa: F401

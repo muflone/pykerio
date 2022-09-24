@@ -18,7 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .DateTimeStamp import DateTimeStamp
-from .Ip6Address import Ip6Address
-from .IpAddress import IpAddress
-from .KId import KId
+from .date_time_stamp import DateTimeStamp                         # noqa: F401
+from .ip_address import IpAddress                                  # noqa: F401
+from .ip6_address import Ip6Address                                # noqa: F401
+from .kid import KId                                               # noqa: F401

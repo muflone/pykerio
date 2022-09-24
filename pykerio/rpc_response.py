@@ -20,10 +20,10 @@
 
 from .json_serializable import JSONSerializable
 
-from .structs.ApiException import ApiException
-from .structs.LocalizableMessageParameters import LocalizableMessageParameters
+from .structs.api_exception import ApiException
+from .structs.localizable_message_parameters import LocalizableMessageParameters
 
-from .lists.StringList import StringList
+from .lists.string_list import StringList
 
 
 class RPCResponse(JSONSerializable):

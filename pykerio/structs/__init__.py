@@ -18,66 +18,68 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .BaseStruct import BaseStruct
-from .AddResult import AddResult
-from .ApiApplication import ApiApplication
-from .ApiException import ApiException
-from .ByteValueWithUnits import ByteValueWithUnits
-from .CertificateDn import CertificateDn
-from .ClientTimestamp import ClientTimestamp
-from .Collision import Collision
-from .ConnectivityConfig import ConnectivityConfig
-from .CreateResult import CreateResult
-from .Credentials import Credentials
-from .CredentialsConfig import CredentialsConfig
-from .DataStatistic import DataStatistic
-from .Date import Date
-from .DateTimeConfig import DateTimeConfig
-from .DetailsConfig import DetailsConfig
-from .DnsConfig import DnsConfig
-from .DnsHost import DnsHost
-from .DnsForwarder import DnsForwarder
-from .Download import Download
-from .Error import Error
-from .FilenameGroup import FilenameGroup
-from .Histogram import Histogram
-from .HistogramData import HistogramData
-from .IdReference import IdReference
-from .Interface import Interface
-from .InterfaceConnectivityParameters import InterfaceConnectivityParameters
-from .InterfaceFlags import InterfaceFlags
-from .IpAddressMask import IpAddressMask
-from .Ip6AddressMask import Ip6AddressMask
-from .IpsecPeerIdConfig import IpsecPeerIdConfig
-from .LocalizableMessage import LocalizableMessage
-from .LocalizableMessageParameters import LocalizableMessageParameters
-from .ManipulationError import ManipulationError
-from .NamedValue import NamedValue
-from .NamedMultiValue import NamedMultiValue
-from .Notification import Notification
-from .OptionalEntity import OptionalEntity
-from .OptionalIdReference import OptionalIdReference
-from .OptionalIpAddress import OptionalIpAddress
-from .OptionalLong import OptionalLong
-from .OptionalString import OptionalString
-from .Password import Password
-from .PortConfig import PortConfig
-from .RasConfig import RasConfig
-from .Restriction import Restriction
-from .RestrictionTuple import RestrictionTuple
-from .SearchQuery import SearchQuery
-from .SizeLimit import SizeLimit
-from .SortOrder import SortOrder
-from .StorageData import StorageData
-from .SubCondition import SubCondition
-from .Time import Time
-from .TimeHMS import TimeHMS
-from .TimeSpan import TimeSpan
-from .VpnRoute import VpnRoute
-from .VpnServerConfig import VpnServerConfig
-from .VpnTunnelConfig import VpnTunnelConfig
-from .WifiChannelInfo import WifiChannelInfo
-from .WifiConfig import WifiConfig
-from .WifiCountryConfig import WifiCountryConfig
-from .WifiModeChannelConfig import WifiModeChannelConfig
-from .WifiSsidConfig import WifiSsidConfig
+from .add_result import AddResult                                  # noqa: F401
+from .api_application import ApiApplication                        # noqa: F401
+from .api_exception import ApiException                            # noqa: F401
+from .base_struct import BaseStruct                                # noqa: F401
+from .byte_value_with_units import ByteValueWithUnits              # noqa: F401
+from .certificate_dn import CertificateDn                          # noqa: F401
+from .client_timestamp import ClientTimestamp                      # noqa: F401
+from .collision import Collision                                   # noqa: F401
+from .connectivity_config import ConnectivityConfig                # noqa: F401
+from .create_result import CreateResult                            # noqa: F401
+from .credentials import Credentials                               # noqa: F401
+from .credentials_config import CredentialsConfig                  # noqa: F401
+from .data_statistic import DataStatistic                          # noqa: F401
+from .date import Date                                             # noqa: F401
+from .date_time_config import DateTimeConfig                       # noqa: F401
+from .details_config import DetailsConfig                          # noqa: F401
+from .dns_config import DnsConfig                                  # noqa: F401
+from .dns_host import DnsHost                                      # noqa: F401
+from .dns_forwarder import DnsForwarder                            # noqa: F401
+from .download import Download                                     # noqa: F401
+from .error import Error                                           # noqa: F401
+from .filename_group import FilenameGroup                          # noqa: F401
+from .histogram import Histogram                                   # noqa: F401
+from .histogram_data import HistogramData                          # noqa: F401
+from .id_reference import IdReference                              # noqa: F401
+from .interface import Interface                                   # noqa: F401
+from .interface_connectivity_parameters import (
+    InterfaceConnectivityParameters)                               # noqa: F401
+from .interface_flags import InterfaceFlags                        # noqa: F401
+from .ip_address_mask import IpAddressMask                         # noqa: F401
+from .ip6_address_mask import Ip6AddressMask                       # noqa: F401
+from .ipsec_peer_id_config import IpsecPeerIdConfig                # noqa: F401
+from .localizable_message import LocalizableMessage                # noqa: F401
+from .localizable_message_parameters import (
+    LocalizableMessageParameters)                                  # noqa: F401
+from .manipulation_error import ManipulationError                  # noqa: F401
+from .named_value import NamedValue                                # noqa: F401
+from .named_multi_value import NamedMultiValue                     # noqa: F401
+from .notification import Notification                             # noqa: F401
+from .optional_entity import OptionalEntity                        # noqa: F401
+from .optional_id_reference import OptionalIdReference             # noqa: F401
+from .optional_ip_address import OptionalIpAddress                 # noqa: F401
+from .optional_long import OptionalLong                            # noqa: F401
+from .optional_string import OptionalString                        # noqa: F401
+from .password import Password                                     # noqa: F401
+from .port_config import PortConfig                                # noqa: F401
+from .ras_config import RasConfig                                  # noqa: F401
+from .restriction import Restriction                               # noqa: F401
+from .restriction_tuple import RestrictionTuple                    # noqa: F401
+from .search_query import SearchQuery                              # noqa: F401
+from .size_limit import SizeLimit                                  # noqa: F401
+from .sort_order import SortOrder                                  # noqa: F401
+from .storage_data import StorageData                              # noqa: F401
+from .sub_condition import SubCondition                            # noqa: F401
+from .time import Time                                             # noqa: F401
+from .time_hms import TimeHMS                                      # noqa: F401
+from .time_span import TimeSpan                                    # noqa: F401
+from .vpn_route import VpnRoute                                    # noqa: F401
+from .vpn_server_config import VpnServerConfig                     # noqa: F401
+from .vpn_tunnel_config import VpnTunnelConfig                     # noqa: F401
+from .wifi_channel_info import WifiChannelInfo                     # noqa: F401
+from .wifi_config import WifiConfig                                # noqa: F401
+from .wifi_country_config import WifiCountryConfig                 # noqa: F401
+from .wifi_mode_channel_config import WifiModeChannelConfig        # noqa: F401
+from .wifi_ssid_config import WifiSsidConfig                       # noqa: F401
