@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class SortDirection(BaseEnumeration):
-    VALUES = {'Asc': 0,
-              'Desc': 1
-             }
+    ASC = 0
+    DESC = 1
+
+    VALUES = {
+        'Asc': ASC,
+        'Desc': DESC
+    }

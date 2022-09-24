@@ -22,10 +22,18 @@ from . import BaseEnumeration
 
 
 class RestrictionKind(BaseEnumeration):
-    VALUES = {'Regex': 0,
-              'ByteLength': 1,
-              'ForbiddenNameList': 2,
-              'ForbiddenPrefixList': 3,
-              'ForbiddenSuffixList': 4,
-              'ForbiddenCharacterList': 5
-             }
+    REGEX = 0
+    BYTE_LENGTH = 1
+    FORBIDDEN_NAME_LIST = 2
+    FORBIDDEN_PREFIX_LIST = 3
+    FORBIDDEN_SUFFIX_LIST = 4
+    FORBIDDEN_CHARACTER_LIST = 5
+
+    VALUES = {
+        'Regex': REGEX,
+        'ByteLength': BYTE_LENGTH,
+        'ForbiddenNameList': FORBIDDEN_NAME_LIST,
+        'ForbiddenPrefixList': FORBIDDEN_PREFIX_LIST,
+        'ForbiddenSuffixList': FORBIDDEN_SUFFIX_LIST,
+        'ForbiddenCharacterList': FORBIDDEN_CHARACTER_LIST
+    }

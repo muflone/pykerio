@@ -22,11 +22,20 @@ from . import BaseEnumeration
 
 
 class StorageDataType(BaseEnumeration):
-    VALUES = {'StorageDataStar': 0,
-              'StorageDataLogs': 1,
-              'StorageDataCrash': 2,
-              'StorageDataPktdump': 3,
-              'StorageDataUpdate': 4,
-              'StorageDataQuarantine': 5,
-              'StorageDataHttpCache': 6
-             }
+    STAR = 0
+    LOGS = 1
+    CRASH = 2
+    PKT_DUMP = 3
+    UPDATE = 4
+    QUARANTINE = 5
+    HTTP_CACHE = 6
+
+    VALUES = {
+        'StorageDataStar': STAR,
+        'StorageDataLogs': LOGS,
+        'StorageDataCrash': CRASH,
+        'StorageDataPktdump': PKT_DUMP,
+        'StorageDataUpdate': UPDATE,
+        'StorageDataQuarantine': QUARANTINE,
+        'StorageDataHttpCache': HTTP_CACHE
+    }

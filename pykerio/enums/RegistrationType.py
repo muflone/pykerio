@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class RegistrationType(BaseEnumeration):
-    VALUES = {'rsNoRegistration': 0,
-              'rsTrialRegistered': 1,
-              'rsTrialExpired': 2,
-              'rsProductRegistered': 3
-             }
+    NO_REGISTRATION = 0
+    TRIAL_REGISTERED = 1
+    TRIAL_EXPIRED = 2
+    REGISTERED = 3
+
+    VALUES = {
+        'rsNoRegistration': NO_REGISTRATION,
+        'rsTrialRegistered': TRIAL_REGISTERED,
+        'rsTrialExpired': TRIAL_EXPIRED,
+        'rsProductRegistered': REGISTERED
+    }

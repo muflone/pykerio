@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class HttpsServerMode(BaseEnumeration):
-    VALUES = {'HttpsServerModeDisabled': 0,
-              'HttpsServerModeDefaultCertificate': 1,
-              'HttpsServerModeCustomCertificate': 2
-             }
+    DISABLED = 0
+    DEFAULT_CERTIFICATE = 1
+    CUSTOM_CERTIFICATE = 2
+
+    VALUES = {
+        'HttpsServerModeDisabled': DISABLED,
+        'HttpsServerModeDefaultCertificate': DEFAULT_CERTIFICATE,
+        'HttpsServerModeCustomCertificate': CUSTOM_CERTIFICATE
+    }

@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class ConnectionDirection(BaseEnumeration):
-    VALUES = {'ConnectionDirectionInbound': 0,
-              'ConnectionDirectionOutbound': 1,
-              'ConnectionDirectionLocal': 2
-             }
+    INBOUND = 0
+    OUTBOUND = 1
+    LOCAL = 2
+
+    VALUES = {
+        'ConnectionDirectionInbound': INBOUND,
+        'ConnectionDirectionOutbound': OUTBOUND,
+        'ConnectionDirectionLocal': LOCAL
+    }

@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class TrafficIpVersion(BaseEnumeration):
-    VALUES = {'Ipv4': 0,
-              'Ipv6': 1,
-              'IpAll': 2
-             }
+    V4 = 0
+    V6 = 1
+    ALL = 2
+
+    VALUES = {
+        'Ipv4': V4,
+        'Ipv6': V6,
+        'IpAll': ALL
+    }

@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class CheckVersionType(BaseEnumeration):
-    VALUES = {'CheckVersionConfig': 0,
-              'CheckVersionBeta': 1,
-              'CheckVersionFinal': 2
-             }
+    CONFIG = 0
+    BETA = 1
+    FINAL = 2
+
+    VALUES = {
+        'CheckVersionConfig': CONFIG,
+        'CheckVersionBeta': BETA,
+        'CheckVersionFinal': FINAL
+    }

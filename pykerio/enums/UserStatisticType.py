@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class UserStatisticType(BaseEnumeration):
-    VALUES = {'UserStatisticAll': 0,
-              'UserStatisticUser': 1,
-              'UserStatisticOther': 2,
-              'UserStatisticGuest': 3
-             }
+    ALL = 0
+    USER = 1
+    OTHER = 2
+    GUEST = 3
+
+    VALUES = {
+        'UserStatisticAll': ALL,
+        'UserStatisticUser': USER,
+        'UserStatisticOther': OTHER,
+        'UserStatisticGuest': GUEST
+    }

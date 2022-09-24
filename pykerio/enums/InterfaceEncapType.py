@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class InterfaceEncapType(BaseEnumeration):
-    VALUES = {'InterfaceEncapNative': 0,
-              'InterfaceEncapPppoe': 1
-             }
+    NATIVE = 0
+    PPPOE = 1
+
+    VALUES = {
+        'InterfaceEncapNative': NATIVE,
+        'InterfaceEncapPppoe': PPPOE
+    }

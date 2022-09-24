@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class TrafficStatisticsType(BaseEnumeration):
-    VALUES = {'TrafficStatisticsInterface': 0,
-              'TrafficStatisticsTrafficRule': 1,
-              'TrafficStatisticsBandwidthRule': 2
-             }
+    INTERFACE = 0
+    TRAFFIC_RULE = 1
+    BANDWIDTH_RULE = 2
+
+    VALUES = {
+        'TrafficStatisticsInterface': INTERFACE,
+        'TrafficStatisticsTrafficRule': TRAFFIC_RULE,
+        'TrafficStatisticsBandwidthRule': BANDWIDTH_RULE
+    }

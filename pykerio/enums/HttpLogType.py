@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class HttpLogType(BaseEnumeration):
-    VALUES = {'HttpLogApache': 0,
-              'HttpLogSquid': 1
-             }
+    APACHE = 0
+    SQUID = 1
+
+    VALUES = {
+        'HttpLogApache': APACHE,
+        'HttpLogSquid': SQUID
+    }

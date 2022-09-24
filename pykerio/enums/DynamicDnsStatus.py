@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class DynamicDnsStatus(BaseEnumeration):
-    VALUES = {'DynamicDnsOk': 0,
-              'DynamicDnsError': 1,
-              'DynamicDnsUpdate': 2
-             }
+    OK = 0
+    ERROR = 1
+    UPDATE = 2
+
+    VALUES = {
+        'DynamicDnsOk': OK,
+        'DynamicDnsError': ERROR,
+        'DynamicDnsUpdate': UPDATE
+    }

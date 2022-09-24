@@ -22,9 +22,16 @@ from . import BaseEnumeration
 
 
 class ActiveTool(BaseEnumeration):
-    VALUES = {'ActiveToolNone': 0,
-              'ActiveToolPing': 1,
-              'ActiveToolTraceRoute': 2,
-              'ActiveToolDns': 3,
-              'ActiveToolWhois': 4
-             }
+    NONE = 0
+    PING = 1
+    TRACEROUTE = 2
+    DNS = 3
+    WHOIS = 4
+
+    VALUES = {
+        'ActiveToolNone': NONE,
+        'ActiveToolPing': PING,
+        'ActiveToolTraceRoute': TRACEROUTE,
+        'ActiveToolDns': DNS,
+        'ActiveToolWhois': WHOIS
+    }

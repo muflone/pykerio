@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class UserRoleType(BaseEnumeration):
-    VALUES = {'Auditor': 0,
-              'FullAdmin': 1
-             }
+    AUDITOR = 0
+    FULL_ADMIN = 1
+
+    VALUES = {
+        'Auditor': AUDITOR,
+        'FullAdmin': FULL_ADMIN
+    }

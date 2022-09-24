@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class InterfaceConditionType(BaseEnumeration):
-    VALUES = {'InterfaceInternet': 0,
-              'InterfaceTrusted': 1,
-              'InterfaceGuest': 2,
-              'InterfaceSelected': 3
-             }
+    INTERNET = 0
+    TRUSTED = 1
+    GUEST = 2
+    SELECTED = 3
+
+    VALUES = {
+        'InterfaceInternet': INTERNET,
+        'InterfaceTrusted': TRUSTED,
+        'InterfaceGuest': GUEST,
+        'InterfaceSelected': SELECTED
+    }

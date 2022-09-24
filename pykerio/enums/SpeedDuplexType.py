@@ -22,10 +22,18 @@ from . import BaseEnumeration
 
 
 class SpeedDuplexType(BaseEnumeration):
-    VALUES = {'SpeedDuplexAuto': 0,
-              'SpeedDuplexHalf10': 1,
-              'SpeedDuplexFull10': 2,
-              'SpeedDuplexHalf100': 3,
-              'SpeedDuplexFull100': 4,
-              'SpeedDuplexFull1000': 5
-             }
+    AUTO = 0
+    HALF_10 = 1
+    FULL_10 = 2
+    HALF_100 = 3
+    FULL_100 = 4
+    FULL_1000 = 5
+
+    VALUES = {
+        'SpeedDuplexAuto': AUTO,
+        'SpeedDuplexHalf10': HALF_10,
+        'SpeedDuplexFull10': FULL_10,
+        'SpeedDuplexHalf100': HALF_100,
+        'SpeedDuplexFull100': FULL_100,
+        'SpeedDuplexFull1000': FULL_1000
+    }

@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class NtpUpdatePhase(BaseEnumeration):
-    VALUES = {'NtpUpdateDisabled': 0,
-              'NtpUpdateOk': 1,
-              'NtpUpdateError': 2,
-              'NtpUpdateProgress': 3
-             }
+    DISABLED = 0
+    OK = 1
+    ERROR = 2
+    PROGRESS = 3
+
+    VALUES = {
+        'NtpUpdateDisabled': DISABLED,
+        'NtpUpdateOk': OK,
+        'NtpUpdateError': ERROR,
+        'NtpUpdateProgress': PROGRESS
+    }

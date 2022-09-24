@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class UrlEntryType(BaseEnumeration):
-    VALUES = {'Url': 0,
-              'UrlChildGroup': 1
-             }
+    URL = 0
+    URL_CHILD_GROUP = 1
+
+    VALUES = {
+        'Url': URL,
+        'UrlChildGroup': URL_CHILD_GROUP
+    }

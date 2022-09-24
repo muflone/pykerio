@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class ConfigurationBackupPhase(BaseEnumeration):
-    VALUES = {'ConfigurationBackupOk': 0,
-              'ConfigurationBackupInProgress': 1,
-              'ConfigurationBackupFailed': 2
-             }
+    OK = 0
+    IN_PROGRESS = 1
+    FAILED = 2
+
+    VALUES = {
+        'ConfigurationBackupOk': OK,
+        'ConfigurationBackupInProgress': IN_PROGRESS,
+        'ConfigurationBackupFailed': FAILED
+    }

@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class ExpireType(BaseEnumeration):
-    VALUES = {'License': 0,
-              'Subscription': 1
-             }
+    LICENSE = 0
+    SUBSCRIPTION = 1
+
+    VALUES = {
+        'License': LICENSE,
+        'Subscription': SUBSCRIPTION
+    }

@@ -22,10 +22,18 @@ from . import BaseEnumeration
 
 
 class AntivirusUpdatePhases(BaseEnumeration):
-    VALUES = {'AntivirusUpdateStarted': 0,
-              'AntivirusUpdateChecking': 1,
-              'AntivirusUpdateDownload': 2,
-              'AntivirusUpdateDownloadEngine': 3,
-              'AntivirusUpdateOk': 4,
-              'AntivirusUpdateFailed': 5
-             }
+    STARTED = 0
+    CHECKING = 1
+    DOWNLOAD = 2
+    DOWNLOAD_ENGINE = 3
+    OK = 4
+    FAILED = 5
+
+    VALUES = {
+        'AntivirusUpdateStarted': STARTED,
+        'AntivirusUpdateChecking': CHECKING,
+        'AntivirusUpdateDownload': DOWNLOAD,
+        'AntivirusUpdateDownloadEngine': DOWNLOAD_ENGINE,
+        'AntivirusUpdateOk': OK,
+        'AntivirusUpdateFailed': FAILED
+    }

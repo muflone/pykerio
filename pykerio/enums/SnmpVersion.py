@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class SnmpVersion(BaseEnumeration):
-    VALUES = {'SnmpV2c': 0,
-              'SnmpV3': 1
-             }
+    V2C = 0
+    V3 = 1
+
+    VALUES = {
+        'SnmpV2c': V2C,
+        'SnmpV3': V3
+    }

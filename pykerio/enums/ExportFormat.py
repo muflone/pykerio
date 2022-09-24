@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class ExportFormat(BaseEnumeration):
-    VALUES = {'PlainText': 0,
-              'Html': 1
-             }
+    PLAIN_TEXT = 0
+    HTML = 1
+
+    VALUES = {
+        'PlainText': PLAIN_TEXT,
+        'Html': HTML
+    }

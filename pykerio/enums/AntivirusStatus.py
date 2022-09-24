@@ -22,10 +22,18 @@ from . import BaseEnumeration
 
 
 class AntivirusStatus(BaseEnumeration):
-    VALUES = {'AntivirusOk': 0,
-              'AntivirusNotActive': 1,
-              'AntivirusInternalFailed': 2,
-              'AntivirusExternalFailed': 3,
-              'AntivirusBothFailed': 4,
-              'AntivirusWaitingForInitialDb': 5
-             }
+    OK = 0
+    NOT_ACTIVE = 1
+    INTERNAL_FAILED = 2
+    EXTERNAL_FAILED = 3
+    BOTH_FAILED = 4
+    WAITING_FOR_INITIAL_DB = 5
+
+    VALUES = {
+        'AntivirusOk': OK,
+        'AntivirusNotActive': NOT_ACTIVE,
+        'AntivirusInternalFailed': INTERNAL_FAILED,
+        'AntivirusExternalFailed': EXTERNAL_FAILED,
+        'AntivirusBothFailed': BOTH_FAILED,
+        'AntivirusWaitingForInitialDb': WAITING_FOR_INITIAL_DB
+    }

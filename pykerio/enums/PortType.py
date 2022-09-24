@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class PortType(BaseEnumeration):
-    VALUES = {'PortEthernet': 0,
-              'PortWifi': 1
-             }
+    ETHERNET = 0
+    WIFI = 1
+
+    VALUES = {
+        'PortEthernet': ETHERNET,
+        'PortWifi': WIFI
+    }

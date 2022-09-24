@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class HistogramType(BaseEnumeration):
-    VALUES = {'HistogramOneDay': 0,
-              'HistogramTwoHours': 1,
-              'HistogramOneWeek': 2,
-              'HistogramOneMonth': 3
-             }
+    ONE_DAY = 0
+    TWO_HOURS = 1
+    ONE_WEEK = 2
+    ONE_MONTH = 3
+
+    VALUES = {
+        'HistogramOneDay': ONE_DAY,
+        'HistogramTwoHours': TWO_HOURS,
+        'HistogramOneWeek': ONE_WEEK,
+        'HistogramOneMonth': ONE_MONTH
+    }

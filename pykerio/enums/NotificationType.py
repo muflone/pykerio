@@ -22,29 +22,56 @@ from . import BaseEnumeration
 
 
 class NotificationType(BaseEnumeration):
-    VALUES = {'NotificationUpdate': 0,
-              'NotificationDump': 1,
-              'NotificationLowMemory': 2,
-              'NotificationDomains': 3,
-              'NotificationSubWillExpire': 4,
-              'NotificationSubExpired': 5,
-              'NotificationLicWillExpire': 6,
-              'NotificationLicExpired': 7,
-              'NotificationBackupLine': 8,
-              'NotificationInterfaceSpeed': 9,
-              'NotificationSmtp': 10,
-              'NotificationLlbLine': 11,
-              'NotificationLlb': 12,
-              'NotificationConnectionOnDemand': 13,
-              'NotificationConnectionFailover': 14,
-              'NotificationConnectionBalancing': 15,
-              'NotificationConnectionPersistent': 16,
-              'NotificationCertificateError': 17,
-              'NotificationCertificateWillExpire': 18,
-              'NotificationCertificateExpired': 19,
-              'NotificationCaWillExpire': 20,
-              'NotificationCaExpired': 21,
-              'NotificationBackupFailed': 22,
-              'NotificationPacketDump': 23,
-              'NotificationUnknown': 24
-             }
+    UPDATE = 0
+    DUMP = 1
+    LOW_MEMORY = 2
+    DOMAINS = 3
+    SUB_WILL_EXPIRE = 4
+    SUB_EXPIRED = 5
+    LIC_WILL_EXPIRE = 6
+    LIC_EXPIRED = 7
+    BACKUP_LINE = 8
+    INTERFACE_SPEED = 9
+    SMTP = 10
+    LLB_LINE = 11
+    LLB = 12
+    CONNECTION_ON_DEMAND = 13
+    CONNECTION_FAILOVER = 14
+    CONNECTION_BALANCING = 15
+    CONNECTION_PERSISTENT = 16
+    CERTIFICATE_ERROR = 17
+    CERTIFICATE_WILL_EXPIRE = 18
+    CERTIFICATE_EXPIRED = 19
+    CA_WILL_EXPIRE = 20
+    CA_EXPIRED = 21
+    BACKUP_FAILED = 22
+    PACKET_DUMP = 23
+    UNKNOWN = 24
+
+    VALUES = {
+        'NotificationUpdate': UPDATE,
+        'NotificationDump': DUMP,
+        'NotificationLowMemory': LOW_MEMORY,
+        'NotificationDomains': DOMAINS,
+        'NotificationSubWillExpire': SUB_WILL_EXPIRE,
+        'NotificationSubExpired': SUB_EXPIRED,
+        'NotificationLicWillExpire': LIC_WILL_EXPIRE,
+        'NotificationLicExpired': LIC_EXPIRED,
+        'NotificationBackupLine': BACKUP_LINE,
+        'NotificationInterfaceSpeed': INTERFACE_SPEED,
+        'NotificationSmtp': SMTP,
+        'NotificationLlbLine': LLB_LINE,
+        'NotificationLlb': LLB,
+        'NotificationConnectionOnDemand': CONNECTION_ON_DEMAND,
+        'NotificationConnectionFailover': CONNECTION_FAILOVER,
+        'NotificationConnectionBalancing': CONNECTION_BALANCING,
+        'NotificationConnectionPersistent': CONNECTION_PERSISTENT,
+        'NotificationCertificateError': CERTIFICATE_ERROR,
+        'NotificationCertificateWillExpire': CERTIFICATE_WILL_EXPIRE,
+        'NotificationCertificateExpired': CERTIFICATE_EXPIRED,
+        'NotificationCaWillExpire': CA_WILL_EXPIRE,
+        'NotificationCaExpired': CA_EXPIRED,
+        'NotificationBackupFailed': BACKUP_FAILED,
+        'NotificationPacketDump': PACKET_DUMP,
+        'NotificationUnknown': UNKNOWN
+    }

@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class UrlFilterStatus(BaseEnumeration):
-    VALUES = {'UrlFilterNotLicensed': 0,
-              'UrlFilterNotActivated': 1,
-              'UrlFilterActivating': 2,
-              'UrlFilterActivated': 3
-             }
+    NOT_LICENSED = 0
+    NOT_ACTIVATED = 1
+    ACTIVATING = 2
+    ACTIVATED = 3
+
+    VALUES = {
+        'UrlFilterNotLicensed': NOT_LICENSED,
+        'UrlFilterNotActivated': NOT_ACTIVATED,
+        'UrlFilterActivating': ACTIVATING,
+        'UrlFilterActivated': ACTIVATED
+    }

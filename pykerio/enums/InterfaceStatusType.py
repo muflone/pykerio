@@ -22,11 +22,20 @@ from . import BaseEnumeration
 
 
 class InterfaceStatusType(BaseEnumeration):
-    VALUES = {'Up': 0,
-              'Down': 1,
-              'Connecting': 2,
-              'Disconnecting': 3,
-              'CableDisconnected': 4,
-              'Error': 5,
-              'Backup': 6
-             }
+    UP = 0
+    DOWN = 1
+    CONNECTING = 2
+    DISCONNECTING = 3
+    CABLE_DISCONNECTED = 4
+    ERROR = 5
+    BACKUP = 6
+
+    VALUES = {
+        'Up': UP,
+        'Down': DOWN,
+        'Connecting': CONNECTING,
+        'Disconnecting': DISCONNECTING,
+        'CableDisconnected': CABLE_DISCONNECTED,
+        'Error': ERROR,
+        'Backup': BACKUP
+    }

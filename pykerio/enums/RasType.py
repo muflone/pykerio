@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class RasType(BaseEnumeration):
-    VALUES = {'PPPoE': 0,
-              'PPTP': 1,
-              'L2TP': 2
-             }
+    PPPOE = 0
+    PPTP = 1
+    L2TP = 2
+
+    VALUES = {
+        'PPPoE': PPPOE,
+        'PPTP': PPTP,
+        'L2TP': L2TP
+    }

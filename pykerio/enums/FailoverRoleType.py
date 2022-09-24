@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class FailoverRoleType(BaseEnumeration):
-    VALUES = {'None': 0,
-              'Primary': 1,
-              'Secondary': 2
-             }
+    NONE = 0
+    PRIMARY = 1
+    SECONDARY = 2
+
+    VALUES = {
+        'None': NONE,
+        'Primary': PRIMARY,
+        'Secondary': SECONDARY
+    }

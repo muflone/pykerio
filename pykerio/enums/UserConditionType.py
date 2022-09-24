@@ -22,9 +22,16 @@ from . import BaseEnumeration
 
 
 class UserConditionType(BaseEnumeration):
-    VALUES = {'AnyUser': 0,
-              'AuthenticatedUsers': 1,
-              'UnrecognizedUsers': 2,
-              'SelectedUsers': 3,
-              'Nobody': 4
-             }
+    ANY_USER = 0
+    AUTHENTICATED_USERS = 1
+    UNRECOGNIZED_USERS = 2
+    SELECTED_USERS = 3
+    NOBODY = 4
+
+    VALUES = {
+        'AnyUser': ANY_USER,
+        'AuthenticatedUsers': AUTHENTICATED_USERS,
+        'UnrecognizedUsers': UNRECOGNIZED_USERS,
+        'SelectedUsers': SELECTED_USERS,
+        'Nobody': NOBODY
+    }

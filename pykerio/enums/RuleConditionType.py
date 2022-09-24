@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class RuleConditionType(BaseEnumeration):
-    VALUES = {'RuleAny': 0,
-              'RuleSelectedEntities': 1,
-              'RuleInvalidCondition': 2
-             }
+    ANY = 0
+    SELECTED_ENTITIES = 1
+    INVALID_CONDITION = 2
+
+    VALUES = {
+        'RuleAny': ANY,
+        'RuleSelectedEntities': SELECTED_ENTITIES,
+        'RuleInvalidCondition': INVALID_CONDITION
+    }

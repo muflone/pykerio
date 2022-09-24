@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class VpnType(BaseEnumeration):
-    VALUES = {'VpnKerio': 0,
-              'VpnIpsec': 1
-             }
+    KERIO = 0
+    IPSEC = 1
+
+    VALUES = {
+        'VpnKerio': KERIO,
+        'VpnIpsec': IPSEC
+    }

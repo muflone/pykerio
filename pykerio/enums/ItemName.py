@@ -22,11 +22,20 @@ from . import BaseEnumeration
 
 
 class ItemName(BaseEnumeration):
-    VALUES = {'Name': 0,
-              'Description': 1,
-              'Email': 2,
-              'FullName': 3,
-              'TimeItem': 4,
-              'DateItem': 5,
-              'DomainName': 6
-             }
+    NAME = 0
+    DESCRIPTION = 1
+    EMAIL = 2
+    FULL_NAME = 3
+    TIME_ITEM = 4
+    DATE_ITEM = 5
+    DOMAIN_NAME = 6
+
+    VALUES = {
+        'Name': NAME,
+        'Description': DESCRIPTION,
+        'Email': EMAIL,
+        'FullName': FULL_NAME,
+        'TimeItem': TIME_ITEM,
+        'DateItem': DATE_ITEM,
+        'DomainName': DOMAIN_NAME
+    }

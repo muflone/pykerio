@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class DynamicDnsAddressType(BaseEnumeration):
-    VALUES = {'DynamicDnsAdressIface': 0,
-              'DynamicDnsAdressDetect': 1,
-              'DynamicDnsAdressCustom': 2
-             }
+    IFACE = 0
+    DETECT = 1
+    CUSTOM = 2
+
+    VALUES = {
+        'DynamicDnsAdressIface': IFACE,
+        'DynamicDnsAdressDetect': DETECT,
+        'DynamicDnsAdressCustom': CUSTOM
+    }

@@ -22,9 +22,16 @@ from . import BaseEnumeration
 
 
 class InterfaceGroupType(BaseEnumeration):
-    VALUES = {'Other': 0,
-              'Guest': 1,
-              'Vpn': 2,
-              'Trusted': 3,
-              'Internet': 4
-             }
+    OTHER = 0
+    GUEST = 1
+    VPN = 2
+    TRUSTED = 3
+    INTERNET = 4
+
+    VALUES = {
+        'Other': OTHER,
+        'Guest': GUEST,
+        'Vpn': VPN,
+        'Trusted': TRUSTED,
+        'Internet': INTERNET
+    }

@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class OsCodeType(BaseEnumeration):
-    VALUES = {'OsWindows': 0,
-              'OsLinux': 1,
-              'OsMacos': 2,
-              'OsUnknown': 3
-             }
+    WINDOWS = 0
+    LINUX = 1
+    MACOS = 2
+    UNKNOWN = 3
+
+    VALUES = {
+        'OsWindows': WINDOWS,
+        'OsLinux': LINUX,
+        'OsMacos': MACOS,
+        'OsUnknown': UNKNOWN
+    }

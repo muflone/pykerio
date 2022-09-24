@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class RegistrationFinishType(BaseEnumeration):
-    VALUES = {'rfCreate': 0,
-              'rfModify': 1,
-              'rfDownload': 2,
-              'rfStore': 3
-             }
+    CREATE = 0
+    MODIFY = 1
+    DOWNLOAD = 2
+    STORE = 3
+
+    VALUES = {
+        'rfCreate': CREATE,
+        'rfModify': MODIFY,
+        'rfDownload': DOWNLOAD,
+        'rfStore': STORE
+    }

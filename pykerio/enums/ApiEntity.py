@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class ApiEntity(BaseEnumeration):
-    VALUES = {'PolicyWizard': 0,
-              'AlertList': 1
-             }
+    POLICY_WIZARD = 0
+    ALERT_LIST = 1
+
+    VALUES = {
+        'PolicyWizard': POLICY_WIZARD,
+        'AlertList': ALERT_LIST
+    }

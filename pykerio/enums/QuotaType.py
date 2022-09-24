@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class QuotaType(BaseEnumeration):
-    VALUES = {'QuotaBoth': 0,
-              'QuotaDownload': 1,
-              'QuotaUpload': 2
-             }
+    BOTH = 0
+    DOWNLOAD = 1
+    UPLOAD = 2
+
+    VALUES = {
+        'QuotaBoth': BOTH,
+        'QuotaDownload': DOWNLOAD,
+        'QuotaUpload': UPLOAD
+    }

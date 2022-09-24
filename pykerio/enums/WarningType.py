@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class WarningType(BaseEnumeration):
-    VALUES = {'WarnBetaVersion': 0,
-              'WarnUpdateFailed': 1,
-              'WarnConfigurationReverted': 2
-             }
+    BETA_VERSION = 0
+    UPDATE_FAILED = 1
+    CONFIGURATION_REVERTED = 2
+
+    VALUES = {
+        'WarnBetaVersion': BETA_VERSION,
+        'WarnUpdateFailed': UPDATE_FAILED,
+        'WarnConfigurationReverted': CONFIGURATION_REVERTED
+    }

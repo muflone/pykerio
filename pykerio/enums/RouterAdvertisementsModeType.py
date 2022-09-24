@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class RouterAdvertisementsModeType(BaseEnumeration):
-    VALUES = {'RouterAdvertisementsAutomatic': 0,
-              'RouterAdvertisementsManual': 1
-             }
+    AUTOMATIC = 0
+    MANUAL = 1
+
+    VALUES = {
+        'RouterAdvertisementsAutomatic': AUTOMATIC,
+        'RouterAdvertisementsManual': MANUAL
+    }

@@ -22,15 +22,28 @@ from . import BaseEnumeration
 
 
 class Entity(BaseEnumeration):
-    VALUES = {'EntityUser': 0,
-              'EntityAlias': 1,
-              'EntityGroup': 2,
-              'EntityMailingList': 3,
-              'EntityResource': 4,
-              'EntityTimeRange': 5,
-              'EntityTimeRangeGroup': 6,
-              'EntityIpAddress': 7,
-              'EntityIpAddressGroup': 8,
-              'EntityService': 9,
-              'EntityDomain': 10
-             }
+    USER = 0
+    ALIAS = 1
+    GROUP = 2
+    MAILING_LIST = 3
+    RESOURCE = 4
+    TIME_RANGE = 5
+    TIME_RANGE_GROUP = 6
+    IP_ADDRESS = 7
+    IP_ADDRESS_GROUP = 8
+    SERVICE = 9
+    DOMAIN = 10
+
+    VALUES = {
+        'EntityUser': USER,
+        'EntityAlias': ALIAS,
+        'EntityGroup': GROUP,
+        'EntityMailingList': MAILING_LIST,
+        'EntityResource': RESOURCE,
+        'EntityTimeRange': TIME_RANGE,
+        'EntityTimeRangeGroup': TIME_RANGE_GROUP,
+        'EntityIpAddress': IP_ADDRESS,
+        'EntityIpAddressGroup': IP_ADDRESS_GROUP,
+        'EntityService': SERVICE,
+        'EntityDomain': DOMAIN
+    }

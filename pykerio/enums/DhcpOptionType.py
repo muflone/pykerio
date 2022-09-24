@@ -22,20 +22,38 @@ from . import BaseEnumeration
 
 
 class DhcpOptionType(BaseEnumeration):
-    VALUES = {'DhcpBool': 0,
-              'DhcpInt8': 1,
-              'DhcpInt16': 2,
-              'DhcpInt32': 3,
-              'DhcpIpAddr': 4,
-              'DhcpString': 5,
-              'DhcpHex': 6,
-              'DhcpTimeSigned': 7,
-              'DhcpTimeUnsigned': 8,
-              'DhcpInt8List': 9,
-              'DhcpInt16List': 10,
-              'DhcpInt32List': 11,
-              'DhcpIpAddrList': 12,
-              'DhcpIpPairList': 13,
-              'DhcpIpMaskList': 14,
-              'DhcpIpMaskIpList': 15
-             }
+    BOOL = 0
+    INT8 = 1
+    INT16 = 2
+    INT32 = 3
+    IP_ADDR = 4
+    STRING = 5
+    HEX = 6
+    TIME_SIGNED = 7
+    TIME_UNSIGNED = 8
+    INT8_LIST = 9
+    INT16_LIST = 10
+    INT32_LIST = 11
+    IP_ADDR_LIST = 12
+    IP_PAIR_LIST = 13
+    IP_MASK_LIST = 14
+    IP_MASK_IP_LIST = 15
+
+    VALUES = {
+        'DhcpBool': BOOL,
+        'DhcpInt8': INT8,
+        'DhcpInt16': INT16,
+        'DhcpInt32': INT32,
+        'DhcpIpAddr': IP_ADDR,
+        'DhcpString': STRING,
+        'DhcpHex': HEX,
+        'DhcpTimeSigned': TIME_SIGNED,
+        'DhcpTimeUnsigned': TIME_UNSIGNED,
+        'DhcpInt8List': INT8_LIST,
+        'DhcpInt16List': INT16_LIST,
+        'DhcpInt32List': INT32_LIST,
+        'DhcpIpAddrList': IP_ADDR_LIST,
+        'DhcpIpPairList': IP_PAIR_LIST,
+        'DhcpIpMaskList': IP_MASK_LIST,
+        'DhcpIpMaskIpList': IP_MASK_IP_LIST
+    }

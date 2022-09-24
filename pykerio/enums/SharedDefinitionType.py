@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class SharedDefinitionType(BaseEnumeration):
-    VALUES = {'SharedDefinitionIpAddrGroup': 0,
-              'SharedDefinitionUrlGroup': 1,
-              'SharedDefinitionTimeRange': 2
-             }
+    IP_ADDRESS_GROUP = 0
+    URL_GROUP = 1
+    TIME_RANGE = 2
+
+    VALUES = {
+        'SharedDefinitionIpAddrGroup': IP_ADDRESS_GROUP,
+        'SharedDefinitionUrlGroup': URL_GROUP,
+        'SharedDefinitionTimeRange': TIME_RANGE
+    }

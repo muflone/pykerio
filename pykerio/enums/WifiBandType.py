@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class WifiBandType(BaseEnumeration):
-    VALUES = {'WifiBandA': 0,
-              'WifiBandBG': 1,
-              'WifiBandAC': 2
-             }
+    A = 0
+    BG = 1
+    AC = 2
+
+    VALUES = {
+        'WifiBandA': A,
+        'WifiBandBG': BG,
+        'WifiBandAC': AC
+    }

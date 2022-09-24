@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class ActiveHostType(BaseEnumeration):
-    VALUES = {'ActiveHostFirevall': 0,
-              'ActiveHostVpnClient': 1,
-              'ActiveHostHost': 2,
-              'ActiveHostGuest': 3
-             }
+    FIREWALL = 0
+    VPN_CLIENT = 1
+    HOST = 2
+    GUEST = 3
+
+    VALUES = {
+        'ActiveHostFirevall': FIREWALL,
+        'ActiveHostVpnClient': VPN_CLIENT,
+        'ActiveHostHost': HOST,
+        'ActiveHostGuest': GUEST
+    }

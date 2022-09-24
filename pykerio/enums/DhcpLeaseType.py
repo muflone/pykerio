@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class DhcpLeaseType(BaseEnumeration):
-    VALUES = {'DhcpTypeReservation': 0,
-              'DhcpTypeLease': 1
-             }
+    RESERVATION = 0
+    LEASE = 1
+
+    VALUES = {
+        'DhcpTypeReservation': RESERVATION,
+        'DhcpTypeLease': LEASE
+    }

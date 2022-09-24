@@ -22,8 +22,14 @@ from . import BaseEnumeration
 
 
 class RuleAction(BaseEnumeration):
-    VALUES = {'Allow': 0,
-              'Deny': 1,
-              'Drop': 2,
-              'NotSet': 3
-             }
+    ALLOW = 0
+    DENY = 1
+    DROP = 2
+    NOT_SET = 3
+
+    VALUES = {
+        'Allow': ALLOW,
+        'Deny': DENY,
+        'Drop': DROP,
+        'NotSet': NOT_SET
+    }

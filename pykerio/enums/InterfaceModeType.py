@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class InterfaceModeType(BaseEnumeration):
-    VALUES = {'InterfaceModeManual': 0,
-              'InterfaceModeAutomatic': 1,
-              'InterfaceModeLinkLocal': 2
-             }
+    MANUAL = 0
+    AUTOMATIC = 1
+    LINK_LOCAL = 2
+
+    VALUES = {
+        'InterfaceModeManual': MANUAL,
+        'InterfaceModeAutomatic': AUTOMATIC,
+        'InterfaceModeLinkLocal': LINK_LOCAL
+    }

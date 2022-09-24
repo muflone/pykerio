@@ -22,9 +22,16 @@ from . import BaseEnumeration
 
 
 class InterfaceType(BaseEnumeration):
-    VALUES = {'Ethernet': 0,
-              'Ras': 1,
-              'DialIn': 2,
-              'VpnServer': 3,
-              'VpnTunnel': 4
-             }
+    ETHERNET = 0
+    RAS = 1
+    DIAL_IN = 2
+    VPN_SERVER = 3
+    VPN_TUNNEL = 4
+
+    VALUES = {
+        'Ethernet': ETHERNET,
+        'Ras': RAS,
+        'DialIn': DIAL_IN,
+        'VpnServer': VPN_SERVER,
+        'VpnTunnel': VPN_TUNNEL
+    }

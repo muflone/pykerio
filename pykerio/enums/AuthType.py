@@ -22,6 +22,10 @@ from . import BaseEnumeration
 
 
 class AuthType(BaseEnumeration):
-    VALUES = {'Internal': 0,
-              'KerberosNt': 1
-             }
+    INTERNAL = 0
+    KERBEROS_NT = 1
+
+    VALUES = {
+        'Internal': INTERNAL,
+        'KerberosNt': KERBEROS_NT
+    }

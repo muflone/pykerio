@@ -22,10 +22,18 @@ from . import BaseEnumeration
 
 
 class ByteUnits(BaseEnumeration):
-    VALUES = {'Bytes': 0,
-              'KiloBytes': 1,
-              'MegaBytes': 2,
-              'GigaBytes': 3,
-              'TeraBytes': 4,
-              'PetaBytes': 5
-             }
+    BYTES = 0
+    KILO_BYTES = 1
+    MEGA_BYTES = 2
+    GIGA_BYTES = 3
+    TERA_BYTES = 4
+    PETA_BYTES = 5
+
+    VALUES = {
+        'Bytes': BYTES,
+        'KiloBytes': KILO_BYTES,
+        'MegaBytes': MEGA_BYTES,
+        'GigaBytes': GIGA_BYTES,
+        'TeraBytes': TERA_BYTES,
+        'PetaBytes': PETA_BYTES
+    }

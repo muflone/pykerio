@@ -22,7 +22,12 @@ from . import BaseEnumeration
 
 
 class RouteType(BaseEnumeration):
-    VALUES = {'RouteSystem': 0,
-              'RouteStatic': 1,
-              'RouteVpn': 2
-             }
+    SYSTEM = 0
+    STATIC = 1
+    VPN = 2
+
+    VALUES = {
+        'RouteSystem': SYSTEM,
+        'RouteStatic': STATIC,
+        'RouteVpn': VPN
+    }
