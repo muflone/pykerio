@@ -8,7 +8,7 @@
 
 **Description:** API for Kerio products
 
-**Copyright:** 2018 Fabio Castelli (Muflone) <muflone@muflone.com>
+**Copyright:** 2018-2022 Fabio Castelli (Muflone) <muflone@muflone.com>
 
 **License:** GPL-2+
 

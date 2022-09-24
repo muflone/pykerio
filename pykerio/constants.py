@@ -2,7 +2,7 @@
 #     Project: PyKerio
 # Description: API for Kerio products
 #      Author: Fabio Castelli (Muflone) <muflone@muflone.com>
-#   Copyright: 2018 Fabio Castelli
+#   Copyright: 2018-2022 Fabio Castelli
 #     License: GPL-2+
 #  This program is free software; you can redistribute it and/or modify it
 #  under the terms of the GNU General Public License as published by the Free
@@ -25,7 +25,7 @@ APP_ID = 'pykerio.muflone.com'
 APP_URL = 'http://www.muflone.com/pykerio/'
 APP_AUTHOR = 'Fabio Castelli'
 APP_AUTHOR_EMAIL = 'muflone@muflone.com'
-APP_COPYRIGHT = 'Copyright 2018 %s' % APP_AUTHOR
+APP_COPYRIGHT = 'Copyright 2018-2022 %s' % APP_AUTHOR
 
 UNLIMITED = -1
 DEFAULT_PING_SIZE = 56
