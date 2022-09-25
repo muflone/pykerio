@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ExportFormat(unittest.TestCase):
-    def test_00_ExportFormat_PlainText(self):
+    def test_00_PlainText(self):
         """
         Test ExportFormat with PlainText
         """
@@ -33,7 +33,7 @@ class TestCase_ExportFormat(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PlainText')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ExportFormat_Html(self):
+    def test_01_Html(self):
         """
         Test ExportFormat with Html
         """
@@ -43,7 +43,7 @@ class TestCase_ExportFormat(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_ExportFormat_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ExportFormat with FAIL
         """

@@ -32,7 +32,6 @@ class TestCase_LocalizableMessageParameters(unittest.TestCase):
         positional_parameters.append('User1')
         positional_parameters.append('Foo')
 
-        message = 'Would you want to delete the user %1 (%2)?'
         teststruct = pykerio.structs.LocalizableMessageParameters({
             'positionalParameters': positional_parameters,
             'plurality': 1})
@@ -40,7 +39,7 @@ class TestCase_LocalizableMessageParameters(unittest.TestCase):
         self.assertEqual(len(teststruct.values()), 2)
 
         self.assertEqual(teststruct['positionalParameters'],
-                          positional_parameters)
+                         positional_parameters)
         self.assertEqual(teststruct['plurality'], 1)
 
         teststruct.clear()

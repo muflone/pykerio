@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_VpnClientState(unittest.TestCase):
-    def test_00_VpnClientState_VpnClientConnecting(self):
+    def test_00_VpnClientConnecting(self):
         """
         Test VpnClientState with VpnClientConnecting
         """
@@ -33,7 +33,7 @@ class TestCase_VpnClientState(unittest.TestCase):
         self.assertEqual(value.get_name(), 'VpnClientConnecting')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_VpnClientState_VpnClientAuthenticating(self):
+    def test_01_VpnClientAuthenticating(self):
         """
         Test VpnClientState with VpnClientAuthenticating
         """
@@ -42,7 +42,7 @@ class TestCase_VpnClientState(unittest.TestCase):
         self.assertEqual(value.get_name(), 'VpnClientAuthenticating')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_VpnClientState_VpnClientAuthenticated(self):
+    def test_02_VpnClientAuthenticated(self):
         """
         Test VpnClientState with VpnClientAuthenticated
         """
@@ -51,7 +51,7 @@ class TestCase_VpnClientState(unittest.TestCase):
         self.assertEqual(value.get_name(), 'VpnClientAuthenticated')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_VpnClientState_VpnClientConnected(self):
+    def test_03_VpnClientConnected(self):
         """
         Test VpnClientState with VpnClientConnected
         """
@@ -60,7 +60,7 @@ class TestCase_VpnClientState(unittest.TestCase):
         self.assertEqual(value.get_name(), 'VpnClientConnected')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_VpnClientState_VpnClientOther(self):
+    def test_04_VpnClientOther(self):
         """
         Test VpnClientState with VpnClientOther
         """
@@ -70,7 +70,7 @@ class TestCase_VpnClientState(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_VpnClientState_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test VpnClientState with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_AddresseeType(unittest.TestCase):
-    def test_00_AddresseeType_AddresseeEmail(self):
+    def test_00_AddresseeEmail(self):
         """
         Test AddresseeType with AddresseeEmail
         """
@@ -33,7 +33,7 @@ class TestCase_AddresseeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AddresseeEmail')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_AddresseeType_AddresseeUser(self):
+    def test_01_AddresseeUser(self):
         """
         Test AddresseeType with AddresseeUser
         """
@@ -43,7 +43,7 @@ class TestCase_AddresseeType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_AddresseeType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test AddresseeType with FAIL
         """

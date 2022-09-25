@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RouterAdvertisementsModeType(unittest.TestCase):
-    def test_00_RouterAdvertisementsModeType_RouterAdvertisementsAutomatic(self):
+    def test_00_RouterAdvertisementsAutomatic(self):
         """
         Test RouterAdvertisementsModeType with RouterAdvertisementsAutomatic
         """
@@ -33,7 +33,7 @@ class TestCase_RouterAdvertisementsModeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RouterAdvertisementsAutomatic')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RouterAdvertisementsModeType_RouterAdvertisementsManual(self):
+    def test_01_RouterAdvertisementsManual(self):
         """
         Test RouterAdvertisementsModeType with RouterAdvertisementsManual
         """
@@ -43,7 +43,7 @@ class TestCase_RouterAdvertisementsModeType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_RouterAdvertisementsModeType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RouterAdvertisementsModeType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_InterfaceEncapType(unittest.TestCase):
-    def test_00_InterfaceEncapType_InterfaceEncapNative(self):
+    def test_00_InterfaceEncapNative(self):
         """
         Test InterfaceEncapType with InterfaceEncapNative
         """
@@ -33,7 +33,7 @@ class TestCase_InterfaceEncapType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'InterfaceEncapNative')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_InterfaceEncapType_InterfaceEncapPppoe(self):
+    def test_01_InterfaceEncapPppoe(self):
         """
         Test InterfaceEncapType with InterfaceEncapPppoe
         """
@@ -43,7 +43,7 @@ class TestCase_InterfaceEncapType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_InterfaceEncapType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test InterfaceEncapType with FAIL
         """

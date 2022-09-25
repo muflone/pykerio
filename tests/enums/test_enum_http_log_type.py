@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_HttpLogType(unittest.TestCase):
-    def test_00_HttpLogType_HttpLogApache(self):
+    def test_00_HttpLogApache(self):
         """
         Test HttpLogType with HttpLogApache
         """
@@ -33,7 +33,7 @@ class TestCase_HttpLogType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HttpLogApache')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_HttpLogType_HttpLogSquid(self):
+    def test_01_HttpLogSquid(self):
         """
         Test HttpLogType with HttpLogSquid
         """
@@ -43,7 +43,7 @@ class TestCase_HttpLogType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_HttpLogType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test HttpLogType with FAIL
         """

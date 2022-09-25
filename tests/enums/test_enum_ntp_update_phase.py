@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_NtpUpdatePhase(unittest.TestCase):
-    def test_00_NtpUpdatePhase_NtpUpdateDisabled(self):
+    def test_00_NtpUpdateDisabled(self):
         """
         Test NtpUpdatePhase with NtpUpdateDisabled
         """
@@ -33,7 +33,7 @@ class TestCase_NtpUpdatePhase(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NtpUpdateDisabled')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_NtpUpdatePhase_NtpUpdateOk(self):
+    def test_01_NtpUpdateOk(self):
         """
         Test NtpUpdatePhase with NtpUpdateOk
         """
@@ -42,7 +42,7 @@ class TestCase_NtpUpdatePhase(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NtpUpdateOk')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_NtpUpdatePhase_NtpUpdateError(self):
+    def test_02_NtpUpdateError(self):
         """
         Test NtpUpdatePhase with NtpUpdateError
         """
@@ -51,7 +51,7 @@ class TestCase_NtpUpdatePhase(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NtpUpdateError')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_NtpUpdatePhase_NtpUpdateProgress(self):
+    def test_03_NtpUpdateProgress(self):
         """
         Test NtpUpdatePhase with NtpUpdateProgress
         """
@@ -61,7 +61,7 @@ class TestCase_NtpUpdatePhase(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_NtpUpdatePhase_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test NtpUpdatePhase with FAIL
         """

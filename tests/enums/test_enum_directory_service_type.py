@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DirectoryServiceType(unittest.TestCase):
-    def test_00_DirectoryServiceType_WindowsActiveDirectory(self):
+    def test_00_WindowsActiveDirectory(self):
         """
         Test DirectoryServiceType with WindowsActiveDirectory
         """
@@ -33,7 +33,7 @@ class TestCase_DirectoryServiceType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WindowsActiveDirectory')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DirectoryServiceType_AppleDirectoryKerberos(self):
+    def test_01_AppleDirectoryKerberos(self):
         """
         Test DirectoryServiceType with AppleDirectoryKerberos
         """
@@ -42,7 +42,7 @@ class TestCase_DirectoryServiceType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AppleDirectoryKerberos')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_DirectoryServiceType_AppleDirectoryPassword(self):
+    def test_02_AppleDirectoryPassword(self):
         """
         Test DirectoryServiceType with AppleDirectoryPassword
         """
@@ -52,7 +52,7 @@ class TestCase_DirectoryServiceType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_DirectoryServiceType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DirectoryServiceType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RouteType(unittest.TestCase):
-    def test_00_RouteType_RouteSystem(self):
+    def test_00_RouteSystem(self):
         """
         Test RouteType with RouteSystem
         """
@@ -33,7 +33,7 @@ class TestCase_RouteType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RouteSystem')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RouteType_RouteStatic(self):
+    def test_01_RouteStatic(self):
         """
         Test RouteType with RouteStatic
         """
@@ -42,7 +42,7 @@ class TestCase_RouteType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RouteStatic')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RouteType_RouteVpn(self):
+    def test_02_RouteVpn(self):
         """
         Test RouteType with RouteVpn
         """
@@ -52,7 +52,7 @@ class TestCase_RouteType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_RouteType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RouteType with FAIL
         """

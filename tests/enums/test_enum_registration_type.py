@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RegistrationType(unittest.TestCase):
-    def test_00_RegistrationType_rsNoRegistration(self):
+    def test_00_rsNoRegistration(self):
         """
         Test RegistrationType with rsNoRegistration
         """
@@ -33,7 +33,7 @@ class TestCase_RegistrationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'rsNoRegistration')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RegistrationType_rsTrialRegistered(self):
+    def test_01_rsTrialRegistered(self):
         """
         Test RegistrationType with rsTrialRegistered
         """
@@ -42,7 +42,7 @@ class TestCase_RegistrationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'rsTrialRegistered')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RegistrationType_rsTrialExpired(self):
+    def test_02_rsTrialExpired(self):
         """
         Test RegistrationType with rsTrialExpired
         """
@@ -51,7 +51,7 @@ class TestCase_RegistrationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'rsTrialExpired')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_RegistrationType_rsProductRegistered(self):
+    def test_03_rsProductRegistered(self):
         """
         Test RegistrationType with rsProductRegistered
         """
@@ -61,7 +61,7 @@ class TestCase_RegistrationType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_RegistrationType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RegistrationType with FAIL
         """

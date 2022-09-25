@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SearchStatus(unittest.TestCase):
-    def test_00_SearchStatus_ResultFound(self):
+    def test_00_ResultFound(self):
         """
         Test SearchStatus with ResultFound
         """
@@ -33,7 +33,7 @@ class TestCase_SearchStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ResultFound')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SearchStatus_Searching(self):
+    def test_01_Searching(self):
         """
         Test SearchStatus with Searching
         """
@@ -42,7 +42,7 @@ class TestCase_SearchStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Searching')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_SearchStatus_Cancelled(self):
+    def test_02_Cancelled(self):
         """
         Test SearchStatus with Cancelled
         """
@@ -51,7 +51,7 @@ class TestCase_SearchStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Cancelled')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_SearchStatus_ResultNotFound(self):
+    def test_03_ResultNotFound(self):
         """
         Test SearchStatus with ResultNotFound
         """
@@ -61,7 +61,7 @@ class TestCase_SearchStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_SearchStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SearchStatus with FAIL
         """

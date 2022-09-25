@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_WifiBandType(unittest.TestCase):
-    def test_00_WifiBandType_WifiBandA(self):
+    def test_00_WifiBandA(self):
         """
         Test WifiBandType with WifiBandA
         """
@@ -33,7 +33,7 @@ class TestCase_WifiBandType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WifiBandA')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_WifiBandType_WifiBandBG(self):
+    def test_01_WifiBandBG(self):
         """
         Test WifiBandType with WifiBandBG
         """
@@ -42,7 +42,7 @@ class TestCase_WifiBandType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WifiBandBG')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_WifiBandType_WifiBandAC(self):
+    def test_02_WifiBandAC(self):
         """
         Test WifiBandType with WifiBandAC
         """
@@ -52,7 +52,7 @@ class TestCase_WifiBandType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_WifiBandType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test WifiBandType with FAIL
         """

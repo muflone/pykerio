@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ActiveHostType(unittest.TestCase):
-    def test_00_ActiveHostType_ActiveHostFirevall(self):
+    def test_00_ActiveHostFirevall(self):
         """
         Test ActiveHostType with ActiveHostFirevall
         """
@@ -33,7 +33,7 @@ class TestCase_ActiveHostType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveHostFirevall')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ActiveHostType_ActiveHostVpnClient(self):
+    def test_01_ActiveHostVpnClient(self):
         """
         Test ActiveHostType with ActiveHostVpnClient
         """
@@ -42,7 +42,7 @@ class TestCase_ActiveHostType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveHostVpnClient')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ActiveHostType_ActiveHostHost(self):
+    def test_02_ActiveHostHost(self):
         """
         Test ActiveHostType with ActiveHostHost
         """
@@ -51,7 +51,7 @@ class TestCase_ActiveHostType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveHostHost')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ActiveHostType_ActiveHostGuest(self):
+    def test_03_ActiveHostGuest(self):
         """
         Test ActiveHostType with ActiveHostGuest
         """
@@ -61,7 +61,7 @@ class TestCase_ActiveHostType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_ActiveHostType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ActiveHostType with FAIL
         """

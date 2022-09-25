@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SnmpVersion(unittest.TestCase):
-    def test_00_SnmpVersion_SnmpV2c(self):
+    def test_00_SnmpV2c(self):
         """
         Test SnmpVersion with SnmpV2c
         """
@@ -33,7 +33,7 @@ class TestCase_SnmpVersion(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SnmpV2c')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SnmpVersion_SnmpV3(self):
+    def test_01_SnmpV3(self):
         """
         Test SnmpVersion with SnmpV3
         """
@@ -43,7 +43,7 @@ class TestCase_SnmpVersion(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_SnmpVersion_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SnmpVersion with FAIL
         """

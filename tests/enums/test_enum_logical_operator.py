@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_LogicalOperator(unittest.TestCase):
-    def test_00_LogicalOperator_Or(self):
+    def test_00_Or(self):
         """
         Test LogicalOperator with Or
         """
@@ -33,7 +33,7 @@ class TestCase_LogicalOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Or')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_LogicalOperator_And(self):
+    def test_01_And(self):
         """
         Test LogicalOperator with And
         """
@@ -43,7 +43,7 @@ class TestCase_LogicalOperator(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_LogicalOperator_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test LogicalOperator with FAIL
         """

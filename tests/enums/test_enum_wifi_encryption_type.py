@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_WifiEncryptionType(unittest.TestCase):
-    def test_00_WifiEncryptionType_WifiEncryptionDisabled(self):
+    def test_00_WifiEncryptionDisabled(self):
         """
         Test WifiEncryptionType with WifiEncryptionDisabled
         """
@@ -33,7 +33,7 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WifiEncryptionDisabled')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_WifiEncryptionType_WifiEncryptionWpaPsk(self):
+    def test_01_WifiEncryptionWpaPsk(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpaPsk
         """
@@ -42,7 +42,7 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WifiEncryptionWpaPsk')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_WifiEncryptionType_WifiEncryptionWpaEnt(self):
+    def test_02_WifiEncryptionWpaEnt(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpaEnt
         """
@@ -51,7 +51,7 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WifiEncryptionWpaEnt')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_WifiEncryptionType_WifiEncryptionWpa2Psk(self):
+    def test_03_WifiEncryptionWpa2Psk(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpa2Psk
         """
@@ -60,7 +60,7 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WifiEncryptionWpa2Psk')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_WifiEncryptionType_WifiEncryptionWpa2Ent(self):
+    def test_04_WifiEncryptionWpa2Ent(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpa2Ent
         """
@@ -70,7 +70,7 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_WifiEncryptionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test WifiEncryptionType with FAIL
         """

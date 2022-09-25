@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_NotificationSeverity(unittest.TestCase):
-    def test_00_NotificationSeverity_NotificationWarning(self):
+    def test_00_NotificationWarning(self):
         """
         Test NotificationSeverity with NotificationWarning
         """
@@ -33,7 +33,7 @@ class TestCase_NotificationSeverity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationWarning')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_NotificationSeverity_NotificationError(self):
+    def test_01_NotificationError(self):
         """
         Test NotificationSeverity with NotificationError
         """
@@ -43,7 +43,7 @@ class TestCase_NotificationSeverity(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_NotificationSeverity_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test NotificationSeverity with FAIL
         """

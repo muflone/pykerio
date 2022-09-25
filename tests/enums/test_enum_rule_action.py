@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RuleAction(unittest.TestCase):
-    def test_00_RuleAction_Allow(self):
+    def test_00_Allow(self):
         """
         Test RuleAction with Allow
         """
@@ -33,7 +33,7 @@ class TestCase_RuleAction(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Allow')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RuleAction_Deny(self):
+    def test_01_Deny(self):
         """
         Test RuleAction with Deny
         """
@@ -42,7 +42,7 @@ class TestCase_RuleAction(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Deny')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RuleAction_Drop(self):
+    def test_02_Drop(self):
         """
         Test RuleAction with Drop
         """
@@ -51,7 +51,7 @@ class TestCase_RuleAction(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Drop')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_RuleAction_NotSet(self):
+    def test_03_NotSet(self):
         """
         Test RuleAction with NotSet
         """
@@ -61,7 +61,7 @@ class TestCase_RuleAction(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_RuleAction_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RuleAction with FAIL
         """

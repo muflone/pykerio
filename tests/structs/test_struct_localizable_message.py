@@ -42,7 +42,7 @@ class TestCase_LocalizableMessage(unittest.TestCase):
 
         self.assertEqual(teststruct['message'], message)
         self.assertEqual(teststruct['positionalParameters'],
-                          positional_parameters)
+                         positional_parameters)
         self.assertEqual(teststruct['plurality'], 1)
 
         teststruct.clear()

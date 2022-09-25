@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_QuotaType(unittest.TestCase):
-    def test_00_QuotaType_QuotaBoth(self):
+    def test_00_QuotaBoth(self):
         """
         Test QuotaType with QuotaBoth
         """
@@ -33,7 +33,7 @@ class TestCase_QuotaType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'QuotaBoth')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_QuotaType_QuotaDownload(self):
+    def test_01_QuotaDownload(self):
         """
         Test QuotaType with QuotaDownload
         """
@@ -42,7 +42,7 @@ class TestCase_QuotaType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'QuotaDownload')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_QuotaType_QuotaUpload(self):
+    def test_02_QuotaUpload(self):
         """
         Test QuotaType with QuotaUpload
         """
@@ -52,7 +52,7 @@ class TestCase_QuotaType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_QuotaType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test QuotaType with FAIL
         """

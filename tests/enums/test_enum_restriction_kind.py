@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RestrictionKind(unittest.TestCase):
-    def test_00_RestrictionKind_Regex(self):
+    def test_00_Regex(self):
         """
         Test RestrictionKind with Regex
         """
@@ -33,7 +33,7 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Regex')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RestrictionKind_ByteLength(self):
+    def test_01_ByteLength(self):
         """
         Test RestrictionKind with ByteLength
         """
@@ -42,7 +42,7 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ByteLength')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RestrictionKind_ForbiddenNameList(self):
+    def test_02_ForbiddenNameList(self):
         """
         Test RestrictionKind with ForbiddenNameList
         """
@@ -51,7 +51,7 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ForbiddenNameList')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_RestrictionKind_ForbiddenPrefixList(self):
+    def test_03_ForbiddenPrefixList(self):
         """
         Test RestrictionKind with ForbiddenPrefixList
         """
@@ -60,7 +60,7 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ForbiddenPrefixList')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_RestrictionKind_ForbiddenSuffixList(self):
+    def test_04_ForbiddenSuffixList(self):
         """
         Test RestrictionKind with ForbiddenSuffixList
         """
@@ -69,7 +69,7 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ForbiddenSuffixList')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_RestrictionKind_ForbiddenCharacterList(self):
+    def test_05_ForbiddenCharacterList(self):
         """
         Test RestrictionKind with ForbiddenCharacterList
         """
@@ -79,7 +79,7 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_RestrictionKind_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RestrictionKind with FAIL
         """

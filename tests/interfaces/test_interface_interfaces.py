@@ -48,8 +48,10 @@ class TestCase_Interfaces(unittest.TestCase):
 
         # Session login
         cls.session = pykerio.interfaces.Session(api)
-        cls.session.login(userName=os.environ.get('KERIO_USERNAME', 'admin-en'),
-                          password=os.environ.get('KERIO_PASSWORD', 'kerio'),
+        cls.session.login(userName=os.environ.get('KERIO_USERNAME',
+                                                  'admin-en'),
+                          password=os.environ.get('KERIO_PASSWORD',
+                                                  'kerio'),
                           application=application)
 
         # Interfaces
@@ -99,39 +101,11 @@ class TestCase_Interfaces(unittest.TestCase):
         for iface in ifaces:
             # Check the type for each interface
             self.assertEqual(type(iface), pykerio.structs.Interface)
-            # print(iface['name'], iface['type'].dump())
             iface_type = iface['type'].dump()
-            if iface_type == pykerio.enums.InterfaceType('Ethernet').dump():
-                print('{ENABLED:2s}{TYPE:15s}{GROUP:15s}{LINK:20s}'
-                      '{NAME:15s}{IP:20s}{SUBNET:20s}{GATEWAY:20s}{DNS:20s}'
-                      '{MAC:20s}{SYSTEMNAME:20s}'.format(
-                      ENABLED='E' if iface['enabled'] else 'D',
-                      LINK=iface['linkStatus'].dump(),
-                      NAME=iface['name'],
-                      GATEWAY=iface['gateway'],
-                      DNS=iface['dnsServers'],
-                      IP=iface['ip'],
-                      SUBNET=iface['subnetMask'],
-                      MAC=iface['mac'],
-                      SYSTEMNAME=iface['systemName'],
-                      GROUP=iface['group'].dump(),
-                      TYPE=iface['type'].dump()))
-            elif iface_type == pykerio.enums.InterfaceType('VpnServer').dump():
+            if iface_type == pykerio.enums.InterfaceType('VpnServer').dump():
                 # Check for VpnServer config type
                 self.assertEqual(type(iface['server']),
-                                  pykerio.structs.VpnServerConfig)
-                print('{ENABLED:2s}{TYPE:15s}{GROUP:15s}{LINK:20s}'
-                      '{NAME:15s}{IP:20s}{SUBNET:20s}{GATEWAY:20s}{DNS:20s}'
-                      ''.format(
-                      ENABLED='E' if iface['enabled'] else 'D',
-                      LINK=iface['linkStatus'].dump(),
-                      NAME=iface['name'],
-                      GATEWAY=iface['ip'],
-                      DNS=iface['server']['primaryDns'],
-                      IP=iface['server']['network'],
-                      SUBNET=iface['server']['mask'],
-                      GROUP=iface['group'].dump(),
-                      TYPE=iface['type'].dump()))
+                                 pykerio.structs.VpnServerConfig)
 
     def test_02_get_with_fields(self):
         """
@@ -164,7 +138,8 @@ class TestCase_Interfaces(unittest.TestCase):
         self.assertNotEquals(count, 0)
         # Check for number of interfaces different from count
         self.assertEqual(len(ifaces), count)
-        # Check for results not in dictionary form (only for filled fields list)
+        # Check for results not in dictionary form
+        # (only for filled fields list)
         self.assertNotEquals(type(ifaces), dict)
         # Check for the number of fields in the first interface
         self.assertEqual(len(ifaces[0].items()), len(fields))
@@ -429,6 +404,7 @@ class TestCase_Interfaces(unittest.TestCase):
         Test Interfaces getConnectivityConfig
         """
         config = self.__class__.interfaces.getConnectivityConfig()
+        self.assertNotEqual(len(config.keys()), 0)
 
     @unittest.skipIf(os.environ.get('KERIO_READONLY', 'NO').upper() == 'YES',
                      'Insufficient rights')
@@ -452,6 +428,7 @@ class TestCase_Interfaces(unittest.TestCase):
         Test Interfaces getIpsecPeerIdConfig
         """
         config = self.__class__.interfaces.getIpsecPeerIdConfig()
+        self.assertNotEqual(len(config.keys()), 0)
 
     @unittest.skipIf(os.environ.get('KERIO_HAS_WIFI', 'NO').upper() == 'NO',
                      'No WiFi module enabled')
@@ -459,7 +436,7 @@ class TestCase_Interfaces(unittest.TestCase):
         """
         Test Interfaces getWifiCountries
         """
-        results = self.__class__.interfaces.getWifiCountries()
+        config = self.__class__.interfaces.getWifiCountries()
         self.assertNotEqual(len(config.keys()), 0)
 
     @unittest.skipIf(os.environ.get('KERIO_HAS_WIFI', 'NO').upper() == 'NO',

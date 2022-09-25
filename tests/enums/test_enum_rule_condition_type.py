@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RuleConditionType(unittest.TestCase):
-    def test_00_RuleConditionType_RuleAny(self):
+    def test_00_RuleAny(self):
         """
         Test RuleConditionType with RuleAny
         """
@@ -33,7 +33,7 @@ class TestCase_RuleConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RuleAny')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RuleConditionType_RuleSelectedEntities(self):
+    def test_01_RuleSelectedEntities(self):
         """
         Test RuleConditionType with RuleSelectedEntities
         """
@@ -42,7 +42,7 @@ class TestCase_RuleConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RuleSelectedEntities')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RuleConditionType_RuleInvalidCondition(self):
+    def test_02_RuleInvalidCondition(self):
         """
         Test RuleConditionType with RuleInvalidCondition
         """
@@ -52,7 +52,7 @@ class TestCase_RuleConditionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_RuleConditionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RuleConditionType with FAIL
         """

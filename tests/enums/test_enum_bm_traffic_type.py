@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_BMTrafficType(unittest.TestCase):
-    def test_00_BMTrafficType_BMTrafficEmail(self):
+    def test_00_BMTrafficEmail(self):
         """
         Test BMTrafficType with BMTrafficEmail
         """
@@ -33,7 +33,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficEmail')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_BMTrafficType_BMTrafficFtp(self):
+    def test_01_BMTrafficFtp(self):
         """
         Test BMTrafficType with BMTrafficFtp
         """
@@ -42,7 +42,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficFtp')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_BMTrafficType_BMTrafficInstantMessaging(self):
+    def test_02_BMTrafficInstantMessaging(self):
         """
         Test BMTrafficType with BMTrafficInstantMessaging
         """
@@ -51,7 +51,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficInstantMessaging')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_BMTrafficType_BMTrafficMultimedia(self):
+    def test_03_BMTrafficMultimedia(self):
         """
         Test BMTrafficType with BMTrafficMultimedia
         """
@@ -60,7 +60,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficMultimedia')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_BMTrafficType_BMTrafficP2p(self):
+    def test_04_BMTrafficP2p(self):
         """
         Test BMTrafficType with BMTrafficP2p
         """
@@ -69,7 +69,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficP2p')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_BMTrafficType_BMTrafficRemoteAccess(self):
+    def test_05_BMTrafficRemoteAccess(self):
         """
         Test BMTrafficType with BMTrafficRemoteAccess
         """
@@ -78,7 +78,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficRemoteAccess')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_BMTrafficType_BMTrafficSip(self):
+    def test_06_BMTrafficSip(self):
         """
         Test BMTrafficType with BMTrafficSip
         """
@@ -87,7 +87,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficSip')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_BMTrafficType_BMTrafficVpn(self):
+    def test_07_BMTrafficVpn(self):
         """
         Test BMTrafficType with BMTrafficVpn
         """
@@ -96,7 +96,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMTrafficVpn')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_BMTrafficType_BMTrafficWeb(self):
+    def test_08_BMTrafficWeb(self):
         """
         Test BMTrafficType with BMTrafficWeb
         """
@@ -106,7 +106,7 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.get_value(), 8)
 
     @unittest.expectedFailure
-    def test_99_BMTrafficType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test BMTrafficType with FAIL
         """

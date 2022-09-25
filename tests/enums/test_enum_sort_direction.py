@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SortDirection(unittest.TestCase):
-    def test_00_SortDirection_Asc(self):
+    def test_00_Asc(self):
         """
         Test SortDirection with Asc
         """
@@ -33,7 +33,7 @@ class TestCase_SortDirection(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Asc')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SortDirection_Desc(self):
+    def test_01_Desc(self):
         """
         Test SortDirection with Desc
         """
@@ -43,7 +43,7 @@ class TestCase_SortDirection(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_SortDirection_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SortDirection with FAIL
         """

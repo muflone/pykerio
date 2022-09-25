@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ContentEntityUrlType(unittest.TestCase):
-    def test_00_ContentEntityUrlType_ContentEntityUrlWildcard(self):
+    def test_00_ContentEntityUrlWildcard(self):
         """
         Test ContentEntityUrlType with ContentEntityUrlWildcard
         """
@@ -33,7 +33,7 @@ class TestCase_ContentEntityUrlType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ContentEntityUrlWildcard')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ContentEntityUrlType_ContentEntityUrlRegex(self):
+    def test_01_ContentEntityUrlRegex(self):
         """
         Test ContentEntityUrlType with ContentEntityUrlRegex
         """
@@ -42,7 +42,7 @@ class TestCase_ContentEntityUrlType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ContentEntityUrlRegex')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ContentEntityUrlType_ContentEntityUrlHostname(self):
+    def test_02_ContentEntityUrlHostname(self):
         """
         Test ContentEntityUrlType with ContentEntityUrlHostname
         """
@@ -52,7 +52,7 @@ class TestCase_ContentEntityUrlType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_ContentEntityUrlType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ContentEntityUrlType with FAIL
         """

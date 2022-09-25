@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_HistogramIntervalType(unittest.TestCase):
-    def test_00_HistogramIntervalType_HistogramInterval5m(self):
+    def test_00_HistogramInterval5m(self):
         """
         Test HistogramIntervalType with HistogramInterval5m
         """
@@ -33,7 +33,7 @@ class TestCase_HistogramIntervalType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HistogramInterval5m')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_HistogramIntervalType_HistogramInterval20s(self):
+    def test_01_HistogramInterval20s(self):
         """
         Test HistogramIntervalType with HistogramInterval20s
         """
@@ -42,7 +42,7 @@ class TestCase_HistogramIntervalType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HistogramInterval20s')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_HistogramIntervalType_HistogramInterval30m(self):
+    def test_02_HistogramInterval30m(self):
         """
         Test HistogramIntervalType with HistogramInterval30m
         """
@@ -51,7 +51,7 @@ class TestCase_HistogramIntervalType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HistogramInterval30m')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_HistogramIntervalType_HistogramInterval2h(self):
+    def test_03_HistogramInterval2h(self):
         """
         Test HistogramIntervalType with HistogramInterval2h
         """
@@ -61,7 +61,7 @@ class TestCase_HistogramIntervalType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_HistogramIntervalType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test HistogramIntervalType with FAIL
         """

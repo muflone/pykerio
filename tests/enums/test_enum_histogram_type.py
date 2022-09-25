@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_HistogramType(unittest.TestCase):
-    def test_00_HistogramType_HistogramOneDay(self):
+    def test_00_HistogramOneDay(self):
         """
         Test HistogramType with HistogramOneDay
         """
@@ -33,7 +33,7 @@ class TestCase_HistogramType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HistogramOneDay')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_HistogramType_HistogramTwoHours(self):
+    def test_01_HistogramTwoHours(self):
         """
         Test HistogramType with HistogramTwoHours
         """
@@ -42,7 +42,7 @@ class TestCase_HistogramType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HistogramTwoHours')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_HistogramType_HistogramOneWeek(self):
+    def test_02_HistogramOneWeek(self):
         """
         Test HistogramType with HistogramOneWeek
         """
@@ -51,7 +51,7 @@ class TestCase_HistogramType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HistogramOneWeek')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_HistogramType_HistogramOneMonth(self):
+    def test_03_HistogramOneMonth(self):
         """
         Test HistogramType with HistogramOneMonth
         """
@@ -61,7 +61,7 @@ class TestCase_HistogramType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_HistogramType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test HistogramType with FAIL
         """

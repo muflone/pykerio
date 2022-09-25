@@ -43,17 +43,15 @@ class Session(JSONSerializable):
             method='Session.login',
             params={'userName': userName,
                     'password': password,
-                    'application': application
-                   })
+                    'application': application})
         self.api.token = response.result['token']
 
     def logout(self):
         """
         destroys session
         """
-        response = self.api.request_rpc(
-            method='Session.logout',
-            params={})
+        self.api.request_rpc(method='Session.logout',
+                             params={})
 
     def getUserName(self):
         """
@@ -89,27 +87,24 @@ class Session(JSONSerializable):
         """
         reset all persistent objects (managers) in session
         """
-        response = self.api.request_rpc(
-            method='Session.reset',
-            params={})
+        self.api.request_rpc(method='Session.reset',
+                             params={})
 
     def setSessionVariable(self, name: str, value: str):
         """
         Stores clients defined variable to configuration for logged user
         """
-        response = self.api.request_rpc(
-            method='Session.setSessionVariable',
-            params={'name': name,
-                    'value': value
-                   })
+        self.api.request_rpc(method='Session.setSessionVariable',
+                             params={'name': name,
+                                     'value': value})
 
     def getSessionVariable(self, name: str):
         """
-        Returns clients defined variable stored in configuration for logged user
+        Returns clients defined variable stored in configuration for logged
+        user
         """
-        response = self.api.request_rpc(
-            method='Session.getSessionVariable',
-            params={'name': name})
+        response = self.api.request_rpc(method='Session.getSessionVariable',
+                                        params={'name': name})
         return response.result['value']
 
     def getConnectedInterface(self):

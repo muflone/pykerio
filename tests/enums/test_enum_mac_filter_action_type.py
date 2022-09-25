@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_MacFilterActionType(unittest.TestCase):
-    def test_00_MacFilterActionType_MacFilterDeny(self):
+    def test_00_MacFilterDeny(self):
         """
         Test MacFilterActionType with MacFilterDeny
         """
@@ -33,7 +33,7 @@ class TestCase_MacFilterActionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'MacFilterDeny')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_MacFilterActionType_MacFilterAllow(self):
+    def test_01_MacFilterAllow(self):
         """
         Test MacFilterActionType with MacFilterAllow
         """
@@ -43,7 +43,7 @@ class TestCase_MacFilterActionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_MacFilterActionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test MacFilterActionType with FAIL
         """

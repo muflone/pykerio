@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_AlertEventRuleType(unittest.TestCase):
-    def test_00_AlertEventRuleType_AlertTraffic(self):
+    def test_00_AlertTraffic(self):
         """
         Test AlertEventRuleType with AlertTraffic
         """
@@ -33,7 +33,7 @@ class TestCase_AlertEventRuleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AlertTraffic')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_AlertEventRuleType_AlertContent(self):
+    def test_01_AlertContent(self):
         """
         Test AlertEventRuleType with AlertContent
         """
@@ -43,7 +43,7 @@ class TestCase_AlertEventRuleType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_AlertEventRuleType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test AlertEventRuleType with FAIL
         """

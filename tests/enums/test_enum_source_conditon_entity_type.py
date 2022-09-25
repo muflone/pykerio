@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SourceConditonEntityType(unittest.TestCase):
-    def test_00_SourceConditonEntityType_SourceConditonEntityAddressGroup(self):
+    def test_00_SourceConditonEntityAddressGroup(self):
         """
         Test SourceConditonEntityType with SourceConditonEntityAddressGroup
         """
@@ -33,7 +33,7 @@ class TestCase_SourceConditonEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SourceConditonEntityAddressGroup')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SourceConditonEntityType_SourceConditonEntityUsers(self):
+    def test_01_SourceConditonEntityUsers(self):
         """
         Test SourceConditonEntityType with SourceConditonEntityUsers
         """
@@ -42,7 +42,7 @@ class TestCase_SourceConditonEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SourceConditonEntityUsers')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_SourceConditonEntityType_SourceConditonEntityGuests(self):
+    def test_02_SourceConditonEntityGuests(self):
         """
         Test SourceConditonEntityType with SourceConditonEntityGuests
         """
@@ -52,7 +52,7 @@ class TestCase_SourceConditonEntityType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_SourceConditonEntityType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SourceConditonEntityType with FAIL
         """

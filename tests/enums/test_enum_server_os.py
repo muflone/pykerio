@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ServerOs(unittest.TestCase):
-    def test_00_ServerOs_Windows(self):
+    def test_00_Windows(self):
         """
         Test ServerOs with Windows
         """
@@ -33,7 +33,7 @@ class TestCase_ServerOs(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Windows')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ServerOs_Linux(self):
+    def test_01_Linux(self):
         """
         Test ServerOs with Linux
         """
@@ -43,7 +43,7 @@ class TestCase_ServerOs(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_ServerOs_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ServerOs with FAIL
         """

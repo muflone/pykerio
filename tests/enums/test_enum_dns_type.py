@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DnsType(unittest.TestCase):
-    def test_00_DnsType_DnsTypeAny(self):
+    def test_00_DnsTypeAny(self):
         """
         Test DnsType with DnsTypeAny
         """
@@ -33,7 +33,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeAny')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DnsType_DnsTypeA(self):
+    def test_01_DnsTypeA(self):
         """
         Test DnsType with DnsTypeA
         """
@@ -42,7 +42,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeA')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_DnsType_DnsTypeAAAA(self):
+    def test_02_DnsTypeAAAA(self):
         """
         Test DnsType with DnsTypeAAAA
         """
@@ -51,7 +51,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeAAAA')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_DnsType_DnsTypeCname(self):
+    def test_03_DnsTypeCname(self):
         """
         Test DnsType with DnsTypeCname
         """
@@ -60,7 +60,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeCname')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_DnsType_DnsTypeMx(self):
+    def test_04_DnsTypeMx(self):
         """
         Test DnsType with DnsTypeWhois
         """
@@ -69,7 +69,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeMx')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_DnsType_DnsTypeNs(self):
+    def test_05_DnsTypeNs(self):
         """
         Test DnsType with DnsTypeNs
         """
@@ -78,7 +78,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeNs')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_DnsType_DnsTypePtr(self):
+    def test_06_DnsTypePtr(self):
         """
         Test DnsType with DnsTypeWhois
         """
@@ -87,7 +87,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypePtr')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_DnsType_DnsTypeSoa(self):
+    def test_07_DnsTypeSoa(self):
         """
         Test DnsType with DnsTypeSoa
         """
@@ -96,7 +96,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeSoa')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_DnsType_DnsTypeSpf(self):
+    def test_08_DnsTypeSpf(self):
         """
         Test DnsType with DnsTypeSpf
         """
@@ -105,7 +105,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeSpf')
         self.assertEqual(value.get_value(), 8)
 
-    def test_09_DnsType_DnsTypeSrv(self):
+    def test_09_DnsTypeSrv(self):
         """
         Test DnsType with DnsTypeSrv
         """
@@ -114,7 +114,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsTypeSrv')
         self.assertEqual(value.get_value(), 9)
 
-    def test_10_DnsType_DnsTypeTxt(self):
+    def test_10_DnsTypeTxt(self):
         """
         Test DnsType with DnsTypeTxt
         """
@@ -124,7 +124,7 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.get_value(), 10)
 
     @unittest.expectedFailure
-    def test_99_DnsType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DnsType with FAIL
         """

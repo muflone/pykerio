@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_InterfaceType(unittest.TestCase):
-    def test_00_InterfaceType_Ethernet(self):
+    def test_00_Ethernet(self):
         """
         Test InterfaceType with Ethernet
         """
@@ -33,7 +33,7 @@ class TestCase_InterfaceType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Ethernet')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_InterfaceType_Ras(self):
+    def test_01_Ras(self):
         """
         Test InterfaceType with Ras
         """
@@ -42,7 +42,7 @@ class TestCase_InterfaceType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Ras')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_InterfaceType_DialIn(self):
+    def test_02_DialIn(self):
         """
         Test InterfaceType with DialIn
         """
@@ -51,7 +51,7 @@ class TestCase_InterfaceType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DialIn')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_InterfaceType_VpnServer(self):
+    def test_03_VpnServer(self):
         """
         Test InterfaceType with VpnServer
         """
@@ -60,7 +60,7 @@ class TestCase_InterfaceType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'VpnServer')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_InterfaceType_VpnTunnel(self):
+    def test_04_VpnTunnel(self):
         """
         Test InterfaceType with VpnTunnel
         """
@@ -70,7 +70,7 @@ class TestCase_InterfaceType(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_InterfaceType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test InterfaceType with FAIL
         """

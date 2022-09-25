@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SharedDefinitionType(unittest.TestCase):
-    def test_00_SharedDefinitionType_SharedDefinitionIpAddrGroup(self):
+    def test_00_SharedDefinitionIpAddrGroup(self):
         """
         Test SharedDefinitionType with SharedDefinitionIpAddrGroup
         """
@@ -33,7 +33,7 @@ class TestCase_SharedDefinitionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SharedDefinitionIpAddrGroup')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SharedDefinitionType_SharedDefinitionUrlGroup(self):
+    def test_01_SharedDefinitionUrlGroup(self):
         """
         Test SharedDefinitionType with SharedDefinitionUrlGroup
         """
@@ -42,7 +42,7 @@ class TestCase_SharedDefinitionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SharedDefinitionUrlGroup')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_SharedDefinitionType_SharedDefinitionTimeRange(self):
+    def test_02_SharedDefinitionTimeRange(self):
         """
         Test SharedDefinitionType with SharedDefinitionTimeRange
         """
@@ -52,7 +52,7 @@ class TestCase_SharedDefinitionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_SharedDefinitionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SharedDefinitionType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DynamicDnsStatus(unittest.TestCase):
-    def test_00_DynamicDnsStatus_DynamicDnsOk(self):
+    def test_00_DynamicDnsOk(self):
         """
         Test DynamicDnsStatus with DynamicDnsOk
         """
@@ -33,7 +33,7 @@ class TestCase_DynamicDnsStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DynamicDnsOk')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DynamicDnsStatus_DynamicDnsError(self):
+    def test_01_DynamicDnsError(self):
         """
         Test DynamicDnsStatus with DynamicDnsError
         """
@@ -42,7 +42,7 @@ class TestCase_DynamicDnsStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DynamicDnsError')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_DynamicDnsStatus_DynamicDnsUpdate(self):
+    def test_02_DynamicDnsUpdate(self):
         """
         Test DynamicDnsStatus with DynamicDnsUpdate
         """
@@ -52,7 +52,7 @@ class TestCase_DynamicDnsStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_DynamicDnsStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DynamicDnsStatus with FAIL
         """

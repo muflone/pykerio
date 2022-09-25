@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_JoinStatus(unittest.TestCase):
-    def test_00_JoinStatus_JoinStatusConnected(self):
+    def test_00_JoinStatusConnected(self):
         """
         Test JoinStatus with JoinStatusConnected
         """
@@ -33,7 +33,7 @@ class TestCase_JoinStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'JoinStatusConnected')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_JoinStatus_JoinStatusDisconnected(self):
+    def test_01_JoinStatusDisconnected(self):
         """
         Test JoinStatus with JoinStatusDisconnected
         """
@@ -42,7 +42,7 @@ class TestCase_JoinStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'JoinStatusDisconnected')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_JoinStatus_JoinStatusError(self):
+    def test_02_JoinStatusError(self):
         """
         Test JoinStatus with JoinStatusError
         """
@@ -52,7 +52,7 @@ class TestCase_JoinStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_JoinStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test JoinStatus with FAIL
         """

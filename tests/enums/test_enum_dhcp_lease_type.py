@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DhcpLeaseType(unittest.TestCase):
-    def test_00_DhcpLeaseType_DhcpTypeReservation(self):
+    def test_00_DhcpTypeReservation(self):
         """
         Test DhcpLeaseType with DhcpTypeReservation
         """
@@ -33,7 +33,7 @@ class TestCase_DhcpLeaseType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DhcpTypeReservation')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DhcpLeaseType_DhcpTypeLease(self):
+    def test_01_DhcpTypeLease(self):
         """
         Test DhcpLeaseType with DhcpTypeLease
         """
@@ -43,7 +43,7 @@ class TestCase_DhcpLeaseType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_DhcpLeaseType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DhcpLeaseType with FAIL
         """

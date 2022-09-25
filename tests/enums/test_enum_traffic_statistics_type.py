@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_TrafficStatisticsType(unittest.TestCase):
-    def test_00_TrafficStatisticsType_TrafficStatisticsInterface(self):
+    def test_00_TrafficStatisticsInterface(self):
         """
         Test TrafficStatisticsType with TrafficStatisticsInterface
         """
@@ -33,7 +33,7 @@ class TestCase_TrafficStatisticsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficStatisticsInterface')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_TrafficStatisticsType_TrafficStatisticsTrafficRule(self):
+    def test_01_TrafficStatisticsTrafficRule(self):
         """
         Test TrafficStatisticsType with TrafficStatisticsTrafficRule
         """
@@ -42,7 +42,7 @@ class TestCase_TrafficStatisticsType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficStatisticsTrafficRule')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_TrafficStatisticsType_TrafficStatisticsBandwidthRule(self):
+    def test_02_TrafficStatisticsBandwidthRule(self):
         """
         Test TrafficStatisticsType with TrafficStatisticsBandwidthRule
         """
@@ -52,7 +52,7 @@ class TestCase_TrafficStatisticsType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_TrafficStatisticsType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test TrafficStatisticsType with FAIL
         """

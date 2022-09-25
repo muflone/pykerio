@@ -44,14 +44,14 @@ from .histogram import Histogram                                   # noqa: F401
 from .histogram_data import HistogramData                          # noqa: F401
 from .id_reference import IdReference                              # noqa: F401
 from .interface import Interface                                   # noqa: F401
-from .interface_connectivity_parameters import (
+from .interface_connectivity_parameters import (                   # noqa: F401
     InterfaceConnectivityParameters)                               # noqa: F401
 from .interface_flags import InterfaceFlags                        # noqa: F401
 from .ip_address_mask import IpAddressMask                         # noqa: F401
 from .ip6_address_mask import Ip6AddressMask                       # noqa: F401
 from .ipsec_peer_id_config import IpsecPeerIdConfig                # noqa: F401
 from .localizable_message import LocalizableMessage                # noqa: F401
-from .localizable_message_parameters import (
+from .localizable_message_parameters import (                      # noqa: F401
     LocalizableMessageParameters)                                  # noqa: F401
 from .manipulation_error import ManipulationError                  # noqa: F401
 from .named_value import NamedValue                                # noqa: F401

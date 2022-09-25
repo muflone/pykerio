@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_AuthType(unittest.TestCase):
-    def test_00_AuthType_Internal(self):
+    def test_00_Internal(self):
         """
         Test AuthType with Internal
         """
@@ -33,7 +33,7 @@ class TestCase_AuthType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Internal')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_AuthType_KerberosNt(self):
+    def test_01_KerberosNt(self):
         """
         Test AuthType with KerberosNt
         """
@@ -43,7 +43,7 @@ class TestCase_AuthType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_AuthType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test AuthType with FAIL
         """

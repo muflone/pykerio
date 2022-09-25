@@ -32,7 +32,8 @@ from ..lists.ip6_address_mask_list import Ip6AddressMaskList
 from ..lists.kid_list import KIdList
 
 from ..structs.details_config import DetailsConfig
-from ..structs.interface_connectivity_parameters import InterfaceConnectivityParameters
+from ..structs.interface_connectivity_parameters import (
+       InterfaceConnectivityParameters)
 from ..structs.interface_flags import InterfaceFlags
 from ..structs.optional_long import OptionalLong
 from ..structs.optional_string import OptionalString
@@ -75,7 +76,8 @@ class Interface(BaseStruct):
                                    'ip6Gateway': IpAddress,
                                    'routedIp6PrefixAutodetected': bool,
                                    'routedIp6Prefix': str,
-                                   'connectivityParameters': InterfaceConnectivityParameters,
+                                   'connectivityParameters':
+                                   InterfaceConnectivityParameters,
                                    'encap': InterfaceEncapType,
                                    'mtuOverride': OptionalLong,
                                    'macOverride': OptionalString,

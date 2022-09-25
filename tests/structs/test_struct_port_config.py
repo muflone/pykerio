@@ -53,7 +53,7 @@ class TestCase_PortConfig(unittest.TestCase):
         self.assertEqual(teststruct['id'], kid)
         self.assertEqual(teststruct['vlans'], vlans)
         self.assertEqual(teststruct['speedDuplexMayNotWork'],
-                          speedDuplexMayNotWork)
+                         speedDuplexMayNotWork)
 
         teststruct.clear()
         self.assertEqual(len(teststruct.keys()), 0)

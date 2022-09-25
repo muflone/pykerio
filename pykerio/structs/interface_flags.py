@@ -20,10 +20,6 @@
 
 from .base_struct import BaseStruct
 
-from ..enums.failover_role_type import FailoverRoleType
-
-from ..structs.optional_long import OptionalLong
-
 
 class InterfaceFlags(BaseStruct):
     def __init__(self, data: dict):

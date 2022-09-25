@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UserFormatType(unittest.TestCase):
-    def test_00_UserFormatType_UserFormatFL(self):
+    def test_00_UserFormatFL(self):
         """
         Test UserFormatType with UserFormatFL
         """
@@ -33,7 +33,7 @@ class TestCase_UserFormatType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserFormatFL')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UserFormatType_UserFormatFLU(self):
+    def test_01_UserFormatFLU(self):
         """
         Test UserFormatType with UserFormatFLU
         """
@@ -42,7 +42,7 @@ class TestCase_UserFormatType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserFormatFLU')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_UserFormatType_UserFormatFLD(self):
+    def test_02_UserFormatFLD(self):
         """
         Test UserFormatType with UserFormatFLD
         """
@@ -51,7 +51,7 @@ class TestCase_UserFormatType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserFormatFLD')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_UserFormatType_UserFormatLF(self):
+    def test_03_UserFormatLF(self):
         """
         Test UserFormatType with UserFormatLF
         """
@@ -60,7 +60,7 @@ class TestCase_UserFormatType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserFormatLF')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_UserFormatType_UserFormatLFU(self):
+    def test_04_UserFormatLFU(self):
         """
         Test UserFormatType with UserFormatLFU
         """
@@ -69,7 +69,7 @@ class TestCase_UserFormatType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserFormatLFU')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_UserFormatType_UserFormatLFD(self):
+    def test_05_UserFormatLFD(self):
         """
         Test UserFormatType with UserFormatLFD
         """
@@ -79,7 +79,7 @@ class TestCase_UserFormatType(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_UserFormatType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UserFormatType with FAIL
         """

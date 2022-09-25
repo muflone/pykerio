@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_BMConditionType(unittest.TestCase):
-    def test_00_BMConditionType_BMConditionTrafficType(self):
+    def test_00_BMConditionTrafficType(self):
         """
         Test BMConditionType with BMConditionTrafficType
         """
@@ -33,7 +33,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionTrafficType')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_BMConditionType_BMConditionQuota(self):
+    def test_01_BMConditionQuota(self):
         """
         Test BMConditionType with BMConditionQuota
         """
@@ -42,7 +42,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionQuota')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_BMConditionType_BMConditionLargeData(self):
+    def test_02_BMConditionLargeData(self):
         """
         Test BMConditionType with BMConditionLargeData
         """
@@ -51,7 +51,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionLargeData')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_BMConditionType_BMConditionTrafficRule(self):
+    def test_03_BMConditionTrafficRule(self):
         """
         Test BMConditionType with BMConditionTrafficRule
         """
@@ -60,7 +60,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionTrafficRule')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_BMConditionType_BMConditionContentRule(self):
+    def test_04_BMConditionContentRule(self):
         """
         Test BMConditionType with BMConditionContentRule
         """
@@ -69,7 +69,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionContentRule')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_BMConditionType_BMConditionService(self):
+    def test_05_BMConditionService(self):
         """
         Test BMConditionType with BMConditionService
         """
@@ -78,7 +78,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionService')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_BMConditionType_BMConditionDscp(self):
+    def test_06_BMConditionDscp(self):
         """
         Test BMConditionType with BMConditionDscp
         """
@@ -87,7 +87,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionDscp')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_BMConditionType_BMConditionUsers(self):
+    def test_07_BMConditionUsers(self):
         """
         Test BMConditionType with BMConditionUsers
         """
@@ -96,7 +96,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionUsers')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_BMConditionType_BMConditionInvalid(self):
+    def test_08_BMConditionInvalid(self):
         """
         Test BMConditionType with BMConditionInvalid
         """
@@ -105,7 +105,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionInvalid')
         self.assertEqual(value.get_value(), 8)
 
-    def test_09_BMConditionType_BMContentRuleType(self):
+    def test_09_BMContentRuleType(self):
         """
         Test BMConditionType with BMContentRuleType
         """
@@ -114,7 +114,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMContentRuleType')
         self.assertEqual(value.get_value(), 9)
 
-    def test_10_BMConditionType_BMConditionGuests(self):
+    def test_10_BMConditionGuests(self):
         """
         Test BMConditionType with BMConditionGuests
         """
@@ -123,7 +123,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BMConditionGuests')
         self.assertEqual(value.get_value(), 10)
 
-    def test_11_BMConditionType_BMConditionApplication(self):
+    def test_11_BMConditionApplication(self):
         """
         Test BMConditionType with BMConditionApplication
         """
@@ -133,7 +133,7 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 11)
 
     @unittest.expectedFailure
-    def test_99_BMConditionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test BMConditionType with FAIL
         """

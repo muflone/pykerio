@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_InterfaceConditionType(unittest.TestCase):
-    def test_00_InterfaceConditionType_InterfaceInternet(self):
+    def test_00_InterfaceInternet(self):
         """
         Test InterfaceConditionType with InterfaceInternet
         """
@@ -33,7 +33,7 @@ class TestCase_InterfaceConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'InterfaceInternet')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_InterfaceConditionType_InterfaceTrusted(self):
+    def test_01_InterfaceTrusted(self):
         """
         Test InterfaceConditionType with InterfaceTrusted
         """
@@ -42,7 +42,7 @@ class TestCase_InterfaceConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'InterfaceTrusted')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_InterfaceConditionType_InterfaceGuest(self):
+    def test_02_InterfaceGuest(self):
         """
         Test InterfaceConditionType with InterfaceGuest
         """
@@ -51,7 +51,7 @@ class TestCase_InterfaceConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'InterfaceGuest')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_InterfaceConditionType_InterfaceSelected(self):
+    def test_03_InterfaceSelected(self):
         """
         Test InterfaceConditionType with InterfaceSelected
         """
@@ -61,7 +61,7 @@ class TestCase_InterfaceConditionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_InterfaceConditionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test InterfaceConditionType with FAIL
         """

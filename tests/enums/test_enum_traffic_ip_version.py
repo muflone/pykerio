@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_TrafficIpVersion(unittest.TestCase):
-    def test_00_TrafficIpVersion_Ipv4(self):
+    def test_00_Ipv4(self):
         """
         Test TrafficIpVersion with Ipv4
         """
@@ -33,7 +33,7 @@ class TestCase_TrafficIpVersion(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Ipv4')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_TrafficIpVersion_Ipv6(self):
+    def test_01_Ipv6(self):
         """
         Test TrafficIpVersion with Ipv6
         """
@@ -42,7 +42,7 @@ class TestCase_TrafficIpVersion(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Ipv6')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_TrafficIpVersion_IpAll(self):
+    def test_02_IpAll(self):
         """
         Test TrafficIpVersion with IpAll
         """
@@ -52,7 +52,7 @@ class TestCase_TrafficIpVersion(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_TrafficIpVersion_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test TrafficIpVersion with FAIL
         """

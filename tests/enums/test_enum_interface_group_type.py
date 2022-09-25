@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_InterfaceGroupType(unittest.TestCase):
-    def test_00_InterfaceGroupType_Other(self):
+    def test_00_Other(self):
         """
         Test InterfaceGroupType with Other
         """
@@ -33,7 +33,7 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Other')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_InterfaceGroupType_Guest(self):
+    def test_01_Guest(self):
         """
         Test InterfaceGroupType with Guest
         """
@@ -42,7 +42,7 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Guest')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_InterfaceGroupType_Vpn(self):
+    def test_02_Vpn(self):
         """
         Test InterfaceGroupType with Vpn
         """
@@ -51,7 +51,7 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Vpn')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_InterfaceGroupType_Trusted(self):
+    def test_03_Trusted(self):
         """
         Test InterfaceGroupType with Trusted
         """
@@ -60,7 +60,7 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Trusted')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_InterfaceGroupType_Internet(self):
+    def test_04_Internet(self):
         """
         Test InterfaceGroupType with Internet
         """
@@ -70,7 +70,7 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_InterfaceGroupType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test InterfaceGroupType with FAIL
         """

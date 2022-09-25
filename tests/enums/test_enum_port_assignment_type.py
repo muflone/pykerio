@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_PortAssignmentType(unittest.TestCase):
-    def test_00_PortAssignmentType_PortAssignmentSwitch(self):
+    def test_00_PortAssignmentSwitch(self):
         """
         Test PortAssignmentType with PortAssignmentSwitch
         """
@@ -33,7 +33,7 @@ class TestCase_PortAssignmentType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PortAssignmentSwitch')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_PortAssignmentType_PortAssignmentStandalone(self):
+    def test_01_PortAssignmentStandalone(self):
         """
         Test PortAssignmentType with PortAssignmentStandalone
         """
@@ -42,7 +42,7 @@ class TestCase_PortAssignmentType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PortAssignmentStandalone')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_PortAssignmentType_PortAssignmentUnassigned(self):
+    def test_02_PortAssignmentUnassigned(self):
         """
         Test PortAssignmentType with PortAssignmentUnassigned
         """
@@ -52,7 +52,7 @@ class TestCase_PortAssignmentType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_PortAssignmentType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test PortAssignmentType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_Target(unittest.TestCase):
-    def test_00_Target_TargetFtpServer(self):
+    def test_00_TargetFtpServer(self):
         """
         Test Target with TargetFtpServer
         """
@@ -33,7 +33,7 @@ class TestCase_Target(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TargetFtpServer')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_Target_TargetMyKerio(self):
+    def test_01_TargetMyKerio(self):
         """
         Test Target with TargetMyKerio
         """
@@ -43,7 +43,7 @@ class TestCase_Target(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_Target_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test Target with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_OsCodeType(unittest.TestCase):
-    def test_00_OsCodeType_OsWindows(self):
+    def test_00_OsWindows(self):
         """
         Test OsCodeType with OsWindows
         """
@@ -33,7 +33,7 @@ class TestCase_OsCodeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'OsWindows')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_OsCodeType_OsLinux(self):
+    def test_01_OsLinux(self):
         """
         Test OsCodeType with OsLinux
         """
@@ -42,7 +42,7 @@ class TestCase_OsCodeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'OsLinux')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_OsCodeType_OsMacos(self):
+    def test_02_OsMacos(self):
         """
         Test OsCodeType with OsMacos
         """
@@ -51,7 +51,7 @@ class TestCase_OsCodeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'OsMacos')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_OsCodeType_OsUnknown(self):
+    def test_03_OsUnknown(self):
         """
         Test OsCodeType with OsUnknown
         """
@@ -61,7 +61,7 @@ class TestCase_OsCodeType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_OsCodeType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test OsCodeType with FAIL
         """

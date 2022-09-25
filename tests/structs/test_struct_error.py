@@ -50,7 +50,7 @@ class TestCase_Error(unittest.TestCase):
         self.assertEqual(teststruct['code'], code)
         self.assertEqual(teststruct['message'], message)
         self.assertEqual(teststruct['messageParameters'],
-                          messageparameters)
+                         messageparameters)
 
         teststruct.clear()
         self.assertEqual(len(teststruct.keys()), 0)

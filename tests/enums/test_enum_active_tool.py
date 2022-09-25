@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ActiveTool(unittest.TestCase):
-    def test_00_ActiveTool_ActiveToolNone(self):
+    def test_00_ActiveToolNone(self):
         """
         Test ActiveTool with ActiveToolNone
         """
@@ -33,7 +33,7 @@ class TestCase_ActiveTool(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveToolNone')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ActiveTool_ActiveToolPing(self):
+    def test_01_ActiveToolPing(self):
         """
         Test ActiveTool with ActiveToolPing
         """
@@ -42,7 +42,7 @@ class TestCase_ActiveTool(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveToolPing')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ActiveTool_ActiveToolTraceRoute(self):
+    def test_02_ActiveToolTraceRoute(self):
         """
         Test ActiveTool with ActiveToolTraceRoute
         """
@@ -51,7 +51,7 @@ class TestCase_ActiveTool(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveToolTraceRoute')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ActiveTool_ActiveToolDns(self):
+    def test_03_ActiveToolDns(self):
         """
         Test ActiveTool with ActiveToolDns
         """
@@ -60,7 +60,7 @@ class TestCase_ActiveTool(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ActiveToolDns')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_ActiveTool_ActiveToolWhois(self):
+    def test_04_ActiveToolWhois(self):
         """
         Test ActiveTool with ActiveToolWhois
         """
@@ -70,7 +70,7 @@ class TestCase_ActiveTool(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_ActiveTool_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ActiveTool with FAIL
         """

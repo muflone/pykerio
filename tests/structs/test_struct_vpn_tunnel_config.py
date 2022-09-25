@@ -36,10 +36,10 @@ class TestCase_VpnTunnelConfig(unittest.TestCase):
         network = pykerio.types.IpAddress('192.168.10.0')
         netmask = pykerio.types.IpAddress('255.255.255.0')
         route = pykerio.structs.VpnRoute({'id': kid,
-                                               'enabled': True,
-                                               'description': description,
-                                               'network': network,
-                                               'mask': netmask})
+                                          'enabled': True,
+                                          'description': description,
+                                          'network': network,
+                                          'mask': netmask})
         routes.append(route)
 
         secret = 'secretpassword'
@@ -51,10 +51,6 @@ class TestCase_VpnTunnelConfig(unittest.TestCase):
             'invalid': False})
         network = pykerio.types.IpAddress('192.168.10.0')
         netmask = pykerio.types.IpAddress('255.255.255.0')
-        dns1 = pykerio.types.IpAddress('192.168.10.1')
-        dns2 = pykerio.types.IpAddress('192.168.10.1')
-        wins1 = pykerio.types.IpAddress('192.168.10.1')
-        wins2 = pykerio.types.IpAddress('192.168.10.1')
         route = pykerio.structs.VpnRoute({'id': pykerio.types.KId('Route 1'),
                                           'enabled': True,
                                           'description': 'Route LAN',

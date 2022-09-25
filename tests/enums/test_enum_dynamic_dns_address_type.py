@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DynamicDnsAddressType(unittest.TestCase):
-    def test_00_DynamicDnsAddressType_DynamicDnsAdressIface(self):
+    def test_00_DynamicDnsAdressIface(self):
         """
         Test DynamicDnsAddressType with DynamicDnsAdressIface
         """
@@ -33,7 +33,7 @@ class TestCase_DynamicDnsAddressType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DynamicDnsAdressIface')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DynamicDnsAddressType_DynamicDnsAdressDetect(self):
+    def test_01_DynamicDnsAdressDetect(self):
         """
         Test DynamicDnsAddressType with DynamicDnsAdressDetect
         """
@@ -42,7 +42,7 @@ class TestCase_DynamicDnsAddressType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DynamicDnsAdressDetect')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_DynamicDnsAddressType_DynamicDnsAdressCustom(self):
+    def test_02_DynamicDnsAdressCustom(self):
         """
         Test DynamicDnsAddressType with DynamicDnsAdressCustom
         """
@@ -52,7 +52,7 @@ class TestCase_DynamicDnsAddressType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_DynamicDnsAddressType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DynamicDnsAddressType with FAIL
         """

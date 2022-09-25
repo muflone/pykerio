@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ItemName(unittest.TestCase):
-    def test_00_ItemName_Name(self):
+    def test_00_Name(self):
         """
         Test ItemName with Name
         """
@@ -33,7 +33,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Name')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ItemName_Description(self):
+    def test_01_Description(self):
         """
         Test ItemName with Description
         """
@@ -42,7 +42,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Description')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ItemName_Email(self):
+    def test_02_Email(self):
         """
         Test ItemName with Email
         """
@@ -51,7 +51,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Email')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ItemName_FullName(self):
+    def test_03_FullName(self):
         """
         Test ItemName with FullName
         """
@@ -60,7 +60,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FullName')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_ItemName_TimeItem(self):
+    def test_04_TimeItem(self):
         """
         Test ItemName with TimeItem
         """
@@ -69,7 +69,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TimeItem')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_ItemName_DateItem(self):
+    def test_05_DateItem(self):
         """
         Test ItemName with DateItem
         """
@@ -78,7 +78,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DateItem')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_ItemName_DomainName(self):
+    def test_06_DomainName(self):
         """
         Test ItemName with DomainName
         """
@@ -88,7 +88,7 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.get_value(), 6)
 
     @unittest.expectedFailure
-    def test_99_ItemName_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ItemName with FAIL
         """

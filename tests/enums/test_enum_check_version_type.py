@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_CheckVersionType(unittest.TestCase):
-    def test_00_CheckVersionType_CheckVersionConfig(self):
+    def test_00_CheckVersionConfig(self):
         """
         Test CheckVersionType with CheckVersionConfig
         """
@@ -33,7 +33,7 @@ class TestCase_CheckVersionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'CheckVersionConfig')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_CheckVersionType_CheckVersionBeta(self):
+    def test_01_CheckVersionBeta(self):
         """
         Test CheckVersionType with CheckVersionBeta
         """
@@ -42,7 +42,7 @@ class TestCase_CheckVersionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'CheckVersionBeta')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_CheckVersionType_CheckVersionFinal(self):
+    def test_02_CheckVersionFinal(self):
         """
         Test CheckVersionType with CheckVersionFinal
         """
@@ -52,7 +52,7 @@ class TestCase_CheckVersionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_CheckVersionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test CheckVersionType with FAIL
         """

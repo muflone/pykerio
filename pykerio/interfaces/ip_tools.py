@@ -45,52 +45,47 @@ class IpTools(object):
         """
         Interrupt currently running tool.
         """
-        response = self.api.request_rpc(
-            method='IpTools.stop',
-            params={})
+        self.api.request_rpc(method='IpTools.stop',
+                             params={})
 
     def ping(self, target: str, ipversion: IpVersion, infinite: bool,
              packetSize: int, allowFragmentation: bool):
         """
         Execute IpTool Ping
         """
-        response = self.api.request_rpc(
-            method='IpTools.ping',
-            params={'target': target,
-                    'ipv': ipversion,
-                    'infinite': infinite,
-                    'packetSize': packetSize,
-                    'allowFragmentation': allowFragmentation})
+        self.api.request_rpc(method='IpTools.ping',
+                             params={'target': target,
+                                     'ipv': ipversion,
+                                     'infinite': infinite,
+                                     'packetSize': packetSize,
+                                     'allowFragmentation': allowFragmentation})
 
     def traceRoute(self, target: str, ipversion: IpVersion,
                    resolveHostnames: bool):
         """
         Execute IpTool Traceroute
         """
-        response = self.api.request_rpc(
-            method='IpTools.traceRoute',
-            params={'target': target,
-                    'ipv': ipversion,
-                    'resolveHostnames': resolveHostnames})
+        self.api.request_rpc(method='IpTools.traceRoute',
+                             params={'target': target,
+                                     'ipv': ipversion,
+                                     'resolveHostnames': resolveHostnames})
 
     def whois(self, target: str):
         """
         Execute IpTool Whois
         """
-        response = self.api.request_rpc(
-            method='IpTools.whois',
-            params={'target': target})
+        self.api.request_rpc(method='IpTools.whois',
+                             params={'target': target})
 
     def dns(self, name: str, server: str, tool: DnsTool, dns_type: DnsType):
         """
         Execute IpTool DNS
         """
-        response = self.api.request_rpc(
-            method='IpTools.dns',
-            params={'name': name,
-                    'server': server,
-                    'tool': tool,
-                    'type': dns_type})
+        self.api.request_rpc(method='IpTools.dns',
+                             params={'name': name,
+                                     'server': server,
+                                     'tool': tool,
+                                     'type': dns_type})
 
     def getDnsServers(self):
         """

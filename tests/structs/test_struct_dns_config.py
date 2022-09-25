@@ -29,8 +29,8 @@ class TestCase_DnsConfig(unittest.TestCase):
         Test DnsConfig
         """
         forwarder = pykerio.structs.DnsForwarder({'enabled': True,
-                                                   'domain': 'muflone.com',
-                                                   'forwarders': '8.8.8.8'})
+                                                  'domain': 'muflone.com',
+                                                  'forwarders': '8.8.8.8'})
         customForwarders = pykerio.lists.DnsForwarderList()
         customForwarders.append(forwarder)
         useDomainController = pykerio.structs.OptionalString({

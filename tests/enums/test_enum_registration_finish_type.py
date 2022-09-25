@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RegistrationFinishType(unittest.TestCase):
-    def test_00_RegistrationFinishType_rfCreate(self):
+    def test_00_rfCreate(self):
         """
         Test RegistrationFinishType with rfCreate
         """
@@ -33,7 +33,7 @@ class TestCase_RegistrationFinishType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'rfCreate')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RegistrationFinishType_rfModify(self):
+    def test_01_rfModify(self):
         """
         Test RegistrationFinishType with rfModify
         """
@@ -42,7 +42,7 @@ class TestCase_RegistrationFinishType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'rfModify')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RegistrationFinishType_rfDownload(self):
+    def test_02_rfDownload(self):
         """
         Test RegistrationFinishType with rfDownload
         """
@@ -51,7 +51,7 @@ class TestCase_RegistrationFinishType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'rfDownload')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_RegistrationFinishType_rfStore(self):
+    def test_03_rfStore(self):
         """
         Test RegistrationFinishType with rfStore
         """
@@ -61,7 +61,7 @@ class TestCase_RegistrationFinishType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_RegistrationFinishType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RegistrationFinishType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_PortType(unittest.TestCase):
-    def test_00_PortType_PortEthernet(self):
+    def test_00_PortEthernet(self):
         """
         Test PortType with PortEthernet
         """
@@ -33,7 +33,7 @@ class TestCase_PortType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PortEthernet')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_PortType_PortWifi(self):
+    def test_01_PortWifi(self):
         """
         Test PortType with PortWifi
         """
@@ -43,7 +43,7 @@ class TestCase_PortType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_PortType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test PortType with FAIL
         """

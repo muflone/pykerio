@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_StoreStatus(unittest.TestCase):
-    def test_00_StoreStatus_StoreStatusClean(self):
+    def test_00_StoreStatusClean(self):
         """
         Test StoreStatus with StoreStatusClean
         """
@@ -33,7 +33,7 @@ class TestCase_StoreStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StoreStatusClean')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_StoreStatus_StoreStatusModified(self):
+    def test_01_StoreStatusModified(self):
         """
         Test StoreStatus with StoreStatusModified
         """
@@ -42,7 +42,7 @@ class TestCase_StoreStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StoreStatusModified')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_StoreStatus_StoreStatusNew(self):
+    def test_02_StoreStatusNew(self):
         """
         Test StoreStatus with StoreStatusNew
         """
@@ -52,7 +52,7 @@ class TestCase_StoreStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_StoreStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test StoreStatus with FAIL
         """

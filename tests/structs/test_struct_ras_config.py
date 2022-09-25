@@ -34,9 +34,6 @@ class TestCase_RasConfig(unittest.TestCase):
             'passwordChanged': False})
         timeout = pykerio.structs.OptionalLong({'enabled': True,
                                                 'value': 123})
-        enabled = True
-        kid = pykerio.types.KId('Object name')
-        name = 'Object name'
         connecttime = pykerio.structs.OptionalEntity({
             'enabled': True,
             'id': pykerio.types.KId('Work hours'),

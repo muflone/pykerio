@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_IpVersion(unittest.TestCase):
-    def test_00_IpVersion_IpVersion4(self):
+    def test_00_IpVersion4(self):
         """
         Test IpVersion with IpVersion4
         """
@@ -33,7 +33,7 @@ class TestCase_IpVersion(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IpVersion4')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_IpVersion_IpVersion6(self):
+    def test_01_IpVersion6(self):
         """
         Test IpVersion with IpVersion6
         """
@@ -42,7 +42,7 @@ class TestCase_IpVersion(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IpVersion6')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_IpVersion_IpVersionAny(self):
+    def test_02_IpVersionAny(self):
         """
         Test IpVersion with IpVersionAny
         """
@@ -52,7 +52,7 @@ class TestCase_IpVersion(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_IpVersion_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test IpVersion with FAIL
         """

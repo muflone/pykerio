@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_WarningType(unittest.TestCase):
-    def test_00_WarningType_WarnBetaVersion(self):
+    def test_00_WarnBetaVersion(self):
         """
         Test WarningType with WarnBetaVersion
         """
@@ -33,7 +33,7 @@ class TestCase_WarningType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WarnBetaVersion')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_WarningType_WarnUpdateFailed(self):
+    def test_01_WarnUpdateFailed(self):
         """
         Test WarningType with WarnUpdateFailed
         """
@@ -42,7 +42,7 @@ class TestCase_WarningType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'WarnUpdateFailed')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_WarningType_WarnConfigurationReverted(self):
+    def test_02_WarnConfigurationReverted(self):
         """
         Test WarningType with WarnConfigurationReverted
         """
@@ -52,7 +52,7 @@ class TestCase_WarningType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_WarningType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test WarningType with FAIL
         """

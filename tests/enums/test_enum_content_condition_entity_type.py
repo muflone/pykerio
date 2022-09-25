@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ContentConditionEntityType(unittest.TestCase):
-    def test_00_ContentConditionEntityType_ContentConditionEntityApplication(self):
+    def test_00_ContentConditionEntityApplication(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityApplication
         """
@@ -33,7 +33,7 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ContentConditionEntityApplication')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ContentConditionEntityType_ContentConditionEntityFileName(self):
+    def test_01_ContentConditionEntityFileName(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityFileName
         """
@@ -42,7 +42,7 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ContentConditionEntityFileName')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ContentConditionEntityType_ContentConditionEntityFileGroup(self):
+    def test_02_ContentConditionEntityFileGroup(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityFileGroup
         """
@@ -51,7 +51,7 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ContentConditionEntityFileGroup')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ContentConditionEntityType_ContentConditionEntityUrl(self):
+    def test_03_ContentConditionEntityUrl(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityUrl
         """
@@ -60,7 +60,7 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ContentConditionEntityUrl')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_ContentConditionEntityType_ContentConditionEntityUrlGroup(self):
+    def test_04_ContentConditionEntityUrlGroup(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityUrlGroup
         """
@@ -70,7 +70,7 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_ContentConditionEntityType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ContentConditionEntityType with FAIL
         """

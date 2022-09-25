@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_VpnConditionType(unittest.TestCase):
-    def test_00_VpnConditionType_IncomingClient(self):
+    def test_00_IncomingClient(self):
         """
         Test VpnConditionType with IncomingClient
         """
@@ -33,7 +33,7 @@ class TestCase_VpnConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IncomingClient')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_VpnConditionType_SelectedTunnel(self):
+    def test_01_SelectedTunnel(self):
         """
         Test VpnConditionType with SelectedTunnel
         """
@@ -42,7 +42,7 @@ class TestCase_VpnConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SelectedTunnel')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_VpnConditionType_AllTunnels(self):
+    def test_02_AllTunnels(self):
         """
         Test VpnConditionType with AllTunnels
         """
@@ -52,7 +52,7 @@ class TestCase_VpnConditionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_VpnConditionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test VpnConditionType with FAIL
         """

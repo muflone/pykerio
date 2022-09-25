@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_InterfaceStatusType(unittest.TestCase):
-    def test_00_InterfaceStatusType_Up(self):
+    def test_00_Up(self):
         """
         Test InterfaceStatusType with Up
         """
@@ -33,7 +33,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Up')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_InterfaceStatusType_Down(self):
+    def test_01_Down(self):
         """
         Test InterfaceStatusType with Down
         """
@@ -42,7 +42,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Down')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_InterfaceStatusType_Connecting(self):
+    def test_02_Connecting(self):
         """
         Test InterfaceStatusType with Connecting
         """
@@ -51,7 +51,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Connecting')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_InterfaceStatusType_Disconnecting(self):
+    def test_03_Disconnecting(self):
         """
         Test InterfaceStatusType with Disconnecting
         """
@@ -60,7 +60,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Disconnecting')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_InterfaceStatusType_CableDisconnected(self):
+    def test_04_CableDisconnected(self):
         """
         Test InterfaceStatusType with CableDisconnected
         """
@@ -69,7 +69,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'CableDisconnected')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_InterfaceStatusType_Error(self):
+    def test_05_Error(self):
         """
         Test InterfaceStatusType with Error
         """
@@ -78,7 +78,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Error')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_InterfaceStatusType_Backup(self):
+    def test_06_Backup(self):
         """
         Test InterfaceStatusType with Backup
         """
@@ -88,7 +88,7 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.get_value(), 6)
 
     @unittest.expectedFailure
-    def test_99_InterfaceStatusType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test InterfaceStatusType with FAIL
         """

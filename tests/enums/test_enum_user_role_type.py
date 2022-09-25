@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UserRoleType(unittest.TestCase):
-    def test_00_UserRoleType_Auditor(self):
+    def test_00_Auditor(self):
         """
         Test UserRoleType with Auditor
         """
@@ -33,7 +33,7 @@ class TestCase_UserRoleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Auditor')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UserRoleType_FullAdmin(self):
+    def test_01_FullAdmin(self):
         """
         Test UserRoleType with FullAdmin
         """
@@ -43,7 +43,7 @@ class TestCase_UserRoleType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_UserRoleType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UserRoleType with FAIL
         """

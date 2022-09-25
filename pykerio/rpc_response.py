@@ -21,7 +21,8 @@
 from .json_serializable import JSONSerializable
 
 from .structs.api_exception import ApiException
-from .structs.localizable_message_parameters import LocalizableMessageParameters
+from .structs.localizable_message_parameters import (
+    LocalizableMessageParameters)
 
 from .lists.string_list import StringList
 
@@ -50,5 +51,4 @@ class RPCResponse(JSONSerializable):
         return {'jsonrpc': self.jsonrpc,
                 'id': self.id,
                 'error': self.error,
-                'result': self.result
-               }
+                'result': self.result}

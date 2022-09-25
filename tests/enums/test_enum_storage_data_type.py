@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_StorageDataType(unittest.TestCase):
-    def test_00_StorageDataType_StorageDataStar(self):
+    def test_00_StorageDataStar(self):
         """
         Test StorageDataType with StorageDataStar
         """
@@ -33,7 +33,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StorageDataStar')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_StorageDataType_StorageDataLogs(self):
+    def test_01_StorageDataLogs(self):
         """
         Test StorageDataType with StorageDataLogs
         """
@@ -42,7 +42,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StorageDataLogs')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_StorageDataType_StorageDataCrash(self):
+    def test_02_StorageDataCrash(self):
         """
         Test StorageDataType with StorageDataCrash
         """
@@ -51,7 +51,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StorageDataCrash')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_StorageDataType_StorageDataPktdump(self):
+    def test_03_StorageDataPktdump(self):
         """
         Test StorageDataType with StorageDataPktdump
         """
@@ -60,7 +60,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StorageDataPktdump')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_StorageDataType_StorageDataUpdate(self):
+    def test_04_StorageDataUpdate(self):
         """
         Test StorageDataType with StorageDataUpdate
         """
@@ -69,7 +69,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StorageDataUpdate')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_StorageDataType_StorageDataQuarantine(self):
+    def test_05_StorageDataQuarantine(self):
         """
         Test StorageDataType with StorageDataQuarantine
         """
@@ -78,7 +78,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'StorageDataQuarantine')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_StorageDataType_StorageDataHttpCache(self):
+    def test_06_StorageDataHttpCache(self):
         """
         Test StorageDataType with StorageDataHttpCache
         """
@@ -88,7 +88,7 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.get_value(), 6)
 
     @unittest.expectedFailure
-    def test_99_StorageDataType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test StorageDataType with FAIL
         """

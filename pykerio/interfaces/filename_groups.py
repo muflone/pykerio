@@ -20,8 +20,6 @@
 
 from ..pykerio import PyKerio
 
-from ..structs import FilenameGroup
-
 from ..lists import FilenameGroupList
 
 

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_HttpsServerMode(unittest.TestCase):
-    def test_00_HttpsServerMode_HttpsServerModeDisabled(self):
+    def test_00_HttpsServerModeDisabled(self):
         """
         Test HttpsServerMode with HttpsServerModeDisabled
         """
@@ -33,7 +33,7 @@ class TestCase_HttpsServerMode(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HttpsServerModeDisabled')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_HttpsServerMode_HttpsServerModeDefaultCertificate(self):
+    def test_01_HttpsServerModeDefaultCertificate(self):
         """
         Test HttpsServerMode with HttpsServerModeDefaultCertificate
         """
@@ -42,7 +42,7 @@ class TestCase_HttpsServerMode(unittest.TestCase):
         self.assertEqual(value.get_name(), 'HttpsServerModeDefaultCertificate')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_HttpsServerMode_HttpsServerModeCustomCertificate(self):
+    def test_02_HttpsServerModeCustomCertificate(self):
         """
         Test HttpsServerMode with HttpsServerModeCustomCertificate
         """
@@ -52,7 +52,7 @@ class TestCase_HttpsServerMode(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_HttpsServerMode_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test HttpsServerMode with FAIL
         """

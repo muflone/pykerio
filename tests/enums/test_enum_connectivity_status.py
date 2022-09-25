@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ConnectivityStatus(unittest.TestCase):
-    def test_00_ConnectivityStatus_ConnectivityOk(self):
+    def test_00_ConnectivityOk(self):
         """
         Test ConnectivityStatus with ConnectivityOk
         """
@@ -33,7 +33,7 @@ class TestCase_ConnectivityStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ConnectivityOk')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ConnectivityStatus_ConnectivityChecking(self):
+    def test_01_ConnectivityChecking(self):
         """
         Test ConnectivityStatus with ConnectivityChecking
         """
@@ -42,7 +42,7 @@ class TestCase_ConnectivityStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ConnectivityChecking')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ConnectivityStatus_ConnectivityError(self):
+    def test_02_ConnectivityError(self):
         """
         Test ConnectivityStatus with ConnectivityError
         """
@@ -52,7 +52,7 @@ class TestCase_ConnectivityStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_ConnectivityStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ConnectivityStatus with FAIL
         """

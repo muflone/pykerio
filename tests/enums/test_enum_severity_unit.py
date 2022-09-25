@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SeverityUnit(unittest.TestCase):
-    def test_00_SeverityUnit_SeverityEmergency(self):
+    def test_00_SeverityEmergency(self):
         """
         Test SeverityUnit with SeverityEmergency
         """
@@ -33,7 +33,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityEmergency')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SeverityUnit_SeverityAlert(self):
+    def test_01_SeverityAlert(self):
         """
         Test SeverityUnit with SeverityAlert
         """
@@ -42,7 +42,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityAlert')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_SeverityUnit_SeverityCritical(self):
+    def test_02_SeverityCritical(self):
         """
         Test SeverityUnit with SeverityCritical
         """
@@ -51,7 +51,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityCritical')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_SeverityUnit_SeverityError(self):
+    def test_03_SeverityError(self):
         """
         Test SeverityUnit with SeverityError
         """
@@ -60,7 +60,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityError')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_SeverityUnit_SeverityWarning(self):
+    def test_04_SeverityWarning(self):
         """
         Test SeverityUnit with SeverityWarning
         """
@@ -69,7 +69,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityWarning')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_SeverityUnit_SeverityNotice(self):
+    def test_05_SeverityNotice(self):
         """
         Test SeverityUnit with SeverityNotice
         """
@@ -78,7 +78,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityNotice')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_SeverityUnit_SeverityInformational(self):
+    def test_06_SeverityInformational(self):
         """
         Test SeverityUnit with SeverityInformational
         """
@@ -87,7 +87,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SeverityInformational')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_SeverityUnit_SeverityDebug(self):
+    def test_07_SeverityDebug(self):
         """
         Test SeverityUnit with SeverityDebug
         """
@@ -97,7 +97,7 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.get_value(), 7)
 
     @unittest.expectedFailure
-    def test_99_SeverityUnit_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SeverityUnit with FAIL
         """

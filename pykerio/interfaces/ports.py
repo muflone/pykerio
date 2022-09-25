@@ -23,8 +23,6 @@ from ..pykerio import PyKerio
 from ..lists import ErrorList
 from ..lists import PortConfigList
 
-from ..structs import PortConfig
-
 
 class Ports(object):
     def __init__(self, api: PyKerio):

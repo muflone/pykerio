@@ -28,5 +28,6 @@ class ApiException(BaseStruct):
         BaseStruct.__init__(self,
                             types={'message': str,
                                    'code': int,
-                                   'messageParameters': LocalizableMessageParameters},
+                                   'messageParameters':
+                                       LocalizableMessageParameters},
                             data=data)

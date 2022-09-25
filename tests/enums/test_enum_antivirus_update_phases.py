@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_AntivirusUpdatePhases(unittest.TestCase):
-    def test_00_AntivirusUpdatePhases_AntivirusUpdateStarted(self):
+    def test_00_AntivirusUpdateStarted(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateStarted
         """
@@ -33,7 +33,7 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusUpdateStarted')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_AntivirusUpdatePhases_AntivirusUpdateChecking(self):
+    def test_01_AntivirusUpdateChecking(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateChecking
         """
@@ -42,7 +42,7 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusUpdateChecking')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_AntivirusUpdatePhases_AntivirusUpdateDownload(self):
+    def test_02_AntivirusUpdateDownload(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateDownload
         """
@@ -51,7 +51,7 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusUpdateDownload')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_AntivirusUpdatePhases_AntivirusUpdateDownloadEngine(self):
+    def test_03_AntivirusUpdateDownloadEngine(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateDownloadEngine
         """
@@ -60,7 +60,7 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusUpdateDownloadEngine')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_AntivirusUpdatePhases_AntivirusUpdateOk(self):
+    def test_04_AntivirusUpdateOk(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateOk
         """
@@ -69,7 +69,7 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusUpdateOk')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_AntivirusUpdatePhases_AntivirusUpdateFailed(self):
+    def test_05_AntivirusUpdateFailed(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateFailed
         """
@@ -79,7 +79,7 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_AntivirusUpdatePhases_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test AntivirusUpdatePhases with FAIL
         """

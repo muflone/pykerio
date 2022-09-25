@@ -36,7 +36,6 @@ class TestCase_ApiException(unittest.TestCase):
         messageparameters = pykerio.structs.LocalizableMessageParameters({
             'positionalParameters': positional_parameters,
             'plurality': 1})
-        index = 2
         code = 32614
         teststruct = pykerio.structs.ApiException({
             'message': message,
@@ -48,7 +47,7 @@ class TestCase_ApiException(unittest.TestCase):
         self.assertEqual(teststruct['message'], message)
         self.assertEqual(teststruct['code'], code)
         self.assertEqual(teststruct['messageParameters'],
-                          messageparameters)
+                         messageparameters)
 
         teststruct.clear()
         self.assertEqual(len(teststruct.keys()), 0)

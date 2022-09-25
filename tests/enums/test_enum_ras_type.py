@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RasType(unittest.TestCase):
-    def test_00_RasType_PPPoE(self):
+    def test_00_PPPoE(self):
         """
         Test RasType with PPPoE
         """
@@ -33,7 +33,7 @@ class TestCase_RasType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PPPoE')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RasType_PPTP(self):
+    def test_01_PPTP(self):
         """
         Test RasType with PPTP
         """
@@ -42,7 +42,7 @@ class TestCase_RasType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PPTP')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RasType_L2TP(self):
+    def test_02_L2TP(self):
         """
         Test RasType with L2TP
         """
@@ -52,7 +52,7 @@ class TestCase_RasType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_RasType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RasType with FAIL
         """

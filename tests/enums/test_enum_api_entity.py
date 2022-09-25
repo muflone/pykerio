@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ApiEntity(unittest.TestCase):
-    def test_00_ApiEntity_PolicyWizard(self):
+    def test_00_PolicyWizard(self):
         """
         Test ApiEntity with PolicyWizard
         """
@@ -33,7 +33,7 @@ class TestCase_ApiEntity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'PolicyWizard')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ApiEntity_AlertList(self):
+    def test_01_AlertList(self):
         """
         Test ApiEntity with AlertList
         """
@@ -43,7 +43,7 @@ class TestCase_ApiEntity(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_ApiEntity_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ApiEntity with FAIL
         """

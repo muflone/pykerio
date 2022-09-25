@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DhcpModeType(unittest.TestCase):
-    def test_00_DhcpModeType_DhcpAutomatic(self):
+    def test_00_DhcpAutomatic(self):
         """
         Test DhcpModeType with DhcpAutomatic
         """
@@ -33,7 +33,7 @@ class TestCase_DhcpModeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DhcpAutomatic')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DhcpModeType_DhcpManual(self):
+    def test_01_DhcpManual(self):
         """
         Test DhcpModeType with DhcpManual
         """
@@ -43,7 +43,7 @@ class TestCase_DhcpModeType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_DhcpModeType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DhcpModeType with FAIL
         """

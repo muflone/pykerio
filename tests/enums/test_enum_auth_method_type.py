@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_AuthMethodType(unittest.TestCase):
-    def test_00_AuthMethodType_AuthMethodWeb(self):
+    def test_00_AuthMethodWeb(self):
         """
         Test AuthMethodType with AuthMethodWeb
         """
@@ -33,7 +33,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodWeb')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_AuthMethodType_AuthMethodSslWeb(self):
+    def test_01_AuthMethodSslWeb(self):
         """
         Test AuthMethodType with AuthMethodSslWeb
         """
@@ -42,7 +42,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodSslWeb')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_AuthMethodType_AuthMethodNtlm(self):
+    def test_02_AuthMethodNtlm(self):
         """
         Test AuthMethodType with AuthMethodNtlm
         """
@@ -51,7 +51,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodNtlm')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_AuthMethodType_AuthMethodProxy(self):
+    def test_03_AuthMethodProxy(self):
         """
         Test AuthMethodType with AuthMethodProxy
         """
@@ -60,7 +60,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodProxy')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_AuthMethodType_AuthMethodAutomatic(self):
+    def test_04_AuthMethodAutomatic(self):
         """
         Test AuthMethodType with AuthMethodAutomatic
         """
@@ -69,7 +69,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodAutomatic')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_AuthMethodType_AuthMethodVpnClient(self):
+    def test_05_AuthMethodVpnClient(self):
         """
         Test AuthMethodType with AuthMethodVpnClient
         """
@@ -78,7 +78,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodVpnClient')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_AuthMethodType_AuthMethodSso(self):
+    def test_06_AuthMethodSso(self):
         """
         Test AuthMethodType with AuthMethodSso
         """
@@ -87,7 +87,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodSso')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_AuthMethodType_AuthMethodApi(self):
+    def test_07_AuthMethodApi(self):
         """
         Test AuthMethodType with AuthMethodApi
         """
@@ -96,7 +96,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodApi')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_AuthMethodType_AuthMethodRadius(self):
+    def test_08_AuthMethodRadius(self):
         """
         Test AuthMethodType with AuthMethodRadius
         """
@@ -105,7 +105,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthMethodRadius')
         self.assertEqual(value.get_value(), 8)
 
-    def test_09_AuthMethodType_AuthMethodNone(self):
+    def test_09_AuthMethodNone(self):
         """
         Test AuthMethodType with AuthMethodNone
         """
@@ -115,7 +115,7 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.get_value(), 9)
 
     @unittest.expectedFailure
-    def test_99_AuthMethodType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test AuthMethodType with FAIL
         """

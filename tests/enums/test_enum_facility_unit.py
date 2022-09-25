@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_FacilityUnit(unittest.TestCase):
-    def test_00_FacilityUnit_FacilityKernel(self):
+    def test_00_FacilityKernel(self):
         """
         Test FacilityUnit with FacilityKernel
         """
@@ -33,7 +33,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityKernel')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_FacilityUnit_FacilityUserLevel(self):
+    def test_01_FacilityUserLevel(self):
         """
         Test FacilityUnit with FacilityUserLevel
         """
@@ -42,7 +42,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityUserLevel')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_FacilityUnit_FacilityMailSystem(self):
+    def test_02_FacilityMailSystem(self):
         """
         Test FacilityUnit with FacilityMailSystem
         """
@@ -51,7 +51,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityMailSystem')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_FacilityUnit_FacilitySystemDaemons(self):
+    def test_03_FacilitySystemDaemons(self):
         """
         Test FacilityUnit with FacilitySystemDaemons
         """
@@ -60,7 +60,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilitySystemDaemons')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_FacilityUnit_FacilitySecurity1(self):
+    def test_04_FacilitySecurity1(self):
         """
         Test FacilityUnit with FacilitySecurity1
         """
@@ -69,7 +69,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilitySecurity1')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_FacilityUnit_FacilityInternal(self):
+    def test_05_FacilityInternal(self):
         """
         Test FacilityUnit with FacilityInternal
         """
@@ -78,7 +78,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityInternal')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_FacilityUnit_FacilityLinePrinter(self):
+    def test_06_FacilityLinePrinter(self):
         """
         Test FacilityUnit with FacilityLinePrinter
         """
@@ -87,7 +87,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLinePrinter')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_FacilityUnit_FacilityNetworkNews(self):
+    def test_07_FacilityNetworkNews(self):
         """
         Test FacilityUnit with FacilityNetworkNews
         """
@@ -96,7 +96,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityNetworkNews')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_FacilityUnit_FacilityUucpSubsystem(self):
+    def test_08_FacilityUucpSubsystem(self):
         """
         Test FacilityUnit with FacilityUucpSubsystem
         """
@@ -105,7 +105,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityUucpSubsystem')
         self.assertEqual(value.get_value(), 8)
 
-    def test_09_FacilityUnit_FacilityClockDaemon1(self):
+    def test_09_FacilityClockDaemon1(self):
         """
         Test FacilityUnit with FacilityClockDaemon1
         """
@@ -114,7 +114,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityClockDaemon1')
         self.assertEqual(value.get_value(), 9)
 
-    def test_10_FacilityUnit_FacilitySecurity2(self):
+    def test_10_FacilitySecurity2(self):
         """
         Test FacilityUnit with FacilitySecurity2
         """
@@ -123,7 +123,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilitySecurity2')
         self.assertEqual(value.get_value(), 10)
 
-    def test_11_FacilityUnit_FacilityFtpDaemon(self):
+    def test_11_FacilityFtpDaemon(self):
         """
         Test FacilityUnit with FacilityFtpDaemon
         """
@@ -132,7 +132,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityFtpDaemon')
         self.assertEqual(value.get_value(), 11)
 
-    def test_12_FacilityUnit_FacilityNtpSubsystem(self):
+    def test_12_FacilityNtpSubsystem(self):
         """
         Test FacilityUnit with FacilityNtpSubsystem
         """
@@ -141,7 +141,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityNtpSubsystem')
         self.assertEqual(value.get_value(), 12)
 
-    def test_13_FacilityUnit_FacilityLogAudit(self):
+    def test_13_FacilityLogAudit(self):
         """
         Test FacilityUnit with FacilityLogAudit
         """
@@ -150,7 +150,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLogAudit')
         self.assertEqual(value.get_value(), 13)
 
-    def test_14_FacilityUnit_FacilityLogAlert(self):
+    def test_14_FacilityLogAlert(self):
         """
         Test FacilityUnit with FacilityLogAlert
         """
@@ -159,7 +159,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLogAlert')
         self.assertEqual(value.get_value(), 14)
 
-    def test_15_FacilityUnit_FacilityClockDaemon2(self):
+    def test_15_FacilityClockDaemon2(self):
         """
         Test FacilityUnit with FacilityClockDaemon2
         """
@@ -168,7 +168,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityClockDaemon2')
         self.assertEqual(value.get_value(), 15)
 
-    def test_16_FacilityUnit_FacilityLocal0(self):
+    def test_16_FacilityLocal0(self):
         """
         Test FacilityUnit with FacilityLocal0
         """
@@ -177,7 +177,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal0')
         self.assertEqual(value.get_value(), 16)
 
-    def test_17_FacilityUnit_FacilityLocal1(self):
+    def test_17_FacilityLocal1(self):
         """
         Test FacilityUnit with FacilityLocal1
         """
@@ -186,7 +186,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal1')
         self.assertEqual(value.get_value(), 17)
 
-    def test_18_FacilityUnit_FacilityLocal2(self):
+    def test_18_FacilityLocal2(self):
         """
         Test FacilityUnit with FacilityLocal2
         """
@@ -195,7 +195,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal2')
         self.assertEqual(value.get_value(), 18)
 
-    def test_19_FacilityUnit_FacilityLocal3(self):
+    def test_19_FacilityLocal3(self):
         """
         Test FacilityUnit with FacilityLocal3
         """
@@ -204,7 +204,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal3')
         self.assertEqual(value.get_value(), 19)
 
-    def test_20_FacilityUnit_FacilityLocal4(self):
+    def test_20_FacilityLocal4(self):
         """
         Test FacilityUnit with FacilityLocal4
         """
@@ -213,7 +213,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal4')
         self.assertEqual(value.get_value(), 20)
 
-    def test_21_FacilityUnit_FacilityLocal5(self):
+    def test_21_FacilityLocal5(self):
         """
         Test FacilityUnit with FacilityLocal5
         """
@@ -222,7 +222,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal5')
         self.assertEqual(value.get_value(), 21)
 
-    def test_22_FacilityUnit_FacilityLocal6(self):
+    def test_22_FacilityLocal6(self):
         """
         Test FacilityUnit with FacilityLocal6
         """
@@ -231,7 +231,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'FacilityLocal6')
         self.assertEqual(value.get_value(), 22)
 
-    def test_23_FacilityUnit_FacilityLocal7(self):
+    def test_23_FacilityLocal7(self):
         """
         Test FacilityUnit with FacilityLocal7
         """
@@ -241,7 +241,7 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.get_value(), 23)
 
     @unittest.expectedFailure
-    def test_99_FacilityUnit_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test FacilityUnit with FAIL
         """

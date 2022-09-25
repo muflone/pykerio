@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_IntrusionPreventionAction(unittest.TestCase):
-    def test_00_IntrusionPreventionAction_IntrusionPreventionActionDropAndLog(self):
+    def test_00_IntrusionPreventionActionDropAndLog(self):
         """
         Test IntrusionPreventionAction with IntrusionPreventionActionDropAndLog
         """
@@ -33,7 +33,7 @@ class TestCase_IntrusionPreventionAction(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IntrusionPreventionActionDropAndLog')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_IntrusionPreventionAction_IntrusionPreventionActionLog(self):
+    def test_01_IntrusionPreventionActionLog(self):
         """
         Test IntrusionPreventionAction with IntrusionPreventionActionLog
         """
@@ -42,7 +42,7 @@ class TestCase_IntrusionPreventionAction(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IntrusionPreventionActionLog')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_IntrusionPreventionAction_IntrusionPreventionActionNothing(self):
+    def test_02_IntrusionPreventionActionNothing(self):
         """
         Test IntrusionPreventionAction with IntrusionPreventionActionNothing
         """
@@ -52,7 +52,7 @@ class TestCase_IntrusionPreventionAction(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_IntrusionPreventionAction_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test IntrusionPreventionAction with FAIL
         """

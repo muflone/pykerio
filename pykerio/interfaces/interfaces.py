@@ -59,9 +59,8 @@ class Interfaces(object):
         """
         discard changes cached in manager
         """
-        response = self.api.request_rpc(
-            method='Interfaces.reset',
-            params={})
+        self.api.request_rpc(method='Interfaces.reset',
+                             params={})
 
     def get(self, query: SearchQuery, sortByGroup: bool):
         """
@@ -139,18 +138,16 @@ class Interfaces(object):
         Dial interface. Works only for disconnected RAS.
         Action is taken immediatelly, without apply.
         """
-        response = self.api.request_rpc(
-            method='Interfaces.dial',
-            params={'id': kid})
+        self.api.request_rpc(method='Interfaces.dial',
+                             params={'id': kid})
 
     def hangup(self, kid: KId):
         """
         Hangup interface. Works only for connected RAS.
         Action is taken immediatelly, without apply.
         """
-        response = self.api.request_rpc(
-            method='Interfaces.hangup',
-            params={'id': kid})
+        self.api.request_rpc(method='Interfaces.hangup',
+                             params={'id': kid})
 
     def checkIpCollision(self):
         """
@@ -167,17 +164,15 @@ class Interfaces(object):
         """
         Initiates testing of connectivity
         """
-        response = self.api.request_rpc(
-            method='Interfaces.startConnectivityTest',
-            params={})
+        self.api.request_rpc(method='Interfaces.startConnectivityTest',
+                             params={})
 
     def cancelConnectivityTest(self):
         """
         Cancels testing of connectivity and sets status to ConnectivityError
         """
-        response = self.api.request_rpc(
-            method='Interfaces.cancelConnectivityTest',
-            params={})
+        self.api.request_rpc(method='Interfaces.cancelConnectivityTest',
+                             params={})
 
     def connectivityTestStatus(self):
         """
@@ -216,9 +211,8 @@ class Interfaces(object):
         """
         Stores Connectivity config values
         """
-        response = self.api.request_rpc(
-            method='Interfaces.setConnectivityConfig',
-            params={'config': config.dump()})
+        self.api.request_rpc(method='Interfaces.setConnectivityConfig',
+                             params={'config': config.dump()})
 
     def getIpsecPeerIdConfig(self):
         """
@@ -230,7 +224,7 @@ class Interfaces(object):
         results = IpsecPeerIdConfig(response.result['config'])
         return results
 
-    #FIXME: needs testing and a box with WiFi
+    # FIXME: needs testing and a box with WiFi
     def getWifiCountries(self):
         """
         Returns Country list with allowed channel configuration
@@ -242,7 +236,7 @@ class Interfaces(object):
         results.load(response.result['countries'])
         return results
 
-    #FIXME: needs testing and a box with WiFi
+    # FIXME: needs testing and a box with WiFi
     def getWifiConfig(self):
         """
         Returns WiFi configuration
@@ -253,7 +247,7 @@ class Interfaces(object):
         results = WifiConfig(response.result['config'])
         return results
 
-    #FIXME: needs testing and a box with WiFi
+    # FIXME: needs testing and a box with WiFi
     def setWifiConfig(self, config: WifiConfig):
         """
         Sets WiFi configuration
@@ -272,17 +266,20 @@ class Interfaces(object):
         """
         conditions = SubConditionList()
         if name:
-            conditions.append(SubCondition({'fieldName': 'name',
-                                            'comparator': CompareOperator('Eq'),
-                                            'value': name}))
+            conditions.append(
+                SubCondition({'fieldName': 'name',
+                              'comparator': CompareOperator('Eq'),
+                              'value': name}))
         if interface_type:
-            conditions.append(SubCondition({'fieldName': 'type',
-                                            'comparator': CompareOperator('Eq'),
-                                            'value': interface_type.dump()}))
+            conditions.append(
+                SubCondition({'fieldName': 'type',
+                              'comparator': CompareOperator('Eq'),
+                              'value': interface_type.dump()}))
         if interface_group:
-            conditions.append(SubCondition({'fieldName': 'group',
-                                            'comparator': CompareOperator('Eq'),
-                                            'value': interface_group.dump()}))
+            conditions.append(
+                SubCondition({'fieldName': 'group',
+                              'comparator': CompareOperator('Eq'),
+                              'value': interface_group.dump()}))
 
         order = SortOrder({'columnName': 'name',
                            'direction': SortDirection(name='Asc'),
@@ -290,13 +287,12 @@ class Interfaces(object):
         orderbylist = SortOrderList()
         orderbylist.append(order)
 
-        search_query = SearchQuery({
-            'fields': StringList(),
-            'conditions': conditions,
-            'combining': LogicalOperator('And'),
-            'start': 0,
-            'limit': UNLIMITED,
-            'orderBy': orderbylist})
+        search_query = SearchQuery({'fields': StringList(),
+                                    'conditions': conditions,
+                                    'combining': LogicalOperator('And'),
+                                    'start': 0,
+                                    'limit': UNLIMITED,
+                                    'orderBy': orderbylist})
         (ifaces, count) = self.get(query=search_query, sortByGroup=True)
         results = InterfaceList()
         results.load(ifaces)

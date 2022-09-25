@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_CompareOperator(unittest.TestCase):
-    def test_00_CompareOperator_Eq(self):
+    def test_00_Eq(self):
         """
         Test CompareOperator with Eq
         """
@@ -33,7 +33,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Eq')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_CompareOperator_NotEq(self):
+    def test_01_NotEq(self):
         """
         Test CompareOperator with NotEq
         """
@@ -42,7 +42,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotEq')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_CompareOperator_LessThan(self):
+    def test_02_LessThan(self):
         """
         Test CompareOperator with LessThan
         """
@@ -51,7 +51,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'LessThan')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_CompareOperator_GreaterThan(self):
+    def test_03_GreaterThan(self):
         """
         Test CompareOperator with GreaterThan
         """
@@ -60,7 +60,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'GreaterThan')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_CompareOperator_LessEq(self):
+    def test_04_LessEq(self):
         """
         Test CompareOperator with LessEq
         """
@@ -69,7 +69,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'LessEq')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_CompareOperator_GreaterEq(self):
+    def test_05_GreaterEq(self):
         """
         Test CompareOperator with GreaterEq
         """
@@ -78,7 +78,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'GreaterEq')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_CompareOperator_Like(self):
+    def test_06_Like(self):
         """
         Test CompareOperator with Like
         """
@@ -88,7 +88,7 @@ class TestCase_CompareOperator(unittest.TestCase):
         self.assertEqual(value.get_value(), 6)
 
     @unittest.expectedFailure
-    def test_99_CompareOperator_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test CompareOperator with FAIL
         """

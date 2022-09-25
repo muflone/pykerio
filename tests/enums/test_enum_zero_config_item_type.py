@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ZeroConfigItemType(unittest.TestCase):
-    def test_00_ZeroConfigItemType_ZeroConfigVpnClients(self):
+    def test_00_ZeroConfigVpnClients(self):
         """
         Test ZeroConfigItemType with ZeroConfigVpnClients
         """
@@ -33,7 +33,7 @@ class TestCase_ZeroConfigItemType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ZeroConfigVpnClients')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ZeroConfigItemType_ZeroConfigVpnTunnel(self):
+    def test_01_ZeroConfigVpnTunnel(self):
         """
         Test ZeroConfigItemType with ZeroConfigVpnTunnel
         """
@@ -42,7 +42,7 @@ class TestCase_ZeroConfigItemType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ZeroConfigVpnTunnel')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ZeroConfigItemType_ZeroConfigInterface(self):
+    def test_02_ZeroConfigInterface(self):
         """
         Test ZeroConfigItemType with ZeroConfigInterface
         """
@@ -52,7 +52,7 @@ class TestCase_ZeroConfigItemType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_ZeroConfigItemType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ZeroConfigItemType with FAIL
         """

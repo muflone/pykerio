@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_LoginType(unittest.TestCase):
-    def test_00_LoginType_LoginRegular(self):
+    def test_00_LoginRegular(self):
         """
         Test LoginType with LoginRegular
         """
@@ -33,7 +33,7 @@ class TestCase_LoginType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'LoginRegular')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_LoginType_LoginAutomatic(self):
+    def test_01_LoginAutomatic(self):
         """
         Test LoginType with LoginAutomatic
         """
@@ -42,7 +42,7 @@ class TestCase_LoginType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'LoginAutomatic')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_LoginType_LoginReactivation(self):
+    def test_02_LoginReactivation(self):
         """
         Test LoginType with LoginReactivation
         """
@@ -52,7 +52,7 @@ class TestCase_LoginType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_LoginType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test LoginType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ApplicationType(unittest.TestCase):
-    def test_00_ApplicationType_ApplicationWebFilterCategory(self):
+    def test_00_ApplicationWebFilterCategory(self):
         """
         Test ApplicationType with ApplicationWebFilterCategory
         """
@@ -33,7 +33,7 @@ class TestCase_ApplicationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ApplicationWebFilterCategory')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ApplicationType_ApplicationProtocol(self):
+    def test_01_ApplicationProtocol(self):
         """
         Test ApplicationType with ApplicationProtocol
         """
@@ -43,7 +43,7 @@ class TestCase_ApplicationType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_ApplicationType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ApplicationType with FAIL
         """

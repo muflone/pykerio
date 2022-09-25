@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_VpnType(unittest.TestCase):
-    def test_00_VpnType_VpnKerio(self):
+    def test_00_VpnKerio(self):
         """
         Test VpnType with VpnKerio
         """
@@ -33,7 +33,7 @@ class TestCase_VpnType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'VpnKerio')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_VpnType_VpnIpsec(self):
+    def test_01_VpnIpsec(self):
         """
         Test VpnType with VpnIpsec
         """
@@ -43,7 +43,7 @@ class TestCase_VpnType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_VpnType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test VpnType with FAIL
         """

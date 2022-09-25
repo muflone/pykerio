@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ExpireType(unittest.TestCase):
-    def test_00_ExpireType_License(self):
+    def test_00_License(self):
         """
         Test ExpireType with License
         """
@@ -33,7 +33,7 @@ class TestCase_ExpireType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'License')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ExpireType_Subscription(self):
+    def test_01_Subscription(self):
         """
         Test ExpireType with Subscription
         """
@@ -43,7 +43,7 @@ class TestCase_ExpireType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_ExpireType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ExpireType with FAIL
         """

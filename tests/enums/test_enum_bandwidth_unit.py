@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_BandwidthUnit(unittest.TestCase):
-    def test_00_BandwidthUnit_BandwidthUnitBits(self):
+    def test_00_BandwidthUnitBits(self):
         """
         Test BandwidthUnit with BandwidthUnitBits
         """
@@ -33,7 +33,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BandwidthUnitBits')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_BandwidthUnit_BandwidthUnitBytes(self):
+    def test_01_BandwidthUnitBytes(self):
         """
         Test BandwidthUnit with BandwidthUnitBytes
         """
@@ -42,7 +42,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BandwidthUnitBytes')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_BandwidthUnit_BandwidthUnitKilobits(self):
+    def test_02_BandwidthUnitKilobits(self):
         """
         Test BandwidthUnit with BandwidthUnitKilobits
         """
@@ -51,7 +51,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BandwidthUnitKilobits')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_BandwidthUnit_BandwidthUnitKiloBytes(self):
+    def test_03_BandwidthUnitKiloBytes(self):
         """
         Test BandwidthUnit with BandwidthUnitKiloBytes
         """
@@ -60,7 +60,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BandwidthUnitKiloBytes')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_BandwidthUnit_BandwidthUnitMegabits(self):
+    def test_04_BandwidthUnitMegabits(self):
         """
         Test BandwidthUnit with BandwidthUnitMegabits
         """
@@ -69,7 +69,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BandwidthUnitMegabits')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_BandwidthUnit_BandwidthUnitMegaBytes(self):
+    def test_05_BandwidthUnitMegaBytes(self):
         """
         Test BandwidthUnit with BandwidthUnitMegaBytes
         """
@@ -78,7 +78,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BandwidthUnitMegaBytes')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_BandwidthUnit_BandwidthUnitPercent(self):
+    def test_06_BandwidthUnitPercent(self):
         """
         Test BandwidthUnit with BandwidthUnitPercent
         """
@@ -88,7 +88,7 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.get_value(), 6)
 
     @unittest.expectedFailure
-    def test_99_BandwidthUnit_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test BandwidthUnit with FAIL
         """

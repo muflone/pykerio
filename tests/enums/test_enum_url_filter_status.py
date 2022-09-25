@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UrlFilterStatus(unittest.TestCase):
-    def test_00_UrlFilterStatus_UrlFilterNotLicensed(self):
+    def test_00_UrlFilterNotLicensed(self):
         """
         Test UrlFilterStatus with UrlFilterNotLicensed
         """
@@ -33,7 +33,7 @@ class TestCase_UrlFilterStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UrlFilterNotLicensed')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UrlFilterStatus_UrlFilterNotActivated(self):
+    def test_01_UrlFilterNotActivated(self):
         """
         Test UrlFilterStatus with UrlFilterNotActivated
         """
@@ -42,7 +42,7 @@ class TestCase_UrlFilterStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UrlFilterNotActivated')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_UrlFilterStatus_UrlFilterActivating(self):
+    def test_02_UrlFilterActivating(self):
         """
         Test UrlFilterStatus with UrlFilterActivating
         """
@@ -51,7 +51,7 @@ class TestCase_UrlFilterStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UrlFilterActivating')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_UrlFilterStatus_UrlFilterActivated(self):
+    def test_03_UrlFilterActivated(self):
         """
         Test UrlFilterStatus with UrlFilterActivated
         """
@@ -61,7 +61,7 @@ class TestCase_UrlFilterStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_UrlFilterStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UrlFilterStatus with FAIL
         """

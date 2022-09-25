@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ScanRuleType(unittest.TestCase):
-    def test_00_ScanRuleType_ScanRuleUrl(self):
+    def test_00_ScanRuleUrl(self):
         """
         Test ScanRuleType with ScanRuleUrl
         """
@@ -33,7 +33,7 @@ class TestCase_ScanRuleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ScanRuleUrl')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ScanRuleType_ScanRuleMime(self):
+    def test_01_ScanRuleMime(self):
         """
         Test ScanRuleType with ScanRuleMime
         """
@@ -42,7 +42,7 @@ class TestCase_ScanRuleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ScanRuleMime')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ScanRuleType_ScanRuleFilename(self):
+    def test_02_ScanRuleFilename(self):
         """
         Test ScanRuleType with ScanRuleFilename
         """
@@ -51,7 +51,7 @@ class TestCase_ScanRuleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ScanRuleFilename')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ScanRuleType_ScanRuleFileGroup(self):
+    def test_03_ScanRuleFileGroup(self):
         """
         Test ScanRuleType with ScanRuleFileGroup
         """
@@ -61,7 +61,7 @@ class TestCase_ScanRuleType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_ScanRuleType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ScanRuleType with FAIL
         """

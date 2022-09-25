@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_DnsTool(unittest.TestCase):
-    def test_00_DnsTool_DnsToolNslookup(self):
+    def test_00_DnsToolNslookup(self):
         """
         Test DnsTool with DnsToolNslookup
         """
@@ -33,7 +33,7 @@ class TestCase_DnsTool(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DnsToolNslookup')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_DnsTool_DnsToolDig(self):
+    def test_01_DnsToolDig(self):
         """
         Test DnsTool with DnsToolDig
         """
@@ -43,7 +43,7 @@ class TestCase_DnsTool(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_DnsTool_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test DnsTool with FAIL
         """

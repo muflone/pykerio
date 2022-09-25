@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SpeedDuplexType(unittest.TestCase):
-    def test_00_SpeedDuplexType_SpeedDuplexAuto(self):
+    def test_00_SpeedDuplexAuto(self):
         """
         Test SpeedDuplexType with SpeedDuplexAuto
         """
@@ -33,7 +33,7 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SpeedDuplexAuto')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SpeedDuplexType_SpeedDuplexHalf10(self):
+    def test_01_SpeedDuplexHalf10(self):
         """
         Test SpeedDuplexType with SpeedDuplexHalf10
         """
@@ -42,7 +42,7 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SpeedDuplexHalf10')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_SpeedDuplexType_SpeedDuplexFull10(self):
+    def test_02_SpeedDuplexFull10(self):
         """
         Test SpeedDuplexType with SpeedDuplexFull10
         """
@@ -51,7 +51,7 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SpeedDuplexFull10')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_SpeedDuplexType_SpeedDuplexHalf100(self):
+    def test_03_SpeedDuplexHalf100(self):
         """
         Test SpeedDuplexType with SpeedDuplexHalf100
         """
@@ -60,7 +60,7 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SpeedDuplexHalf100')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_SpeedDuplexType_SpeedDuplexFull100(self):
+    def test_04_SpeedDuplexFull100(self):
         """
         Test SpeedDuplexType with SpeedDuplexFull100
         """
@@ -69,7 +69,7 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SpeedDuplexFull100')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_SpeedDuplexType_SpeedDuplexFull1000(self):
+    def test_05_SpeedDuplexFull1000(self):
         """
         Test SpeedDuplexType with SpeedDuplexFull1000
         """
@@ -79,7 +79,7 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_SpeedDuplexType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SpeedDuplexType with FAIL
         """

@@ -44,6 +44,5 @@ class Storage(object):
         """
         Delete data specified by type from storage.
         """
-        response = self.api.request_rpc(
-            method='Storage.remove',
-            params={'type': storage_type.dump()})
+        self.api.request_rpc(method='Storage.remove',
+                             params={'type': storage_type.dump()})

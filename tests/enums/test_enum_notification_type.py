@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_NotificationType(unittest.TestCase):
-    def test_00_NotificationType_NotificationUpdate(self):
+    def test_00_NotificationUpdate(self):
         """
         Test NotificationType with NotificationUpdate
         """
@@ -33,7 +33,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationUpdate')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_NotificationType_NotificationDump(self):
+    def test_01_NotificationDump(self):
         """
         Test NotificationType with NotificationDump
         """
@@ -42,7 +42,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationDump')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_NotificationType_NotificationLowMemory(self):
+    def test_02_NotificationLowMemory(self):
         """
         Test NotificationType with NotificationLowMemory
         """
@@ -51,7 +51,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationLowMemory')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_NotificationType_NotificationDomains(self):
+    def test_03_NotificationDomains(self):
         """
         Test NotificationType with NotificationDomains
         """
@@ -60,7 +60,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationDomains')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_NotificationType_NotificationSubWillExpire(self):
+    def test_04_NotificationSubWillExpire(self):
         """
         Test NotificationType with NotificationSubWillExpire
         """
@@ -69,7 +69,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationSubWillExpire')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_NotificationType_NotificationSubExpired(self):
+    def test_05_NotificationSubExpired(self):
         """
         Test NotificationType with NotificationSubExpired
         """
@@ -78,7 +78,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationSubExpired')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_NotificationType_NotificationLicWillExpire(self):
+    def test_06_NotificationLicWillExpire(self):
         """
         Test NotificationType with NotificationLicWillExpire
         """
@@ -87,7 +87,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationLicWillExpire')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_NotificationType_NotificationLicExpired(self):
+    def test_07_NotificationLicExpired(self):
         """
         Test NotificationType with NotificationLicExpired
         """
@@ -96,7 +96,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationLicExpired')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_NotificationType_NotificationBackupLine(self):
+    def test_08_NotificationBackupLine(self):
         """
         Test NotificationType with NotificationBackupLine
         """
@@ -105,7 +105,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationBackupLine')
         self.assertEqual(value.get_value(), 8)
 
-    def test_09_NotificationType_NotificationInterfaceSpeed(self):
+    def test_09_NotificationInterfaceSpeed(self):
         """
         Test NotificationType with NotificationInterfaceSpeed
         """
@@ -114,7 +114,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationInterfaceSpeed')
         self.assertEqual(value.get_value(), 9)
 
-    def test_10_NotificationType_NotificationSmtp(self):
+    def test_10_NotificationSmtp(self):
         """
         Test NotificationType with NotificationSmtp
         """
@@ -123,7 +123,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationSmtp')
         self.assertEqual(value.get_value(), 10)
 
-    def test_11_NotificationType_NotificationLlbLine(self):
+    def test_11_NotificationLlbLine(self):
         """
         Test NotificationType with NotificationLlbLine
         """
@@ -132,7 +132,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationLlbLine')
         self.assertEqual(value.get_value(), 11)
 
-    def test_12_NotificationType_NotificationLlb(self):
+    def test_12_NotificationLlb(self):
         """
         Test NotificationType with NotificationLlb
         """
@@ -141,7 +141,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationLlb')
         self.assertEqual(value.get_value(), 12)
 
-    def test_13_NotificationType_NotificationConnectionOnDemand(self):
+    def test_13_NotificationConnectionOnDemand(self):
         """
         Test NotificationType with NotificationConnectionOnDemand
         """
@@ -150,7 +150,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationConnectionOnDemand')
         self.assertEqual(value.get_value(), 13)
 
-    def test_14_NotificationType_NotificationConnectionFailover(self):
+    def test_14_NotificationConnectionFailover(self):
         """
         Test NotificationType with NotificationConnectionFailover
         """
@@ -159,7 +159,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationConnectionFailover')
         self.assertEqual(value.get_value(), 14)
 
-    def test_15_NotificationType_NotificationConnectionBalancing(self):
+    def test_15_NotificationConnectionBalancing(self):
         """
         Test NotificationType with NotificationConnectionBalancing
         """
@@ -168,7 +168,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationConnectionBalancing')
         self.assertEqual(value.get_value(), 15)
 
-    def test_16_NotificationType_NotificationConnectionPersistent(self):
+    def test_16_NotificationConnectionPersistent(self):
         """
         Test NotificationType with NotificationConnectionPersistent
         """
@@ -177,7 +177,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationConnectionPersistent')
         self.assertEqual(value.get_value(), 16)
 
-    def test_17_NotificationType_NotificationCertificateError(self):
+    def test_17_NotificationCertificateError(self):
         """
         Test NotificationType with NotificationCertificateError
         """
@@ -186,7 +186,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationCertificateError')
         self.assertEqual(value.get_value(), 17)
 
-    def test_18_NotificationType_NotificationCertificateWillExpire(self):
+    def test_18_NotificationCertificateWillExpire(self):
         """
         Test NotificationType with NotificationCertificateWillExpire
         """
@@ -195,7 +195,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationCertificateWillExpire')
         self.assertEqual(value.get_value(), 18)
 
-    def test_19_NotificationType_NotificationCertificateExpired(self):
+    def test_19_NotificationCertificateExpired(self):
         """
         Test NotificationType with NotificationCertificateExpired
         """
@@ -204,7 +204,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationCertificateExpired')
         self.assertEqual(value.get_value(), 19)
 
-    def test_20_NotificationType_NotificationCaWillExpire(self):
+    def test_20_NotificationCaWillExpire(self):
         """
         Test NotificationType with NotificationCaWillExpire
         """
@@ -213,7 +213,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationCaWillExpire')
         self.assertEqual(value.get_value(), 20)
 
-    def test_21_NotificationType_NotificationCaExpired(self):
+    def test_21_NotificationCaExpired(self):
         """
         Test NotificationType with NotificationCaExpired
         """
@@ -222,7 +222,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationCaExpired')
         self.assertEqual(value.get_value(), 21)
 
-    def test_22_NotificationType_NotificationBackupFailed(self):
+    def test_22_NotificationBackupFailed(self):
         """
         Test NotificationType with NotificationBackupFailed
         """
@@ -231,7 +231,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationBackupFailed')
         self.assertEqual(value.get_value(), 22)
 
-    def test_23_NotificationType_NotificationPacketDump(self):
+    def test_23_NotificationPacketDump(self):
         """
         Test NotificationType with NotificationPacketDump
         """
@@ -240,7 +240,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NotificationPacketDump')
         self.assertEqual(value.get_value(), 23)
 
-    def test_24_NotificationType_NotificationUnknown(self):
+    def test_24_NotificationUnknown(self):
         """
         Test NotificationType with NotificationUnknown
         """
@@ -250,7 +250,7 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.get_value(), 24)
 
     @unittest.expectedFailure
-    def test_99_NotificationType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test NotificationType with FAIL
         """

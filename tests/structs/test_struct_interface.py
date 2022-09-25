@@ -146,9 +146,11 @@ class TestCase_Interface(unittest.TestCase):
             'gatewayAutodetected': True,
             'gateway': pykerio.types.IpAddress(''),
             'ip6Enabled': True,
-            'ip6Mode': pykerio.enums.InterfaceModeType('InterfaceModeAutomatic'),
+            'ip6Mode': pykerio.enums.InterfaceModeType(
+                'InterfaceModeAutomatic'),
             'ip6Addresses': pykerio.lists.Ip6AddressMaskList(),
-            'linkIp6Address': pykerio.types.Ip6Address('fe80::290:fff:fff:fff'),
+            'linkIp6Address': pykerio.types.Ip6Address(
+                'fe80::290:fff:fff:fff'),
             'ip6Gateway': pykerio.types.IpAddress(''),
             'routedIp6PrefixAutodetected': True,
             'routedIp6Prefix': '',

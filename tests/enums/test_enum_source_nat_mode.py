@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_SourceNatMode(unittest.TestCase):
-    def test_00_SourceNatMode_NatDefault(self):
+    def test_00_NatDefault(self):
         """
         Test SourceNatMode with NatDefault
         """
@@ -33,7 +33,7 @@ class TestCase_SourceNatMode(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NatDefault')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_SourceNatMode_NatInterface(self):
+    def test_01_NatInterface(self):
         """
         Test SourceNatMode with NatInterface
         """
@@ -42,7 +42,7 @@ class TestCase_SourceNatMode(unittest.TestCase):
         self.assertEqual(value.get_name(), 'NatInterface')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_SourceNatMode_NatIpAddress(self):
+    def test_02_NatIpAddress(self):
         """
         Test SourceNatMode with NatIpAddress
         """
@@ -52,7 +52,7 @@ class TestCase_SourceNatMode(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_SourceNatMode_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test SourceNatMode with FAIL
         """

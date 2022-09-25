@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_MppeType(unittest.TestCase):
-    def test_00_MppeType_MppeDisabled(self):
+    def test_00_MppeDisabled(self):
         """
         Test MppeType with MppeDisabled
         """
@@ -33,7 +33,7 @@ class TestCase_MppeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'MppeDisabled')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_MppeType_MppeEnabled(self):
+    def test_01_MppeEnabled(self):
         """
         Test MppeType with MppeEnabled
         """
@@ -42,7 +42,7 @@ class TestCase_MppeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'MppeEnabled')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_MppeType_Mppe128Enabled(self):
+    def test_02_Mppe128Enabled(self):
         """
         Test MppeType with Mppe128Enabled
         """
@@ -52,7 +52,7 @@ class TestCase_MppeType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_MppeType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test MppeType with FAIL
         """

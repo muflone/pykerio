@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_InterfaceModeType(unittest.TestCase):
-    def test_00_InterfaceModeType_InterfaceModeManual(self):
+    def test_00_InterfaceModeManual(self):
         """
         Test InterfaceModeType with InterfaceModeManual
         """
@@ -33,7 +33,7 @@ class TestCase_InterfaceModeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'InterfaceModeManual')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_InterfaceModeType_InterfaceModeAutomatic(self):
+    def test_01_InterfaceModeAutomatic(self):
         """
         Test InterfaceModeType with InterfaceModeAutomatic
         """
@@ -42,7 +42,7 @@ class TestCase_InterfaceModeType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'InterfaceModeAutomatic')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_InterfaceModeType_InterfaceModeLinkLocal(self):
+    def test_02_InterfaceModeLinkLocal(self):
         """
         Test InterfaceModeType with InterfaceModeLinkLocal
         """
@@ -52,7 +52,7 @@ class TestCase_InterfaceModeType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_InterfaceModeType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test InterfaceModeType with FAIL
         """

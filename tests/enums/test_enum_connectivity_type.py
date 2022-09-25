@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ConnectivityType(unittest.TestCase):
-    def test_00_ConnectivityType_Persistent(self):
+    def test_00_Persistent(self):
         """
         Test ConnectivityType with Persistent
         """
@@ -33,7 +33,7 @@ class TestCase_ConnectivityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Persistent')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ConnectivityType_DialOnDemand(self):
+    def test_01_DialOnDemand(self):
         """
         Test ConnectivityType with DialOnDemand
         """
@@ -42,7 +42,7 @@ class TestCase_ConnectivityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'DialOnDemand')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ConnectivityType_Failover(self):
+    def test_02_Failover(self):
         """
         Test ConnectivityType with Failover
         """
@@ -51,7 +51,7 @@ class TestCase_ConnectivityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Failover')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ConnectivityType_LoadBalancing(self):
+    def test_03_LoadBalancing(self):
         """
         Test ConnectivityType with LoadBalancing
         """
@@ -61,7 +61,7 @@ class TestCase_ConnectivityType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_ConnectivityType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ConnectivityType with FAIL
         """

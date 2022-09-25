@@ -50,7 +50,7 @@ from .port_config_list import PortConfigList                       # noqa: F401
 from .restriction_list import RestrictionList                      # noqa: F401
 from .restriction_tuple_list import RestrictionTupleList           # noqa: F401
 from .sort_order_list import SortOrderList                         # noqa: F401
-from .speed_duplex_may_not_work_list import (
+from .speed_duplex_may_not_work_list import (                      # noqa: F401
     SpeedDuplexMayNotWorkList)                                     # noqa: F401
 from .storage_data_list import StorageDataList                     # noqa: F401
 from .string_list import StringList                                # noqa: F401

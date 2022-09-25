@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_TrafficEntityType(unittest.TestCase):
-    def test_00_TrafficEntityType_TrafficEntityHost(self):
+    def test_00_TrafficEntityHost(self):
         """
         Test TrafficEntityType with TrafficEntityHost
         """
@@ -33,7 +33,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityHost')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_TrafficEntityType_TrafficEntityNetwork(self):
+    def test_01_TrafficEntityNetwork(self):
         """
         Test TrafficEntityType with TrafficEntityNetwork
         """
@@ -42,7 +42,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityNetwork')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_TrafficEntityType_TrafficEntityRange(self):
+    def test_02_TrafficEntityRange(self):
         """
         Test TrafficEntityType with TrafficEntityRange
         """
@@ -51,7 +51,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityRange')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_TrafficEntityType_TrafficEntityAddressGroup(self):
+    def test_03_TrafficEntityAddressGroup(self):
         """
         Test TrafficEntityType with TrafficEntityAddressGroup
         """
@@ -60,7 +60,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityAddressGroup')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_TrafficEntityType_TrafficEntityPrefix(self):
+    def test_04_TrafficEntityPrefix(self):
         """
         Test TrafficEntityType with TrafficEntityPrefix
         """
@@ -69,7 +69,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityPrefix')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_TrafficEntityType_TrafficEntityInterface(self):
+    def test_05_TrafficEntityInterface(self):
         """
         Test TrafficEntityType with TrafficEntityInterface
         """
@@ -78,7 +78,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityInterface')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_TrafficEntityType_TrafficEntityVpn(self):
+    def test_06_TrafficEntityVpn(self):
         """
         Test TrafficEntityType with TrafficEntityVpn
         """
@@ -87,7 +87,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TrafficEntityVpn')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_TrafficEntityType_TrafficEntityUsers(self):
+    def test_07_TrafficEntityUsers(self):
         """
         Test TrafficEntityType with TrafficEntityUsers
         """
@@ -97,7 +97,7 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.get_value(), 7)
 
     @unittest.expectedFailure
-    def test_99_TrafficEntityType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test TrafficEntityType with FAIL
         """

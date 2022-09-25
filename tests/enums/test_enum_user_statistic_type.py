@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UserStatisticType(unittest.TestCase):
-    def test_00_UserStatisticType_UserStatisticAll(self):
+    def test_00_UserStatisticAll(self):
         """
         Test UserStatisticType with UserStatisticAll
         """
@@ -33,7 +33,7 @@ class TestCase_UserStatisticType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserStatisticAll')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UserStatisticType_UserStatisticUser(self):
+    def test_01_UserStatisticUser(self):
         """
         Test UserStatisticType with UserStatisticUser
         """
@@ -42,7 +42,7 @@ class TestCase_UserStatisticType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserStatisticUser')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_UserStatisticType_UserStatisticOther(self):
+    def test_02_UserStatisticOther(self):
         """
         Test UserStatisticType with UserStatisticOther
         """
@@ -51,7 +51,7 @@ class TestCase_UserStatisticType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UserStatisticOther')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_UserStatisticType_UserStatisticGuest(self):
+    def test_03_UserStatisticGuest(self):
         """
         Test UserStatisticType with UserStatisticGuest
         """
@@ -61,7 +61,7 @@ class TestCase_UserStatisticType(unittest.TestCase):
         self.assertEqual(value.get_value(), 3)
 
     @unittest.expectedFailure
-    def test_99_UserStatisticType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UserStatisticType with FAIL
         """

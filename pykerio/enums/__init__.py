@@ -40,7 +40,7 @@ from .configuration_backup_phase import ConfigurationBackupPhase   # noqa: F401
 from .connection_direction import ConnectionDirection              # noqa: F401
 from .connectivity_status import ConnectivityStatus                # noqa: F401
 from .connectivity_type import ConnectivityType                    # noqa: F401
-from .content_condition_entity_type import (
+from .content_condition_entity_type import (                       # noqa: F401
     ContentConditionEntityType)                                    # noqa: F401
 from .content_entity_url_type import ContentEntityUrlType          # noqa: F401
 from .dhcp_lease_type import DhcpLeaseType                         # noqa: F401
@@ -66,9 +66,9 @@ from .interface_group_type import InterfaceGroupType               # noqa: F401
 from .interface_mode_type import InterfaceModeType                 # noqa: F401
 from .interface_status_type import InterfaceStatusType             # noqa: F401
 from .interface_type import InterfaceType                          # noqa: F401
-from .intrusion_prevention_action import (
+from .intrusion_prevention_action import (                         # noqa: F401
     IntrusionPreventionAction)                                     # noqa: F401
-from .intrusion_prevention_update_phases import (
+from .intrusion_prevention_update_phases import (                  # noqa: F401
     IntrusionPreventionUpdatePhases)                               # noqa: F401
 from .ip_version import IpVersion                                  # noqa: F401
 from .item_name import ItemName                                    # noqa: F401
@@ -91,7 +91,7 @@ from .registration_finish_type import RegistrationFinishType       # noqa: F401
 from .registration_type import RegistrationType                    # noqa: F401
 from .restriction_kind import RestrictionKind                      # noqa: F401
 from .rotation_period import RotationPeriod                        # noqa: F401
-from .router_advertisements_mode_type import (
+from .router_advertisements_mode_type import (                     # noqa: F401
     RouterAdvertisementsModeType)                                  # noqa: F401
 from .route_type import RouteType                                  # noqa: F401
 from .rule_action import RuleAction                                # noqa: F401

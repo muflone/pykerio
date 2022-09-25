@@ -43,7 +43,7 @@ class TestCase_ConnectivityConfig(unittest.TestCase):
         self.assertEqual(teststruct['mode'], mode)
         self.assertEqual(teststruct['probeHosts'], probehosts)
         self.assertEqual(teststruct['reconnectTunnelsWhenPrimaryGoesBack'],
-                                     True)
+                         True)
         self.assertEqual(teststruct['lazyFailover'], False)
 
         teststruct.clear()

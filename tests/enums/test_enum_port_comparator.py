@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_PortComparator(unittest.TestCase):
-    def test_00_PortComparator_Any(self):
+    def test_00_Any(self):
         """
         Test PortComparator with Any
         """
@@ -33,7 +33,7 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Any')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_PortComparator_Equal(self):
+    def test_01_Equal(self):
         """
         Test PortComparator with Equal
         """
@@ -42,7 +42,7 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Equal')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_PortComparator_LessThan(self):
+    def test_02_LessThan(self):
         """
         Test PortComparator with LessThan
         """
@@ -51,7 +51,7 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'LessThan')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_PortComparator_GreaterThan(self):
+    def test_03_GreaterThan(self):
         """
         Test PortComparator with GreaterThan
         """
@@ -60,7 +60,7 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'GreaterThan')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_PortComparator_Range(self):
+    def test_04_Range(self):
         """
         Test PortComparator with Range
         """
@@ -69,7 +69,7 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Range')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_PortComparator_List(self):
+    def test_05_List(self):
         """
         Test PortComparator with List
         """
@@ -79,7 +79,7 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_PortComparator_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test PortComparator with FAIL
         """

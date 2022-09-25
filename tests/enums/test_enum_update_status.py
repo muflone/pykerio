@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UpdateStatus(unittest.TestCase):
-    def test_00_UpdateStatus_UpdateStatusOk(self):
+    def test_00_UpdateStatusOk(self):
         """
         Test UpdateStatus with UpdateStatusOk
         """
@@ -33,7 +33,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusOk')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UpdateStatus_UpdateStatusChecking(self):
+    def test_01_UpdateStatusChecking(self):
         """
         Test UpdateStatus with UpdateStatusChecking
         """
@@ -42,7 +42,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusChecking')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_UpdateStatus_UpdateStatusCheckFailed(self):
+    def test_02_UpdateStatusCheckFailed(self):
         """
         Test UpdateStatus with UpdateStatusCheckFailed
         """
@@ -51,7 +51,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusCheckFailed')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_UpdateStatus_UpdateStatusDownloadOk(self):
+    def test_03_UpdateStatusDownloadOk(self):
         """
         Test UpdateStatus with UpdateStatusDownloadOk
         """
@@ -60,7 +60,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusDownloadOk')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_UpdateStatus_UpdateStatusDownloading(self):
+    def test_04_UpdateStatusDownloading(self):
         """
         Test UpdateStatus with UpdateStatusDownloading
         """
@@ -69,7 +69,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusDownloading')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_UpdateStatus_UpdateStatusDownloadFailed(self):
+    def test_05_UpdateStatusDownloadFailed(self):
         """
         Test UpdateStatus with UpdateStatusDownloadFailed
         """
@@ -78,7 +78,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusDownloadFailed')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_UpdateStatus_UpdateStatusUpgrading(self):
+    def test_06_UpdateStatusUpgrading(self):
         """
         Test UpdateStatus with UpdateStatusUpgrading
         """
@@ -87,7 +87,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UpdateStatusUpgrading')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_UpdateStatus_UpdateStatusUpgradeFailed(self):
+    def test_07_UpdateStatusUpgradeFailed(self):
         """
         Test UpdateStatus with UpdateStatusUpgradeFailed
         """
@@ -97,7 +97,7 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 7)
 
     @unittest.expectedFailure
-    def test_99_UpdateStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UpdateStatus with FAIL
         """

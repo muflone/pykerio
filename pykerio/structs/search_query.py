@@ -39,11 +39,15 @@ class SearchQuery(BaseStruct):
     cases solved by using substitution of complicated query-part by simple
     condition.
 
-    Only the quicksearch is currently implemented and only in "Users::get()" method.
+    Only the quicksearch is currently implemented and only in "Users::get()"
+    method.
     Behavior of quicksearch in Users::get():
-    QUICKSEARCH    = "x"   is equal to:   (loginName    = "x")  OR (fullName    = "x")
-    QUICKSEARCH LIKE "x*"  is equal to:   (loginName LIKE "x*") OR (fullName LIKE "x*")
-    QUICKSEARCH   <> "x"   is equal to:   (loginName   <> "x") AND (fullName   <> "x")
+    QUICKSEARCH    = "x"   is equal to:   (loginName    = "x")
+                                          OR (fullName    = "x")
+    QUICKSEARCH LIKE "x*"  is equal to:   (loginName LIKE "x*")
+                                          OR (fullName LIKE "x*")
+    QUICKSEARCH   <> "x"   is equal to:   (loginName   <> "x")
+                                          AND (fullName   <> "x")
     """
     def __init__(self, data: dict):
         BaseStruct.__init__(self,

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ConnectionDirection(unittest.TestCase):
-    def test_00_ConnectionDirection_ConnectionDirectionInbound(self):
+    def test_00_ConnectionDirectionInbound(self):
         """
         Test ConnectionDirection with ConnectionDirectionInbound
         """
@@ -33,7 +33,7 @@ class TestCase_ConnectionDirection(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ConnectionDirectionInbound')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ConnectionDirection_ConnectionDirectionOutbound(self):
+    def test_01_ConnectionDirectionOutbound(self):
         """
         Test ConnectionDirection with ConnectionDirectionOutbound
         """
@@ -42,7 +42,7 @@ class TestCase_ConnectionDirection(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ConnectionDirectionOutbound')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ConnectionDirection_ConnectionDirectionLocal(self):
+    def test_02_ConnectionDirectionLocal(self):
         """
         Test ConnectionDirection with ConnectionDirectionLocal
         """
@@ -52,7 +52,7 @@ class TestCase_ConnectionDirection(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_ConnectionDirection_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ConnectionDirection with FAIL
         """

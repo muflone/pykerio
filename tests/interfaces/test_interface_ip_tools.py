@@ -49,8 +49,10 @@ class TestCase_IpTools(unittest.TestCase):
 
         # Session login
         cls.session = pykerio.interfaces.Session(api)
-        cls.session.login(userName=os.environ.get('KERIO_USERNAME', 'admin-en'),
-                          password=os.environ.get('KERIO_PASSWORD', 'kerio'),
+        cls.session.login(userName=os.environ.get('KERIO_USERNAME',
+                                                  'admin-en'),
+                          password=os.environ.get('KERIO_PASSWORD',
+                                                  'kerio'),
                           application=application)
 
         # HardwareInfo
@@ -67,12 +69,12 @@ class TestCase_IpTools(unittest.TestCase):
         """
         Test IpTools ping
         """
-        self.__class__.iptools.ping(target='kerio.com',
-                                    ipversion=pykerio.enums.IpVersion(
-                                        name='IpVersion4'),
-                                    infinite=True,
-                                    packetSize=pykerio.constants.DEFAULT_PING_SIZE,
-                                    allowFragmentation=False)
+        self.__class__.iptools.ping(
+            target='kerio.com',
+            ipversion=pykerio.enums.IpVersion(name='IpVersion4'),
+            infinite=True,
+            packetSize=pykerio.constants.DEFAULT_PING_SIZE,
+            allowFragmentation=False)
         time.sleep(3)
         active_tool, lines = self.__class__.iptools.getStatus()
         self.assertEqual(active_tool.dump(), pykerio.enums.ActiveTool(
@@ -114,7 +116,8 @@ class TestCase_IpTools(unittest.TestCase):
                                    server='8.8.8.8',
                                    tool=pykerio.enums.DnsTool(
                                        name='DnsToolNslookup'),
-                                   dns_type=pykerio.enums.DnsType('DnsTypeAny'))
+                                   dns_type=pykerio.enums.DnsType(
+                                       'DnsTypeAny'))
         time.sleep(3)
         active_tool, lines = self.__class__.iptools.getStatus()
         for line in lines:
@@ -129,7 +132,8 @@ class TestCase_IpTools(unittest.TestCase):
                                    server='8.8.8.8',
                                    tool=pykerio.enums.DnsTool(
                                        name='DnsToolDig'),
-                                   dns_type=pykerio.enums.DnsType('DnsTypeAny'))
+                                   dns_type=pykerio.enums.DnsType(
+                                       'DnsTypeAny'))
         time.sleep(3)
         active_tool, lines = self.__class__.iptools.getStatus()
         for line in lines:

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_AntivirusStatus(unittest.TestCase):
-    def test_00_AntivirusStatus_AntivirusOk(self):
+    def test_00_AntivirusOk(self):
         """
         Test AntivirusStatus with AntivirusOk
         """
@@ -33,7 +33,7 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusOk')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_AntivirusStatus_AntivirusNotActive(self):
+    def test_01_AntivirusNotActive(self):
         """
         Test AntivirusStatus with AntivirusNotActive
         """
@@ -42,7 +42,7 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusNotActive')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_AntivirusStatus_AntivirusInternalFailed(self):
+    def test_02_AntivirusInternalFailed(self):
         """
         Test AntivirusStatus with AntivirusInternalFailed
         """
@@ -51,7 +51,7 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusInternalFailed')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_AntivirusStatus_AntivirusExternalFailed(self):
+    def test_03_AntivirusExternalFailed(self):
         """
         Test AntivirusStatus with AntivirusExternalFailed
         """
@@ -60,7 +60,7 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusExternalFailed')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_AntivirusStatus_AntivirusBothFailed(self):
+    def test_04_AntivirusBothFailed(self):
         """
         Test AntivirusStatus with AntivirusBothFailed
         """
@@ -69,7 +69,7 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AntivirusBothFailed')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_AntivirusStatus_AntivirusWaitingForInitialDb(self):
+    def test_05_AntivirusWaitingForInitialDb(self):
         """
         Test AntivirusStatus with AntivirusWaitingForInitialDb
         """
@@ -79,7 +79,7 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_AntivirusStatus_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test AntivirusStatus with FAIL
         """

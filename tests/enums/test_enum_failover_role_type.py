@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_FailoverRoleType(unittest.TestCase):
-    def test_00_FailoverRoleType_None(self):
+    def test_00_None(self):
         """
         Test FailoverRoleType with None
         """
@@ -33,7 +33,7 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'None')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_FailoverRoleType_Primary(self):
+    def test_01_Primary(self):
         """
         Test FailoverRoleType with Primary
         """
@@ -42,7 +42,7 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Primary')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_FailoverRoleType_Secondary(self):
+    def test_02_Secondary(self):
         """
         Test FailoverRoleType with Secondary
         """
@@ -52,7 +52,7 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_FailoverRoleType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test FailoverRoleType with FAIL
         """

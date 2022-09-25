@@ -20,7 +20,8 @@
 
 from .base_struct import BaseStruct
 
-from ..structs.localizable_message_parameters import LocalizableMessageParameters
+from ..structs.localizable_message_parameters import (
+    LocalizableMessageParameters)
 
 
 class Error(BaseStruct):
@@ -33,5 +34,6 @@ class Error(BaseStruct):
                             types={'inputIndex': int,
                                    'code': int,
                                    'message': str,
-                                   'messageParameters': LocalizableMessageParameters},
+                                   'messageParameters':
+                                       LocalizableMessageParameters},
                             data=data)

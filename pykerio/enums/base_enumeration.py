@@ -26,7 +26,7 @@ class BaseEnumeration(JSONSerializable):
 
     def __init__(self, name):
         JSONSerializable.__init__(self)
-        assert(name in self.VALUES)
+        assert name in self.VALUES
         self._name = name
 
     def dump(self):

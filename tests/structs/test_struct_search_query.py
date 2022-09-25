@@ -53,12 +53,13 @@ class TestCase_SearchQuery(unittest.TestCase):
                                            'caseSensitive': False})
         orderbylist = pykerio.lists.SortOrderList(order)
 
-        teststruct = pykerio.structs.SearchQuery({'fields': fields,
-                                                  'conditions': conditions,
-                                                  'combining': combining,
-                                                  'start': 0,
-                                                  'limit': pykerio.constants.UNLIMITED,
-                                                  'orderBy': orderbylist})
+        teststruct = pykerio.structs.SearchQuery({
+            'fields': fields,
+            'conditions': conditions,
+            'combining': combining,
+            'start': 0,
+            'limit': pykerio.constants.UNLIMITED,
+            'orderBy': orderbylist})
         self.assertEqual(len(teststruct.keys()), 6)
         self.assertEqual(len(teststruct.values()), 6)
 

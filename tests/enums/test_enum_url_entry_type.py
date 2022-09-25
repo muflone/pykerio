@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UrlEntryType(unittest.TestCase):
-    def test_00_UrlEntryType_Url(self):
+    def test_00_Url(self):
         """
         Test UrlEntryType with Url
         """
@@ -33,7 +33,7 @@ class TestCase_UrlEntryType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Url')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UrlEntryType_UrlChildGroup(self):
+    def test_01_UrlChildGroup(self):
         """
         Test UrlEntryType with UrlChildGroup
         """
@@ -43,7 +43,7 @@ class TestCase_UrlEntryType(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_UrlEntryType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UrlEntryType with FAIL
         """

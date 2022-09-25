@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_UserConditionType(unittest.TestCase):
-    def test_00_UserConditionType_AnyUser(self):
+    def test_00_AnyUser(self):
         """
         Test UserConditionType with AnyUser
         """
@@ -33,7 +33,7 @@ class TestCase_UserConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AnyUser')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_UserConditionType_AuthenticatedUsers(self):
+    def test_01_AuthenticatedUsers(self):
         """
         Test UserConditionType with AuthenticatedUsers
         """
@@ -42,7 +42,7 @@ class TestCase_UserConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'AuthenticatedUsers')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_UserConditionType_UnrecognizedUsers(self):
+    def test_02_UnrecognizedUsers(self):
         """
         Test UserConditionType with UnrecognizedUsers
         """
@@ -51,7 +51,7 @@ class TestCase_UserConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'UnrecognizedUsers')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_UserConditionType_SelectedUsers(self):
+    def test_03_SelectedUsers(self):
         """
         Test UserConditionType with SelectedUsers
         """
@@ -60,7 +60,7 @@ class TestCase_UserConditionType(unittest.TestCase):
         self.assertEqual(value.get_name(), 'SelectedUsers')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_UserConditionType_Nobody(self):
+    def test_04_Nobody(self):
         """
         Test UserConditionType with Nobody
         """
@@ -70,7 +70,7 @@ class TestCase_UserConditionType(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_UserConditionType_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test UserConditionType with FAIL
         """

@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
-    def test_00_IntrusionPreventionUpdatePhases_IntrusionPreventionUpdateOk(self):
+    def test_00_IntrusionPreventionUpdateOk(self):
         """
         Test IntrusionPreventionUpdatePhases with IntrusionPreventionUpdateOk
         """
@@ -33,7 +33,7 @@ class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IntrusionPreventionUpdateOk')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_IntrusionPreventionUpdatePhases_IntrusionPreventionUpdateError(self):
+    def test_01_IntrusionPreventionUpdateError(self):
         """
         Test IntrusionPreventionUpdatePhases with IntrusionPreventionUpdateError
         """
@@ -42,7 +42,7 @@ class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_name(), 'IntrusionPreventionUpdateError')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_IntrusionPreventionUpdatePhases_IntrusionPreventionUpdateProgress(self):
+    def test_02_IntrusionPreventionUpdateProgress(self):
         """
         Test IntrusionPreventionUpdatePhases with IntrusionPreventionUpdateProgress
         """
@@ -52,7 +52,7 @@ class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_IntrusionPreventionUpdatePhases_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test IntrusionPreventionUpdatePhases with FAIL
         """

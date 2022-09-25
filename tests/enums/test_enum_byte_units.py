@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ByteUnits(unittest.TestCase):
-    def test_00_ByteUnits_Bytes(self):
+    def test_00_Bytes(self):
         """
         Test ByteUnits with Bytes
         """
@@ -33,7 +33,7 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.get_name(), 'Bytes')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ByteUnits_KiloBytes(self):
+    def test_01_KiloBytes(self):
         """
         Test ByteUnits with KiloBytes
         """
@@ -42,7 +42,7 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.get_name(), 'KiloBytes')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ByteUnits_MegaBytes(self):
+    def test_02_MegaBytes(self):
         """
         Test ByteUnits with MegaBytes
         """
@@ -51,7 +51,7 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.get_name(), 'MegaBytes')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_ByteUnits_GigaBytes(self):
+    def test_03_GigaBytes(self):
         """
         Test ByteUnits with GigaBytes
         """
@@ -60,7 +60,7 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.get_name(), 'GigaBytes')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_ByteUnits_TeraBytes(self):
+    def test_04_TeraBytes(self):
         """
         Test ByteUnits with TeraBytes
         """
@@ -69,7 +69,7 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.get_name(), 'TeraBytes')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_ByteUnits_PetaBytes(self):
+    def test_05_PetaBytes(self):
         """
         Test ByteUnits with PetaBytes
         """
@@ -79,7 +79,7 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.get_value(), 5)
 
     @unittest.expectedFailure
-    def test_99_ByteUnits_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ByteUnits with FAIL
         """

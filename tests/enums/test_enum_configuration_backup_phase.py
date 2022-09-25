@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_ConfigurationBackupPhase(unittest.TestCase):
-    def test_00_ConfigurationBackupPhase_ConfigurationBackupOk(self):
+    def test_00_ConfigurationBackupOk(self):
         """
         Test ConfigurationBackupPhase with ConfigurationBackupOk
         """
@@ -33,7 +33,7 @@ class TestCase_ConfigurationBackupPhase(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ConfigurationBackupOk')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_ConfigurationBackupPhase_ConfigurationBackupInProgress(self):
+    def test_01_ConfigurationBackupInProgress(self):
         """
         Test ConfigurationBackupPhase with ConfigurationBackupInProgress
         """
@@ -42,7 +42,7 @@ class TestCase_ConfigurationBackupPhase(unittest.TestCase):
         self.assertEqual(value.get_name(), 'ConfigurationBackupInProgress')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_ConfigurationBackupPhase_ConfigurationBackupFailed(self):
+    def test_02_ConfigurationBackupFailed(self):
         """
         Test ConfigurationBackupPhase with ConfigurationBackupFailed
         """
@@ -52,7 +52,7 @@ class TestCase_ConfigurationBackupPhase(unittest.TestCase):
         self.assertEqual(value.get_value(), 2)
 
     @unittest.expectedFailure
-    def test_99_ConfigurationBackupPhase_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test ConfigurationBackupPhase with FAIL
         """

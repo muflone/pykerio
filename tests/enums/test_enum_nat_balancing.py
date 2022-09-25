@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_NatBalancing(unittest.TestCase):
-    def test_00_NatBalancing_BalancingPerHost(self):
+    def test_00_BalancingPerHost(self):
         """
         Test NatBalancing with BalancingPerHost
         """
@@ -33,7 +33,7 @@ class TestCase_NatBalancing(unittest.TestCase):
         self.assertEqual(value.get_name(), 'BalancingPerHost')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_NatBalancing_BalancingPerConnection(self):
+    def test_01_BalancingPerConnection(self):
         """
         Test NatBalancing with BalancingPerConnection
         """
@@ -43,7 +43,7 @@ class TestCase_NatBalancing(unittest.TestCase):
         self.assertEqual(value.get_value(), 1)
 
     @unittest.expectedFailure
-    def test_99_NatBalancing_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test NatBalancing with FAIL
         """

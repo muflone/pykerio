@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_Entity(unittest.TestCase):
-    def test_00_Entity_EntityUser(self):
+    def test_00_EntityUser(self):
         """
         Test Entity with EntityUser
         """
@@ -33,7 +33,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityUser')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_Entity_EntityAlias(self):
+    def test_01_EntityAlias(self):
         """
         Test Entity with EntityAlias
         """
@@ -42,7 +42,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityAlias')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_Entity_EntityGroup(self):
+    def test_02_EntityGroup(self):
         """
         Test Entity with EntityGroup
         """
@@ -51,7 +51,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityGroup')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_Entity_EntityMailingList(self):
+    def test_03_EntityMailingList(self):
         """
         Test Entity with EntityMailingList
         """
@@ -60,7 +60,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityMailingList')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_Entity_EntityResource(self):
+    def test_04_EntityResource(self):
         """
         Test Entity with EntityResource
         """
@@ -69,7 +69,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityResource')
         self.assertEqual(value.get_value(), 4)
 
-    def test_05_Entity_EntityTimeRange(self):
+    def test_05_EntityTimeRange(self):
         """
         Test Entity with EntityTimeRange
         """
@@ -78,7 +78,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityTimeRange')
         self.assertEqual(value.get_value(), 5)
 
-    def test_06_Entity_EntityTimeRangeGroup(self):
+    def test_06_EntityTimeRangeGroup(self):
         """
         Test Entity with EntityTimeRangeGroup
         """
@@ -87,7 +87,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityTimeRangeGroup')
         self.assertEqual(value.get_value(), 6)
 
-    def test_07_Entity_EntityIpAddress(self):
+    def test_07_EntityIpAddress(self):
         """
         Test Entity with EntityIpAddress
         """
@@ -96,7 +96,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityIpAddress')
         self.assertEqual(value.get_value(), 7)
 
-    def test_08_Entity_EntityIpAddressGroup(self):
+    def test_08_EntityIpAddressGroup(self):
         """
         Test Entity with EntityIpAddressGroup
         """
@@ -105,7 +105,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityIpAddressGroup')
         self.assertEqual(value.get_value(), 8)
 
-    def test_09_Entity_EntityService(self):
+    def test_09_EntityService(self):
         """
         Test Entity with EntityService
         """
@@ -114,7 +114,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_name(), 'EntityService')
         self.assertEqual(value.get_value(), 9)
 
-    def test_10_Entity_EntityDomain(self):
+    def test_10_EntityDomain(self):
         """
         Test Entity with EntityDomain
         """
@@ -124,7 +124,7 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.get_value(), 10)
 
     @unittest.expectedFailure
-    def test_99_Entity_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test Entity with FAIL
         """

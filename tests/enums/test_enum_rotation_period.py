@@ -24,7 +24,7 @@ import pykerio
 
 
 class TestCase_RotationPeriod(unittest.TestCase):
-    def test_00_RotationPeriod_RotateNever(self):
+    def test_00_RotateNever(self):
         """
         Test RotationPeriod with RotateNever
         """
@@ -33,7 +33,7 @@ class TestCase_RotationPeriod(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RotateNever')
         self.assertEqual(value.get_value(), 0)
 
-    def test_01_RotationPeriod_RotateHourly(self):
+    def test_01_RotateHourly(self):
         """
         Test RotationPeriod with RotateHourly
         """
@@ -42,7 +42,7 @@ class TestCase_RotationPeriod(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RotateHourly')
         self.assertEqual(value.get_value(), 1)
 
-    def test_02_RotationPeriod_RotateDaily(self):
+    def test_02_RotateDaily(self):
         """
         Test RotationPeriod with RotateDaily
         """
@@ -51,7 +51,7 @@ class TestCase_RotationPeriod(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RotateDaily')
         self.assertEqual(value.get_value(), 2)
 
-    def test_03_RotationPeriod_RotateWeekly(self):
+    def test_03_RotateWeekly(self):
         """
         Test RotationPeriod with RotateWeekly
         """
@@ -60,7 +60,7 @@ class TestCase_RotationPeriod(unittest.TestCase):
         self.assertEqual(value.get_name(), 'RotateWeekly')
         self.assertEqual(value.get_value(), 3)
 
-    def test_04_RotationPeriod_RotateMonthly(self):
+    def test_04_RotateMonthly(self):
         """
         Test RotationPeriod with RotateMonthly
         """
@@ -70,7 +70,7 @@ class TestCase_RotationPeriod(unittest.TestCase):
         self.assertEqual(value.get_value(), 4)
 
     @unittest.expectedFailure
-    def test_99_RotationPeriod_FAIL(self):
+    def test_99_FAIL(self):
         """
         Test RotationPeriod with FAIL
         """
