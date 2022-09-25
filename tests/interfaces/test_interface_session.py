@@ -56,20 +56,20 @@ class TestCase_Session(unittest.TestCase):
         self.__class__.session.login(userName=self.username,
                                      password=password,
                                      application=application)
-        self.assertNotEquals(self.__class__.session.api.token, '')
+        self.assertNotEqual(self.__class__.session.api.token, '')
 
     def test_02_getUserName(self):
         """
         Test Session username
         """
-        self.assertNotEquals(self.__class__.session.api.token, '')
+        self.assertNotEqual(self.__class__.session.api.token, '')
         self.assertEqual(self.__class__.session.getUserName(), self.username)
 
     def test_03_getCsrfToken(self):
         """
         Test Session Csrf token
         """
-        self.assertNotEquals(self.__class__.session.getCsrfToken(), '')
+        self.assertNotEqual(self.__class__.session.getCsrfToken(), '')
 
     def test_04_getLoginType(self):
         """

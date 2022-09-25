@@ -70,5 +70,5 @@ class TestCase_HardwareInfo(unittest.TestCase):
         """
         Test HardwareInfo getBoxSerialNumber
         """
-        self.assertNotEquals(
+        self.assertNotEqual(
             self.__class__.hardware_info.getBoxSerialNumber(), '')

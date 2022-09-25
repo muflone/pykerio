@@ -21,6 +21,9 @@
 import unittest
 
 import pykerio
+from pykerio.enums import (CompareOperator,
+                           LogicalOperator,
+                           SortDirection)
 
 
 class TestCase_SearchQuery(unittest.TestCase):
@@ -32,22 +35,22 @@ class TestCase_SearchQuery(unittest.TestCase):
         fields.append('interface')
         fields.append('type')
 
-        comparator = pykerio.enums.CompareOperator.Like
+        comparator = CompareOperator.Like
         condition = pykerio.structs.SubCondition({'fieldName': 'name',
                                                   'comparator': comparator,
                                                   'value': 'LAN'})
         conditions = pykerio.lists.SubConditionList()
         conditions.append(condition)
 
-        comparator = pykerio.enums.CompareOperator.Eq
+        comparator = CompareOperator.Eq
         condition = pykerio.structs.SubCondition({'fieldName': 'name',
                                                   'comparator': comparator,
                                                   'value': 'VPN'})
         conditions.append(condition)
 
-        combining = pykerio.enums.LogicalOperator.Or
+        combining = LogicalOperator.Or
 
-        sort_direction = pykerio.enums.SortDirection.Asc
+        sort_direction = SortDirection.Asc
         order = pykerio.structs.SortOrder({'columnName': 'name',
                                            'direction': sort_direction,
                                            'caseSensitive': False})

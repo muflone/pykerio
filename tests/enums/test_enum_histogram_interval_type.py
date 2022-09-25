@@ -59,13 +59,3 @@ class TestCase_HistogramIntervalType(unittest.TestCase):
         self.assertEqual(value.dump(), 'HistogramInterval2h')
         self.assertEqual(value.name, 'HistogramInterval2h')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test HistogramIntervalType with FAIL
-        """
-        value = HistogramIntervalType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -41,13 +41,3 @@ class TestCase_ApplicationType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ApplicationProtocol')
         self.assertEqual(value.name, 'ApplicationProtocol')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ApplicationType with FAIL
-        """
-        value = ApplicationType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

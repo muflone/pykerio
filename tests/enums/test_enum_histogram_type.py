@@ -59,13 +59,3 @@ class TestCase_HistogramType(unittest.TestCase):
         self.assertEqual(value.dump(), 'HistogramOneMonth')
         self.assertEqual(value.name, 'HistogramOneMonth')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test HistogramType with FAIL
-        """
-        value = HistogramType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

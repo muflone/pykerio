@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-
-from ..enums import StorageDataType
-
-from ..lists import StorageDataList
+from pykerio.pykerio import PyKerio
+from pykerio.enums.storage_data_type import StorageDataType
+from pykerio.lists.storage_data_list import StorageDataList
 
 
 class Storage(object):

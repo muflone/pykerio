@@ -77,13 +77,3 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         self.assertEqual(value.dump(), 'SpeedDuplexFull1000')
         self.assertEqual(value.name, 'SpeedDuplexFull1000')
         self.assertEqual(value.value, 5)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test SpeedDuplexType with FAIL
-        """
-        value = SpeedDuplexType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

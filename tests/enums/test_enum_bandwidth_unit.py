@@ -86,13 +86,3 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         self.assertEqual(value.dump(), 'BandwidthUnitPercent')
         self.assertEqual(value.name, 'BandwidthUnitPercent')
         self.assertEqual(value.value, 6)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test BandwidthUnit with FAIL
-        """
-        value = BandwidthUnit.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

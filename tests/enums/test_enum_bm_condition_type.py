@@ -131,13 +131,3 @@ class TestCase_BMConditionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'BMConditionApplication')
         self.assertEqual(value.name, 'BMConditionApplication')
         self.assertEqual(value.value, 11)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test BMConditionType with FAIL
-        """
-        value = BMConditionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

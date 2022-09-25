@@ -23,6 +23,7 @@ import ssl
 import unittest
 
 import pykerio
+from pykerio.enums import ServerOs
 
 
 class TestCase_Server(unittest.TestCase):
@@ -69,13 +70,13 @@ class TestCase_Server(unittest.TestCase):
         Test Server getOs
         """
         server_os = self.__class__.server.getOs()
-        self.assertEqual(server_os.dump(), pykerio.enums.ServerOs.Linux.name)
+        self.assertEqual(server_os.dump(), ServerOs.Linux.name)
 
     def test_02_getRestrictionList(self):
         """
         Test Server getRestrictionList
         """
         restrictions_list = self.__class__.server.getRestrictionList()
-        self.assertNotEquals(len(restrictions_list), 0)
+        self.assertNotEqual(len(restrictions_list), 0)
         for restriction in restrictions_list:
             self.assertEqual(type(restriction), pykerio.structs.Restriction)

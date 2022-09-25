@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.byte_units import ByteUnits
-
-from ..lists.histogram_data_list import HistogramDataList
+from pykerio.enums.byte_units import ByteUnits
+from pykerio.lists.histogram_data_list import HistogramDataList
+from pykerio.structs.base_struct import BaseStruct
 
 
 class Histogram(BaseStruct):

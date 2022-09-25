@@ -41,13 +41,3 @@ class TestCase_LogicalOperator(unittest.TestCase):
         self.assertEqual(value.dump(), 'And')
         self.assertEqual(value.name, 'And')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test LogicalOperator with FAIL
-        """
-        value = LogicalOperator.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

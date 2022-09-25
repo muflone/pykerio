@@ -68,13 +68,3 @@ class TestCase_ActiveTool(unittest.TestCase):
         self.assertEqual(value.dump(), 'ActiveToolWhois')
         self.assertEqual(value.name, 'ActiveToolWhois')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ActiveTool with FAIL
-        """
-        value = ActiveTool.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

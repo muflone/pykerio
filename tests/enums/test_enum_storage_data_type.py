@@ -86,13 +86,3 @@ class TestCase_StorageDataType(unittest.TestCase):
         self.assertEqual(value.dump(), 'StorageDataHttpCache')
         self.assertEqual(value.name, 'StorageDataHttpCache')
         self.assertEqual(value.value, 6)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test StorageDataType with FAIL
-        """
-        value = StorageDataType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -68,13 +68,3 @@ class TestCase_RotationPeriod(unittest.TestCase):
         self.assertEqual(value.dump(), 'RotateMonthly')
         self.assertEqual(value.name, 'RotateMonthly')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test RotationPeriod with FAIL
-        """
-        value = RotationPeriod.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

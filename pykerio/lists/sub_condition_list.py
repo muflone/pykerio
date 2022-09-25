@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.sub_condition import SubCondition
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.sub_condition import SubCondition
 
 
 class SubConditionList(BaseList):

@@ -59,13 +59,3 @@ class TestCase_InterfaceConditionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'InterfaceSelected')
         self.assertEqual(value.name, 'InterfaceSelected')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test InterfaceConditionType with FAIL
-        """
-        value = InterfaceConditionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -59,13 +59,3 @@ class TestCase_UrlFilterStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'UrlFilterActivated')
         self.assertEqual(value.name, 'UrlFilterActivated')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test UrlFilterStatus with FAIL
-        """
-        value = UrlFilterStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

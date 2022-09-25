@@ -248,13 +248,3 @@ class TestCase_NotificationType(unittest.TestCase):
         self.assertEqual(value.dump(), 'NotificationUnknown')
         self.assertEqual(value.name, 'NotificationUnknown')
         self.assertEqual(value.value, 24)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test NotificationType with FAIL
-        """
-        value = NotificationType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

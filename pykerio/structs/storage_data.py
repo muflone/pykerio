@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.storage_data_type import StorageDataType
+from pykerio.enums.storage_data_type import StorageDataType
+from pykerio.structs.base_struct import BaseStruct
 
 
 class StorageData(BaseStruct):

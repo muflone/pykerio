@@ -41,13 +41,3 @@ class TestCase_AuthType(unittest.TestCase):
         self.assertEqual(value.dump(), 'KerberosNt')
         self.assertEqual(value.name, 'KerberosNt')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test AuthType with FAIL
-        """
-        value = AuthType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

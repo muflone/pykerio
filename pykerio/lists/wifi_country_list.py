@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.wifi_country_config import WifiCountryConfig
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.wifi_country_config import WifiCountryConfig
 
 
 class WifiCountryList(BaseList):

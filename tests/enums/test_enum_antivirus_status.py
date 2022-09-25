@@ -77,13 +77,3 @@ class TestCase_AntivirusStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'AntivirusWaitingForInitialDb')
         self.assertEqual(value.name, 'AntivirusWaitingForInitialDb')
         self.assertEqual(value.value, 5)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test AntivirusStatus with FAIL
-        """
-        value = AntivirusStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

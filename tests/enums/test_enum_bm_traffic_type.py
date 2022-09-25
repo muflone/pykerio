@@ -104,13 +104,3 @@ class TestCase_BMTrafficType(unittest.TestCase):
         self.assertEqual(value.dump(), 'BMTrafficWeb')
         self.assertEqual(value.name, 'BMTrafficWeb')
         self.assertEqual(value.value, 8)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test BMTrafficType with FAIL
-        """
-        value = BMTrafficType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

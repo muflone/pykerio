@@ -59,13 +59,3 @@ class TestCase_ConnectivityType(unittest.TestCase):
         self.assertEqual(value.dump(), 'LoadBalancing')
         self.assertEqual(value.name, 'LoadBalancing')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ConnectivityType with FAIL
-        """
-        value = ConnectivityType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

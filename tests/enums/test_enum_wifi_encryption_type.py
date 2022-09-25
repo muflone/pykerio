@@ -68,13 +68,3 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'WifiEncryptionWpa2Ent')
         self.assertEqual(value.name, 'WifiEncryptionWpa2Ent')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test WifiEncryptionType with FAIL
-        """
-        value = WifiEncryptionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

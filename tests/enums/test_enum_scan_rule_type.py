@@ -59,13 +59,3 @@ class TestCase_ScanRuleType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ScanRuleFileGroup')
         self.assertEqual(value.name, 'ScanRuleFileGroup')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ScanRuleType with FAIL
-        """
-        value = ScanRuleType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

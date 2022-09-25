@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.certificate_dn import CertificateDn
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.certificate_dn import CertificateDn
 
 
 class CertificateDnList(BaseList):

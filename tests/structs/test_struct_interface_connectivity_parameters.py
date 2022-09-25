@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import FailoverRoleType
 
 
 class TestCase_InterfaceConnectivityParameters(unittest.TestCase):
@@ -28,7 +29,7 @@ class TestCase_InterfaceConnectivityParameters(unittest.TestCase):
         """
         Test InterfaceConnectivityParameters
         """
-        failovertype = pykerio.enums.FailoverRoleType.Primary
+        failovertype = FailoverRoleType.Primary
         weight = pykerio.structs.OptionalLong({'enabled': True,
                                                'value': 1})
 

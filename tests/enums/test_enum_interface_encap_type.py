@@ -41,13 +41,3 @@ class TestCase_InterfaceEncapType(unittest.TestCase):
         self.assertEqual(value.dump(), 'InterfaceEncapPppoe')
         self.assertEqual(value.name, 'InterfaceEncapPppoe')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test InterfaceEncapType with FAIL
-        """
-        value = InterfaceEncapType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

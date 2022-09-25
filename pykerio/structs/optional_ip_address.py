@@ -18,7 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .optional_string import OptionalString
+from pykerio.structs.optional_string import OptionalString
 
 
 class OptionalIpAddress(OptionalString):

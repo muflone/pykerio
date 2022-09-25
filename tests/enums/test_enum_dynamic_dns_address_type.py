@@ -50,13 +50,3 @@ class TestCase_DynamicDnsAddressType(unittest.TestCase):
         self.assertEqual(value.dump(), 'DynamicDnsAdressCustom')
         self.assertEqual(value.name, 'DynamicDnsAdressCustom')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DynamicDnsAddressType with FAIL
-        """
-        value = DynamicDnsAddressType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..enums.notification_type import NotificationType
+from pykerio.enums.notification_type import NotificationType
+from pykerio.lists.base_list import BaseList
 
 
 class NotificationTypeList(BaseList):

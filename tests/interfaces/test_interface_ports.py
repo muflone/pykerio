@@ -23,6 +23,8 @@ import ssl
 import unittest
 
 import pykerio
+from pykerio.enums import (PortAssignmentType,
+                           SpeedDuplexType)
 
 
 class TestCase_Ports(unittest.TestCase):
@@ -69,7 +71,7 @@ class TestCase_Ports(unittest.TestCase):
         Test Ports get
         """
         ports_list = self.__class__.ports.get()
-        self.assertNotEquals(len(ports_list), 0)
+        self.assertNotEqual(len(ports_list), 0)
         for port in ports_list:
             self.assertEqual(type(port), pykerio.structs.PortConfig)
 
@@ -82,7 +84,8 @@ class TestCase_Ports(unittest.TestCase):
         ports_list = self.__class__.ports.get()
         for port in ports_list:
             # Changing LAN ports speed to HalfDuplex 10 Mbit
-            if (port['assignment'].dump() == pykerio.enums.PortAssignmentType.PortAssignmentSwitch.name):
-                port['speedDuplex'] = pykerio.enums.SpeedDuplexType.SpeedDuplexHalf10
+            if (port['assignment'].dump() ==
+                    PortAssignmentType.PortAssignmentSwitch.name):
+                port['speedDuplex'] = SpeedDuplexType.SpeedDuplexHalf10
         # Apply changes
         self.__class__.ports.set(ports_list, 10)

@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..structs.localizable_message_parameters import (
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.localizable_message_parameters import (
     LocalizableMessageParameters)
 
 

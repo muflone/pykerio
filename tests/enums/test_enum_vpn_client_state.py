@@ -68,13 +68,3 @@ class TestCase_VpnClientState(unittest.TestCase):
         self.assertEqual(value.dump(), 'VpnClientOther')
         self.assertEqual(value.name, 'VpnClientOther')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test VpnClientState with FAIL
-        """
-        value = VpnClientState.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

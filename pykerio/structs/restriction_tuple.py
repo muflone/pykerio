@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.restriction_kind import RestrictionKind
-
-from ..lists.string_list import StringList
+from pykerio.enums.restriction_kind import RestrictionKind
+from pykerio.lists.string_list import StringList
+from pykerio.structs.base_struct import BaseStruct
 
 
 class RestrictionTuple(BaseStruct):

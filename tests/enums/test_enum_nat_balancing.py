@@ -41,13 +41,3 @@ class TestCase_NatBalancing(unittest.TestCase):
         self.assertEqual(value.dump(), 'BalancingPerConnection')
         self.assertEqual(value.name, 'BalancingPerConnection')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test NatBalancing with FAIL
-        """
-        value = NatBalancing.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

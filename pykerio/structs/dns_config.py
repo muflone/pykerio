@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..lists.dns_forwarder_list import DnsForwarderList
-
-from ..structs.optional_string import OptionalString
+from pykerio.lists.dns_forwarder_list import DnsForwarderList
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.optional_string import OptionalString
 
 
 class DnsConfig(BaseStruct):

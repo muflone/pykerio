@@ -18,7 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_enumeration import BaseEnumeration
+from pykerio.enums.base_enumeration import BaseEnumeration
 
 
 class OsCodeType(BaseEnumeration):

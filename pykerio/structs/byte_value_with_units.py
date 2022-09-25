@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.byte_units import ByteUnits
+from pykerio.enums.byte_units import ByteUnits
+from pykerio.structs.base_struct import BaseStruct
 
 
 class ByteValueWithUnits(BaseStruct):

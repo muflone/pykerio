@@ -18,17 +18,13 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.port_assignment_type import PortAssignmentType
-from ..enums.port_type import PortType
-from ..enums.speed_duplex_type import SpeedDuplexType
-
-from ..lists.speed_duplex_may_not_work_list import SpeedDuplexMayNotWorkList
-
-from ..structs.optional_string import OptionalString
-
-from ..types.kid import KId
+from pykerio.enums.port_assignment_type import PortAssignmentType
+from pykerio.enums.port_type import PortType
+from pykerio.enums.speed_duplex_type import SpeedDuplexType
+from pykerio.lists.speed_duplex_may_not_work_list import SpeedDuplexMayNotWorkList
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.optional_string import OptionalString
+from pykerio.types.kid import KId
 
 
 class PortConfig(BaseStruct):

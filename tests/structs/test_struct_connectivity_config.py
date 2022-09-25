@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import ConnectivityType
 
 
 class TestCase_ConnectivityConfig(unittest.TestCase):
@@ -28,7 +29,7 @@ class TestCase_ConnectivityConfig(unittest.TestCase):
         """
         Test ConnectivityConfig
         """
-        mode = pykerio.enums.ConnectivityType.Persistent
+        mode = ConnectivityType.Persistent
         probehosts = pykerio.structs.OptionalString({'enabled': True,
                                                      'value': '192.168.1.1'})
 

@@ -18,13 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .json_serializable import JSONSerializable
-
-from .structs.api_exception import ApiException
-from .structs.localizable_message_parameters import (
+from pykerio.json_serializable import JSONSerializable
+from pykerio.lists.string_list import StringList
+from pykerio.structs.api_exception import ApiException
+from pykerio.structs.localizable_message_parameters import (
     LocalizableMessageParameters)
-
-from .lists.string_list import StringList
 
 
 class RPCResponse(JSONSerializable):

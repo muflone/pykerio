@@ -18,10 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from .date import Date
-from .time_hms import TimeHMS
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.date import Date
+from pykerio.structs.time_hms import TimeHMS
 
 
 class DateTimeConfig(BaseStruct):

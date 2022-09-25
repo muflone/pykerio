@@ -77,13 +77,3 @@ class TestCase_RestrictionKind(unittest.TestCase):
         self.assertEqual(value.dump(), 'ForbiddenCharacterList')
         self.assertEqual(value.name, 'ForbiddenCharacterList')
         self.assertEqual(value.value, 5)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test RestrictionKind with FAIL
-        """
-        value = RestrictionKind.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

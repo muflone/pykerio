@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.failover_role_type import FailoverRoleType
-
-from ..structs.optional_long import OptionalLong
+from pykerio.enums.failover_role_type import FailoverRoleType
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.optional_long import OptionalLong
 
 
 class InterfaceConnectivityParameters(BaseStruct):

@@ -18,10 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.notification_type import NotificationType
-from ..enums.notification_severity import NotificationSeverity
+from pykerio.enums.notification_type import NotificationType
+from pykerio.enums.notification_severity import NotificationSeverity
+from pykerio.structs.base_struct import BaseStruct
 
 
 class Notification(BaseStruct):

@@ -50,13 +50,3 @@ class TestCase_ContentEntityUrlType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ContentEntityUrlHostname')
         self.assertEqual(value.name, 'ContentEntityUrlHostname')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ContentEntityUrlType with FAIL
-        """
-        value = ContentEntityUrlType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

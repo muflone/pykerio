@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..lists.certificate_dn_list import CertificateDnList
+from pykerio.lists.certificate_dn_list import CertificateDnList
+from pykerio.structs.base_struct import BaseStruct
 
 
 class IpsecPeerIdConfig(BaseStruct):

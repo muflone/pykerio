@@ -18,7 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
+from pykerio.structs.base_struct import BaseStruct
 
 
 class Download(BaseStruct):

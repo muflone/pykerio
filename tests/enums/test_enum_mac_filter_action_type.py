@@ -41,13 +41,3 @@ class TestCase_MacFilterActionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'MacFilterAllow')
         self.assertEqual(value.name, 'MacFilterAllow')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test MacFilterActionType with FAIL
-        """
-        value = MacFilterActionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

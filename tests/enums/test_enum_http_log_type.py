@@ -41,13 +41,3 @@ class TestCase_HttpLogType(unittest.TestCase):
         self.assertEqual(value.dump(), 'HttpLogSquid')
         self.assertEqual(value.name, 'HttpLogSquid')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test HttpLogType with FAIL
-        """
-        value = HttpLogType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

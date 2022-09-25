@@ -50,13 +50,3 @@ class TestCase_DirectoryServiceType(unittest.TestCase):
         self.assertEqual(value.dump(), 'AppleDirectoryPassword')
         self.assertEqual(value.name, 'AppleDirectoryPassword')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DirectoryServiceType with FAIL
-        """
-        value = DirectoryServiceType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -77,13 +77,3 @@ class TestCase_ByteUnits(unittest.TestCase):
         self.assertEqual(value.dump(), 'PetaBytes')
         self.assertEqual(value.name, 'PetaBytes')
         self.assertEqual(value.value, 5)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ByteUnits with FAIL
-        """
-        value = ByteUnits.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

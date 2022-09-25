@@ -41,13 +41,3 @@ class TestCase_ExportFormat(unittest.TestCase):
         self.assertEqual(value.dump(), 'Html')
         self.assertEqual(value.name, 'Html')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ExportFormat with FAIL
-        """
-        value = ExportFormat.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

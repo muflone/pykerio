@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.wifi_channel_info import WifiChannelInfo
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.wifi_channel_info import WifiChannelInfo
 
 
 class WifiChannelList(BaseList):

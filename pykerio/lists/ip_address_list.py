@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..types.ip_address import IpAddress
+from pykerio.lists.base_list import BaseList
+from pykerio.types.ip_address import IpAddress
 
 
 class IpAddressList(BaseList):

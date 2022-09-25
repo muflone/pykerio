@@ -18,7 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
+from pykerio.pykerio import PyKerio
 
 
 class HardwareInfo(object):

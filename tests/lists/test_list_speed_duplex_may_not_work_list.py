@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import SpeedDuplexType
 
 
 class TestCase_SpeedDuplexMayNotWorkList(unittest.TestCase):
@@ -31,10 +32,10 @@ class TestCase_SpeedDuplexMayNotWorkList(unittest.TestCase):
         testlist = pykerio.lists.SpeedDuplexMayNotWorkList()
         self.assertEqual(len(testlist), 0)
 
-        value = pykerio.enums.SpeedDuplexType.SpeedDuplexHalf10
+        value = SpeedDuplexType.SpeedDuplexHalf10
         testlist.append(value)
 
-        value = pykerio.enums.SpeedDuplexType.SpeedDuplexFull10
+        value = SpeedDuplexType.SpeedDuplexFull10
         testlist.append(value)
 
         self.assertEqual(len(testlist), 2)

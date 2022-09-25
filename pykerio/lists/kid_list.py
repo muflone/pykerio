@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..types.kid import KId
+from pykerio.lists.base_list import BaseList
+from pykerio.types.kid import KId
 
 
 class KIdList(BaseList):

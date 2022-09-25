@@ -41,13 +41,3 @@ class TestCase_AlertEventRuleType(unittest.TestCase):
         self.assertEqual(value.dump(), 'AlertContent')
         self.assertEqual(value.name, 'AlertContent')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test AlertEventRuleType with FAIL
-        """
-        value = AlertEventRuleType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

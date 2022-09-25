@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.sort_direction import SortDirection
+from pykerio.enums.sort_direction import SortDirection
+from pykerio.structs.base_struct import BaseStruct
 
 
 class SortOrder(BaseStruct):

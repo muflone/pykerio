@@ -50,13 +50,3 @@ class TestCase_SourceNatMode(unittest.TestCase):
         self.assertEqual(value.dump(), 'NatIpAddress')
         self.assertEqual(value.name, 'NatIpAddress')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test SourceNatMode with FAIL
-        """
-        value = SourceNatMode.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

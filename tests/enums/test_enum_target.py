@@ -41,13 +41,3 @@ class TestCase_Target(unittest.TestCase):
         self.assertEqual(value.dump(), 'TargetMyKerio')
         self.assertEqual(value.name, 'TargetMyKerio')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test Target with FAIL
-        """
-        value = Target.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

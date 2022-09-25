@@ -86,13 +86,3 @@ class TestCase_ItemName(unittest.TestCase):
         self.assertEqual(value.dump(), 'DomainName')
         self.assertEqual(value.name, 'DomainName')
         self.assertEqual(value.value, 6)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ItemName with FAIL
-        """
-        value = ItemName.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

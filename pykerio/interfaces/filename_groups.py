@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-
-from ..lists import FilenameGroupList
+from pykerio.lists.filename_group_list import FilenameGroupList
+from pykerio.pykerio import PyKerio
 
 
 class FilenameGroups(object):

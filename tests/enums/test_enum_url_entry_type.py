@@ -41,13 +41,3 @@ class TestCase_UrlEntryType(unittest.TestCase):
         self.assertEqual(value.dump(), 'UrlChildGroup')
         self.assertEqual(value.name, 'UrlChildGroup')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test UrlEntryType with FAIL
-        """
-        value = UrlEntryType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

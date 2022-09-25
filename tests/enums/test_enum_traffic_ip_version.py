@@ -50,13 +50,3 @@ class TestCase_TrafficIpVersion(unittest.TestCase):
         self.assertEqual(value.dump(), 'IpAll')
         self.assertEqual(value.name, 'IpAll')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test TrafficIpVersion with FAIL
-        """
-        value = TrafficIpVersion.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

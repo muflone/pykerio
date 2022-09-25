@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..enums.speed_duplex_type import SpeedDuplexType
+from pykerio.enums.speed_duplex_type import SpeedDuplexType
+from pykerio.lists.base_list import BaseList
 
 
 class SpeedDuplexMayNotWorkList(BaseList):

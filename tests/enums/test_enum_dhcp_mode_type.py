@@ -41,13 +41,3 @@ class TestCase_DhcpModeType(unittest.TestCase):
         self.assertEqual(value.dump(), 'DhcpManual')
         self.assertEqual(value.name, 'DhcpManual')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DhcpModeType with FAIL
-        """
-        value = DhcpModeType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

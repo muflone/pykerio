@@ -86,13 +86,3 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         self.assertEqual(value.dump(), 'Backup')
         self.assertEqual(value.name, 'Backup')
         self.assertEqual(value.value, 6)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test InterfaceStatusType with FAIL
-        """
-        value = InterfaceStatusType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

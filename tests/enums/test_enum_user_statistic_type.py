@@ -59,13 +59,3 @@ class TestCase_UserStatisticType(unittest.TestCase):
         self.assertEqual(value.dump(), 'UserStatisticGuest')
         self.assertEqual(value.name, 'UserStatisticGuest')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test UserStatisticType with FAIL
-        """
-        value = UserStatisticType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -18,13 +18,10 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.wifi_band_type import WifiBandType
-
-from ..lists.wifi_ssid_config_list import WifiSsidConfigList
-
-from ..types.kid import KId
+from pykerio.enums.wifi_band_type import WifiBandType
+from pykerio.lists.wifi_ssid_config_list import WifiSsidConfigList
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.types.kid import KId
 
 
 class WifiConfig(BaseStruct):

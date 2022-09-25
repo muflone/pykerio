@@ -52,13 +52,3 @@ class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
         self.assertEqual(value.dump(), 'IntrusionPreventionUpdateProgress')
         self.assertEqual(value.name, 'IntrusionPreventionUpdateProgress')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test IntrusionPreventionUpdatePhases with FAIL
-        """
-        value = IntrusionPrevUP.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

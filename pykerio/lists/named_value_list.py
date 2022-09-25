@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.named_value import NamedValue
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.named_value import NamedValue
 
 
 class NamedValueList(BaseList):

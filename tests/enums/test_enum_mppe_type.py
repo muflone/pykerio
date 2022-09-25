@@ -50,13 +50,3 @@ class TestCase_MppeType(unittest.TestCase):
         self.assertEqual(value.dump(), 'Mppe128Enabled')
         self.assertEqual(value.name, 'Mppe128Enabled')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test MppeType with FAIL
-        """
-        value = MppeType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

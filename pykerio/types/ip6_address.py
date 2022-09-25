@@ -18,7 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..json_serializable import JSONSerializable
+from pykerio.json_serializable import JSONSerializable
 
 
 class Ip6Address(str, JSONSerializable):

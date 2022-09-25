@@ -50,13 +50,3 @@ class TestCase_DynamicDnsStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'DynamicDnsUpdate')
         self.assertEqual(value.name, 'DynamicDnsUpdate')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DynamicDnsStatus with FAIL
-        """
-        value = DynamicDnsStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -50,13 +50,3 @@ class TestCase_QuotaType(unittest.TestCase):
         self.assertEqual(value.dump(), 'QuotaUpload')
         self.assertEqual(value.name, 'QuotaUpload')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test QuotaType with FAIL
-        """
-        value = QuotaType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

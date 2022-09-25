@@ -50,13 +50,3 @@ class TestCase_ConfigurationBackupPhase(unittest.TestCase):
         self.assertEqual(value.dump(), 'ConfigurationBackupFailed')
         self.assertEqual(value.name, 'ConfigurationBackupFailed')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ConfigurationBackupPhase with FAIL
-        """
-        value = ConfigurationBackupPhase.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

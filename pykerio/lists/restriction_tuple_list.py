@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.restriction_tuple import RestrictionTuple
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.restriction_tuple import RestrictionTuple
 
 
 class RestrictionTupleList(BaseList):

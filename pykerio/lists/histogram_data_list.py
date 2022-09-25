@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.histogram_data import HistogramData
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.histogram_data import HistogramData
 
 
 class HistogramDataList(BaseList):

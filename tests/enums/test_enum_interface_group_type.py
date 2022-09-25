@@ -68,13 +68,3 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         self.assertEqual(value.dump(), 'Internet')
         self.assertEqual(value.name, 'Internet')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test InterfaceGroupType with FAIL
-        """
-        value = InterfaceGroupType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

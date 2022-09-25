@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..types.ip6_address import Ip6Address
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.types.ip6_address import Ip6Address
 
 
 class Ip6AddressMask(BaseStruct):

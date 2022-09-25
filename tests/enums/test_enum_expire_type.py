@@ -41,13 +41,3 @@ class TestCase_ExpireType(unittest.TestCase):
         self.assertEqual(value.dump(), 'Subscription')
         self.assertEqual(value.name, 'Subscription')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ExpireType with FAIL
-        """
-        value = ExpireType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

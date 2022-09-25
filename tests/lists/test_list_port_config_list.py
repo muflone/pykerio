@@ -21,6 +21,9 @@
 import unittest
 
 import pykerio
+from pykerio.enums import (PortAssignmentType,
+                           PortType,
+                           SpeedDuplexType)
 
 
 class TestCase_PortConfigList(unittest.TestCase):
@@ -35,16 +38,16 @@ class TestCase_PortConfigList(unittest.TestCase):
         vlans = pykerio.structs.OptionalString({'enabled': True,
                                                 'value': '0'})
         speedDuplexMayNotWork = pykerio.lists.SpeedDuplexMayNotWorkList()
-        speedDuplexMayNotWork.append(pykerio.enums.SpeedDuplexType.SpeedDuplexHalf10)
-        speedDuplexMayNotWork.append(pykerio.enums.SpeedDuplexType.SpeedDuplexFull10)
+        speedDuplexMayNotWork.append(SpeedDuplexType.SpeedDuplexHalf10)
+        speedDuplexMayNotWork.append(SpeedDuplexType.SpeedDuplexFull10)
 
         teststruct = pykerio.structs.PortConfig({
             'id': kid,
-            'type': pykerio.enums.PortType.PortEthernet,
+            'type': PortType.PortEthernet,
             'name': 'eth0',
-            'assignment': pykerio.enums.PortAssignmentType.PortAssignmentStandalone,
+            'assignment': PortAssignmentType.PortAssignmentStandalone,
             'vlans': vlans,
-            'speedDuplex': pykerio.enums.SpeedDuplexType.SpeedDuplexAuto,
+            'speedDuplex': SpeedDuplexType.SpeedDuplexAuto,
             'speedDuplexMayNotWork': speedDuplexMayNotWork})
 
         testlist.append(teststruct)

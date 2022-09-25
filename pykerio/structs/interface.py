@@ -18,32 +18,28 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.interface_encap_type import InterfaceEncapType
-from ..enums.interface_group_type import InterfaceGroupType
-from ..enums.interface_mode_type import InterfaceModeType
-from ..enums.interface_status_type import InterfaceStatusType
-from ..enums.interface_type import InterfaceType
-from ..enums.store_status import StoreStatus
-
-from ..lists.ip_address_mask_list import IpAddressMaskList
-from ..lists.ip6_address_mask_list import Ip6AddressMaskList
-from ..lists.kid_list import KIdList
-
-from ..structs.details_config import DetailsConfig
-from ..structs.interface_connectivity_parameters import (
+from pykerio.enums.interface_encap_type import InterfaceEncapType
+from pykerio.enums.interface_group_type import InterfaceGroupType
+from pykerio.enums.interface_mode_type import InterfaceModeType
+from pykerio.enums.interface_status_type import InterfaceStatusType
+from pykerio.enums.interface_type import InterfaceType
+from pykerio.enums.store_status import StoreStatus
+from pykerio.lists.ip_address_mask_list import IpAddressMaskList
+from pykerio.lists.ip6_address_mask_list import Ip6AddressMaskList
+from pykerio.lists.kid_list import KIdList
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.details_config import DetailsConfig
+from pykerio.structs.interface_connectivity_parameters import (
        InterfaceConnectivityParameters)
-from ..structs.interface_flags import InterfaceFlags
-from ..structs.optional_long import OptionalLong
-from ..structs.optional_string import OptionalString
-from ..structs.ras_config import RasConfig
-from ..structs.vpn_server_config import VpnServerConfig
-from ..structs.vpn_tunnel_config import VpnTunnelConfig
-
-from ..types.ip_address import IpAddress
-from ..types.ip6_address import Ip6Address
-from ..types.kid import KId
+from pykerio.structs.interface_flags import InterfaceFlags
+from pykerio.structs.optional_long import OptionalLong
+from pykerio.structs.optional_string import OptionalString
+from pykerio.structs.ras_config import RasConfig
+from pykerio.structs.vpn_server_config import VpnServerConfig
+from pykerio.structs.vpn_tunnel_config import VpnTunnelConfig
+from pykerio.types.ip_address import IpAddress
+from pykerio.types.ip6_address import Ip6Address
+from pykerio.types.kid import KId
 
 
 class Interface(BaseStruct):

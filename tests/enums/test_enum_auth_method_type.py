@@ -113,13 +113,3 @@ class TestCase_AuthMethodType(unittest.TestCase):
         self.assertEqual(value.dump(), 'AuthMethodNone')
         self.assertEqual(value.name, 'AuthMethodNone')
         self.assertEqual(value.value, 9)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test AuthMethodType with FAIL
-        """
-        value = AuthMethodType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

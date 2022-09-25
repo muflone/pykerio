@@ -167,13 +167,3 @@ class TestCase_DhcpOptionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'DhcpIpMaskIpList')
         self.assertEqual(value.name, 'DhcpIpMaskIpList')
         self.assertEqual(value.value, 15)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DhcpOptionType with FAIL
-        """
-        value = DhcpOptionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

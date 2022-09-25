@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.filename_group import FilenameGroup
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.filename_group import FilenameGroup
 
 
 class FilenameGroupList(BaseList):

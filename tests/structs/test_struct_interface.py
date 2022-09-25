@@ -21,6 +21,16 @@
 import unittest
 
 import pykerio
+from pykerio.enums import (FailoverRoleType,
+                           InterfaceEncapType,
+                           InterfaceGroupType,
+                           InterfaceModeType,
+                           InterfaceStatusType,
+                           InterfaceType,
+                           MppeType,
+                           RasType,
+                           StoreStatus,
+                           VpnType)
 
 
 class TestCase_Interface(unittest.TestCase):
@@ -40,7 +50,7 @@ class TestCase_Interface(unittest.TestCase):
         weight = pykerio.structs.OptionalLong({'enabled': True,
                                                'value': 1})
         interfaceparams = pykerio.structs.InterfaceConnectivityParameters({
-            'failoverRole': pykerio.enums.FailoverRoleType.NONE,
+            'failoverRole': FailoverRoleType.NONE,
             'onDemand': False,
             'loadBalancingWeight': weight})
 
@@ -67,14 +77,14 @@ class TestCase_Interface(unittest.TestCase):
             'adScriptEnabled': False,
             'bhScriptEnabled': False,
             'ahScriptEnabled': False,
-            'rasType': pykerio.enums.RasType.PPPoE,
+            'rasType': RasType.PPPoE,
             'pppoeIfaceId': '',
             'server': '',
             'papEnabled': False,
             'chapEnabled': False,
             'mschapEnabled': False,
             'mschapv2Enabled': False,
-            'mppe': pykerio.enums.MppeType.MppeDisabled,
+            'mppe': MppeType.MppeDisabled,
             'mppeStateful': False})
 
         vpnserver = pykerio.structs.VpnServerConfig({
@@ -103,7 +113,7 @@ class TestCase_Interface(unittest.TestCase):
             'secondaryWins': pykerio.types.IpAddress('')})
 
         vpntunnel = pykerio.structs.VpnTunnelConfig({
-            'type': pykerio.enums.VpnType.VpnKerio,
+            'type': VpnType.VpnKerio,
             'peer': pykerio.structs.OptionalString({'enabled': False,
                                                     'value': ''}),
             'localRoutes': pykerio.lists.VpnRouteList(),
@@ -126,18 +136,18 @@ class TestCase_Interface(unittest.TestCase):
 
         teststruct = pykerio.structs.Interface({
             'enabled': True,
-            'type': pykerio.enums.InterfaceType.Ethernet,
-            'status': pykerio.enums.StoreStatus.StoreStatusClean,
+            'type': InterfaceType.Ethernet,
+            'status': StoreStatus.StoreStatusClean,
             'dhcpServerEnabled': False,
             'id': pykerio.types.KId('LanSwitch'),
-            'group': pykerio.enums.InterfaceGroupType.Trusted,
+            'group': InterfaceGroupType.Trusted,
             'name': 'LAN',
-            'linkStatus': pykerio.enums.InterfaceStatusType.Up,
+            'linkStatus': InterfaceStatusType.Up,
             'details': details,
             'mac': '00-90-0b-ff-ff-ff',
             'systemName': 'lan',
             'ip4Enabled': True,
-            'mode': pykerio.enums.InterfaceModeType.InterfaceModeManual,
+            'mode': InterfaceModeType.InterfaceModeManual,
             'ip': pykerio.types.IpAddress('192.168.10.1'),
             'subnetMask': pykerio.types.IpAddress('255.255.255.0'),
             'secondaryAddresses': pykerio.lists.IpAddressMaskList(),
@@ -146,7 +156,7 @@ class TestCase_Interface(unittest.TestCase):
             'gatewayAutodetected': True,
             'gateway': pykerio.types.IpAddress(''),
             'ip6Enabled': True,
-            'ip6Mode': pykerio.enums.InterfaceModeType.InterfaceModeAutomatic,
+            'ip6Mode': InterfaceModeType.InterfaceModeAutomatic,
             'ip6Addresses': pykerio.lists.Ip6AddressMaskList(),
             'linkIp6Address': pykerio.types.Ip6Address(
                 'fe80::290:fff:fff:fff'),
@@ -154,7 +164,7 @@ class TestCase_Interface(unittest.TestCase):
             'routedIp6PrefixAutodetected': True,
             'routedIp6Prefix': '',
             'connectivityParameters': interfaceparams,
-            'encap': pykerio.enums.InterfaceEncapType.InterfaceEncapNative,
+            'encap': InterfaceEncapType.InterfaceEncapNative,
             'mtuOverride': pykerio.structs.OptionalLong({'enabled': False,
                                                          'value': 0}),
             'macOverride': pykerio.structs.OptionalString({'enabled': False,

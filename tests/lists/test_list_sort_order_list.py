@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import SortDirection
 
 
 class TestCase_SortOrderList(unittest.TestCase):
@@ -31,7 +32,7 @@ class TestCase_SortOrderList(unittest.TestCase):
         testlist = pykerio.lists.SortOrderList()
         self.assertEqual(len(testlist), 0)
 
-        sort_direction = pykerio.enums.SortDirection.Asc
+        sort_direction = SortDirection.Asc
         teststruct = pykerio.structs.SortOrder({'columnName': 'foo',
                                                 'direction': sort_direction,
                                                 'caseSensitive': False})
@@ -39,7 +40,7 @@ class TestCase_SortOrderList(unittest.TestCase):
         self.assertEqual(len(testlist), 1)
         self.assertEqual(testlist[-1], teststruct)
 
-        sort_direction = pykerio.enums.SortDirection.Asc
+        sort_direction = SortDirection.Asc
         teststruct = pykerio.structs.SortOrder({'columnName': 'bar',
                                                 'direction': sort_direction,
                                                 'caseSensitive': True})

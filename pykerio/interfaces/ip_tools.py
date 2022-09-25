@@ -18,14 +18,12 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-
-from ..enums import ActiveTool
-from ..enums import DnsTool
-from ..enums import DnsType
-from ..enums import IpVersion
-
-from ..lists import StringList
+from pykerio.enums.active_tool import ActiveTool
+from pykerio.enums.dns_tool import DnsTool
+from pykerio.enums.dns_type import DnsType
+from pykerio.enums.ip_version import IpVersion
+from pykerio.lists.string_list import StringList
+from pykerio.pykerio import PyKerio
 
 
 class IpTools(object):

@@ -59,13 +59,3 @@ class TestCase_ActiveHostType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ActiveHostGuest')
         self.assertEqual(value.name, 'ActiveHostGuest')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ActiveHostType with FAIL
-        """
-        value = ActiveHostType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

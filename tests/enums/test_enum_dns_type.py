@@ -122,13 +122,3 @@ class TestCase_DnsType(unittest.TestCase):
         self.assertEqual(value.dump(), 'DnsTypeTxt')
         self.assertEqual(value.name, 'DnsTypeTxt')
         self.assertEqual(value.value, 10)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DnsType with FAIL
-        """
-        value = DnsType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

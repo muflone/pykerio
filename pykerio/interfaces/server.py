@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-
-from ..enums import ServerOs
-
-from ..lists import RestrictionList
+from pykerio.enums.server_os import ServerOs
+from pykerio.lists.restriction_list import RestrictionList
+from pykerio.pykerio import PyKerio
 
 
 class Server(object):

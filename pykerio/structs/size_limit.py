@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from .byte_value_with_units import ByteValueWithUnits
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.byte_value_with_units import ByteValueWithUnits
 
 
 class SizeLimit(BaseStruct):

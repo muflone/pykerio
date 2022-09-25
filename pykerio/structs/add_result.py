@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from .localizable_message import LocalizableMessage
-
-from ..types.kid import KId
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.localizable_message import LocalizableMessage
+from pykerio.types.kid import KId
 
 
 class AddResult(BaseStruct):

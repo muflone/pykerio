@@ -50,13 +50,3 @@ class TestCase_CheckVersionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'CheckVersionFinal')
         self.assertEqual(value.name, 'CheckVersionFinal')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test CheckVersionType with FAIL
-        """
-        value = CheckVersionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

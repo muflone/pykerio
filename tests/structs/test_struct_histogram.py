@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import ByteUnits
 
 
 class TestCase_Histogram(unittest.TestCase):
@@ -29,7 +30,7 @@ class TestCase_Histogram(unittest.TestCase):
         Test Histogram
         """
         speed = 100000.0
-        units = pykerio.enums.ByteUnits.GigaBytes
+        units = ByteUnits.GigaBytes
         histogramdata = pykerio.structs.HistogramData({'inbound': speed,
                                                        'outbound': speed})
         testlist = pykerio.lists.HistogramDataList()

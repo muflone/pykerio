@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import VpnType
 
 
 class TestCase_VpnTunnelConfig(unittest.TestCase):
@@ -60,7 +61,7 @@ class TestCase_VpnTunnelConfig(unittest.TestCase):
         routes.append(route)
 
         teststruct = pykerio.structs.VpnTunnelConfig({
-            'type': pykerio.enums.VpnType.VpnKerio,
+            'type': VpnType.VpnKerio,
             'peer': peer,
             'localRoutes': routes,
             'remoteRoutes': routes,

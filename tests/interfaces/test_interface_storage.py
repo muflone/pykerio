@@ -23,6 +23,7 @@ import ssl
 import unittest
 
 import pykerio
+from pykerio.enums import StorageDataType
 
 
 class TestCase_Storage(unittest.TestCase):
@@ -69,7 +70,7 @@ class TestCase_Storage(unittest.TestCase):
         Test Storage get
         """
         storage_list = self.__class__.storage.get()
-        self.assertNotEquals(len(storage_list), 0)
+        self.assertNotEqual(len(storage_list), 0)
         for storage in storage_list:
             self.assertEqual(type(storage), pykerio.structs.StorageData)
 
@@ -79,4 +80,4 @@ class TestCase_Storage(unittest.TestCase):
         """
         Test Storage remove
         """
-        self.__class__.storage.remove(pykerio.enums.StorageDataType.StorageDataLogs)
+        self.__class__.storage.remove(StorageDataType.StorageDataLogs)

@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import SortDirection
 
 
 class TestCase_SortOrder(unittest.TestCase):
@@ -28,7 +29,7 @@ class TestCase_SortOrder(unittest.TestCase):
         """
         Test SortOrder
         """
-        sort_direction = pykerio.enums.SortDirection.Asc
+        sort_direction = SortDirection.Asc
         teststruct = pykerio.structs.SortOrder({'columnName': 'foo',
                                                 'direction': sort_direction,
                                                 'caseSensitive': False})

@@ -95,13 +95,3 @@ class TestCase_SeverityUnit(unittest.TestCase):
         self.assertEqual(value.dump(), 'SeverityDebug')
         self.assertEqual(value.name, 'SeverityDebug')
         self.assertEqual(value.value, 7)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test SeverityUnit with FAIL
-        """
-        value = SeverityUnit.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

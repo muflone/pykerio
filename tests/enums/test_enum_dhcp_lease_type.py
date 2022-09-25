@@ -41,13 +41,3 @@ class TestCase_DhcpLeaseType(unittest.TestCase):
         self.assertEqual(value.dump(), 'DhcpTypeLease')
         self.assertEqual(value.name, 'DhcpTypeLease')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DhcpLeaseType with FAIL
-        """
-        value = DhcpLeaseType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

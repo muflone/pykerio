@@ -59,13 +59,3 @@ class TestCase_NtpUpdatePhase(unittest.TestCase):
         self.assertEqual(value.dump(), 'NtpUpdateProgress')
         self.assertEqual(value.name, 'NtpUpdateProgress')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test NtpUpdatePhase with FAIL
-        """
-        value = NtpUpdatePhase.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

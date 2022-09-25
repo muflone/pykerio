@@ -29,8 +29,8 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         Test FailoverRoleType with None
         """
         value = FailoverRoleType.NONE
-        self.assertEqual(value.dump(), 'None')
-        self.assertEqual(value.name, 'None')
+        self.assertEqual(value.dump(), 'NONE')
+        self.assertEqual(value.name, 'NONE')
         self.assertEqual(value.value, 0)
 
     def test_01_Primary(self):
@@ -50,13 +50,3 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         self.assertEqual(value.dump(), 'Secondary')
         self.assertEqual(value.name, 'Secondary')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test FailoverRoleType with FAIL
-        """
-        value = FailoverRoleType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

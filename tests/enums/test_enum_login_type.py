@@ -50,13 +50,3 @@ class TestCase_LoginType(unittest.TestCase):
         self.assertEqual(value.dump(), 'LoginReactivation')
         self.assertEqual(value.name, 'LoginReactivation')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test LoginType with FAIL
-        """
-        value = LoginType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -77,13 +77,3 @@ class TestCase_PortComparator(unittest.TestCase):
         self.assertEqual(value.dump(), 'List')
         self.assertEqual(value.name, 'List')
         self.assertEqual(value.value, 5)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test PortComparator with FAIL
-        """
-        value = PortComparator.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

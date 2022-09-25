@@ -95,13 +95,3 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         self.assertEqual(value.dump(), 'TrafficEntityUsers')
         self.assertEqual(value.name, 'TrafficEntityUsers')
         self.assertEqual(value.value, 7)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test TrafficEntityType with FAIL
-        """
-        value = TrafficEntityType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

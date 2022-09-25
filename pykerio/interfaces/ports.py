@@ -18,10 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-
-from ..lists import ErrorList
-from ..lists import PortConfigList
+from pykerio.lists.error_list import ErrorList
+from pykerio.lists.port_config_list import PortConfigList
+from pykerio.pykerio import PyKerio
 
 
 class Ports(object):

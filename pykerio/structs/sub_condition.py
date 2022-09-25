@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.compare_operator import CompareOperator
+from pykerio.enums.compare_operator import CompareOperator
+from pykerio.structs.base_struct import BaseStruct
 
 
 class SubCondition(BaseStruct):

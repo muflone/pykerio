@@ -50,13 +50,3 @@ class TestCase_RuleConditionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'RuleInvalidCondition')
         self.assertEqual(value.name, 'RuleInvalidCondition')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test RuleConditionType with FAIL
-        """
-        value = RuleConditionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

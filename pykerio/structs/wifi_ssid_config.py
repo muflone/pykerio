@@ -18,13 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.interface_group_type import InterfaceGroupType
-from ..enums.port_assignment_type import PortAssignmentType
-from ..enums.wifi_encryption_type import WifiEncryptionType
-
-from ..types.kid import KId
+from pykerio.enums.interface_group_type import InterfaceGroupType
+from pykerio.enums.port_assignment_type import PortAssignmentType
+from pykerio.enums.wifi_encryption_type import WifiEncryptionType
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.types.kid import KId
 
 
 class WifiSsidConfig(BaseStruct):

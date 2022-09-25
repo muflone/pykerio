@@ -18,10 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..types.ip_address import IpAddress
-from ..types.kid import KId
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.types.ip_address import IpAddress
+from pykerio.types.kid import KId
 
 
 class DnsHost(BaseStruct):

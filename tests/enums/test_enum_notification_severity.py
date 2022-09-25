@@ -41,13 +41,3 @@ class TestCase_NotificationSeverity(unittest.TestCase):
         self.assertEqual(value.dump(), 'NotificationError')
         self.assertEqual(value.name, 'NotificationError')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test NotificationSeverity with FAIL
-        """
-        value = NotificationSeverity.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

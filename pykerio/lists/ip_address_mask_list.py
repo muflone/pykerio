@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.ip_address_mask import IpAddressMask
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.ip_address_mask import IpAddressMask
 
 
 class IpAddressMaskList(BaseList):

@@ -95,13 +95,3 @@ class TestCase_UpdateStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'UpdateStatusUpgradeFailed')
         self.assertEqual(value.name, 'UpdateStatusUpgradeFailed')
         self.assertEqual(value.value, 7)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test UpdateStatus with FAIL
-        """
-        value = UpdateStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

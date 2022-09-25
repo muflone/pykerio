@@ -50,13 +50,3 @@ class TestCase_StoreStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'StoreStatusNew')
         self.assertEqual(value.name, 'StoreStatusNew')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test StoreStatus with FAIL
-        """
-        value = StoreStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

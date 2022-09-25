@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import NotificationType
 
 
 class TestCase_NotificationTypeList(unittest.TestCase):
@@ -31,13 +32,13 @@ class TestCase_NotificationTypeList(unittest.TestCase):
         testlist = pykerio.lists.NotificationTypeList()
         self.assertEqual(len(testlist), 0)
 
-        value = pykerio.enums.NotificationType.NotificationUpdate
+        value = NotificationType.NotificationUpdate
         testlist.append(value)
 
-        value = pykerio.enums.NotificationType.NotificationLowMemory
+        value = NotificationType.NotificationLowMemory
         testlist.append(value)
 
-        value = pykerio.enums.NotificationType.NotificationBackupLine
+        value = NotificationType.NotificationBackupLine
         testlist.append(value)
 
         self.assertEqual(len(testlist), 3)

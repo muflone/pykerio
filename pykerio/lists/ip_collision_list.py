@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..lists.kid_list import KIdList
+from pykerio.lists.base_list import BaseList
+from pykerio.lists.kid_list import KIdList
 
 
 class IpCollisionList(BaseList):

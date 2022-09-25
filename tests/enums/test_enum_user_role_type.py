@@ -41,13 +41,3 @@ class TestCase_UserRoleType(unittest.TestCase):
         self.assertEqual(value.dump(), 'FullAdmin')
         self.assertEqual(value.name, 'FullAdmin')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test UserRoleType with FAIL
-        """
-        value = UserRoleType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -18,14 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.vpn_type import VpnType
-
-from ..lists.vpn_route_list import VpnRouteList
-
-from ..structs.id_reference import IdReference
-from ..structs.optional_string import OptionalString
+from pykerio.enums.vpn_type import VpnType
+from pykerio.lists.vpn_route_list import VpnRouteList
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.id_reference import IdReference
+from pykerio.structs.optional_string import OptionalString
 
 
 class VpnTunnelConfig(BaseStruct):

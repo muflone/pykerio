@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..lists.wifi_mode_channel_list import WifiModeChannelList
-
-from ..types.kid import KId
+from pykerio.lists.wifi_mode_channel_list import WifiModeChannelList
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.types.kid import KId
 
 
 class WifiCountryConfig(BaseStruct):

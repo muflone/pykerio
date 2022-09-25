@@ -22,8 +22,8 @@ import http.cookiejar
 import json
 import urllib.request
 
-from .json_serializable import JSONSerializable
-from .rpc_response import RPCResponse
+from pykerio.json_serializable import JSONSerializable
+from pykerio.rpc_response import RPCResponse
 
 
 class PyKerio(object):

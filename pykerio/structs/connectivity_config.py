@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.connectivity_type import ConnectivityType
-
-from ..structs.optional_string import OptionalString
+from pykerio.enums.connectivity_type import ConnectivityType
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.optional_string import OptionalString
 
 
 class ConnectivityConfig(BaseStruct):

@@ -18,37 +18,32 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-
-from ..constants import UNLIMITED
-
-from ..enums import CompareOperator
-from ..enums import ConnectivityStatus
-from ..enums import InterfaceGroupType
-from ..enums import InterfaceType
-from ..enums import LogicalOperator
-from ..enums import SortDirection
-
-from ..lists import CreateResultList
-from ..lists import ErrorList
-from ..lists import InterfaceList
-from ..lists import IpCollisionList
-from ..lists import KIdList
-from ..lists import NotificationTypeList
-from ..lists import SortOrderList
-from ..lists import StringList
-from ..lists import SubConditionList
-from ..lists import WifiCountryList
-
-from ..structs import ConnectivityConfig
-from ..structs import Interface
-from ..structs import IpsecPeerIdConfig
-from ..structs import SearchQuery
-from ..structs import SortOrder
-from ..structs import SubCondition
-from ..structs import WifiConfig
-
-from ..types import KId
+from pykerio.constants import UNLIMITED
+from pykerio.enums.compare_operator import CompareOperator
+from pykerio.enums.connectivity_status import ConnectivityStatus
+from pykerio.enums.interface_group_type import InterfaceGroupType
+from pykerio.enums.interface_type import InterfaceType
+from pykerio.enums.logical_operator import LogicalOperator
+from pykerio.enums.sort_direction import SortDirection
+from pykerio.lists.create_result_list import CreateResultList
+from pykerio.lists.error_list import ErrorList
+from pykerio.lists.interface_list import InterfaceList
+from pykerio.lists.ip_collision_list import IpCollisionList
+from pykerio.lists.kid_list import KIdList
+from pykerio.lists.notification_type_list import NotificationTypeList
+from pykerio.lists.sort_order_list import SortOrderList
+from pykerio.lists.string_list import StringList
+from pykerio.lists.sub_condition_list import SubConditionList
+from pykerio.lists.wifi_country_list import WifiCountryList
+from pykerio.pykerio import PyKerio
+from pykerio.structs.connectivity_config import ConnectivityConfig
+from pykerio.structs.interface import Interface
+from pykerio.structs.ipsec_peer_id_config import IpsecPeerIdConfig
+from pykerio.structs.search_query import SearchQuery
+from pykerio.structs.sort_order import SortOrder
+from pykerio.structs.sub_condition import SubCondition
+from pykerio.structs.wifi_config import WifiConfig
+from pykerio.types import KId
 
 
 class Interfaces(object):

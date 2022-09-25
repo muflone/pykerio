@@ -59,13 +59,3 @@ class TestCase_OsCodeType(unittest.TestCase):
         self.assertEqual(value.dump(), 'OsUnknown')
         self.assertEqual(value.name, 'OsUnknown')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test OsCodeType with FAIL
-        """
-        value = OsCodeType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

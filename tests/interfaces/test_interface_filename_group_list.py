@@ -69,6 +69,6 @@ class TestCase_FilenameGroups(unittest.TestCase):
         Test FilenameGroupList get
         """
         groups_list = self.__class__.groups.get()
-        self.assertNotEquals(len(groups_list), 0)
+        self.assertNotEqual(len(groups_list), 0)
         for group in groups_list:
             self.assertEqual(type(group), pykerio.structs.FilenameGroup)

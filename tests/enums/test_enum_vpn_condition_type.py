@@ -50,13 +50,3 @@ class TestCase_VpnConditionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'AllTunnels')
         self.assertEqual(value.name, 'AllTunnels')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test VpnConditionType with FAIL
-        """
-        value = VpnConditionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

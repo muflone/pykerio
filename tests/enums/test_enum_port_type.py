@@ -41,13 +41,3 @@ class TestCase_PortType(unittest.TestCase):
         self.assertEqual(value.dump(), 'PortWifi')
         self.assertEqual(value.name, 'PortWifi')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test PortType with FAIL
-        """
-        value = PortType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

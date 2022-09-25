@@ -122,13 +122,3 @@ class TestCase_Entity(unittest.TestCase):
         self.assertEqual(value.dump(), 'EntityDomain')
         self.assertEqual(value.name, 'EntityDomain')
         self.assertEqual(value.value, 10)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test Entity with FAIL
-        """
-        value = Entity.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

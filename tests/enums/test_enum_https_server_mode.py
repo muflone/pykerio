@@ -50,13 +50,3 @@ class TestCase_HttpsServerMode(unittest.TestCase):
         self.assertEqual(value.dump(), 'HttpsServerModeCustomCertificate')
         self.assertEqual(value.name, 'HttpsServerModeCustomCertificate')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test HttpsServerMode with FAIL
-        """
-        value = HttpsServerMode.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

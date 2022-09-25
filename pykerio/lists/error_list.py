@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_list import BaseList
-
-from ..structs.error import Error
+from pykerio.lists.base_list import BaseList
+from pykerio.structs.error import Error
 
 
 class ErrorList(BaseList):

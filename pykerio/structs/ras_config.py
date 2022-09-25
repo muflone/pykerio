@@ -18,14 +18,12 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.ras_type import RasType
-from ..enums.mppe_type import MppeType
-
-from ..structs.credentials_config import CredentialsConfig
-from ..structs.optional_entity import OptionalEntity
-from ..structs.optional_long import OptionalLong
+from pykerio.enums.ras_type import RasType
+from pykerio.enums.mppe_type import MppeType
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.credentials_config import CredentialsConfig
+from pykerio.structs.optional_entity import OptionalEntity
+from pykerio.structs.optional_long import OptionalLong
 
 
 class RasConfig(BaseStruct):

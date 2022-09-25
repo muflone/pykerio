@@ -41,13 +41,3 @@ class TestCase_RouterAdvertisementsModeType(unittest.TestCase):
         self.assertEqual(value.dump(), 'RouterAdvertisementsManual')
         self.assertEqual(value.name, 'RouterAdvertisementsManual')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test RouterAdvertisementsModeType with FAIL
-        """
-        value = RouterAdvertisementsModeType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

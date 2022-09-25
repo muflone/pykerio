@@ -21,6 +21,8 @@
 import unittest
 
 import pykerio
+from pykerio.enums import (NotificationSeverity,
+                           NotificationType)
 
 
 class TestCase_NotificationList(unittest.TestCase):
@@ -31,8 +33,8 @@ class TestCase_NotificationList(unittest.TestCase):
         testlist = pykerio.lists.NotificationList()
         self.assertEqual(len(testlist), 0)
 
-        ntype = pykerio.enums.NotificationType.NotificationLowMemory
-        nseverity = pykerio.enums.NotificationSeverity.NotificationWarning
+        ntype = NotificationType.NotificationLowMemory
+        nseverity = NotificationSeverity.NotificationWarning
         value = 'out of memory'
         code = 32700
         teststruct = pykerio.structs.Notification({'type': ntype,

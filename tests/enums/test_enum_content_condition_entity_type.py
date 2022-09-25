@@ -68,13 +68,3 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ContentConditionEntityUrlGroup')
         self.assertEqual(value.name, 'ContentConditionEntityUrlGroup')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ContentConditionEntityType with FAIL
-        """
-        value = ContentConditionEntityType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

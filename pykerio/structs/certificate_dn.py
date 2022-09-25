@@ -18,9 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..structs.id_reference import IdReference
+from pykerio.structs.base_struct import BaseStruct
+from pykerio.structs.id_reference import IdReference
 
 
 class CertificateDn(BaseStruct):

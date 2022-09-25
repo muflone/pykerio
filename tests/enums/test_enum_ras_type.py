@@ -50,13 +50,3 @@ class TestCase_RasType(unittest.TestCase):
         self.assertEqual(value.dump(), 'L2TP')
         self.assertEqual(value.name, 'L2TP')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test RasType with FAIL
-        """
-        value = RasType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

@@ -50,13 +50,3 @@ class TestCase_WarningType(unittest.TestCase):
         self.assertEqual(value.dump(), 'WarnConfigurationReverted')
         self.assertEqual(value.name, 'WarnConfigurationReverted')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test WarningType with FAIL
-        """
-        value = WarningType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

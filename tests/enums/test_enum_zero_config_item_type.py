@@ -50,13 +50,3 @@ class TestCase_ZeroConfigItemType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ZeroConfigInterface')
         self.assertEqual(value.name, 'ZeroConfigInterface')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ZeroConfigItemType with FAIL
-        """
-        value = ZeroConfigItemType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

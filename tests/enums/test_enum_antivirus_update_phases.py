@@ -77,13 +77,3 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         self.assertEqual(value.dump(), 'AntivirusUpdateFailed')
         self.assertEqual(value.name, 'AntivirusUpdateFailed')
         self.assertEqual(value.value, 5)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test AntivirusUpdatePhases with FAIL
-        """
-        value = AntivirusUpdatePhases.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

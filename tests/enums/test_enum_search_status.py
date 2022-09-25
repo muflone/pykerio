@@ -59,13 +59,3 @@ class TestCase_SearchStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'ResultNotFound')
         self.assertEqual(value.name, 'ResultNotFound')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test SearchStatus with FAIL
-        """
-        value = SearchStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

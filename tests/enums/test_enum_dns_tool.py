@@ -41,13 +41,3 @@ class TestCase_DnsTool(unittest.TestCase):
         self.assertEqual(value.dump(), 'DnsToolDig')
         self.assertEqual(value.name, 'DnsToolDig')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test DnsTool with FAIL
-        """
-        value = DnsTool.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

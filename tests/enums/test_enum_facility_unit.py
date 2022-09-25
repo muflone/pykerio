@@ -239,13 +239,3 @@ class TestCase_FacilityUnit(unittest.TestCase):
         self.assertEqual(value.dump(), 'FacilityLocal7')
         self.assertEqual(value.name, 'FacilityLocal7')
         self.assertEqual(value.value, 23)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test FacilityUnit with FAIL
-        """
-        value = FacilityUnit.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

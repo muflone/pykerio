@@ -18,11 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.wifi_band_type import WifiBandType
-
-from ..lists.wifi_channel_list import WifiChannelList
+from pykerio.enums.wifi_band_type import WifiBandType
+from pykerio.lists.wifi_channel_list import WifiChannelList
+from pykerio.structs.base_struct import BaseStruct
 
 
 class WifiModeChannelConfig(BaseStruct):

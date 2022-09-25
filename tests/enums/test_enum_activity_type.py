@@ -185,13 +185,3 @@ class TestCase_ActivityType(unittest.TestCase):
         self.assertEqual(value.dump(), 'ActivityTypeSocialNetwork')
         self.assertEqual(value.name, 'ActivityTypeSocialNetwork')
         self.assertEqual(value.value, 17)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ActivityType with FAIL
-        """
-        value = ActivityType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

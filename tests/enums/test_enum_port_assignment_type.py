@@ -50,13 +50,3 @@ class TestCase_PortAssignmentType(unittest.TestCase):
         self.assertEqual(value.dump(), 'PortAssignmentUnassigned')
         self.assertEqual(value.name, 'PortAssignmentUnassigned')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test PortAssignmentType with FAIL
-        """
-        value = PortAssignmentType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

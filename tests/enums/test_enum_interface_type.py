@@ -68,13 +68,3 @@ class TestCase_InterfaceType(unittest.TestCase):
         self.assertEqual(value.dump(), 'VpnTunnel')
         self.assertEqual(value.name, 'VpnTunnel')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test InterfaceType with FAIL
-        """
-        value = InterfaceType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

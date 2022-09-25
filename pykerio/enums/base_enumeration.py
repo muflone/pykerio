@@ -20,7 +20,7 @@
 
 from enum import Enum
 
-from ..json_serializable import JSONSerializable
+from pykerio.json_serializable import JSONSerializable
 
 
 class BaseEnumeration(JSONSerializable, Enum):

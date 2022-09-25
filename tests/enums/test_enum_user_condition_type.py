@@ -68,13 +68,3 @@ class TestCase_UserConditionType(unittest.TestCase):
         self.assertEqual(value.dump(), 'Nobody')
         self.assertEqual(value.name, 'Nobody')
         self.assertEqual(value.value, 4)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test UserConditionType with FAIL
-        """
-        value = UserConditionType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

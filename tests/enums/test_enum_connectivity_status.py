@@ -50,13 +50,3 @@ class TestCase_ConnectivityStatus(unittest.TestCase):
         self.assertEqual(value.dump(), 'ConnectivityError')
         self.assertEqual(value.name, 'ConnectivityError')
         self.assertEqual(value.value, 2)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test ConnectivityStatus with FAIL
-        """
-        value = ConnectivityStatus.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

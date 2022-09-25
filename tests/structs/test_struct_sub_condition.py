@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import CompareOperator
 
 
 class TestCase_SubCondition(unittest.TestCase):
@@ -29,7 +30,7 @@ class TestCase_SubCondition(unittest.TestCase):
         Test SubCondition
         """
         fieldName = 'date'
-        comparator = pykerio.enums.CompareOperator.Like
+        comparator = CompareOperator.Like
         value = '2'
         teststruct = pykerio.structs.SubCondition({'fieldName': fieldName,
                                                    'comparator': comparator,

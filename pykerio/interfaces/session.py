@@ -18,14 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from ..pykerio import PyKerio
-from ..json_serializable import JSONSerializable
-
-from ..enums import LoginType
-
-from ..lists import ClientTimestampList
-
-from ..structs import ApiApplication
+from pykerio.enums.login_type import LoginType
+from pykerio.json_serializable import JSONSerializable
+from pykerio.lists.client_timestamp_list import ClientTimestampList
+from pykerio.pykerio import PyKerio
+from pykerio.structs.api_application import ApiApplication
 
 
 class Session(JSONSerializable):

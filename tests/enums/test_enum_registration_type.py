@@ -59,13 +59,3 @@ class TestCase_RegistrationType(unittest.TestCase):
         self.assertEqual(value.dump(), 'rsProductRegistered')
         self.assertEqual(value.name, 'rsProductRegistered')
         self.assertEqual(value.value, 3)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test RegistrationType with FAIL
-        """
-        value = RegistrationType.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

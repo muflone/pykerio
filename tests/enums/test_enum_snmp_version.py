@@ -41,13 +41,3 @@ class TestCase_SnmpVersion(unittest.TestCase):
         self.assertEqual(value.dump(), 'SnmpV3')
         self.assertEqual(value.name, 'SnmpV3')
         self.assertEqual(value.value, 1)
-
-    @unittest.expectedFailure
-    def test_99_FAIL(self):
-        """
-        Test SnmpVersion with FAIL
-        """
-        value = SnmpVersion.FAIL
-        self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.name, 'FAIL')
-        self.assertEqual(value.value, 99)

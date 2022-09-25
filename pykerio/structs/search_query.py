@@ -18,13 +18,11 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from .base_struct import BaseStruct
-
-from ..enums.logical_operator import LogicalOperator
-
-from ..lists.sort_order_list import SortOrderList
-from ..lists.string_list import StringList
-from ..lists.sub_condition_list import SubConditionList
+from pykerio.enums.logical_operator import LogicalOperator
+from pykerio.lists.sort_order_list import SortOrderList
+from pykerio.lists.string_list import StringList
+from pykerio.lists.sub_condition_list import SubConditionList
+from pykerio.structs.base_struct import BaseStruct
 
 
 class SearchQuery(BaseStruct):
