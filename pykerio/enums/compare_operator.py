@@ -25,7 +25,7 @@ class CompareOperator(BaseEnumeration):
     EQ = 0
     NOT_EQ = 1
     LESS_THAN = 2
-    GREATER_THAN = 2
+    GREATER_THAN = 3
     LESS_EQ = 4
     GREATER_EQ = 5
     LIKE = 6
