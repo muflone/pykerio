@@ -1,6 +1,6 @@
 # PyKerio
 
-[![Travis CI Build Status](https://img.shields.io/travis/muflone/pykerio/master.svg)](https://travis-ci.org/muflone/pykerio)
+[![Travis CI Build Status](https://img.shields.io/travis/com/muflone/pykerio/master.svg)](https://travis-ci.com/github/muflone/pykerio)
 [![CircleCI Build Status](https://img.shields.io/circleci/project/github/muflone/pykerio/master.svg)](https://circleci.com/gh/muflone/pykerio)
 [![PyPI - Version](https://img.shields.io/pypi/v/PyKerio.svg)](https://pypi.org/project/PyKerio/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/PyKerio.svg)](https://pypi.org/project/PyKerio/)
