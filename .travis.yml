@@ -1,19 +1,21 @@
 language: python
 python:
-  - "3.3"
-  - "3.4"
-  - "3.5"
-  - "3.6"
-install: "pip install -r requirements.txt"
+  - "3.9"
+install:
+  - pip install -r requirements_ci.txt
 script:
-  - export KERIO_USERNAME='admin-en'
-  - export KERIO_PASSWORD='kerio'
-  - export KERIO_BOX='NO'
-  - export KERIO_READONLY='YES'
-  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/types/
-  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/enums/
-  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/structs/
-  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/lists/
-  - nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/interfaces/
-after_success:
-  - coveralls
+  - python -m compileall pykerio
+  - python -m pycodestyle pykerio
+  - python -m flake8 pykerio
+  - python -m build --outdir=dist .
+  - python -m pip install --verbose dist/*.whl
+  - python -m pip list
+  - python -m pip freeze
+  - ls -laR .
+  - python -m pip uninstall --yes --verbose pykerio
+  - python -m pytest --verbose --capture=no tests/enums
+# Disabled interfaces as actually the demo server is not reachable anymore
+# - python -m pytest --verbose --capture=no tests/interfaces
+  - python -m pytest --verbose --capture=no tests/lists
+  - python -m pytest --verbose --capture=no tests/structs
+  - python -m pytest --verbose --capture=no tests/types

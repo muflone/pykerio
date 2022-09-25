@@ -1,50 +1,48 @@
-# Python CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-python/ for more details
-#
-version: 2
+version: 2.1
+
+orbs:
+  # The python orb contains a set of prepackaged CircleCI configuration you can
+  # use repeatedly in your configuration files
+  # Orb commands and jobs help you with common scripting around a language/tool,
+  # so you don't have to copy and paste it everywhere.
+  # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
+  python: circleci/python@1.2
+
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.9.5
 
     working_directory: ~/repo
 
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
       - run:
           name: install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r requirements.txt
-
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-
-      # run tests!
+            pip install -r requirements_ci.txt
       - run:
-          name: run tests
+          name: check code
           command: |
             . venv/bin/activate
-            export KERIO_USERNAME='admin-en'
-            export KERIO_PASSWORD='kerio'
-            export KERIO_BOX='NO'
-            export KERIO_READONLY='YES'
-            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/types/
-            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/enums/
-            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/structs/
-            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/lists/
-            nosetests --verbose --detailed-errors --nocapture --with-id --with-coverage tests/interfaces/
+            python -m compileall pyodoo
+            python -m pycodestyle pyodoo
+            python -m flake8 pyodoo
+            python -m build --outdir=dist .
+            python -m pip install --verbose dist/*.whl
+            python -m pip list
+            python -m pip freeze
+            ls -laR .
+            python -m pip uninstall --yes --verbose pyodoo
+      - run:
+          name: tests
+          command: |
+            . venv/bin/activate
+            python -m pytest --verbose --capture=no tests/enums
+# Disabled interfaces as actually the demo server is not reachable anymore
+#           python -m pytest --verbose --capture=no tests/interfaces
+            python -m pytest --verbose --capture=no tests/lists
+            python -m pytest --verbose --capture=no tests/structs
+            python -m pytest --verbose --capture=no tests/types
