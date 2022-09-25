@@ -18,6 +18,7 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
+from pykerio.enums.base_enumeration import BaseEnumeration
 from pykerio.json_serializable import JSONSerializable
 
 
@@ -34,7 +35,10 @@ class BaseStruct(dict, JSONSerializable):
                 #           KEY=key,
                 #           ACTUAL=type(item),
                 #           REQUIRED=types[key]))
-                item = types[key](data[key])
+                if issubclass(types[key], BaseEnumeration):
+                    item = types[key].from_name(data[key])
+                else:
+                    item = types[key](data[key])
             if type(item) is not types[key]:
                 print('Type clashing for argument {KEY}'.format(KEY=key))
                 print('  required type: {REQUIRED}'.format(

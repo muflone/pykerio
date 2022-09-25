@@ -50,4 +50,4 @@ class BaseList(list, JSONSerializable):
     def load(self, data):
         """Append a list of items"""
         for item in data:
-            self.append(item)
+            self.append(self._class(item))
