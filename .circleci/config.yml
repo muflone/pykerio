@@ -41,8 +41,8 @@ jobs:
           command: |
             . venv/bin/activate
             python -m pytest --verbose --capture=no tests/enums
-# Disabled interfaces as actually the demo server is not reachable anymore
-#           python -m pytest --verbose --capture=no tests/interfaces
+            # Disabled interfaces as actually the demo server is not reachable anymore
+            # python -m pytest --verbose --capture=no tests/interfaces
             python -m pytest --verbose --capture=no tests/lists
             python -m pytest --verbose --capture=no tests/structs
             python -m pytest --verbose --capture=no tests/types
