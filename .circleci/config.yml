@@ -27,15 +27,15 @@ jobs:
           name: check code
           command: |
             . venv/bin/activate
-            python -m compileall pyodoo
-            python -m pycodestyle pyodoo
-            python -m flake8 pyodoo
+            python -m compileall pykerio
+            python -m pycodestyle pykerio
+            python -m flake8 pykerio
             python -m build --outdir=dist .
             python -m pip install --verbose dist/*.whl
             python -m pip list
             python -m pip freeze
             ls -laR .
-            python -m pip uninstall --yes --verbose pyodoo
+            python -m pip uninstall --yes --verbose pykerio
       - run:
           name: tests
           command: |
