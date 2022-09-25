@@ -34,4 +34,4 @@ class BaseEnumeration(JSONSerializable, Enum):
 
     @classmethod
     def from_name(self, name):
-        return self.__members__[name]
+        return self.__members__[name if name != 'None' else 'NONE']
