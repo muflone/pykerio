@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class IntrusionPreventionUpdatePhases(BaseEnumeration):
-    OK = 0
-    ERROR = 1
-    PROGRESS = 2
-
-    VALUES = {
-        'IntrusionPreventionUpdateOk': OK,
-        'IntrusionPreventionUpdateError': ERROR,
-        'IntrusionPreventionUpdateProgress': PROGRESS
-    }
+    IntrusionPreventionUpdateOk = 0
+    IntrusionPreventionUpdateError = 1
+    IntrusionPreventionUpdateProgress = 2

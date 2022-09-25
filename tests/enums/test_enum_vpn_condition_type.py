@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import VpnConditionType
 
 
 class TestCase_VpnConditionType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_VpnConditionType(unittest.TestCase):
         """
         Test VpnConditionType with IncomingClient
         """
-        value = pykerio.enums.VpnConditionType(name='IncomingClient')
+        value = VpnConditionType.IncomingClient
         self.assertEqual(value.dump(), 'IncomingClient')
-        self.assertEqual(value.get_name(), 'IncomingClient')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'IncomingClient')
+        self.assertEqual(value.value, 0)
 
     def test_01_SelectedTunnel(self):
         """
         Test VpnConditionType with SelectedTunnel
         """
-        value = pykerio.enums.VpnConditionType(name='SelectedTunnel')
+        value = VpnConditionType.SelectedTunnel
         self.assertEqual(value.dump(), 'SelectedTunnel')
-        self.assertEqual(value.get_name(), 'SelectedTunnel')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'SelectedTunnel')
+        self.assertEqual(value.value, 1)
 
     def test_02_AllTunnels(self):
         """
         Test VpnConditionType with AllTunnels
         """
-        value = pykerio.enums.VpnConditionType(name='AllTunnels')
+        value = VpnConditionType.AllTunnels
         self.assertEqual(value.dump(), 'AllTunnels')
-        self.assertEqual(value.get_name(), 'AllTunnels')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'AllTunnels')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test VpnConditionType with FAIL
         """
-        value = pykerio.enums.VpnConditionType(name='FAIL')
+        value = VpnConditionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

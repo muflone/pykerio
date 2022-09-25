@@ -36,7 +36,7 @@ class IpTools(object):
         response = self.api.request_rpc(
             method='IpTools.getStatus',
             params={})
-        active_tool = ActiveTool(name=response.result['activeTool'])
+        active_tool = ActiveTool.from_name(name=response.result['activeTool'])
         lines = StringList()
         lines.load(response.result['lines'])
         return (active_tool, lines)

@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class ConnectivityStatus(BaseEnumeration):
-    OK = 0
-    CHECKING = 1
-    ERROR = 2
-
-    VALUES = {
-        'ConnectivityOk': OK,
-        'ConnectivityChecking': CHECKING,
-        'ConnectivityError': ERROR
-    }
+    ConnectivityOk = 0
+    ConnectivityChecking = 1
+    ConnectivityError = 2

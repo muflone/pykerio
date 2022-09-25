@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import InterfaceEncapType
 
 
 class TestCase_InterfaceEncapType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_InterfaceEncapType(unittest.TestCase):
         """
         Test InterfaceEncapType with InterfaceEncapNative
         """
-        value = pykerio.enums.InterfaceEncapType(name='InterfaceEncapNative')
+        value = InterfaceEncapType.InterfaceEncapNative
         self.assertEqual(value.dump(), 'InterfaceEncapNative')
-        self.assertEqual(value.get_name(), 'InterfaceEncapNative')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'InterfaceEncapNative')
+        self.assertEqual(value.value, 0)
 
     def test_01_InterfaceEncapPppoe(self):
         """
         Test InterfaceEncapType with InterfaceEncapPppoe
         """
-        value = pykerio.enums.InterfaceEncapType(name='InterfaceEncapPppoe')
+        value = InterfaceEncapType.InterfaceEncapPppoe
         self.assertEqual(value.dump(), 'InterfaceEncapPppoe')
-        self.assertEqual(value.get_name(), 'InterfaceEncapPppoe')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'InterfaceEncapPppoe')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test InterfaceEncapType with FAIL
         """
-        value = pykerio.enums.InterfaceEncapType(name='FAIL')
+        value = InterfaceEncapType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

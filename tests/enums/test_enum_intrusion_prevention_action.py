@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import IntrusionPreventionAction
 
 
 class TestCase_IntrusionPreventionAction(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_IntrusionPreventionAction(unittest.TestCase):
         """
         Test IntrusionPreventionAction with IntrusionPreventionActionDropAndLog
         """
-        value = pykerio.enums.IntrusionPreventionAction(name='IntrusionPreventionActionDropAndLog')
+        value = IntrusionPreventionAction.IntrusionPreventionActionDropAndLog
         self.assertEqual(value.dump(), 'IntrusionPreventionActionDropAndLog')
-        self.assertEqual(value.get_name(), 'IntrusionPreventionActionDropAndLog')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'IntrusionPreventionActionDropAndLog')
+        self.assertEqual(value.value, 0)
 
     def test_01_IntrusionPreventionActionLog(self):
         """
         Test IntrusionPreventionAction with IntrusionPreventionActionLog
         """
-        value = pykerio.enums.IntrusionPreventionAction(name='IntrusionPreventionActionLog')
+        value = IntrusionPreventionAction.IntrusionPreventionActionLog
         self.assertEqual(value.dump(), 'IntrusionPreventionActionLog')
-        self.assertEqual(value.get_name(), 'IntrusionPreventionActionLog')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'IntrusionPreventionActionLog')
+        self.assertEqual(value.value, 1)
 
     def test_02_IntrusionPreventionActionNothing(self):
         """
         Test IntrusionPreventionAction with IntrusionPreventionActionNothing
         """
-        value = pykerio.enums.IntrusionPreventionAction(name='IntrusionPreventionActionNothing')
+        value = IntrusionPreventionAction.IntrusionPreventionActionNothing
         self.assertEqual(value.dump(), 'IntrusionPreventionActionNothing')
-        self.assertEqual(value.get_name(), 'IntrusionPreventionActionNothing')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'IntrusionPreventionActionNothing')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test IntrusionPreventionAction with FAIL
         """
-        value = pykerio.enums.IntrusionPreventionAction(name='FAIL')
+        value = IntrusionPreventionAction.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

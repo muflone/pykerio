@@ -82,9 +82,7 @@ class TestCase_Ports(unittest.TestCase):
         ports_list = self.__class__.ports.get()
         for port in ports_list:
             # Changing LAN ports speed to HalfDuplex 10 Mbit
-            if port['assignment'].dump() == pykerio.enums.PortAssignmentType(
-                    'PortAssignmentSwitch').dump():
-                port['speedDuplex'] = pykerio.enums.SpeedDuplexType(
-                    name='SpeedDuplexHalf10')
+            if (port['assignment'].dump() == pykerio.enums.PortAssignmentType.PortAssignmentSwitch.name):
+                port['speedDuplex'] = pykerio.enums.SpeedDuplexType.SpeedDuplexHalf10
         # Apply changes
         self.__class__.ports.set(ports_list, 10)

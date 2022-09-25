@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import InterfaceStatusType
 
 
 class TestCase_InterfaceStatusType(unittest.TestCase):
@@ -28,71 +28,71 @@ class TestCase_InterfaceStatusType(unittest.TestCase):
         """
         Test InterfaceStatusType with Up
         """
-        value = pykerio.enums.InterfaceStatusType(name='Up')
+        value = InterfaceStatusType.Up
         self.assertEqual(value.dump(), 'Up')
-        self.assertEqual(value.get_name(), 'Up')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Up')
+        self.assertEqual(value.value, 0)
 
     def test_01_Down(self):
         """
         Test InterfaceStatusType with Down
         """
-        value = pykerio.enums.InterfaceStatusType(name='Down')
+        value = InterfaceStatusType.Down
         self.assertEqual(value.dump(), 'Down')
-        self.assertEqual(value.get_name(), 'Down')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Down')
+        self.assertEqual(value.value, 1)
 
     def test_02_Connecting(self):
         """
         Test InterfaceStatusType with Connecting
         """
-        value = pykerio.enums.InterfaceStatusType(name='Connecting')
+        value = InterfaceStatusType.Connecting
         self.assertEqual(value.dump(), 'Connecting')
-        self.assertEqual(value.get_name(), 'Connecting')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Connecting')
+        self.assertEqual(value.value, 2)
 
     def test_03_Disconnecting(self):
         """
         Test InterfaceStatusType with Disconnecting
         """
-        value = pykerio.enums.InterfaceStatusType(name='Disconnecting')
+        value = InterfaceStatusType.Disconnecting
         self.assertEqual(value.dump(), 'Disconnecting')
-        self.assertEqual(value.get_name(), 'Disconnecting')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'Disconnecting')
+        self.assertEqual(value.value, 3)
 
     def test_04_CableDisconnected(self):
         """
         Test InterfaceStatusType with CableDisconnected
         """
-        value = pykerio.enums.InterfaceStatusType(name='CableDisconnected')
+        value = InterfaceStatusType.CableDisconnected
         self.assertEqual(value.dump(), 'CableDisconnected')
-        self.assertEqual(value.get_name(), 'CableDisconnected')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'CableDisconnected')
+        self.assertEqual(value.value, 4)
 
     def test_05_Error(self):
         """
         Test InterfaceStatusType with Error
         """
-        value = pykerio.enums.InterfaceStatusType(name='Error')
+        value = InterfaceStatusType.Error
         self.assertEqual(value.dump(), 'Error')
-        self.assertEqual(value.get_name(), 'Error')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'Error')
+        self.assertEqual(value.value, 5)
 
     def test_06_Backup(self):
         """
         Test InterfaceStatusType with Backup
         """
-        value = pykerio.enums.InterfaceStatusType(name='Backup')
+        value = InterfaceStatusType.Backup
         self.assertEqual(value.dump(), 'Backup')
-        self.assertEqual(value.get_name(), 'Backup')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'Backup')
+        self.assertEqual(value.value, 6)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test InterfaceStatusType with FAIL
         """
-        value = pykerio.enums.InterfaceStatusType(name='FAIL')
+        value = InterfaceStatusType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

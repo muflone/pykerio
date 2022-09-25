@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class DnsTool(BaseEnumeration):
-    NSLOOKUP = 0
-    DIG = 1
-
-    VALUES = {
-        'DnsToolNslookup': NSLOOKUP,
-        'DnsToolDig': DIG
-    }
+    DnsToolNslookup = 0
+    DnsToolDig = 1

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import MppeType
 
 
 class TestCase_MppeType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_MppeType(unittest.TestCase):
         """
         Test MppeType with MppeDisabled
         """
-        value = pykerio.enums.MppeType(name='MppeDisabled')
+        value = MppeType.MppeDisabled
         self.assertEqual(value.dump(), 'MppeDisabled')
-        self.assertEqual(value.get_name(), 'MppeDisabled')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'MppeDisabled')
+        self.assertEqual(value.value, 0)
 
     def test_01_MppeEnabled(self):
         """
         Test MppeType with MppeEnabled
         """
-        value = pykerio.enums.MppeType(name='MppeEnabled')
+        value = MppeType.MppeEnabled
         self.assertEqual(value.dump(), 'MppeEnabled')
-        self.assertEqual(value.get_name(), 'MppeEnabled')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'MppeEnabled')
+        self.assertEqual(value.value, 1)
 
     def test_02_Mppe128Enabled(self):
         """
         Test MppeType with Mppe128Enabled
         """
-        value = pykerio.enums.MppeType(name='Mppe128Enabled')
+        value = MppeType.Mppe128Enabled
         self.assertEqual(value.dump(), 'Mppe128Enabled')
-        self.assertEqual(value.get_name(), 'Mppe128Enabled')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Mppe128Enabled')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test MppeType with FAIL
         """
-        value = pykerio.enums.MppeType(name='FAIL')
+        value = MppeType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

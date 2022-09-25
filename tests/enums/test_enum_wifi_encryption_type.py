@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import WifiEncryptionType
 
 
 class TestCase_WifiEncryptionType(unittest.TestCase):
@@ -28,53 +28,53 @@ class TestCase_WifiEncryptionType(unittest.TestCase):
         """
         Test WifiEncryptionType with WifiEncryptionDisabled
         """
-        value = pykerio.enums.WifiEncryptionType(name='WifiEncryptionDisabled')
+        value = WifiEncryptionType.WifiEncryptionDisabled
         self.assertEqual(value.dump(), 'WifiEncryptionDisabled')
-        self.assertEqual(value.get_name(), 'WifiEncryptionDisabled')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'WifiEncryptionDisabled')
+        self.assertEqual(value.value, 0)
 
     def test_01_WifiEncryptionWpaPsk(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpaPsk
         """
-        value = pykerio.enums.WifiEncryptionType(name='WifiEncryptionWpaPsk')
+        value = WifiEncryptionType.WifiEncryptionWpaPsk
         self.assertEqual(value.dump(), 'WifiEncryptionWpaPsk')
-        self.assertEqual(value.get_name(), 'WifiEncryptionWpaPsk')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'WifiEncryptionWpaPsk')
+        self.assertEqual(value.value, 1)
 
     def test_02_WifiEncryptionWpaEnt(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpaEnt
         """
-        value = pykerio.enums.WifiEncryptionType(name='WifiEncryptionWpaEnt')
+        value = WifiEncryptionType.WifiEncryptionWpaEnt
         self.assertEqual(value.dump(), 'WifiEncryptionWpaEnt')
-        self.assertEqual(value.get_name(), 'WifiEncryptionWpaEnt')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'WifiEncryptionWpaEnt')
+        self.assertEqual(value.value, 2)
 
     def test_03_WifiEncryptionWpa2Psk(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpa2Psk
         """
-        value = pykerio.enums.WifiEncryptionType(name='WifiEncryptionWpa2Psk')
+        value = WifiEncryptionType.WifiEncryptionWpa2Psk
         self.assertEqual(value.dump(), 'WifiEncryptionWpa2Psk')
-        self.assertEqual(value.get_name(), 'WifiEncryptionWpa2Psk')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'WifiEncryptionWpa2Psk')
+        self.assertEqual(value.value, 3)
 
     def test_04_WifiEncryptionWpa2Ent(self):
         """
         Test WifiEncryptionType with WifiEncryptionWpa2Ent
         """
-        value = pykerio.enums.WifiEncryptionType(name='WifiEncryptionWpa2Ent')
+        value = WifiEncryptionType.WifiEncryptionWpa2Ent
         self.assertEqual(value.dump(), 'WifiEncryptionWpa2Ent')
-        self.assertEqual(value.get_name(), 'WifiEncryptionWpa2Ent')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'WifiEncryptionWpa2Ent')
+        self.assertEqual(value.value, 4)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test WifiEncryptionType with FAIL
         """
-        value = pykerio.enums.WifiEncryptionType(name='FAIL')
+        value = WifiEncryptionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

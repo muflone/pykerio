@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SharedDefinitionType
 
 
 class TestCase_SharedDefinitionType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_SharedDefinitionType(unittest.TestCase):
         """
         Test SharedDefinitionType with SharedDefinitionIpAddrGroup
         """
-        value = pykerio.enums.SharedDefinitionType(name='SharedDefinitionIpAddrGroup')
+        value = SharedDefinitionType.SharedDefinitionIpAddrGroup
         self.assertEqual(value.dump(), 'SharedDefinitionIpAddrGroup')
-        self.assertEqual(value.get_name(), 'SharedDefinitionIpAddrGroup')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'SharedDefinitionIpAddrGroup')
+        self.assertEqual(value.value, 0)
 
     def test_01_SharedDefinitionUrlGroup(self):
         """
         Test SharedDefinitionType with SharedDefinitionUrlGroup
         """
-        value = pykerio.enums.SharedDefinitionType(name='SharedDefinitionUrlGroup')
+        value = SharedDefinitionType.SharedDefinitionUrlGroup
         self.assertEqual(value.dump(), 'SharedDefinitionUrlGroup')
-        self.assertEqual(value.get_name(), 'SharedDefinitionUrlGroup')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'SharedDefinitionUrlGroup')
+        self.assertEqual(value.value, 1)
 
     def test_02_SharedDefinitionTimeRange(self):
         """
         Test SharedDefinitionType with SharedDefinitionTimeRange
         """
-        value = pykerio.enums.SharedDefinitionType(name='SharedDefinitionTimeRange')
+        value = SharedDefinitionType.SharedDefinitionTimeRange
         self.assertEqual(value.dump(), 'SharedDefinitionTimeRange')
-        self.assertEqual(value.get_name(), 'SharedDefinitionTimeRange')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'SharedDefinitionTimeRange')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SharedDefinitionType with FAIL
         """
-        value = pykerio.enums.SharedDefinitionType(name='FAIL')
+        value = SharedDefinitionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

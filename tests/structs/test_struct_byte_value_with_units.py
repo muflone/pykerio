@@ -28,7 +28,7 @@ class TestCase_ByteValueWithUnits(unittest.TestCase):
         """
         Test ByteValueWithUnits
         """
-        units = pykerio.enums.ByteUnits('GigaBytes')
+        units = pykerio.enums.ByteUnits.GigaBytes
         value = 12345
         teststruct = pykerio.structs.ByteValueWithUnits({
             'value': value,

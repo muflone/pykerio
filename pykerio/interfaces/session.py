@@ -81,7 +81,7 @@ class Session(JSONSerializable):
         response = self.api.request_rpc(
             method='Session.getLoginType',
             params={})
-        return LoginType(response.result['type'])
+        return LoginType.from_name(response.result['type'])
 
     def reset(self):
         """

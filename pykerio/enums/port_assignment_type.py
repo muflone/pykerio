@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class PortAssignmentType(BaseEnumeration):
-    SWITCH = 0
-    STANDALONE = 1
-    UNASSIGNED = 2
-
-    VALUES = {
-        'PortAssignmentSwitch': SWITCH,
-        'PortAssignmentStandalone': STANDALONE,
-        'PortAssignmentUnassigned': UNASSIGNED
-    }
+    PortAssignmentSwitch = 0
+    PortAssignmentStandalone = 1
+    PortAssignmentUnassigned = 2

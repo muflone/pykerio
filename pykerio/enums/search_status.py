@@ -22,14 +22,7 @@ from .base_enumeration import BaseEnumeration
 
 
 class SearchStatus(BaseEnumeration):
-    RESULTS_FOUND = 0
-    SEARCHING = 1
-    CANCELED = 2
-    NOT_FOUND = 3
-
-    VALUES = {
-        'ResultFound': RESULTS_FOUND,
-        'Searching': SEARCHING,
-        'Cancelled': CANCELED,
-        'ResultNotFound': NOT_FOUND
-    }
+    ResultFound = 0
+    Searching = 1
+    Cancelled = 2
+    ResultNotFound = 3

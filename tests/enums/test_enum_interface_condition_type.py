@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import InterfaceConditionType
 
 
 class TestCase_InterfaceConditionType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_InterfaceConditionType(unittest.TestCase):
         """
         Test InterfaceConditionType with InterfaceInternet
         """
-        value = pykerio.enums.InterfaceConditionType(name='InterfaceInternet')
+        value = InterfaceConditionType.InterfaceInternet
         self.assertEqual(value.dump(), 'InterfaceInternet')
-        self.assertEqual(value.get_name(), 'InterfaceInternet')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'InterfaceInternet')
+        self.assertEqual(value.value, 0)
 
     def test_01_InterfaceTrusted(self):
         """
         Test InterfaceConditionType with InterfaceTrusted
         """
-        value = pykerio.enums.InterfaceConditionType(name='InterfaceTrusted')
+        value = InterfaceConditionType.InterfaceTrusted
         self.assertEqual(value.dump(), 'InterfaceTrusted')
-        self.assertEqual(value.get_name(), 'InterfaceTrusted')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'InterfaceTrusted')
+        self.assertEqual(value.value, 1)
 
     def test_02_InterfaceGuest(self):
         """
         Test InterfaceConditionType with InterfaceGuest
         """
-        value = pykerio.enums.InterfaceConditionType(name='InterfaceGuest')
+        value = InterfaceConditionType.InterfaceGuest
         self.assertEqual(value.dump(), 'InterfaceGuest')
-        self.assertEqual(value.get_name(), 'InterfaceGuest')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'InterfaceGuest')
+        self.assertEqual(value.value, 2)
 
     def test_03_InterfaceSelected(self):
         """
         Test InterfaceConditionType with InterfaceSelected
         """
-        value = pykerio.enums.InterfaceConditionType(name='InterfaceSelected')
+        value = InterfaceConditionType.InterfaceSelected
         self.assertEqual(value.dump(), 'InterfaceSelected')
-        self.assertEqual(value.get_name(), 'InterfaceSelected')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'InterfaceSelected')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test InterfaceConditionType with FAIL
         """
-        value = pykerio.enums.InterfaceConditionType(name='FAIL')
+        value = InterfaceConditionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

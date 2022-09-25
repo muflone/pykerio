@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class SourceConditonEntityType(BaseEnumeration):
-    ADDRESS_GROUP = 0
-    USERS = 1
-    GUESTS = 2
-
-    VALUES = {
-        'SourceConditonEntityAddressGroup': ADDRESS_GROUP,
-        'SourceConditonEntityUsers': USERS,
-        'SourceConditonEntityGuests': GUESTS
-    }
+    SourceConditonEntityAddressGroup = 0
+    SourceConditonEntityUsers = 1
+    SourceConditonEntityGuests = 2

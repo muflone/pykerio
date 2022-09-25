@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ContentConditionEntityType
 
 
 class TestCase_ContentConditionEntityType(unittest.TestCase):
@@ -28,53 +28,53 @@ class TestCase_ContentConditionEntityType(unittest.TestCase):
         """
         Test ContentConditionEntityType with ContentConditionEntityApplication
         """
-        value = pykerio.enums.ContentConditionEntityType(name='ContentConditionEntityApplication')
+        value = ContentConditionEntityType.ContentConditionEntityApplication
         self.assertEqual(value.dump(), 'ContentConditionEntityApplication')
-        self.assertEqual(value.get_name(), 'ContentConditionEntityApplication')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ContentConditionEntityApplication')
+        self.assertEqual(value.value, 0)
 
     def test_01_ContentConditionEntityFileName(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityFileName
         """
-        value = pykerio.enums.ContentConditionEntityType(name='ContentConditionEntityFileName')
+        value = ContentConditionEntityType.ContentConditionEntityFileName
         self.assertEqual(value.dump(), 'ContentConditionEntityFileName')
-        self.assertEqual(value.get_name(), 'ContentConditionEntityFileName')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ContentConditionEntityFileName')
+        self.assertEqual(value.value, 1)
 
     def test_02_ContentConditionEntityFileGroup(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityFileGroup
         """
-        value = pykerio.enums.ContentConditionEntityType(name='ContentConditionEntityFileGroup')
+        value = ContentConditionEntityType.ContentConditionEntityFileGroup
         self.assertEqual(value.dump(), 'ContentConditionEntityFileGroup')
-        self.assertEqual(value.get_name(), 'ContentConditionEntityFileGroup')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ContentConditionEntityFileGroup')
+        self.assertEqual(value.value, 2)
 
     def test_03_ContentConditionEntityUrl(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityUrl
         """
-        value = pykerio.enums.ContentConditionEntityType(name='ContentConditionEntityUrl')
+        value = ContentConditionEntityType.ContentConditionEntityUrl
         self.assertEqual(value.dump(), 'ContentConditionEntityUrl')
-        self.assertEqual(value.get_name(), 'ContentConditionEntityUrl')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'ContentConditionEntityUrl')
+        self.assertEqual(value.value, 3)
 
     def test_04_ContentConditionEntityUrlGroup(self):
         """
         Test ContentConditionEntityType with ContentConditionEntityUrlGroup
         """
-        value = pykerio.enums.ContentConditionEntityType(name='ContentConditionEntityUrlGroup')
+        value = ContentConditionEntityType.ContentConditionEntityUrlGroup
         self.assertEqual(value.dump(), 'ContentConditionEntityUrlGroup')
-        self.assertEqual(value.get_name(), 'ContentConditionEntityUrlGroup')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'ContentConditionEntityUrlGroup')
+        self.assertEqual(value.value, 4)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ContentConditionEntityType with FAIL
         """
-        value = pykerio.enums.ContentConditionEntityType(name='FAIL')
+        value = ContentConditionEntityType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

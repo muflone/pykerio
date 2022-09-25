@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import AntivirusUpdatePhases
 
 
 class TestCase_AntivirusUpdatePhases(unittest.TestCase):
@@ -28,62 +28,62 @@ class TestCase_AntivirusUpdatePhases(unittest.TestCase):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateStarted
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='AntivirusUpdateStarted')
+        value = AntivirusUpdatePhases.AntivirusUpdateStarted
         self.assertEqual(value.dump(), 'AntivirusUpdateStarted')
-        self.assertEqual(value.get_name(), 'AntivirusUpdateStarted')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'AntivirusUpdateStarted')
+        self.assertEqual(value.value, 0)
 
     def test_01_AntivirusUpdateChecking(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateChecking
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='AntivirusUpdateChecking')
+        value = AntivirusUpdatePhases.AntivirusUpdateChecking
         self.assertEqual(value.dump(), 'AntivirusUpdateChecking')
-        self.assertEqual(value.get_name(), 'AntivirusUpdateChecking')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'AntivirusUpdateChecking')
+        self.assertEqual(value.value, 1)
 
     def test_02_AntivirusUpdateDownload(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateDownload
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='AntivirusUpdateDownload')
+        value = AntivirusUpdatePhases.AntivirusUpdateDownload
         self.assertEqual(value.dump(), 'AntivirusUpdateDownload')
-        self.assertEqual(value.get_name(), 'AntivirusUpdateDownload')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'AntivirusUpdateDownload')
+        self.assertEqual(value.value, 2)
 
     def test_03_AntivirusUpdateDownloadEngine(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateDownloadEngine
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='AntivirusUpdateDownloadEngine')
+        value = AntivirusUpdatePhases.AntivirusUpdateDownloadEngine
         self.assertEqual(value.dump(), 'AntivirusUpdateDownloadEngine')
-        self.assertEqual(value.get_name(), 'AntivirusUpdateDownloadEngine')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'AntivirusUpdateDownloadEngine')
+        self.assertEqual(value.value, 3)
 
     def test_04_AntivirusUpdateOk(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateOk
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='AntivirusUpdateOk')
+        value = AntivirusUpdatePhases.AntivirusUpdateOk
         self.assertEqual(value.dump(), 'AntivirusUpdateOk')
-        self.assertEqual(value.get_name(), 'AntivirusUpdateOk')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'AntivirusUpdateOk')
+        self.assertEqual(value.value, 4)
 
     def test_05_AntivirusUpdateFailed(self):
         """
         Test AntivirusUpdatePhases with AntivirusUpdateFailed
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='AntivirusUpdateFailed')
+        value = AntivirusUpdatePhases.AntivirusUpdateFailed
         self.assertEqual(value.dump(), 'AntivirusUpdateFailed')
-        self.assertEqual(value.get_name(), 'AntivirusUpdateFailed')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'AntivirusUpdateFailed')
+        self.assertEqual(value.value, 5)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test AntivirusUpdatePhases with FAIL
         """
-        value = pykerio.enums.AntivirusUpdatePhases(name='FAIL')
+        value = AntivirusUpdatePhases.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

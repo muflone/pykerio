@@ -39,7 +39,7 @@ class TestCase_WifiCountryConfig(unittest.TestCase):
         channels.append(channel)
 
         channelsconfig = pykerio.structs.WifiModeChannelConfig({
-            'band': pykerio.enums.WifiBandType('WifiBandBG'),
+            'band': pykerio.enums.WifiBandType.WifiBandBG,
             'channels': channels})
         channelslist = pykerio.lists.WifiModeChannelList()
         channelslist.append(channelsconfig)

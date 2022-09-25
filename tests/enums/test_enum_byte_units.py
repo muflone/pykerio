@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ByteUnits
 
 
 class TestCase_ByteUnits(unittest.TestCase):
@@ -28,62 +28,62 @@ class TestCase_ByteUnits(unittest.TestCase):
         """
         Test ByteUnits with Bytes
         """
-        value = pykerio.enums.ByteUnits(name='Bytes')
+        value = ByteUnits.Bytes
         self.assertEqual(value.dump(), 'Bytes')
-        self.assertEqual(value.get_name(), 'Bytes')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Bytes')
+        self.assertEqual(value.value, 0)
 
     def test_01_KiloBytes(self):
         """
         Test ByteUnits with KiloBytes
         """
-        value = pykerio.enums.ByteUnits(name='KiloBytes')
+        value = ByteUnits.KiloBytes
         self.assertEqual(value.dump(), 'KiloBytes')
-        self.assertEqual(value.get_name(), 'KiloBytes')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'KiloBytes')
+        self.assertEqual(value.value, 1)
 
     def test_02_MegaBytes(self):
         """
         Test ByteUnits with MegaBytes
         """
-        value = pykerio.enums.ByteUnits(name='MegaBytes')
+        value = ByteUnits.MegaBytes
         self.assertEqual(value.dump(), 'MegaBytes')
-        self.assertEqual(value.get_name(), 'MegaBytes')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'MegaBytes')
+        self.assertEqual(value.value, 2)
 
     def test_03_GigaBytes(self):
         """
         Test ByteUnits with GigaBytes
         """
-        value = pykerio.enums.ByteUnits(name='GigaBytes')
+        value = ByteUnits.GigaBytes
         self.assertEqual(value.dump(), 'GigaBytes')
-        self.assertEqual(value.get_name(), 'GigaBytes')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'GigaBytes')
+        self.assertEqual(value.value, 3)
 
     def test_04_TeraBytes(self):
         """
         Test ByteUnits with TeraBytes
         """
-        value = pykerio.enums.ByteUnits(name='TeraBytes')
+        value = ByteUnits.TeraBytes
         self.assertEqual(value.dump(), 'TeraBytes')
-        self.assertEqual(value.get_name(), 'TeraBytes')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'TeraBytes')
+        self.assertEqual(value.value, 4)
 
     def test_05_PetaBytes(self):
         """
         Test ByteUnits with PetaBytes
         """
-        value = pykerio.enums.ByteUnits(name='PetaBytes')
+        value = ByteUnits.PetaBytes
         self.assertEqual(value.dump(), 'PetaBytes')
-        self.assertEqual(value.get_name(), 'PetaBytes')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'PetaBytes')
+        self.assertEqual(value.value, 5)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ByteUnits with FAIL
         """
-        value = pykerio.enums.ByteUnits(name='FAIL')
+        value = ByteUnits.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

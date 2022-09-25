@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import UserFormatType
 
 
 class TestCase_UserFormatType(unittest.TestCase):
@@ -28,62 +28,62 @@ class TestCase_UserFormatType(unittest.TestCase):
         """
         Test UserFormatType with UserFormatFL
         """
-        value = pykerio.enums.UserFormatType(name='UserFormatFL')
+        value = UserFormatType.UserFormatFL
         self.assertEqual(value.dump(), 'UserFormatFL')
-        self.assertEqual(value.get_name(), 'UserFormatFL')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'UserFormatFL')
+        self.assertEqual(value.value, 0)
 
     def test_01_UserFormatFLU(self):
         """
         Test UserFormatType with UserFormatFLU
         """
-        value = pykerio.enums.UserFormatType(name='UserFormatFLU')
+        value = UserFormatType.UserFormatFLU
         self.assertEqual(value.dump(), 'UserFormatFLU')
-        self.assertEqual(value.get_name(), 'UserFormatFLU')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'UserFormatFLU')
+        self.assertEqual(value.value, 1)
 
     def test_02_UserFormatFLD(self):
         """
         Test UserFormatType with UserFormatFLD
         """
-        value = pykerio.enums.UserFormatType(name='UserFormatFLD')
+        value = UserFormatType.UserFormatFLD
         self.assertEqual(value.dump(), 'UserFormatFLD')
-        self.assertEqual(value.get_name(), 'UserFormatFLD')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'UserFormatFLD')
+        self.assertEqual(value.value, 2)
 
     def test_03_UserFormatLF(self):
         """
         Test UserFormatType with UserFormatLF
         """
-        value = pykerio.enums.UserFormatType(name='UserFormatLF')
+        value = UserFormatType.UserFormatLF
         self.assertEqual(value.dump(), 'UserFormatLF')
-        self.assertEqual(value.get_name(), 'UserFormatLF')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'UserFormatLF')
+        self.assertEqual(value.value, 3)
 
     def test_04_UserFormatLFU(self):
         """
         Test UserFormatType with UserFormatLFU
         """
-        value = pykerio.enums.UserFormatType(name='UserFormatLFU')
+        value = UserFormatType.UserFormatLFU
         self.assertEqual(value.dump(), 'UserFormatLFU')
-        self.assertEqual(value.get_name(), 'UserFormatLFU')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'UserFormatLFU')
+        self.assertEqual(value.value, 4)
 
     def test_05_UserFormatLFD(self):
         """
         Test UserFormatType with UserFormatLFD
         """
-        value = pykerio.enums.UserFormatType(name='UserFormatLFD')
+        value = UserFormatType.UserFormatLFD
         self.assertEqual(value.dump(), 'UserFormatLFD')
-        self.assertEqual(value.get_name(), 'UserFormatLFD')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'UserFormatLFD')
+        self.assertEqual(value.value, 5)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test UserFormatType with FAIL
         """
-        value = pykerio.enums.UserFormatType(name='FAIL')
+        value = UserFormatType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

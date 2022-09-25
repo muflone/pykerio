@@ -22,14 +22,7 @@ from .base_enumeration import BaseEnumeration
 
 
 class ScanRuleType(BaseEnumeration):
-    URL = 0
-    MIME = 1
-    FILENAME = 2
-    FILE_GROUP = 3
-
-    VALUES = {
-        'ScanRuleUrl': URL,
-        'ScanRuleMime': MIME,
-        'ScanRuleFilename': FILENAME,
-        'ScanRuleFileGroup': FILE_GROUP
-    }
+    ScanRuleUrl = 0
+    ScanRuleMime = 1
+    ScanRuleFilename = 2
+    ScanRuleFileGroup = 3

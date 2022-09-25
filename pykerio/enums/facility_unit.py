@@ -22,54 +22,27 @@ from .base_enumeration import BaseEnumeration
 
 
 class FacilityUnit(BaseEnumeration):
-    KERNEL = 0
-    USER_LEVEL = 1
-    MAIL_SYSTEM = 2
-    SYSTEM_DAEMONS = 3
-    SECURITY1 = 4
-    INTERNAL = 5
-    LINE_PRINTER = 6
-    NETWORK_NEWS = 7
-    UUCP_SUBSYSTEM = 8
-    CLOCK_DAEMON1 = 9
-    SECURITY2 = 10
-    FTP_DAEMON = 11
-    NTP_SUBSYSTEM = 12
-    LOG_AUDIT = 13
-    LOG_ALERT = 14
-    CLOCK_DAEMON2 = 15
-    LOCAL0 = 16
-    LOCAL1 = 17
-    LOCAL2 = 18
-    LOCAL3 = 19
-    LOCAL4 = 20
-    LOCAL5 = 21
-    LOCAL6 = 22
-    LOCAL7 = 23
-
-    VALUES = {
-        'FacilityKernel': KERNEL,
-        'FacilityUserLevel': USER_LEVEL,
-        'FacilityMailSystem': MAIL_SYSTEM,
-        'FacilitySystemDaemons': SYSTEM_DAEMONS,
-        'FacilitySecurity1': SECURITY1,
-        'FacilityInternal': INTERNAL,
-        'FacilityLinePrinter': LINE_PRINTER,
-        'FacilityNetworkNews': NETWORK_NEWS,
-        'FacilityUucpSubsystem': UUCP_SUBSYSTEM,
-        'FacilityClockDaemon1': CLOCK_DAEMON1,
-        'FacilitySecurity2': SECURITY2,
-        'FacilityFtpDaemon': FTP_DAEMON,
-        'FacilityNtpSubsystem': NTP_SUBSYSTEM,
-        'FacilityLogAudit': LOG_AUDIT,
-        'FacilityLogAlert': LOG_ALERT,
-        'FacilityClockDaemon2': CLOCK_DAEMON2,
-        'FacilityLocal0': LOCAL0,
-        'FacilityLocal1': LOCAL1,
-        'FacilityLocal2': LOCAL2,
-        'FacilityLocal3': LOCAL3,
-        'FacilityLocal4': LOCAL4,
-        'FacilityLocal5': LOCAL5,
-        'FacilityLocal6': LOCAL6,
-        'FacilityLocal7': LOCAL7
-    }
+    FacilityKernel = 0
+    FacilityUserLevel = 1
+    FacilityMailSystem = 2
+    FacilitySystemDaemons = 3
+    FacilitySecurity1 = 4
+    FacilityInternal = 5
+    FacilityLinePrinter = 6
+    FacilityNetworkNews = 7
+    FacilityUucpSubsystem = 8
+    FacilityClockDaemon1 = 9
+    FacilitySecurity2 = 10
+    FacilityFtpDaemon = 11
+    FacilityNtpSubsystem = 12
+    FacilityLogAudit = 13
+    FacilityLogAlert = 14
+    FacilityClockDaemon2 = 15
+    FacilityLocal0 = 16
+    FacilityLocal1 = 17
+    FacilityLocal2 = 18
+    FacilityLocal3 = 19
+    FacilityLocal4 = 20
+    FacilityLocal5 = 21
+    FacilityLocal6 = 22
+    FacilityLocal7 = 23

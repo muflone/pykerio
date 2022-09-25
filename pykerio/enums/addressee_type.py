@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class AddresseeType(BaseEnumeration):
-    EMAIL = 0
-    USER = 1
-
-    VALUES = {
-        'AddresseeEmail': EMAIL,
-        'AddresseeUser': USER
-    }
+    AddresseeEmail = 0
+    AddresseeUser = 1

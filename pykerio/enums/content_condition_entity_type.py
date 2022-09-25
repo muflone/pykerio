@@ -22,16 +22,8 @@ from .base_enumeration import BaseEnumeration
 
 
 class ContentConditionEntityType(BaseEnumeration):
-    APPLICATION = 0
-    FILE_NAME = 1
-    FILE_GROUP = 2
-    URL = 3
-    URL_GROUP = 4
-
-    VALUES = {
-        'ContentConditionEntityApplication': APPLICATION,
-        'ContentConditionEntityFileName': FILE_NAME,
-        'ContentConditionEntityFileGroup': FILE_GROUP,
-        'ContentConditionEntityUrl': URL,
-        'ContentConditionEntityUrlGroup': URL_GROUP
-    }
+    ContentConditionEntityApplication = 0
+    ContentConditionEntityFileName = 1
+    ContentConditionEntityFileGroup = 2
+    ContentConditionEntityUrl = 3
+    ContentConditionEntityUrlGroup = 4

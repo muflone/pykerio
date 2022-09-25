@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import TrafficEntityType
 
 
 class TestCase_TrafficEntityType(unittest.TestCase):
@@ -28,80 +28,80 @@ class TestCase_TrafficEntityType(unittest.TestCase):
         """
         Test TrafficEntityType with TrafficEntityHost
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityHost')
+        value = TrafficEntityType.TrafficEntityHost
         self.assertEqual(value.dump(), 'TrafficEntityHost')
-        self.assertEqual(value.get_name(), 'TrafficEntityHost')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'TrafficEntityHost')
+        self.assertEqual(value.value, 0)
 
     def test_01_TrafficEntityNetwork(self):
         """
         Test TrafficEntityType with TrafficEntityNetwork
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityNetwork')
+        value = TrafficEntityType.TrafficEntityNetwork
         self.assertEqual(value.dump(), 'TrafficEntityNetwork')
-        self.assertEqual(value.get_name(), 'TrafficEntityNetwork')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'TrafficEntityNetwork')
+        self.assertEqual(value.value, 1)
 
     def test_02_TrafficEntityRange(self):
         """
         Test TrafficEntityType with TrafficEntityRange
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityRange')
+        value = TrafficEntityType.TrafficEntityRange
         self.assertEqual(value.dump(), 'TrafficEntityRange')
-        self.assertEqual(value.get_name(), 'TrafficEntityRange')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'TrafficEntityRange')
+        self.assertEqual(value.value, 2)
 
     def test_03_TrafficEntityAddressGroup(self):
         """
         Test TrafficEntityType with TrafficEntityAddressGroup
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityAddressGroup')
+        value = TrafficEntityType.TrafficEntityAddressGroup
         self.assertEqual(value.dump(), 'TrafficEntityAddressGroup')
-        self.assertEqual(value.get_name(), 'TrafficEntityAddressGroup')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'TrafficEntityAddressGroup')
+        self.assertEqual(value.value, 3)
 
     def test_04_TrafficEntityPrefix(self):
         """
         Test TrafficEntityType with TrafficEntityPrefix
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityPrefix')
+        value = TrafficEntityType.TrafficEntityPrefix
         self.assertEqual(value.dump(), 'TrafficEntityPrefix')
-        self.assertEqual(value.get_name(), 'TrafficEntityPrefix')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'TrafficEntityPrefix')
+        self.assertEqual(value.value, 4)
 
     def test_05_TrafficEntityInterface(self):
         """
         Test TrafficEntityType with TrafficEntityInterface
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityInterface')
+        value = TrafficEntityType.TrafficEntityInterface
         self.assertEqual(value.dump(), 'TrafficEntityInterface')
-        self.assertEqual(value.get_name(), 'TrafficEntityInterface')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'TrafficEntityInterface')
+        self.assertEqual(value.value, 5)
 
     def test_06_TrafficEntityVpn(self):
         """
         Test TrafficEntityType with TrafficEntityVpn
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityVpn')
+        value = TrafficEntityType.TrafficEntityVpn
         self.assertEqual(value.dump(), 'TrafficEntityVpn')
-        self.assertEqual(value.get_name(), 'TrafficEntityVpn')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'TrafficEntityVpn')
+        self.assertEqual(value.value, 6)
 
     def test_07_TrafficEntityUsers(self):
         """
         Test TrafficEntityType with TrafficEntityUsers
         """
-        value = pykerio.enums.TrafficEntityType(name='TrafficEntityUsers')
+        value = TrafficEntityType.TrafficEntityUsers
         self.assertEqual(value.dump(), 'TrafficEntityUsers')
-        self.assertEqual(value.get_name(), 'TrafficEntityUsers')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'TrafficEntityUsers')
+        self.assertEqual(value.value, 7)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test TrafficEntityType with FAIL
         """
-        value = pykerio.enums.TrafficEntityType(name='FAIL')
+        value = TrafficEntityType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

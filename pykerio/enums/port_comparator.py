@@ -22,18 +22,9 @@ from .base_enumeration import BaseEnumeration
 
 
 class PortComparator(BaseEnumeration):
-    ANY = 0
-    EQUAL = 1
-    LESS_THAN = 2
-    GREATER_THAN = 3
-    RANGE = 4
-    LIST = 5
-
-    VALUES = {
-        'Any': ANY,
-        'Equal': EQUAL,
-        'LessThan': LESS_THAN,
-        'GreaterThan': GREATER_THAN,
-        'Range': RANGE,
-        'List': LIST
-    }
+    Any = 0
+    Equal = 1
+    LessThan = 2
+    GreaterThan = 3
+    Range = 4
+    List = 5

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RegistrationType
 
 
 class TestCase_RegistrationType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_RegistrationType(unittest.TestCase):
         """
         Test RegistrationType with rsNoRegistration
         """
-        value = pykerio.enums.RegistrationType(name='rsNoRegistration')
+        value = RegistrationType.rsNoRegistration
         self.assertEqual(value.dump(), 'rsNoRegistration')
-        self.assertEqual(value.get_name(), 'rsNoRegistration')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'rsNoRegistration')
+        self.assertEqual(value.value, 0)
 
     def test_01_rsTrialRegistered(self):
         """
         Test RegistrationType with rsTrialRegistered
         """
-        value = pykerio.enums.RegistrationType(name='rsTrialRegistered')
+        value = RegistrationType.rsTrialRegistered
         self.assertEqual(value.dump(), 'rsTrialRegistered')
-        self.assertEqual(value.get_name(), 'rsTrialRegistered')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'rsTrialRegistered')
+        self.assertEqual(value.value, 1)
 
     def test_02_rsTrialExpired(self):
         """
         Test RegistrationType with rsTrialExpired
         """
-        value = pykerio.enums.RegistrationType(name='rsTrialExpired')
+        value = RegistrationType.rsTrialExpired
         self.assertEqual(value.dump(), 'rsTrialExpired')
-        self.assertEqual(value.get_name(), 'rsTrialExpired')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'rsTrialExpired')
+        self.assertEqual(value.value, 2)
 
     def test_03_rsProductRegistered(self):
         """
         Test RegistrationType with rsProductRegistered
         """
-        value = pykerio.enums.RegistrationType(name='rsProductRegistered')
+        value = RegistrationType.rsProductRegistered
         self.assertEqual(value.dump(), 'rsProductRegistered')
-        self.assertEqual(value.get_name(), 'rsProductRegistered')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'rsProductRegistered')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RegistrationType with FAIL
         """
-        value = pykerio.enums.RegistrationType(name='FAIL')
+        value = RegistrationType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

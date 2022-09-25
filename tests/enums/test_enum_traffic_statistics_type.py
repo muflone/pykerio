@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import TrafficStatisticsType
 
 
 class TestCase_TrafficStatisticsType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_TrafficStatisticsType(unittest.TestCase):
         """
         Test TrafficStatisticsType with TrafficStatisticsInterface
         """
-        value = pykerio.enums.TrafficStatisticsType(name='TrafficStatisticsInterface')
+        value = TrafficStatisticsType.TrafficStatisticsInterface
         self.assertEqual(value.dump(), 'TrafficStatisticsInterface')
-        self.assertEqual(value.get_name(), 'TrafficStatisticsInterface')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'TrafficStatisticsInterface')
+        self.assertEqual(value.value, 0)
 
     def test_01_TrafficStatisticsTrafficRule(self):
         """
         Test TrafficStatisticsType with TrafficStatisticsTrafficRule
         """
-        value = pykerio.enums.TrafficStatisticsType(name='TrafficStatisticsTrafficRule')
+        value = TrafficStatisticsType.TrafficStatisticsTrafficRule
         self.assertEqual(value.dump(), 'TrafficStatisticsTrafficRule')
-        self.assertEqual(value.get_name(), 'TrafficStatisticsTrafficRule')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'TrafficStatisticsTrafficRule')
+        self.assertEqual(value.value, 1)
 
     def test_02_TrafficStatisticsBandwidthRule(self):
         """
         Test TrafficStatisticsType with TrafficStatisticsBandwidthRule
         """
-        value = pykerio.enums.TrafficStatisticsType(name='TrafficStatisticsBandwidthRule')
+        value = TrafficStatisticsType.TrafficStatisticsBandwidthRule
         self.assertEqual(value.dump(), 'TrafficStatisticsBandwidthRule')
-        self.assertEqual(value.get_name(), 'TrafficStatisticsBandwidthRule')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'TrafficStatisticsBandwidthRule')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test TrafficStatisticsType with FAIL
         """
-        value = pykerio.enums.TrafficStatisticsType(name='FAIL')
+        value = TrafficStatisticsType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

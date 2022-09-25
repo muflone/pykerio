@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class MppeType(BaseEnumeration):
-    DISABLED = 0
-    ENABLED = 1
-    ENABLED_128 = 2
-
-    VALUES = {
-        'MppeDisabled': DISABLED,
-        'MppeEnabled': ENABLED,
-        'Mppe128Enabled': ENABLED_128
-    }
+    MppeDisabled = 0
+    MppeEnabled = 1
+    Mppe128Enabled = 2

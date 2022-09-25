@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ConnectivityStatus
 
 
 class TestCase_ConnectivityStatus(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_ConnectivityStatus(unittest.TestCase):
         """
         Test ConnectivityStatus with ConnectivityOk
         """
-        value = pykerio.enums.ConnectivityStatus(name='ConnectivityOk')
+        value = ConnectivityStatus.ConnectivityOk
         self.assertEqual(value.dump(), 'ConnectivityOk')
-        self.assertEqual(value.get_name(), 'ConnectivityOk')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ConnectivityOk')
+        self.assertEqual(value.value, 0)
 
     def test_01_ConnectivityChecking(self):
         """
         Test ConnectivityStatus with ConnectivityChecking
         """
-        value = pykerio.enums.ConnectivityStatus(name='ConnectivityChecking')
+        value = ConnectivityStatus.ConnectivityChecking
         self.assertEqual(value.dump(), 'ConnectivityChecking')
-        self.assertEqual(value.get_name(), 'ConnectivityChecking')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ConnectivityChecking')
+        self.assertEqual(value.value, 1)
 
     def test_02_ConnectivityError(self):
         """
         Test ConnectivityStatus with ConnectivityError
         """
-        value = pykerio.enums.ConnectivityStatus(name='ConnectivityError')
+        value = ConnectivityStatus.ConnectivityError
         self.assertEqual(value.dump(), 'ConnectivityError')
-        self.assertEqual(value.get_name(), 'ConnectivityError')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ConnectivityError')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ConnectivityStatus with FAIL
         """
-        value = pykerio.enums.ConnectivityStatus(name='FAIL')
+        value = ConnectivityStatus.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

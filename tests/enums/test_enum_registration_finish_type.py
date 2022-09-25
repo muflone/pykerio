@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RegistrationFinishType
 
 
 class TestCase_RegistrationFinishType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_RegistrationFinishType(unittest.TestCase):
         """
         Test RegistrationFinishType with rfCreate
         """
-        value = pykerio.enums.RegistrationFinishType(name='rfCreate')
+        value = RegistrationFinishType.rfCreate
         self.assertEqual(value.dump(), 'rfCreate')
-        self.assertEqual(value.get_name(), 'rfCreate')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'rfCreate')
+        self.assertEqual(value.value, 0)
 
     def test_01_rfModify(self):
         """
         Test RegistrationFinishType with rfModify
         """
-        value = pykerio.enums.RegistrationFinishType(name='rfModify')
+        value = RegistrationFinishType.rfModify
         self.assertEqual(value.dump(), 'rfModify')
-        self.assertEqual(value.get_name(), 'rfModify')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'rfModify')
+        self.assertEqual(value.value, 1)
 
     def test_02_rfDownload(self):
         """
         Test RegistrationFinishType with rfDownload
         """
-        value = pykerio.enums.RegistrationFinishType(name='rfDownload')
+        value = RegistrationFinishType.rfDownload
         self.assertEqual(value.dump(), 'rfDownload')
-        self.assertEqual(value.get_name(), 'rfDownload')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'rfDownload')
+        self.assertEqual(value.value, 2)
 
     def test_03_rfStore(self):
         """
         Test RegistrationFinishType with rfStore
         """
-        value = pykerio.enums.RegistrationFinishType(name='rfStore')
+        value = RegistrationFinishType.rfStore
         self.assertEqual(value.dump(), 'rfStore')
-        self.assertEqual(value.get_name(), 'rfStore')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'rfStore')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RegistrationFinishType with FAIL
         """
-        value = pykerio.enums.RegistrationFinishType(name='FAIL')
+        value = RegistrationFinishType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class SourceNatMode(BaseEnumeration):
-    DEFAULT = 0
-    INTERFACE = 1
-    IP_ADDRESS = 2
-
-    VALUES = {
-        'NatDefault': DEFAULT,
-        'NatInterface': INTERFACE,
-        'NatIpAddress': IP_ADDRESS
-    }
+    NatDefault = 0
+    NatInterface = 1
+    NatIpAddress = 2

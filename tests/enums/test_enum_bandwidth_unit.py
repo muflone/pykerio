@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import BandwidthUnit
 
 
 class TestCase_BandwidthUnit(unittest.TestCase):
@@ -28,71 +28,71 @@ class TestCase_BandwidthUnit(unittest.TestCase):
         """
         Test BandwidthUnit with BandwidthUnitBits
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitBits')
+        value = BandwidthUnit.BandwidthUnitBits
         self.assertEqual(value.dump(), 'BandwidthUnitBits')
-        self.assertEqual(value.get_name(), 'BandwidthUnitBits')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'BandwidthUnitBits')
+        self.assertEqual(value.value, 0)
 
     def test_01_BandwidthUnitBytes(self):
         """
         Test BandwidthUnit with BandwidthUnitBytes
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitBytes')
+        value = BandwidthUnit.BandwidthUnitBytes
         self.assertEqual(value.dump(), 'BandwidthUnitBytes')
-        self.assertEqual(value.get_name(), 'BandwidthUnitBytes')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'BandwidthUnitBytes')
+        self.assertEqual(value.value, 1)
 
     def test_02_BandwidthUnitKilobits(self):
         """
         Test BandwidthUnit with BandwidthUnitKilobits
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitKilobits')
+        value = BandwidthUnit.BandwidthUnitKilobits
         self.assertEqual(value.dump(), 'BandwidthUnitKilobits')
-        self.assertEqual(value.get_name(), 'BandwidthUnitKilobits')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'BandwidthUnitKilobits')
+        self.assertEqual(value.value, 2)
 
     def test_03_BandwidthUnitKiloBytes(self):
         """
         Test BandwidthUnit with BandwidthUnitKiloBytes
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitKiloBytes')
+        value = BandwidthUnit.BandwidthUnitKiloBytes
         self.assertEqual(value.dump(), 'BandwidthUnitKiloBytes')
-        self.assertEqual(value.get_name(), 'BandwidthUnitKiloBytes')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'BandwidthUnitKiloBytes')
+        self.assertEqual(value.value, 3)
 
     def test_04_BandwidthUnitMegabits(self):
         """
         Test BandwidthUnit with BandwidthUnitMegabits
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitMegabits')
+        value = BandwidthUnit.BandwidthUnitMegabits
         self.assertEqual(value.dump(), 'BandwidthUnitMegabits')
-        self.assertEqual(value.get_name(), 'BandwidthUnitMegabits')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'BandwidthUnitMegabits')
+        self.assertEqual(value.value, 4)
 
     def test_05_BandwidthUnitMegaBytes(self):
         """
         Test BandwidthUnit with BandwidthUnitMegaBytes
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitMegaBytes')
+        value = BandwidthUnit.BandwidthUnitMegaBytes
         self.assertEqual(value.dump(), 'BandwidthUnitMegaBytes')
-        self.assertEqual(value.get_name(), 'BandwidthUnitMegaBytes')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'BandwidthUnitMegaBytes')
+        self.assertEqual(value.value, 5)
 
     def test_06_BandwidthUnitPercent(self):
         """
         Test BandwidthUnit with BandwidthUnitPercent
         """
-        value = pykerio.enums.BandwidthUnit(name='BandwidthUnitPercent')
+        value = BandwidthUnit.BandwidthUnitPercent
         self.assertEqual(value.dump(), 'BandwidthUnitPercent')
-        self.assertEqual(value.get_name(), 'BandwidthUnitPercent')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'BandwidthUnitPercent')
+        self.assertEqual(value.value, 6)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test BandwidthUnit with FAIL
         """
-        value = pykerio.enums.BandwidthUnit(name='FAIL')
+        value = BandwidthUnit.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

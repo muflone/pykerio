@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import QuotaType
 
 
 class TestCase_QuotaType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_QuotaType(unittest.TestCase):
         """
         Test QuotaType with QuotaBoth
         """
-        value = pykerio.enums.QuotaType(name='QuotaBoth')
+        value = QuotaType.QuotaBoth
         self.assertEqual(value.dump(), 'QuotaBoth')
-        self.assertEqual(value.get_name(), 'QuotaBoth')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'QuotaBoth')
+        self.assertEqual(value.value, 0)
 
     def test_01_QuotaDownload(self):
         """
         Test QuotaType with QuotaDownload
         """
-        value = pykerio.enums.QuotaType(name='QuotaDownload')
+        value = QuotaType.QuotaDownload
         self.assertEqual(value.dump(), 'QuotaDownload')
-        self.assertEqual(value.get_name(), 'QuotaDownload')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'QuotaDownload')
+        self.assertEqual(value.value, 1)
 
     def test_02_QuotaUpload(self):
         """
         Test QuotaType with QuotaUpload
         """
-        value = pykerio.enums.QuotaType(name='QuotaUpload')
+        value = QuotaType.QuotaUpload
         self.assertEqual(value.dump(), 'QuotaUpload')
-        self.assertEqual(value.get_name(), 'QuotaUpload')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'QuotaUpload')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test QuotaType with FAIL
         """
-        value = pykerio.enums.QuotaType(name='FAIL')
+        value = QuotaType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

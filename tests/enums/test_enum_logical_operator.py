@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import LogicalOperator
 
 
 class TestCase_LogicalOperator(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_LogicalOperator(unittest.TestCase):
         """
         Test LogicalOperator with Or
         """
-        value = pykerio.enums.LogicalOperator(name='Or')
+        value = LogicalOperator.Or
         self.assertEqual(value.dump(), 'Or')
-        self.assertEqual(value.get_name(), 'Or')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Or')
+        self.assertEqual(value.value, 0)
 
     def test_01_And(self):
         """
         Test LogicalOperator with And
         """
-        value = pykerio.enums.LogicalOperator(name='And')
+        value = LogicalOperator.And
         self.assertEqual(value.dump(), 'And')
-        self.assertEqual(value.get_name(), 'And')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'And')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test LogicalOperator with FAIL
         """
-        value = pykerio.enums.LogicalOperator(name='FAIL')
+        value = LogicalOperator.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

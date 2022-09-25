@@ -22,42 +22,21 @@ from .base_enumeration import BaseEnumeration
 
 
 class ActivityType(BaseEnumeration):
-    WEB = 0
-    WEB_SEARCH = 1
-    MAIL = 2
-    DOWNLOAD = 3
-    UPLOAD = 4
-    MULTIMEDIA = 5
-    P2P = 6
-    REMOTE_ACCESS = 7
-    VPN = 8
-    INSTANT_MESSAGING = 9
-    HUGE_CONNECTION = 10
-    MAIL_CONNECTION = 11
-    P2P_ATTEMPT = 12
-    WEB_CONNECTION = 13
-    HTTP_CONNECTION = 14
-    WEB_MULTIMEDIA = 15
-    SIP = 16
-    SOCIAL_NETWORK = 17
-
-    VALUES = {
-        'ActivityTypeWeb': WEB,
-        'ActivityTypeWebSearch': WEB_SEARCH,
-        'ActivityTypeMail': MAIL,
-        'ActivityTypeDownload': DOWNLOAD,
-        'ActivityTypeUpload': UPLOAD,
-        'ActivityTypeMultimedia': MULTIMEDIA,
-        'ActivityTypeP2p': P2P,
-        'ActivityTypeRemoteAccess': REMOTE_ACCESS,
-        'ActivityTypeVpn': VPN,
-        'ActivityTypeInstantMessaging': INSTANT_MESSAGING,
-        'ActivityTypeHugeConnection': HUGE_CONNECTION,
-        'ActivityTypeMailConnection': MAIL_CONNECTION,
-        'ActivityTypeP2pAttempt': P2P_ATTEMPT,
-        'ActivityTypeWebConnection': WEB_CONNECTION,
-        'ActivityTypeHTTPConnection': HTTP_CONNECTION,
-        'ActivityTypeWebMultimedia': WEB_MULTIMEDIA,
-        'ActivityTypeSip': SIP,
-        'ActivityTypeSocialNetwork': SOCIAL_NETWORK
-    }
+    ActivityTypeWeb = 0
+    ActivityTypeWebSearch = 1
+    ActivityTypeMail = 2
+    ActivityTypeDownload = 3
+    ActivityTypeUpload = 4
+    ActivityTypeMultimedia = 5
+    ActivityTypeP2p = 6
+    ActivityTypeRemoteAccess = 7
+    ActivityTypeVpn = 8
+    ActivityTypeInstantMessaging = 9
+    ActivityTypeHugeConnection = 10
+    ActivityTypeMailConnection = 11
+    ActivityTypeP2pAttempt = 12
+    ActivityTypeWebConnection = 13
+    ActivityTypeHTTPConnection = 14
+    ActivityTypeWebMultimedia = 15
+    ActivityTypeSip = 16
+    ActivityTypeSocialNetwork = 17

@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class DirectoryServiceType(BaseEnumeration):
-    WINDOWS_ACTIVE_DIRECTORY = 0
-    APPLE_DIRECTORY_KERBEROS = 1
-    APPLE_DIRECTORY_PASSWORD = 2
-
-    VALUES = {
-        'WindowsActiveDirectory': WINDOWS_ACTIVE_DIRECTORY,
-        'AppleDirectoryKerberos': APPLE_DIRECTORY_KERBEROS,
-        'AppleDirectoryPassword': APPLE_DIRECTORY_PASSWORD
-    }
+    WindowsActiveDirectory = 0
+    AppleDirectoryKerberos = 1
+    AppleDirectoryPassword = 2

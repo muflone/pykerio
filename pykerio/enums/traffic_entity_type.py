@@ -22,22 +22,11 @@ from .base_enumeration import BaseEnumeration
 
 
 class TrafficEntityType(BaseEnumeration):
-    HOST = 0
-    NETWORK = 1
-    RANGE = 2
-    ADDRESS_GROUP = 3
-    PREFIX = 4
-    INTERFACE = 5
-    VPN = 6
-    USERS = 7
-
-    VALUES = {
-        'TrafficEntityHost': HOST,
-        'TrafficEntityNetwork': NETWORK,
-        'TrafficEntityRange': RANGE,
-        'TrafficEntityAddressGroup': ADDRESS_GROUP,
-        'TrafficEntityPrefix': PREFIX,
-        'TrafficEntityInterface': INTERFACE,
-        'TrafficEntityVpn': VPN,
-        'TrafficEntityUsers': USERS
-    }
+    TrafficEntityHost = 0
+    TrafficEntityNetwork = 1
+    TrafficEntityRange = 2
+    TrafficEntityAddressGroup = 3
+    TrafficEntityPrefix = 4
+    TrafficEntityInterface = 5
+    TrafficEntityVpn = 6
+    TrafficEntityUsers = 7

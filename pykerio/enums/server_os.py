@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class ServerOs(BaseEnumeration):
-    WINDOWS = 0
-    LINUX = 1
-
-    VALUES = {
-        'Windows': WINDOWS,
-        'Linux': LINUX
-    }
+    Windows = 0
+    Linux = 1

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SourceNatMode
 
 
 class TestCase_SourceNatMode(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_SourceNatMode(unittest.TestCase):
         """
         Test SourceNatMode with NatDefault
         """
-        value = pykerio.enums.SourceNatMode(name='NatDefault')
+        value = SourceNatMode.NatDefault
         self.assertEqual(value.dump(), 'NatDefault')
-        self.assertEqual(value.get_name(), 'NatDefault')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'NatDefault')
+        self.assertEqual(value.value, 0)
 
     def test_01_NatInterface(self):
         """
         Test SourceNatMode with NatInterface
         """
-        value = pykerio.enums.SourceNatMode(name='NatInterface')
+        value = SourceNatMode.NatInterface
         self.assertEqual(value.dump(), 'NatInterface')
-        self.assertEqual(value.get_name(), 'NatInterface')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'NatInterface')
+        self.assertEqual(value.value, 1)
 
     def test_02_NatIpAddress(self):
         """
         Test SourceNatMode with NatIpAddress
         """
-        value = pykerio.enums.SourceNatMode(name='NatIpAddress')
+        value = SourceNatMode.NatIpAddress
         self.assertEqual(value.dump(), 'NatIpAddress')
-        self.assertEqual(value.get_name(), 'NatIpAddress')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'NatIpAddress')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SourceNatMode with FAIL
         """
-        value = pykerio.enums.SourceNatMode(name='FAIL')
+        value = SourceNatMode.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

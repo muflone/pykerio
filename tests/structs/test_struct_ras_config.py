@@ -42,8 +42,8 @@ class TestCase_RasConfig(unittest.TestCase):
             'enabled': False,
             'id': pykerio.types.KId(''),
             'name': ''})
-        rastype = pykerio.enums.RasType(name='PPPoE')
-        mppe = pykerio.enums.MppeType(name='MppeEnabled')
+        rastype = pykerio.enums.RasType.PPPoE
+        mppe = pykerio.enums.MppeType.MppeEnabled
         teststruct = pykerio.structs.RasConfig({'dead': False,
                                                 'entryName': 'RAS Work',
                                                 'useOwnCredentials': True,

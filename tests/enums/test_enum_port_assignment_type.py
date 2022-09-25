@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import PortAssignmentType
 
 
 class TestCase_PortAssignmentType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_PortAssignmentType(unittest.TestCase):
         """
         Test PortAssignmentType with PortAssignmentSwitch
         """
-        value = pykerio.enums.PortAssignmentType(name='PortAssignmentSwitch')
+        value = PortAssignmentType.PortAssignmentSwitch
         self.assertEqual(value.dump(), 'PortAssignmentSwitch')
-        self.assertEqual(value.get_name(), 'PortAssignmentSwitch')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'PortAssignmentSwitch')
+        self.assertEqual(value.value, 0)
 
     def test_01_PortAssignmentStandalone(self):
         """
         Test PortAssignmentType with PortAssignmentStandalone
         """
-        value = pykerio.enums.PortAssignmentType(name='PortAssignmentStandalone')
+        value = PortAssignmentType.PortAssignmentStandalone
         self.assertEqual(value.dump(), 'PortAssignmentStandalone')
-        self.assertEqual(value.get_name(), 'PortAssignmentStandalone')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'PortAssignmentStandalone')
+        self.assertEqual(value.value, 1)
 
     def test_02_PortAssignmentUnassigned(self):
         """
         Test PortAssignmentType with PortAssignmentUnassigned
         """
-        value = pykerio.enums.PortAssignmentType(name='PortAssignmentUnassigned')
+        value = PortAssignmentType.PortAssignmentUnassigned
         self.assertEqual(value.dump(), 'PortAssignmentUnassigned')
-        self.assertEqual(value.get_name(), 'PortAssignmentUnassigned')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'PortAssignmentUnassigned')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test PortAssignmentType with FAIL
         """
-        value = pykerio.enums.PortAssignmentType(name='FAIL')
+        value = PortAssignmentType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

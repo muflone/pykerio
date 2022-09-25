@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import HistogramIntervalType
 
 
 class TestCase_HistogramIntervalType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_HistogramIntervalType(unittest.TestCase):
         """
         Test HistogramIntervalType with HistogramInterval5m
         """
-        value = pykerio.enums.HistogramIntervalType(name='HistogramInterval5m')
+        value = HistogramIntervalType.HistogramInterval5m
         self.assertEqual(value.dump(), 'HistogramInterval5m')
-        self.assertEqual(value.get_name(), 'HistogramInterval5m')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'HistogramInterval5m')
+        self.assertEqual(value.value, 0)
 
     def test_01_HistogramInterval20s(self):
         """
         Test HistogramIntervalType with HistogramInterval20s
         """
-        value = pykerio.enums.HistogramIntervalType(name='HistogramInterval20s')
+        value = HistogramIntervalType.HistogramInterval20s
         self.assertEqual(value.dump(), 'HistogramInterval20s')
-        self.assertEqual(value.get_name(), 'HistogramInterval20s')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'HistogramInterval20s')
+        self.assertEqual(value.value, 1)
 
     def test_02_HistogramInterval30m(self):
         """
         Test HistogramIntervalType with HistogramInterval30m
         """
-        value = pykerio.enums.HistogramIntervalType(name='HistogramInterval30m')
+        value = HistogramIntervalType.HistogramInterval30m
         self.assertEqual(value.dump(), 'HistogramInterval30m')
-        self.assertEqual(value.get_name(), 'HistogramInterval30m')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'HistogramInterval30m')
+        self.assertEqual(value.value, 2)
 
     def test_03_HistogramInterval2h(self):
         """
         Test HistogramIntervalType with HistogramInterval2h
         """
-        value = pykerio.enums.HistogramIntervalType(name='HistogramInterval2h')
+        value = HistogramIntervalType.HistogramInterval2h
         self.assertEqual(value.dump(), 'HistogramInterval2h')
-        self.assertEqual(value.get_name(), 'HistogramInterval2h')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'HistogramInterval2h')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test HistogramIntervalType with FAIL
         """
-        value = pykerio.enums.HistogramIntervalType(name='FAIL')
+        value = HistogramIntervalType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

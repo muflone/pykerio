@@ -22,20 +22,10 @@ from .base_enumeration import BaseEnumeration
 
 
 class BandwidthUnit(BaseEnumeration):
-    BITS = 0
-    BYTES = 1
-    KILO_BITS = 2
-    KILO_BYTES = 3
-    MEGA_BITS = 4
-    MEGA_BYTES = 5
-    PERCENT = 6
-
-    VALUES = {
-        'BandwidthUnitBits': BITS,
-        'BandwidthUnitBytes': BYTES,
-        'BandwidthUnitKilobits': KILO_BITS,
-        'BandwidthUnitKiloBytes': KILO_BYTES,
-        'BandwidthUnitMegabits': MEGA_BITS,
-        'BandwidthUnitMegaBytes': MEGA_BYTES,
-        'BandwidthUnitPercent': PERCENT
-    }
+    BandwidthUnitBits = 0
+    BandwidthUnitBytes = 1
+    BandwidthUnitKilobits = 2
+    BandwidthUnitKiloBytes = 3
+    BandwidthUnitMegabits = 4
+    BandwidthUnitMegaBytes = 5
+    BandwidthUnitPercent = 6

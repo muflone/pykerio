@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DhcpOptionType
 
 
 class TestCase_DhcpOptionType(unittest.TestCase):
@@ -28,152 +28,152 @@ class TestCase_DhcpOptionType(unittest.TestCase):
         """
         Test DhcpOptionType with DhcpBool
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpBool')
+        value = DhcpOptionType.DhcpBool
         self.assertEqual(value.dump(), 'DhcpBool')
-        self.assertEqual(value.get_name(), 'DhcpBool')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'DhcpBool')
+        self.assertEqual(value.value, 0)
 
     def test_01_DhcpInt8(self):
         """
         Test DhcpOptionType with DhcpInt8
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpInt8')
+        value = DhcpOptionType.DhcpInt8
         self.assertEqual(value.dump(), 'DhcpInt8')
-        self.assertEqual(value.get_name(), 'DhcpInt8')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DhcpInt8')
+        self.assertEqual(value.value, 1)
 
     def test_02_DhcpInt16(self):
         """
         Test DhcpOptionType with DhcpInt16
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpInt16')
+        value = DhcpOptionType.DhcpInt16
         self.assertEqual(value.dump(), 'DhcpInt16')
-        self.assertEqual(value.get_name(), 'DhcpInt16')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'DhcpInt16')
+        self.assertEqual(value.value, 2)
 
     def test_03_DhcpInt32(self):
         """
         Test DhcpOptionType with DhcpInt32
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpInt32')
+        value = DhcpOptionType.DhcpInt32
         self.assertEqual(value.dump(), 'DhcpInt32')
-        self.assertEqual(value.get_name(), 'DhcpInt32')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'DhcpInt32')
+        self.assertEqual(value.value, 3)
 
     def test_04_DhcpIpAddr(self):
         """
         Test DhcpOptionType with DhcpIpAddr
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpIpAddr')
+        value = DhcpOptionType.DhcpIpAddr
         self.assertEqual(value.dump(), 'DhcpIpAddr')
-        self.assertEqual(value.get_name(), 'DhcpIpAddr')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'DhcpIpAddr')
+        self.assertEqual(value.value, 4)
 
     def test_05_DhcpString(self):
         """
         Test DhcpOptionType with DhcpString
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpString')
+        value = DhcpOptionType.DhcpString
         self.assertEqual(value.dump(), 'DhcpString')
-        self.assertEqual(value.get_name(), 'DhcpString')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'DhcpString')
+        self.assertEqual(value.value, 5)
 
     def test_06_DhcpHex(self):
         """
         Test DhcpOptionType with DhcpHex
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpHex')
+        value = DhcpOptionType.DhcpHex
         self.assertEqual(value.dump(), 'DhcpHex')
-        self.assertEqual(value.get_name(), 'DhcpHex')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'DhcpHex')
+        self.assertEqual(value.value, 6)
 
     def test_07_DhcpTimeSigned(self):
         """
         Test DhcpOptionType with DhcpTimeSigned
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpTimeSigned')
+        value = DhcpOptionType.DhcpTimeSigned
         self.assertEqual(value.dump(), 'DhcpTimeSigned')
-        self.assertEqual(value.get_name(), 'DhcpTimeSigned')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'DhcpTimeSigned')
+        self.assertEqual(value.value, 7)
 
     def test_08_DhcpTimeUnsigned(self):
         """
         Test DhcpOptionType with DhcpTimeUnsigned
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpTimeUnsigned')
+        value = DhcpOptionType.DhcpTimeUnsigned
         self.assertEqual(value.dump(), 'DhcpTimeUnsigned')
-        self.assertEqual(value.get_name(), 'DhcpTimeUnsigned')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'DhcpTimeUnsigned')
+        self.assertEqual(value.value, 8)
 
     def test_09_DhcpInt8List(self):
         """
         Test DhcpOptionType with DhcpInt8List
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpInt8List')
+        value = DhcpOptionType.DhcpInt8List
         self.assertEqual(value.dump(), 'DhcpInt8List')
-        self.assertEqual(value.get_name(), 'DhcpInt8List')
-        self.assertEqual(value.get_value(), 9)
+        self.assertEqual(value.name, 'DhcpInt8List')
+        self.assertEqual(value.value, 9)
 
     def test_10_DhcpInt16List(self):
         """
         Test DhcpOptionType with DhcpInt16List
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpInt16List')
+        value = DhcpOptionType.DhcpInt16List
         self.assertEqual(value.dump(), 'DhcpInt16List')
-        self.assertEqual(value.get_name(), 'DhcpInt16List')
-        self.assertEqual(value.get_value(), 10)
+        self.assertEqual(value.name, 'DhcpInt16List')
+        self.assertEqual(value.value, 10)
 
     def test_11_DhcpInt32List(self):
         """
         Test DhcpOptionType with DhcpInt32List
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpInt32List')
+        value = DhcpOptionType.DhcpInt32List
         self.assertEqual(value.dump(), 'DhcpInt32List')
-        self.assertEqual(value.get_name(), 'DhcpInt32List')
-        self.assertEqual(value.get_value(), 11)
+        self.assertEqual(value.name, 'DhcpInt32List')
+        self.assertEqual(value.value, 11)
 
     def test_12_DhcpIpAddrList(self):
         """
         Test DhcpOptionType with DhcpIpAddrList
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpIpAddrList')
+        value = DhcpOptionType.DhcpIpAddrList
         self.assertEqual(value.dump(), 'DhcpIpAddrList')
-        self.assertEqual(value.get_name(), 'DhcpIpAddrList')
-        self.assertEqual(value.get_value(), 12)
+        self.assertEqual(value.name, 'DhcpIpAddrList')
+        self.assertEqual(value.value, 12)
 
     def test_13_DhcpIpPairList(self):
         """
         Test DhcpOptionType with DhcpIpPairList
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpIpPairList')
+        value = DhcpOptionType.DhcpIpPairList
         self.assertEqual(value.dump(), 'DhcpIpPairList')
-        self.assertEqual(value.get_name(), 'DhcpIpPairList')
-        self.assertEqual(value.get_value(), 13)
+        self.assertEqual(value.name, 'DhcpIpPairList')
+        self.assertEqual(value.value, 13)
 
     def test_14_DhcpIpMaskList(self):
         """
         Test DhcpOptionType with DhcpIpMaskList
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpIpMaskList')
+        value = DhcpOptionType.DhcpIpMaskList
         self.assertEqual(value.dump(), 'DhcpIpMaskList')
-        self.assertEqual(value.get_name(), 'DhcpIpMaskList')
-        self.assertEqual(value.get_value(), 14)
+        self.assertEqual(value.name, 'DhcpIpMaskList')
+        self.assertEqual(value.value, 14)
 
     def test_15_DhcpIpMaskIpList(self):
         """
         Test DhcpOptionType with DhcpIpMaskIpList
         """
-        value = pykerio.enums.DhcpOptionType(name='DhcpIpMaskIpList')
+        value = DhcpOptionType.DhcpIpMaskIpList
         self.assertEqual(value.dump(), 'DhcpIpMaskIpList')
-        self.assertEqual(value.get_name(), 'DhcpIpMaskIpList')
-        self.assertEqual(value.get_value(), 15)
+        self.assertEqual(value.name, 'DhcpIpMaskIpList')
+        self.assertEqual(value.value, 15)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DhcpOptionType with FAIL
         """
-        value = pykerio.enums.DhcpOptionType(name='FAIL')
+        value = DhcpOptionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

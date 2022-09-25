@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import BMTrafficType
 
 
 class TestCase_BMTrafficType(unittest.TestCase):
@@ -28,89 +28,89 @@ class TestCase_BMTrafficType(unittest.TestCase):
         """
         Test BMTrafficType with BMTrafficEmail
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficEmail')
+        value = BMTrafficType.BMTrafficEmail
         self.assertEqual(value.dump(), 'BMTrafficEmail')
-        self.assertEqual(value.get_name(), 'BMTrafficEmail')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'BMTrafficEmail')
+        self.assertEqual(value.value, 0)
 
     def test_01_BMTrafficFtp(self):
         """
         Test BMTrafficType with BMTrafficFtp
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficFtp')
+        value = BMTrafficType.BMTrafficFtp
         self.assertEqual(value.dump(), 'BMTrafficFtp')
-        self.assertEqual(value.get_name(), 'BMTrafficFtp')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'BMTrafficFtp')
+        self.assertEqual(value.value, 1)
 
     def test_02_BMTrafficInstantMessaging(self):
         """
         Test BMTrafficType with BMTrafficInstantMessaging
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficInstantMessaging')
+        value = BMTrafficType.BMTrafficInstantMessaging
         self.assertEqual(value.dump(), 'BMTrafficInstantMessaging')
-        self.assertEqual(value.get_name(), 'BMTrafficInstantMessaging')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'BMTrafficInstantMessaging')
+        self.assertEqual(value.value, 2)
 
     def test_03_BMTrafficMultimedia(self):
         """
         Test BMTrafficType with BMTrafficMultimedia
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficMultimedia')
+        value = BMTrafficType.BMTrafficMultimedia
         self.assertEqual(value.dump(), 'BMTrafficMultimedia')
-        self.assertEqual(value.get_name(), 'BMTrafficMultimedia')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'BMTrafficMultimedia')
+        self.assertEqual(value.value, 3)
 
     def test_04_BMTrafficP2p(self):
         """
         Test BMTrafficType with BMTrafficP2p
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficP2p')
+        value = BMTrafficType.BMTrafficP2p
         self.assertEqual(value.dump(), 'BMTrafficP2p')
-        self.assertEqual(value.get_name(), 'BMTrafficP2p')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'BMTrafficP2p')
+        self.assertEqual(value.value, 4)
 
     def test_05_BMTrafficRemoteAccess(self):
         """
         Test BMTrafficType with BMTrafficRemoteAccess
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficRemoteAccess')
+        value = BMTrafficType.BMTrafficRemoteAccess
         self.assertEqual(value.dump(), 'BMTrafficRemoteAccess')
-        self.assertEqual(value.get_name(), 'BMTrafficRemoteAccess')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'BMTrafficRemoteAccess')
+        self.assertEqual(value.value, 5)
 
     def test_06_BMTrafficSip(self):
         """
         Test BMTrafficType with BMTrafficSip
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficSip')
+        value = BMTrafficType.BMTrafficSip
         self.assertEqual(value.dump(), 'BMTrafficSip')
-        self.assertEqual(value.get_name(), 'BMTrafficSip')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'BMTrafficSip')
+        self.assertEqual(value.value, 6)
 
     def test_07_BMTrafficVpn(self):
         """
         Test BMTrafficType with BMTrafficVpn
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficVpn')
+        value = BMTrafficType.BMTrafficVpn
         self.assertEqual(value.dump(), 'BMTrafficVpn')
-        self.assertEqual(value.get_name(), 'BMTrafficVpn')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'BMTrafficVpn')
+        self.assertEqual(value.value, 7)
 
     def test_08_BMTrafficWeb(self):
         """
         Test BMTrafficType with BMTrafficWeb
         """
-        value = pykerio.enums.BMTrafficType(name='BMTrafficWeb')
+        value = BMTrafficType.BMTrafficWeb
         self.assertEqual(value.dump(), 'BMTrafficWeb')
-        self.assertEqual(value.get_name(), 'BMTrafficWeb')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'BMTrafficWeb')
+        self.assertEqual(value.value, 8)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test BMTrafficType with FAIL
         """
-        value = pykerio.enums.BMTrafficType(name='FAIL')
+        value = BMTrafficType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

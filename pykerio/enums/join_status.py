@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class JoinStatus(BaseEnumeration):
-    CONNECTED = 0
-    DISCONNECTED = 1
-    ERROR = 2
-
-    VALUES = {
-        'JoinStatusConnected': CONNECTED,
-        'JoinStatusDisconnected': DISCONNECTED,
-        'JoinStatusError': ERROR
-    }
+    JoinStatusConnected = 0
+    JoinStatusDisconnected = 1
+    JoinStatusError = 2

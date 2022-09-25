@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import NatBalancing
 
 
 class TestCase_NatBalancing(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_NatBalancing(unittest.TestCase):
         """
         Test NatBalancing with BalancingPerHost
         """
-        value = pykerio.enums.NatBalancing(name='BalancingPerHost')
+        value = NatBalancing.BalancingPerHost
         self.assertEqual(value.dump(), 'BalancingPerHost')
-        self.assertEqual(value.get_name(), 'BalancingPerHost')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'BalancingPerHost')
+        self.assertEqual(value.value, 0)
 
     def test_01_BalancingPerConnection(self):
         """
         Test NatBalancing with BalancingPerConnection
         """
-        value = pykerio.enums.NatBalancing(name='BalancingPerConnection')
+        value = NatBalancing.BalancingPerConnection
         self.assertEqual(value.dump(), 'BalancingPerConnection')
-        self.assertEqual(value.get_name(), 'BalancingPerConnection')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'BalancingPerConnection')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test NatBalancing with FAIL
         """
-        value = pykerio.enums.NatBalancing(name='FAIL')
+        value = NatBalancing.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

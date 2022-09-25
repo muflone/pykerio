@@ -69,8 +69,7 @@ class TestCase_Server(unittest.TestCase):
         Test Server getOs
         """
         server_os = self.__class__.server.getOs()
-        self.assertEqual(server_os.dump(), pykerio.enums.ServerOs(
-            name='Linux').dump())
+        self.assertEqual(server_os.dump(), pykerio.enums.ServerOs.Linux.name)
 
     def test_02_getRestrictionList(self):
         """

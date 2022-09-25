@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DynamicDnsAddressType
 
 
 class TestCase_DynamicDnsAddressType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_DynamicDnsAddressType(unittest.TestCase):
         """
         Test DynamicDnsAddressType with DynamicDnsAdressIface
         """
-        value = pykerio.enums.DynamicDnsAddressType(name='DynamicDnsAdressIface')
+        value = DynamicDnsAddressType.DynamicDnsAdressIface
         self.assertEqual(value.dump(), 'DynamicDnsAdressIface')
-        self.assertEqual(value.get_name(), 'DynamicDnsAdressIface')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'DynamicDnsAdressIface')
+        self.assertEqual(value.value, 0)
 
     def test_01_DynamicDnsAdressDetect(self):
         """
         Test DynamicDnsAddressType with DynamicDnsAdressDetect
         """
-        value = pykerio.enums.DynamicDnsAddressType(name='DynamicDnsAdressDetect')
+        value = DynamicDnsAddressType.DynamicDnsAdressDetect
         self.assertEqual(value.dump(), 'DynamicDnsAdressDetect')
-        self.assertEqual(value.get_name(), 'DynamicDnsAdressDetect')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DynamicDnsAdressDetect')
+        self.assertEqual(value.value, 1)
 
     def test_02_DynamicDnsAdressCustom(self):
         """
         Test DynamicDnsAddressType with DynamicDnsAdressCustom
         """
-        value = pykerio.enums.DynamicDnsAddressType(name='DynamicDnsAdressCustom')
+        value = DynamicDnsAddressType.DynamicDnsAdressCustom
         self.assertEqual(value.dump(), 'DynamicDnsAdressCustom')
-        self.assertEqual(value.get_name(), 'DynamicDnsAdressCustom')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'DynamicDnsAdressCustom')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DynamicDnsAddressType with FAIL
         """
-        value = pykerio.enums.DynamicDnsAddressType(name='FAIL')
+        value = DynamicDnsAddressType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

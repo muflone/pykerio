@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DhcpLeaseType
 
 
 class TestCase_DhcpLeaseType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_DhcpLeaseType(unittest.TestCase):
         """
         Test DhcpLeaseType with DhcpTypeReservation
         """
-        value = pykerio.enums.DhcpLeaseType(name='DhcpTypeReservation')
+        value = DhcpLeaseType.DhcpTypeReservation
         self.assertEqual(value.dump(), 'DhcpTypeReservation')
-        self.assertEqual(value.get_name(), 'DhcpTypeReservation')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'DhcpTypeReservation')
+        self.assertEqual(value.value, 0)
 
     def test_01_DhcpTypeLease(self):
         """
         Test DhcpLeaseType with DhcpTypeLease
         """
-        value = pykerio.enums.DhcpLeaseType(name='DhcpTypeLease')
+        value = DhcpLeaseType.DhcpTypeLease
         self.assertEqual(value.dump(), 'DhcpTypeLease')
-        self.assertEqual(value.get_name(), 'DhcpTypeLease')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DhcpTypeLease')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DhcpLeaseType with FAIL
         """
-        value = pykerio.enums.DhcpLeaseType(name='FAIL')
+        value = DhcpLeaseType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

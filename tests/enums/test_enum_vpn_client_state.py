@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import VpnClientState
 
 
 class TestCase_VpnClientState(unittest.TestCase):
@@ -28,53 +28,53 @@ class TestCase_VpnClientState(unittest.TestCase):
         """
         Test VpnClientState with VpnClientConnecting
         """
-        value = pykerio.enums.VpnClientState(name='VpnClientConnecting')
+        value = VpnClientState.VpnClientConnecting
         self.assertEqual(value.dump(), 'VpnClientConnecting')
-        self.assertEqual(value.get_name(), 'VpnClientConnecting')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'VpnClientConnecting')
+        self.assertEqual(value.value, 0)
 
     def test_01_VpnClientAuthenticating(self):
         """
         Test VpnClientState with VpnClientAuthenticating
         """
-        value = pykerio.enums.VpnClientState(name='VpnClientAuthenticating')
+        value = VpnClientState.VpnClientAuthenticating
         self.assertEqual(value.dump(), 'VpnClientAuthenticating')
-        self.assertEqual(value.get_name(), 'VpnClientAuthenticating')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'VpnClientAuthenticating')
+        self.assertEqual(value.value, 1)
 
     def test_02_VpnClientAuthenticated(self):
         """
         Test VpnClientState with VpnClientAuthenticated
         """
-        value = pykerio.enums.VpnClientState(name='VpnClientAuthenticated')
+        value = VpnClientState.VpnClientAuthenticated
         self.assertEqual(value.dump(), 'VpnClientAuthenticated')
-        self.assertEqual(value.get_name(), 'VpnClientAuthenticated')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'VpnClientAuthenticated')
+        self.assertEqual(value.value, 2)
 
     def test_03_VpnClientConnected(self):
         """
         Test VpnClientState with VpnClientConnected
         """
-        value = pykerio.enums.VpnClientState(name='VpnClientConnected')
+        value = VpnClientState.VpnClientConnected
         self.assertEqual(value.dump(), 'VpnClientConnected')
-        self.assertEqual(value.get_name(), 'VpnClientConnected')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'VpnClientConnected')
+        self.assertEqual(value.value, 3)
 
     def test_04_VpnClientOther(self):
         """
         Test VpnClientState with VpnClientOther
         """
-        value = pykerio.enums.VpnClientState(name='VpnClientOther')
+        value = VpnClientState.VpnClientOther
         self.assertEqual(value.dump(), 'VpnClientOther')
-        self.assertEqual(value.get_name(), 'VpnClientOther')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'VpnClientOther')
+        self.assertEqual(value.value, 4)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test VpnClientState with FAIL
         """
-        value = pykerio.enums.VpnClientState(name='FAIL')
+        value = VpnClientState.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

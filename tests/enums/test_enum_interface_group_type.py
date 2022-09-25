@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import InterfaceGroupType
 
 
 class TestCase_InterfaceGroupType(unittest.TestCase):
@@ -28,53 +28,53 @@ class TestCase_InterfaceGroupType(unittest.TestCase):
         """
         Test InterfaceGroupType with Other
         """
-        value = pykerio.enums.InterfaceGroupType(name='Other')
+        value = InterfaceGroupType.Other
         self.assertEqual(value.dump(), 'Other')
-        self.assertEqual(value.get_name(), 'Other')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Other')
+        self.assertEqual(value.value, 0)
 
     def test_01_Guest(self):
         """
         Test InterfaceGroupType with Guest
         """
-        value = pykerio.enums.InterfaceGroupType(name='Guest')
+        value = InterfaceGroupType.Guest
         self.assertEqual(value.dump(), 'Guest')
-        self.assertEqual(value.get_name(), 'Guest')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Guest')
+        self.assertEqual(value.value, 1)
 
     def test_02_Vpn(self):
         """
         Test InterfaceGroupType with Vpn
         """
-        value = pykerio.enums.InterfaceGroupType(name='Vpn')
+        value = InterfaceGroupType.Vpn
         self.assertEqual(value.dump(), 'Vpn')
-        self.assertEqual(value.get_name(), 'Vpn')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Vpn')
+        self.assertEqual(value.value, 2)
 
     def test_03_Trusted(self):
         """
         Test InterfaceGroupType with Trusted
         """
-        value = pykerio.enums.InterfaceGroupType(name='Trusted')
+        value = InterfaceGroupType.Trusted
         self.assertEqual(value.dump(), 'Trusted')
-        self.assertEqual(value.get_name(), 'Trusted')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'Trusted')
+        self.assertEqual(value.value, 3)
 
     def test_04_Internet(self):
         """
         Test InterfaceGroupType with Internet
         """
-        value = pykerio.enums.InterfaceGroupType(name='Internet')
+        value = InterfaceGroupType.Internet
         self.assertEqual(value.dump(), 'Internet')
-        self.assertEqual(value.get_name(), 'Internet')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'Internet')
+        self.assertEqual(value.value, 4)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test InterfaceGroupType with FAIL
         """
-        value = pykerio.enums.InterfaceGroupType(name='FAIL')
+        value = InterfaceGroupType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

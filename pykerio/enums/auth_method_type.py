@@ -22,26 +22,13 @@ from .base_enumeration import BaseEnumeration
 
 
 class AuthMethodType(BaseEnumeration):
-    WEB = 0
-    SSL_WEB = 1
-    NTLM = 2
-    PROXY = 3
-    AUTOMATIC = 4
-    VPN_CLIENT = 5
-    SSO = 6
-    API = 7
-    RADIUS = 8
-    NONE = 9
-
-    VALUES = {
-        'AuthMethodWeb': WEB,
-        'AuthMethodSslWeb': SSL_WEB,
-        'AuthMethodNtlm': NTLM,
-        'AuthMethodProxy': PROXY,
-        'AuthMethodAutomatic': AUTOMATIC,
-        'AuthMethodVpnClient': VPN_CLIENT,
-        'AuthMethodSso': SSO,
-        'AuthMethodApi': API,
-        'AuthMethodRadius': RADIUS,
-        'AuthMethodNone': NONE
-    }
+    AuthMethodWeb = 0
+    AuthMethodSslWeb = 1
+    AuthMethodNtlm = 2
+    AuthMethodProxy = 3
+    AuthMethodAutomatic = 4
+    AuthMethodVpnClient = 5
+    AuthMethodSso = 6
+    AuthMethodApi = 7
+    AuthMethodRadius = 8
+    AuthMethodNone = 9

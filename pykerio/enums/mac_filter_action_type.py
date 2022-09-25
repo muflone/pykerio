@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class MacFilterActionType(BaseEnumeration):
-    DENY = 0
-    ALLOW = 1
-
-    VALUES = {
-        'MacFilterDeny': DENY,
-        'MacFilterAllow': ALLOW
-    }
+    MacFilterDeny = 0
+    MacFilterAllow = 1

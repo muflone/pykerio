@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import LoginType
 
 
 class TestCase_LoginType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_LoginType(unittest.TestCase):
         """
         Test LoginType with LoginRegular
         """
-        value = pykerio.enums.LoginType(name='LoginRegular')
+        value = LoginType.LoginRegular
         self.assertEqual(value.dump(), 'LoginRegular')
-        self.assertEqual(value.get_name(), 'LoginRegular')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'LoginRegular')
+        self.assertEqual(value.value, 0)
 
     def test_01_LoginAutomatic(self):
         """
         Test LoginType with LoginAutomatic
         """
-        value = pykerio.enums.LoginType(name='LoginAutomatic')
+        value = LoginType.LoginAutomatic
         self.assertEqual(value.dump(), 'LoginAutomatic')
-        self.assertEqual(value.get_name(), 'LoginAutomatic')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'LoginAutomatic')
+        self.assertEqual(value.value, 1)
 
     def test_02_LoginReactivation(self):
         """
         Test LoginType with LoginReactivation
         """
-        value = pykerio.enums.LoginType(name='LoginReactivation')
+        value = LoginType.LoginReactivation
         self.assertEqual(value.dump(), 'LoginReactivation')
-        self.assertEqual(value.get_name(), 'LoginReactivation')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'LoginReactivation')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test LoginType with FAIL
         """
-        value = pykerio.enums.LoginType(name='FAIL')
+        value = LoginType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import CheckVersionType
 
 
 class TestCase_CheckVersionType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_CheckVersionType(unittest.TestCase):
         """
         Test CheckVersionType with CheckVersionConfig
         """
-        value = pykerio.enums.CheckVersionType(name='CheckVersionConfig')
+        value = CheckVersionType.CheckVersionConfig
         self.assertEqual(value.dump(), 'CheckVersionConfig')
-        self.assertEqual(value.get_name(), 'CheckVersionConfig')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'CheckVersionConfig')
+        self.assertEqual(value.value, 0)
 
     def test_01_CheckVersionBeta(self):
         """
         Test CheckVersionType with CheckVersionBeta
         """
-        value = pykerio.enums.CheckVersionType(name='CheckVersionBeta')
+        value = CheckVersionType.CheckVersionBeta
         self.assertEqual(value.dump(), 'CheckVersionBeta')
-        self.assertEqual(value.get_name(), 'CheckVersionBeta')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'CheckVersionBeta')
+        self.assertEqual(value.value, 1)
 
     def test_02_CheckVersionFinal(self):
         """
         Test CheckVersionType with CheckVersionFinal
         """
-        value = pykerio.enums.CheckVersionType(name='CheckVersionFinal')
+        value = CheckVersionType.CheckVersionFinal
         self.assertEqual(value.dump(), 'CheckVersionFinal')
-        self.assertEqual(value.get_name(), 'CheckVersionFinal')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'CheckVersionFinal')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test CheckVersionType with FAIL
         """
-        value = pykerio.enums.CheckVersionType(name='FAIL')
+        value = CheckVersionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

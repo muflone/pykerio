@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SortDirection
 
 
 class TestCase_SortDirection(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_SortDirection(unittest.TestCase):
         """
         Test SortDirection with Asc
         """
-        value = pykerio.enums.SortDirection(name='Asc')
+        value = SortDirection.Asc
         self.assertEqual(value.dump(), 'Asc')
-        self.assertEqual(value.get_name(), 'Asc')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Asc')
+        self.assertEqual(value.value, 0)
 
     def test_01_Desc(self):
         """
         Test SortDirection with Desc
         """
-        value = pykerio.enums.SortDirection(name='Desc')
+        value = SortDirection.Desc
         self.assertEqual(value.dump(), 'Desc')
-        self.assertEqual(value.get_name(), 'Desc')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Desc')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SortDirection with FAIL
         """
-        value = pykerio.enums.SortDirection(name='FAIL')
+        value = SortDirection.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

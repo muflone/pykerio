@@ -33,12 +33,10 @@ class TestCase_WifiSsidConfig(unittest.TestCase):
         teststruct = pykerio.structs.WifiSsidConfig({
             'id': kid,
             'enabled': True,
-            'assignment': pykerio.enums.PortAssignmentType(
-                name='PortAssignmentStandalone'),
+            'assignment': pykerio.enums.PortAssignmentType.PortAssignmentStandalone,
             'ssid': 'My WiFi',
-            'group': pykerio.enums.InterfaceGroupType(name='Internet'),
-            'encryption': pykerio.enums.WifiEncryptionType(
-                name='WifiEncryptionWpaPsk'),
+            'group': pykerio.enums.InterfaceGroupType.Internet,
+            'encryption': pykerio.enums.WifiEncryptionType.WifiEncryptionWpaPsk,
             'wpaPassword': secret})
         self.assertEqual(len(teststruct.keys()), 7)
         self.assertEqual(len(teststruct.values()), 7)

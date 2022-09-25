@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import PortType
 
 
 class TestCase_PortType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_PortType(unittest.TestCase):
         """
         Test PortType with PortEthernet
         """
-        value = pykerio.enums.PortType(name='PortEthernet')
+        value = PortType.PortEthernet
         self.assertEqual(value.dump(), 'PortEthernet')
-        self.assertEqual(value.get_name(), 'PortEthernet')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'PortEthernet')
+        self.assertEqual(value.value, 0)
 
     def test_01_PortWifi(self):
         """
         Test PortType with PortWifi
         """
-        value = pykerio.enums.PortType(name='PortWifi')
+        value = PortType.PortWifi
         self.assertEqual(value.dump(), 'PortWifi')
-        self.assertEqual(value.get_name(), 'PortWifi')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'PortWifi')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test PortType with FAIL
         """
-        value = pykerio.enums.PortType(name='FAIL')
+        value = PortType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

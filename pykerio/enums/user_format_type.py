@@ -22,18 +22,9 @@ from .base_enumeration import BaseEnumeration
 
 
 class UserFormatType(BaseEnumeration):
-    FL = 0
-    FLU = 1
-    FLD = 2
-    LF = 3
-    LFU = 4
-    LFD = 5
-
-    VALUES = {
-        'UserFormatFL': FL,
-        'UserFormatFLU': FLU,
-        'UserFormatFLD': FLD,
-        'UserFormatLF': LF,
-        'UserFormatLFU': LFU,
-        'UserFormatLFD': LFD
-    }
+    UserFormatFL = 0
+    UserFormatFLU = 1
+    UserFormatFLD = 2
+    UserFormatLF = 3
+    UserFormatLFU = 4
+    UserFormatLFD = 5

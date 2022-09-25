@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import InterfaceModeType
 
 
 class TestCase_InterfaceModeType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_InterfaceModeType(unittest.TestCase):
         """
         Test InterfaceModeType with InterfaceModeManual
         """
-        value = pykerio.enums.InterfaceModeType(name='InterfaceModeManual')
+        value = InterfaceModeType.InterfaceModeManual
         self.assertEqual(value.dump(), 'InterfaceModeManual')
-        self.assertEqual(value.get_name(), 'InterfaceModeManual')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'InterfaceModeManual')
+        self.assertEqual(value.value, 0)
 
     def test_01_InterfaceModeAutomatic(self):
         """
         Test InterfaceModeType with InterfaceModeAutomatic
         """
-        value = pykerio.enums.InterfaceModeType(name='InterfaceModeAutomatic')
+        value = InterfaceModeType.InterfaceModeAutomatic
         self.assertEqual(value.dump(), 'InterfaceModeAutomatic')
-        self.assertEqual(value.get_name(), 'InterfaceModeAutomatic')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'InterfaceModeAutomatic')
+        self.assertEqual(value.value, 1)
 
     def test_02_InterfaceModeLinkLocal(self):
         """
         Test InterfaceModeType with InterfaceModeLinkLocal
         """
-        value = pykerio.enums.InterfaceModeType(name='InterfaceModeLinkLocal')
+        value = InterfaceModeType.InterfaceModeLinkLocal
         self.assertEqual(value.dump(), 'InterfaceModeLinkLocal')
-        self.assertEqual(value.get_name(), 'InterfaceModeLinkLocal')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'InterfaceModeLinkLocal')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test InterfaceModeType with FAIL
         """
-        value = pykerio.enums.InterfaceModeType(name='FAIL')
+        value = InterfaceModeType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

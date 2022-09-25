@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class DhcpModeType(BaseEnumeration):
-    AUTOMATIC = 0
-    MANUAL = 1
-
-    VALUES = {
-        'DhcpAutomatic': AUTOMATIC,
-        'DhcpManual': MANUAL
-    }
+    DhcpAutomatic = 0
+    DhcpManual = 1

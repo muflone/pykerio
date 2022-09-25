@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RuleAction
 
 
 class TestCase_RuleAction(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_RuleAction(unittest.TestCase):
         """
         Test RuleAction with Allow
         """
-        value = pykerio.enums.RuleAction(name='Allow')
+        value = RuleAction.Allow
         self.assertEqual(value.dump(), 'Allow')
-        self.assertEqual(value.get_name(), 'Allow')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Allow')
+        self.assertEqual(value.value, 0)
 
     def test_01_Deny(self):
         """
         Test RuleAction with Deny
         """
-        value = pykerio.enums.RuleAction(name='Deny')
+        value = RuleAction.Deny
         self.assertEqual(value.dump(), 'Deny')
-        self.assertEqual(value.get_name(), 'Deny')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Deny')
+        self.assertEqual(value.value, 1)
 
     def test_02_Drop(self):
         """
         Test RuleAction with Drop
         """
-        value = pykerio.enums.RuleAction(name='Drop')
+        value = RuleAction.Drop
         self.assertEqual(value.dump(), 'Drop')
-        self.assertEqual(value.get_name(), 'Drop')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Drop')
+        self.assertEqual(value.value, 2)
 
     def test_03_NotSet(self):
         """
         Test RuleAction with NotSet
         """
-        value = pykerio.enums.RuleAction(name='NotSet')
+        value = RuleAction.NotSet
         self.assertEqual(value.dump(), 'NotSet')
-        self.assertEqual(value.get_name(), 'NotSet')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'NotSet')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RuleAction with FAIL
         """
-        value = pykerio.enums.RuleAction(name='FAIL')
+        value = RuleAction.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

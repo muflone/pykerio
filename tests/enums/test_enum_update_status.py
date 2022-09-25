@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import UpdateStatus
 
 
 class TestCase_UpdateStatus(unittest.TestCase):
@@ -28,80 +28,80 @@ class TestCase_UpdateStatus(unittest.TestCase):
         """
         Test UpdateStatus with UpdateStatusOk
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusOk')
+        value = UpdateStatus.UpdateStatusOk
         self.assertEqual(value.dump(), 'UpdateStatusOk')
-        self.assertEqual(value.get_name(), 'UpdateStatusOk')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'UpdateStatusOk')
+        self.assertEqual(value.value, 0)
 
     def test_01_UpdateStatusChecking(self):
         """
         Test UpdateStatus with UpdateStatusChecking
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusChecking')
+        value = UpdateStatus.UpdateStatusChecking
         self.assertEqual(value.dump(), 'UpdateStatusChecking')
-        self.assertEqual(value.get_name(), 'UpdateStatusChecking')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'UpdateStatusChecking')
+        self.assertEqual(value.value, 1)
 
     def test_02_UpdateStatusCheckFailed(self):
         """
         Test UpdateStatus with UpdateStatusCheckFailed
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusCheckFailed')
+        value = UpdateStatus.UpdateStatusCheckFailed
         self.assertEqual(value.dump(), 'UpdateStatusCheckFailed')
-        self.assertEqual(value.get_name(), 'UpdateStatusCheckFailed')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'UpdateStatusCheckFailed')
+        self.assertEqual(value.value, 2)
 
     def test_03_UpdateStatusDownloadOk(self):
         """
         Test UpdateStatus with UpdateStatusDownloadOk
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusDownloadOk')
+        value = UpdateStatus.UpdateStatusDownloadOk
         self.assertEqual(value.dump(), 'UpdateStatusDownloadOk')
-        self.assertEqual(value.get_name(), 'UpdateStatusDownloadOk')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'UpdateStatusDownloadOk')
+        self.assertEqual(value.value, 3)
 
     def test_04_UpdateStatusDownloading(self):
         """
         Test UpdateStatus with UpdateStatusDownloading
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusDownloading')
+        value = UpdateStatus.UpdateStatusDownloading
         self.assertEqual(value.dump(), 'UpdateStatusDownloading')
-        self.assertEqual(value.get_name(), 'UpdateStatusDownloading')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'UpdateStatusDownloading')
+        self.assertEqual(value.value, 4)
 
     def test_05_UpdateStatusDownloadFailed(self):
         """
         Test UpdateStatus with UpdateStatusDownloadFailed
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusDownloadFailed')
+        value = UpdateStatus.UpdateStatusDownloadFailed
         self.assertEqual(value.dump(), 'UpdateStatusDownloadFailed')
-        self.assertEqual(value.get_name(), 'UpdateStatusDownloadFailed')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'UpdateStatusDownloadFailed')
+        self.assertEqual(value.value, 5)
 
     def test_06_UpdateStatusUpgrading(self):
         """
         Test UpdateStatus with UpdateStatusUpgrading
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusUpgrading')
+        value = UpdateStatus.UpdateStatusUpgrading
         self.assertEqual(value.dump(), 'UpdateStatusUpgrading')
-        self.assertEqual(value.get_name(), 'UpdateStatusUpgrading')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'UpdateStatusUpgrading')
+        self.assertEqual(value.value, 6)
 
     def test_07_UpdateStatusUpgradeFailed(self):
         """
         Test UpdateStatus with UpdateStatusUpgradeFailed
         """
-        value = pykerio.enums.UpdateStatus(name='UpdateStatusUpgradeFailed')
+        value = UpdateStatus.UpdateStatusUpgradeFailed
         self.assertEqual(value.dump(), 'UpdateStatusUpgradeFailed')
-        self.assertEqual(value.get_name(), 'UpdateStatusUpgradeFailed')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'UpdateStatusUpgradeFailed')
+        self.assertEqual(value.value, 7)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test UpdateStatus with FAIL
         """
-        value = pykerio.enums.UpdateStatus(name='FAIL')
+        value = UpdateStatus.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

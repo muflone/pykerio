@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import VpnType
 
 
 class TestCase_VpnType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_VpnType(unittest.TestCase):
         """
         Test VpnType with VpnKerio
         """
-        value = pykerio.enums.VpnType(name='VpnKerio')
+        value = VpnType.VpnKerio
         self.assertEqual(value.dump(), 'VpnKerio')
-        self.assertEqual(value.get_name(), 'VpnKerio')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'VpnKerio')
+        self.assertEqual(value.value, 0)
 
     def test_01_VpnIpsec(self):
         """
         Test VpnType with VpnIpsec
         """
-        value = pykerio.enums.VpnType(name='VpnIpsec')
+        value = VpnType.VpnIpsec
         self.assertEqual(value.dump(), 'VpnIpsec')
-        self.assertEqual(value.get_name(), 'VpnIpsec')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'VpnIpsec')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test VpnType with FAIL
         """
-        value = pykerio.enums.VpnType(name='FAIL')
+        value = VpnType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

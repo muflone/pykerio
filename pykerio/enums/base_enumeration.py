@@ -18,25 +18,20 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
+from enum import Enum
+
 from ..json_serializable import JSONSerializable
 
 
-class BaseEnumeration(JSONSerializable):
-    VALUES = {}
-
-    def __init__(self, name):
+class BaseEnumeration(JSONSerializable, Enum):
+    def __init__(self, value):
+        Enum.__init__(self)
         JSONSerializable.__init__(self)
-        assert name in self.VALUES
-        self._name = name
 
     def dump(self):
         """JSON serializable representation"""
-        return self.get_name()
+        return self.name
 
-    def get_name(self):
-        """Return the enumeration name"""
-        return self._name
-
-    def get_value(self):
-        """Return the enumeration value"""
-        return self.VALUES[self._name]
+    @classmethod
+    def from_name(self, name):
+        return self.__members__[name]

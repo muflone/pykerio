@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import FacilityUnit
 
 
 class TestCase_FacilityUnit(unittest.TestCase):
@@ -28,224 +28,224 @@ class TestCase_FacilityUnit(unittest.TestCase):
         """
         Test FacilityUnit with FacilityKernel
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityKernel')
+        value = FacilityUnit.FacilityKernel
         self.assertEqual(value.dump(), 'FacilityKernel')
-        self.assertEqual(value.get_name(), 'FacilityKernel')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'FacilityKernel')
+        self.assertEqual(value.value, 0)
 
     def test_01_FacilityUserLevel(self):
         """
         Test FacilityUnit with FacilityUserLevel
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityUserLevel')
+        value = FacilityUnit.FacilityUserLevel
         self.assertEqual(value.dump(), 'FacilityUserLevel')
-        self.assertEqual(value.get_name(), 'FacilityUserLevel')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'FacilityUserLevel')
+        self.assertEqual(value.value, 1)
 
     def test_02_FacilityMailSystem(self):
         """
         Test FacilityUnit with FacilityMailSystem
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityMailSystem')
+        value = FacilityUnit.FacilityMailSystem
         self.assertEqual(value.dump(), 'FacilityMailSystem')
-        self.assertEqual(value.get_name(), 'FacilityMailSystem')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'FacilityMailSystem')
+        self.assertEqual(value.value, 2)
 
     def test_03_FacilitySystemDaemons(self):
         """
         Test FacilityUnit with FacilitySystemDaemons
         """
-        value = pykerio.enums.FacilityUnit(name='FacilitySystemDaemons')
+        value = FacilityUnit.FacilitySystemDaemons
         self.assertEqual(value.dump(), 'FacilitySystemDaemons')
-        self.assertEqual(value.get_name(), 'FacilitySystemDaemons')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'FacilitySystemDaemons')
+        self.assertEqual(value.value, 3)
 
     def test_04_FacilitySecurity1(self):
         """
         Test FacilityUnit with FacilitySecurity1
         """
-        value = pykerio.enums.FacilityUnit(name='FacilitySecurity1')
+        value = FacilityUnit.FacilitySecurity1
         self.assertEqual(value.dump(), 'FacilitySecurity1')
-        self.assertEqual(value.get_name(), 'FacilitySecurity1')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'FacilitySecurity1')
+        self.assertEqual(value.value, 4)
 
     def test_05_FacilityInternal(self):
         """
         Test FacilityUnit with FacilityInternal
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityInternal')
+        value = FacilityUnit.FacilityInternal
         self.assertEqual(value.dump(), 'FacilityInternal')
-        self.assertEqual(value.get_name(), 'FacilityInternal')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'FacilityInternal')
+        self.assertEqual(value.value, 5)
 
     def test_06_FacilityLinePrinter(self):
         """
         Test FacilityUnit with FacilityLinePrinter
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLinePrinter')
+        value = FacilityUnit.FacilityLinePrinter
         self.assertEqual(value.dump(), 'FacilityLinePrinter')
-        self.assertEqual(value.get_name(), 'FacilityLinePrinter')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'FacilityLinePrinter')
+        self.assertEqual(value.value, 6)
 
     def test_07_FacilityNetworkNews(self):
         """
         Test FacilityUnit with FacilityNetworkNews
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityNetworkNews')
+        value = FacilityUnit.FacilityNetworkNews
         self.assertEqual(value.dump(), 'FacilityNetworkNews')
-        self.assertEqual(value.get_name(), 'FacilityNetworkNews')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'FacilityNetworkNews')
+        self.assertEqual(value.value, 7)
 
     def test_08_FacilityUucpSubsystem(self):
         """
         Test FacilityUnit with FacilityUucpSubsystem
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityUucpSubsystem')
+        value = FacilityUnit.FacilityUucpSubsystem
         self.assertEqual(value.dump(), 'FacilityUucpSubsystem')
-        self.assertEqual(value.get_name(), 'FacilityUucpSubsystem')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'FacilityUucpSubsystem')
+        self.assertEqual(value.value, 8)
 
     def test_09_FacilityClockDaemon1(self):
         """
         Test FacilityUnit with FacilityClockDaemon1
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityClockDaemon1')
+        value = FacilityUnit.FacilityClockDaemon1
         self.assertEqual(value.dump(), 'FacilityClockDaemon1')
-        self.assertEqual(value.get_name(), 'FacilityClockDaemon1')
-        self.assertEqual(value.get_value(), 9)
+        self.assertEqual(value.name, 'FacilityClockDaemon1')
+        self.assertEqual(value.value, 9)
 
     def test_10_FacilitySecurity2(self):
         """
         Test FacilityUnit with FacilitySecurity2
         """
-        value = pykerio.enums.FacilityUnit(name='FacilitySecurity2')
+        value = FacilityUnit.FacilitySecurity2
         self.assertEqual(value.dump(), 'FacilitySecurity2')
-        self.assertEqual(value.get_name(), 'FacilitySecurity2')
-        self.assertEqual(value.get_value(), 10)
+        self.assertEqual(value.name, 'FacilitySecurity2')
+        self.assertEqual(value.value, 10)
 
     def test_11_FacilityFtpDaemon(self):
         """
         Test FacilityUnit with FacilityFtpDaemon
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityFtpDaemon')
+        value = FacilityUnit.FacilityFtpDaemon
         self.assertEqual(value.dump(), 'FacilityFtpDaemon')
-        self.assertEqual(value.get_name(), 'FacilityFtpDaemon')
-        self.assertEqual(value.get_value(), 11)
+        self.assertEqual(value.name, 'FacilityFtpDaemon')
+        self.assertEqual(value.value, 11)
 
     def test_12_FacilityNtpSubsystem(self):
         """
         Test FacilityUnit with FacilityNtpSubsystem
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityNtpSubsystem')
+        value = FacilityUnit.FacilityNtpSubsystem
         self.assertEqual(value.dump(), 'FacilityNtpSubsystem')
-        self.assertEqual(value.get_name(), 'FacilityNtpSubsystem')
-        self.assertEqual(value.get_value(), 12)
+        self.assertEqual(value.name, 'FacilityNtpSubsystem')
+        self.assertEqual(value.value, 12)
 
     def test_13_FacilityLogAudit(self):
         """
         Test FacilityUnit with FacilityLogAudit
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLogAudit')
+        value = FacilityUnit.FacilityLogAudit
         self.assertEqual(value.dump(), 'FacilityLogAudit')
-        self.assertEqual(value.get_name(), 'FacilityLogAudit')
-        self.assertEqual(value.get_value(), 13)
+        self.assertEqual(value.name, 'FacilityLogAudit')
+        self.assertEqual(value.value, 13)
 
     def test_14_FacilityLogAlert(self):
         """
         Test FacilityUnit with FacilityLogAlert
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLogAlert')
+        value = FacilityUnit.FacilityLogAlert
         self.assertEqual(value.dump(), 'FacilityLogAlert')
-        self.assertEqual(value.get_name(), 'FacilityLogAlert')
-        self.assertEqual(value.get_value(), 14)
+        self.assertEqual(value.name, 'FacilityLogAlert')
+        self.assertEqual(value.value, 14)
 
     def test_15_FacilityClockDaemon2(self):
         """
         Test FacilityUnit with FacilityClockDaemon2
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityClockDaemon2')
+        value = FacilityUnit.FacilityClockDaemon2
         self.assertEqual(value.dump(), 'FacilityClockDaemon2')
-        self.assertEqual(value.get_name(), 'FacilityClockDaemon2')
-        self.assertEqual(value.get_value(), 15)
+        self.assertEqual(value.name, 'FacilityClockDaemon2')
+        self.assertEqual(value.value, 15)
 
     def test_16_FacilityLocal0(self):
         """
         Test FacilityUnit with FacilityLocal0
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal0')
+        value = FacilityUnit.FacilityLocal0
         self.assertEqual(value.dump(), 'FacilityLocal0')
-        self.assertEqual(value.get_name(), 'FacilityLocal0')
-        self.assertEqual(value.get_value(), 16)
+        self.assertEqual(value.name, 'FacilityLocal0')
+        self.assertEqual(value.value, 16)
 
     def test_17_FacilityLocal1(self):
         """
         Test FacilityUnit with FacilityLocal1
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal1')
+        value = FacilityUnit.FacilityLocal1
         self.assertEqual(value.dump(), 'FacilityLocal1')
-        self.assertEqual(value.get_name(), 'FacilityLocal1')
-        self.assertEqual(value.get_value(), 17)
+        self.assertEqual(value.name, 'FacilityLocal1')
+        self.assertEqual(value.value, 17)
 
     def test_18_FacilityLocal2(self):
         """
         Test FacilityUnit with FacilityLocal2
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal2')
+        value = FacilityUnit.FacilityLocal2
         self.assertEqual(value.dump(), 'FacilityLocal2')
-        self.assertEqual(value.get_name(), 'FacilityLocal2')
-        self.assertEqual(value.get_value(), 18)
+        self.assertEqual(value.name, 'FacilityLocal2')
+        self.assertEqual(value.value, 18)
 
     def test_19_FacilityLocal3(self):
         """
         Test FacilityUnit with FacilityLocal3
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal3')
+        value = FacilityUnit.FacilityLocal3
         self.assertEqual(value.dump(), 'FacilityLocal3')
-        self.assertEqual(value.get_name(), 'FacilityLocal3')
-        self.assertEqual(value.get_value(), 19)
+        self.assertEqual(value.name, 'FacilityLocal3')
+        self.assertEqual(value.value, 19)
 
     def test_20_FacilityLocal4(self):
         """
         Test FacilityUnit with FacilityLocal4
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal4')
+        value = FacilityUnit.FacilityLocal4
         self.assertEqual(value.dump(), 'FacilityLocal4')
-        self.assertEqual(value.get_name(), 'FacilityLocal4')
-        self.assertEqual(value.get_value(), 20)
+        self.assertEqual(value.name, 'FacilityLocal4')
+        self.assertEqual(value.value, 20)
 
     def test_21_FacilityLocal5(self):
         """
         Test FacilityUnit with FacilityLocal5
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal5')
+        value = FacilityUnit.FacilityLocal5
         self.assertEqual(value.dump(), 'FacilityLocal5')
-        self.assertEqual(value.get_name(), 'FacilityLocal5')
-        self.assertEqual(value.get_value(), 21)
+        self.assertEqual(value.name, 'FacilityLocal5')
+        self.assertEqual(value.value, 21)
 
     def test_22_FacilityLocal6(self):
         """
         Test FacilityUnit with FacilityLocal6
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal6')
+        value = FacilityUnit.FacilityLocal6
         self.assertEqual(value.dump(), 'FacilityLocal6')
-        self.assertEqual(value.get_name(), 'FacilityLocal6')
-        self.assertEqual(value.get_value(), 22)
+        self.assertEqual(value.name, 'FacilityLocal6')
+        self.assertEqual(value.value, 22)
 
     def test_23_FacilityLocal7(self):
         """
         Test FacilityUnit with FacilityLocal7
         """
-        value = pykerio.enums.FacilityUnit(name='FacilityLocal7')
+        value = FacilityUnit.FacilityLocal7
         self.assertEqual(value.dump(), 'FacilityLocal7')
-        self.assertEqual(value.get_name(), 'FacilityLocal7')
-        self.assertEqual(value.get_value(), 23)
+        self.assertEqual(value.name, 'FacilityLocal7')
+        self.assertEqual(value.value, 23)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test FacilityUnit with FAIL
         """
-        value = pykerio.enums.FacilityUnit(name='FAIL')
+        value = FacilityUnit.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

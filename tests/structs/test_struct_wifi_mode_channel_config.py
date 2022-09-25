@@ -35,7 +35,7 @@ class TestCase_WifiModeChannelConfig(unittest.TestCase):
                                                    'name80211n': name,
                                                    'value': value})
         channels.append(channel)
-        band = pykerio.enums.WifiBandType('WifiBandBG')
+        band = pykerio.enums.WifiBandType.WifiBandBG
 
         teststruct = pykerio.structs.WifiModeChannelConfig({
             'band': band,

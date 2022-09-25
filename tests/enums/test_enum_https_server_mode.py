@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import HttpsServerMode
 
 
 class TestCase_HttpsServerMode(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_HttpsServerMode(unittest.TestCase):
         """
         Test HttpsServerMode with HttpsServerModeDisabled
         """
-        value = pykerio.enums.HttpsServerMode(name='HttpsServerModeDisabled')
+        value = HttpsServerMode.HttpsServerModeDisabled
         self.assertEqual(value.dump(), 'HttpsServerModeDisabled')
-        self.assertEqual(value.get_name(), 'HttpsServerModeDisabled')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'HttpsServerModeDisabled')
+        self.assertEqual(value.value, 0)
 
     def test_01_HttpsServerModeDefaultCertificate(self):
         """
         Test HttpsServerMode with HttpsServerModeDefaultCertificate
         """
-        value = pykerio.enums.HttpsServerMode(name='HttpsServerModeDefaultCertificate')
+        value = HttpsServerMode.HttpsServerModeDefaultCertificate
         self.assertEqual(value.dump(), 'HttpsServerModeDefaultCertificate')
-        self.assertEqual(value.get_name(), 'HttpsServerModeDefaultCertificate')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'HttpsServerModeDefaultCertificate')
+        self.assertEqual(value.value, 1)
 
     def test_02_HttpsServerModeCustomCertificate(self):
         """
         Test HttpsServerMode with HttpsServerModeCustomCertificate
         """
-        value = pykerio.enums.HttpsServerMode(name='HttpsServerModeCustomCertificate')
+        value = HttpsServerMode.HttpsServerModeCustomCertificate
         self.assertEqual(value.dump(), 'HttpsServerModeCustomCertificate')
-        self.assertEqual(value.get_name(), 'HttpsServerModeCustomCertificate')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'HttpsServerModeCustomCertificate')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test HttpsServerMode with FAIL
         """
-        value = pykerio.enums.HttpsServerMode(name='FAIL')
+        value = HttpsServerMode.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

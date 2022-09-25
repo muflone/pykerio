@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class LogicalOperator(BaseEnumeration):
-    OR = 0
-    AND = 1
-
-    VALUES = {
-        'Or': OR,
-        'And': AND
-    }
+    Or = 0
+    And = 1

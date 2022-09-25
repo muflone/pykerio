@@ -28,7 +28,7 @@ class TestCase_SizeLimit(unittest.TestCase):
         """
         Test SizeLimit
         """
-        units = pykerio.enums.ByteUnits('GigaBytes')
+        units = pykerio.enums.ByteUnits.GigaBytes
         value = 12345
         limit = pykerio.structs.ByteValueWithUnits({
             'value': value,

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import InterfaceType
 
 
 class TestCase_InterfaceType(unittest.TestCase):
@@ -28,53 +28,53 @@ class TestCase_InterfaceType(unittest.TestCase):
         """
         Test InterfaceType with Ethernet
         """
-        value = pykerio.enums.InterfaceType(name='Ethernet')
+        value = InterfaceType.Ethernet
         self.assertEqual(value.dump(), 'Ethernet')
-        self.assertEqual(value.get_name(), 'Ethernet')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Ethernet')
+        self.assertEqual(value.value, 0)
 
     def test_01_Ras(self):
         """
         Test InterfaceType with Ras
         """
-        value = pykerio.enums.InterfaceType(name='Ras')
+        value = InterfaceType.Ras
         self.assertEqual(value.dump(), 'Ras')
-        self.assertEqual(value.get_name(), 'Ras')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Ras')
+        self.assertEqual(value.value, 1)
 
     def test_02_DialIn(self):
         """
         Test InterfaceType with DialIn
         """
-        value = pykerio.enums.InterfaceType(name='DialIn')
+        value = InterfaceType.DialIn
         self.assertEqual(value.dump(), 'DialIn')
-        self.assertEqual(value.get_name(), 'DialIn')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'DialIn')
+        self.assertEqual(value.value, 2)
 
     def test_03_VpnServer(self):
         """
         Test InterfaceType with VpnServer
         """
-        value = pykerio.enums.InterfaceType(name='VpnServer')
+        value = InterfaceType.VpnServer
         self.assertEqual(value.dump(), 'VpnServer')
-        self.assertEqual(value.get_name(), 'VpnServer')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'VpnServer')
+        self.assertEqual(value.value, 3)
 
     def test_04_VpnTunnel(self):
         """
         Test InterfaceType with VpnTunnel
         """
-        value = pykerio.enums.InterfaceType(name='VpnTunnel')
+        value = InterfaceType.VpnTunnel
         self.assertEqual(value.dump(), 'VpnTunnel')
-        self.assertEqual(value.get_name(), 'VpnTunnel')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'VpnTunnel')
+        self.assertEqual(value.value, 4)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test InterfaceType with FAIL
         """
-        value = pykerio.enums.InterfaceType(name='FAIL')
+        value = InterfaceType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

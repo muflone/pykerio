@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ZeroConfigItemType
 
 
 class TestCase_ZeroConfigItemType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_ZeroConfigItemType(unittest.TestCase):
         """
         Test ZeroConfigItemType with ZeroConfigVpnClients
         """
-        value = pykerio.enums.ZeroConfigItemType(name='ZeroConfigVpnClients')
+        value = ZeroConfigItemType.ZeroConfigVpnClients
         self.assertEqual(value.dump(), 'ZeroConfigVpnClients')
-        self.assertEqual(value.get_name(), 'ZeroConfigVpnClients')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ZeroConfigVpnClients')
+        self.assertEqual(value.value, 0)
 
     def test_01_ZeroConfigVpnTunnel(self):
         """
         Test ZeroConfigItemType with ZeroConfigVpnTunnel
         """
-        value = pykerio.enums.ZeroConfigItemType(name='ZeroConfigVpnTunnel')
+        value = ZeroConfigItemType.ZeroConfigVpnTunnel
         self.assertEqual(value.dump(), 'ZeroConfigVpnTunnel')
-        self.assertEqual(value.get_name(), 'ZeroConfigVpnTunnel')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ZeroConfigVpnTunnel')
+        self.assertEqual(value.value, 1)
 
     def test_02_ZeroConfigInterface(self):
         """
         Test ZeroConfigItemType with ZeroConfigInterface
         """
-        value = pykerio.enums.ZeroConfigItemType(name='ZeroConfigInterface')
+        value = ZeroConfigItemType.ZeroConfigInterface
         self.assertEqual(value.dump(), 'ZeroConfigInterface')
-        self.assertEqual(value.get_name(), 'ZeroConfigInterface')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ZeroConfigInterface')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ZeroConfigItemType with FAIL
         """
-        value = pykerio.enums.ZeroConfigItemType(name='FAIL')
+        value = ZeroConfigItemType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

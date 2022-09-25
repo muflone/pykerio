@@ -22,12 +22,7 @@ from .base_enumeration import BaseEnumeration
 
 
 class FailoverRoleType(BaseEnumeration):
+    # FIXME: The NONE value should be None
     NONE = 0
-    PRIMARY = 1
-    SECONDARY = 2
-
-    VALUES = {
-        'None': NONE,
-        'Primary': PRIMARY,
-        'Secondary': SECONDARY
-    }
+    Primary = 1
+    Secondary = 2

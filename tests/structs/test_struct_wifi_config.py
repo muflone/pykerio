@@ -33,12 +33,10 @@ class TestCase_WifiConfig(unittest.TestCase):
         ssidconfig = pykerio.structs.WifiSsidConfig({
             'id': kid,
             'enabled': True,
-            'assignment': pykerio.enums.PortAssignmentType(
-                name='PortAssignmentStandalone'),
+            'assignment': pykerio.enums.PortAssignmentType.PortAssignmentStandalone,
             'ssid': 'My WiFi',
-            'group': pykerio.enums.InterfaceGroupType(name='Internet'),
-            'encryption': pykerio.enums.WifiEncryptionType(
-                name='WifiEncryptionWpaPsk'),
+            'group': pykerio.enums.InterfaceGroupType.Internet,
+            'encryption': pykerio.enums.WifiEncryptionType.WifiEncryptionWpaPsk,
             'wpaPassword': secret})
         ssidconfiglist = pykerio.lists.WifiSsidConfigList()
         ssidconfiglist.append(ssidconfig)
@@ -47,7 +45,7 @@ class TestCase_WifiConfig(unittest.TestCase):
 
         teststruct = pykerio.structs.WifiConfig({
             'country': country,
-            'band': pykerio.enums.WifiBandType(name='WifiBandBG'),
+            'band': pykerio.enums.WifiBandType.WifiBandBG,
             'band80211n': False,
             'channel': 11,
             'ssids': ssidconfiglist})

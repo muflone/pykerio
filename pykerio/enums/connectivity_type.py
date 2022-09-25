@@ -22,14 +22,7 @@ from .base_enumeration import BaseEnumeration
 
 
 class ConnectivityType(BaseEnumeration):
-    PERSISTENT = 0
-    DIAL_ON_DEMAND = 1
-    FAILOVER = 2
-    LOAD_BALANCING = 3
-
-    VALUES = {
-        'Persistent': PERSISTENT,
-        'DialOnDemand': DIAL_ON_DEMAND,
-        'Failover': FAILOVER,
-        'LoadBalancing': LOAD_BALANCING
-    }
+    Persistent = 0
+    DialOnDemand = 1
+    Failover = 2
+    LoadBalancing = 3

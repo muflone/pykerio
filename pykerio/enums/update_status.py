@@ -22,22 +22,11 @@ from .base_enumeration import BaseEnumeration
 
 
 class UpdateStatus(BaseEnumeration):
-    OK = 0
-    CHECKING = 1
-    CHECK_FAILED = 2
-    DOWNLOAD_OK = 3
-    DOWNLOADING = 4
-    DOWNLOAD_FAILED = 5
-    UPGRADING = 6
-    UPGRADE_FAILED = 7
-
-    VALUES = {
-        'UpdateStatusOk': OK,
-        'UpdateStatusChecking': CHECKING,
-        'UpdateStatusCheckFailed': CHECK_FAILED,
-        'UpdateStatusDownloadOk': DOWNLOAD_OK,
-        'UpdateStatusDownloading': DOWNLOADING,
-        'UpdateStatusDownloadFailed': DOWNLOAD_FAILED,
-        'UpdateStatusUpgrading': UPGRADING,
-        'UpdateStatusUpgradeFailed': UPGRADE_FAILED
-    }
+    UpdateStatusOk = 0
+    UpdateStatusChecking = 1
+    UpdateStatusCheckFailed = 2
+    UpdateStatusDownloadOk = 3
+    UpdateStatusDownloading = 4
+    UpdateStatusDownloadFailed = 5
+    UpdateStatusUpgrading = 6
+    UpdateStatusUpgradeFailed = 7

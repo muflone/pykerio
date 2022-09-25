@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ServerOs
 
 
 class TestCase_ServerOs(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_ServerOs(unittest.TestCase):
         """
         Test ServerOs with Windows
         """
-        value = pykerio.enums.ServerOs(name='Windows')
+        value = ServerOs.Windows
         self.assertEqual(value.dump(), 'Windows')
-        self.assertEqual(value.get_name(), 'Windows')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Windows')
+        self.assertEqual(value.value, 0)
 
     def test_01_Linux(self):
         """
         Test ServerOs with Linux
         """
-        value = pykerio.enums.ServerOs(name='Linux')
+        value = ServerOs.Linux
         self.assertEqual(value.dump(), 'Linux')
-        self.assertEqual(value.get_name(), 'Linux')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Linux')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ServerOs with FAIL
         """
-        value = pykerio.enums.ServerOs(name='FAIL')
+        value = ServerOs.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

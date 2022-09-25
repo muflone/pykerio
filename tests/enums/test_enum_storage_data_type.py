@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import StorageDataType
 
 
 class TestCase_StorageDataType(unittest.TestCase):
@@ -28,71 +28,71 @@ class TestCase_StorageDataType(unittest.TestCase):
         """
         Test StorageDataType with StorageDataStar
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataStar')
+        value = StorageDataType.StorageDataStar
         self.assertEqual(value.dump(), 'StorageDataStar')
-        self.assertEqual(value.get_name(), 'StorageDataStar')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'StorageDataStar')
+        self.assertEqual(value.value, 0)
 
     def test_01_StorageDataLogs(self):
         """
         Test StorageDataType with StorageDataLogs
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataLogs')
+        value = StorageDataType.StorageDataLogs
         self.assertEqual(value.dump(), 'StorageDataLogs')
-        self.assertEqual(value.get_name(), 'StorageDataLogs')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'StorageDataLogs')
+        self.assertEqual(value.value, 1)
 
     def test_02_StorageDataCrash(self):
         """
         Test StorageDataType with StorageDataCrash
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataCrash')
+        value = StorageDataType.StorageDataCrash
         self.assertEqual(value.dump(), 'StorageDataCrash')
-        self.assertEqual(value.get_name(), 'StorageDataCrash')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'StorageDataCrash')
+        self.assertEqual(value.value, 2)
 
     def test_03_StorageDataPktdump(self):
         """
         Test StorageDataType with StorageDataPktdump
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataPktdump')
+        value = StorageDataType.StorageDataPktdump
         self.assertEqual(value.dump(), 'StorageDataPktdump')
-        self.assertEqual(value.get_name(), 'StorageDataPktdump')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'StorageDataPktdump')
+        self.assertEqual(value.value, 3)
 
     def test_04_StorageDataUpdate(self):
         """
         Test StorageDataType with StorageDataUpdate
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataUpdate')
+        value = StorageDataType.StorageDataUpdate
         self.assertEqual(value.dump(), 'StorageDataUpdate')
-        self.assertEqual(value.get_name(), 'StorageDataUpdate')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'StorageDataUpdate')
+        self.assertEqual(value.value, 4)
 
     def test_05_StorageDataQuarantine(self):
         """
         Test StorageDataType with StorageDataQuarantine
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataQuarantine')
+        value = StorageDataType.StorageDataQuarantine
         self.assertEqual(value.dump(), 'StorageDataQuarantine')
-        self.assertEqual(value.get_name(), 'StorageDataQuarantine')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'StorageDataQuarantine')
+        self.assertEqual(value.value, 5)
 
     def test_06_StorageDataHttpCache(self):
         """
         Test StorageDataType with StorageDataHttpCache
         """
-        value = pykerio.enums.StorageDataType(name='StorageDataHttpCache')
+        value = StorageDataType.StorageDataHttpCache
         self.assertEqual(value.dump(), 'StorageDataHttpCache')
-        self.assertEqual(value.get_name(), 'StorageDataHttpCache')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'StorageDataHttpCache')
+        self.assertEqual(value.value, 6)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test StorageDataType with FAIL
         """
-        value = pykerio.enums.StorageDataType(name='FAIL')
+        value = StorageDataType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

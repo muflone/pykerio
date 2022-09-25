@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SeverityUnit
 
 
 class TestCase_SeverityUnit(unittest.TestCase):
@@ -28,80 +28,80 @@ class TestCase_SeverityUnit(unittest.TestCase):
         """
         Test SeverityUnit with SeverityEmergency
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityEmergency')
+        value = SeverityUnit.SeverityEmergency
         self.assertEqual(value.dump(), 'SeverityEmergency')
-        self.assertEqual(value.get_name(), 'SeverityEmergency')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'SeverityEmergency')
+        self.assertEqual(value.value, 0)
 
     def test_01_SeverityAlert(self):
         """
         Test SeverityUnit with SeverityAlert
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityAlert')
+        value = SeverityUnit.SeverityAlert
         self.assertEqual(value.dump(), 'SeverityAlert')
-        self.assertEqual(value.get_name(), 'SeverityAlert')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'SeverityAlert')
+        self.assertEqual(value.value, 1)
 
     def test_02_SeverityCritical(self):
         """
         Test SeverityUnit with SeverityCritical
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityCritical')
+        value = SeverityUnit.SeverityCritical
         self.assertEqual(value.dump(), 'SeverityCritical')
-        self.assertEqual(value.get_name(), 'SeverityCritical')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'SeverityCritical')
+        self.assertEqual(value.value, 2)
 
     def test_03_SeverityError(self):
         """
         Test SeverityUnit with SeverityError
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityError')
+        value = SeverityUnit.SeverityError
         self.assertEqual(value.dump(), 'SeverityError')
-        self.assertEqual(value.get_name(), 'SeverityError')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'SeverityError')
+        self.assertEqual(value.value, 3)
 
     def test_04_SeverityWarning(self):
         """
         Test SeverityUnit with SeverityWarning
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityWarning')
+        value = SeverityUnit.SeverityWarning
         self.assertEqual(value.dump(), 'SeverityWarning')
-        self.assertEqual(value.get_name(), 'SeverityWarning')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'SeverityWarning')
+        self.assertEqual(value.value, 4)
 
     def test_05_SeverityNotice(self):
         """
         Test SeverityUnit with SeverityNotice
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityNotice')
+        value = SeverityUnit.SeverityNotice
         self.assertEqual(value.dump(), 'SeverityNotice')
-        self.assertEqual(value.get_name(), 'SeverityNotice')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'SeverityNotice')
+        self.assertEqual(value.value, 5)
 
     def test_06_SeverityInformational(self):
         """
         Test SeverityUnit with SeverityInformational
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityInformational')
+        value = SeverityUnit.SeverityInformational
         self.assertEqual(value.dump(), 'SeverityInformational')
-        self.assertEqual(value.get_name(), 'SeverityInformational')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'SeverityInformational')
+        self.assertEqual(value.value, 6)
 
     def test_07_SeverityDebug(self):
         """
         Test SeverityUnit with SeverityDebug
         """
-        value = pykerio.enums.SeverityUnit(name='SeverityDebug')
+        value = SeverityUnit.SeverityDebug
         self.assertEqual(value.dump(), 'SeverityDebug')
-        self.assertEqual(value.get_name(), 'SeverityDebug')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'SeverityDebug')
+        self.assertEqual(value.value, 7)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SeverityUnit with FAIL
         """
-        value = pykerio.enums.SeverityUnit(name='FAIL')
+        value = SeverityUnit.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

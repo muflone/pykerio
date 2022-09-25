@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class StoreStatus(BaseEnumeration):
-    CLEAN = 0
-    MODIFIED = 1
-    NEW = 2
-
-    VALUES = {
-        'StoreStatusClean': CLEAN,
-        'StoreStatusModified': MODIFIED,
-        'StoreStatusNew': NEW
-    }
+    StoreStatusClean = 0
+    StoreStatusModified = 1
+    StoreStatusNew = 2

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import UrlFilterStatus
 
 
 class TestCase_UrlFilterStatus(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_UrlFilterStatus(unittest.TestCase):
         """
         Test UrlFilterStatus with UrlFilterNotLicensed
         """
-        value = pykerio.enums.UrlFilterStatus(name='UrlFilterNotLicensed')
+        value = UrlFilterStatus.UrlFilterNotLicensed
         self.assertEqual(value.dump(), 'UrlFilterNotLicensed')
-        self.assertEqual(value.get_name(), 'UrlFilterNotLicensed')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'UrlFilterNotLicensed')
+        self.assertEqual(value.value, 0)
 
     def test_01_UrlFilterNotActivated(self):
         """
         Test UrlFilterStatus with UrlFilterNotActivated
         """
-        value = pykerio.enums.UrlFilterStatus(name='UrlFilterNotActivated')
+        value = UrlFilterStatus.UrlFilterNotActivated
         self.assertEqual(value.dump(), 'UrlFilterNotActivated')
-        self.assertEqual(value.get_name(), 'UrlFilterNotActivated')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'UrlFilterNotActivated')
+        self.assertEqual(value.value, 1)
 
     def test_02_UrlFilterActivating(self):
         """
         Test UrlFilterStatus with UrlFilterActivating
         """
-        value = pykerio.enums.UrlFilterStatus(name='UrlFilterActivating')
+        value = UrlFilterStatus.UrlFilterActivating
         self.assertEqual(value.dump(), 'UrlFilterActivating')
-        self.assertEqual(value.get_name(), 'UrlFilterActivating')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'UrlFilterActivating')
+        self.assertEqual(value.value, 2)
 
     def test_03_UrlFilterActivated(self):
         """
         Test UrlFilterStatus with UrlFilterActivated
         """
-        value = pykerio.enums.UrlFilterStatus(name='UrlFilterActivated')
+        value = UrlFilterStatus.UrlFilterActivated
         self.assertEqual(value.dump(), 'UrlFilterActivated')
-        self.assertEqual(value.get_name(), 'UrlFilterActivated')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'UrlFilterActivated')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test UrlFilterStatus with FAIL
         """
-        value = pykerio.enums.UrlFilterStatus(name='FAIL')
+        value = UrlFilterStatus.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

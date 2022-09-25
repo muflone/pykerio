@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ConfigurationBackupPhase
 
 
 class TestCase_ConfigurationBackupPhase(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_ConfigurationBackupPhase(unittest.TestCase):
         """
         Test ConfigurationBackupPhase with ConfigurationBackupOk
         """
-        value = pykerio.enums.ConfigurationBackupPhase(name='ConfigurationBackupOk')
+        value = ConfigurationBackupPhase.ConfigurationBackupOk
         self.assertEqual(value.dump(), 'ConfigurationBackupOk')
-        self.assertEqual(value.get_name(), 'ConfigurationBackupOk')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ConfigurationBackupOk')
+        self.assertEqual(value.value, 0)
 
     def test_01_ConfigurationBackupInProgress(self):
         """
         Test ConfigurationBackupPhase with ConfigurationBackupInProgress
         """
-        value = pykerio.enums.ConfigurationBackupPhase(name='ConfigurationBackupInProgress')
+        value = ConfigurationBackupPhase.ConfigurationBackupInProgress
         self.assertEqual(value.dump(), 'ConfigurationBackupInProgress')
-        self.assertEqual(value.get_name(), 'ConfigurationBackupInProgress')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ConfigurationBackupInProgress')
+        self.assertEqual(value.value, 1)
 
     def test_02_ConfigurationBackupFailed(self):
         """
         Test ConfigurationBackupPhase with ConfigurationBackupFailed
         """
-        value = pykerio.enums.ConfigurationBackupPhase(name='ConfigurationBackupFailed')
+        value = ConfigurationBackupPhase.ConfigurationBackupFailed
         self.assertEqual(value.dump(), 'ConfigurationBackupFailed')
-        self.assertEqual(value.get_name(), 'ConfigurationBackupFailed')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ConfigurationBackupFailed')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ConfigurationBackupPhase with FAIL
         """
-        value = pykerio.enums.ConfigurationBackupPhase(name='FAIL')
+        value = ConfigurationBackupPhase.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

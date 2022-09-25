@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class ZeroConfigItemType(BaseEnumeration):
-    VPN_CLIENTS = 0
-    VPN_TUNNEL = 1
-    INTERFACE = 2
-
-    VALUES = {
-        'ZeroConfigVpnClients': VPN_CLIENTS,
-        'ZeroConfigVpnTunnel': VPN_TUNNEL,
-        'ZeroConfigInterface': INTERFACE
-    }
+    ZeroConfigVpnClients = 0
+    ZeroConfigVpnTunnel = 1
+    ZeroConfigInterface = 2

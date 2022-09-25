@@ -22,16 +22,8 @@ from .base_enumeration import BaseEnumeration
 
 
 class WifiEncryptionType(BaseEnumeration):
-    DISABLED = 0
-    WPA_PSK = 1
-    WPA_ENT = 2
-    WPA2_PSK = 3
-    WPA2_ENT = 4
-
-    VALUES = {
-        'WifiEncryptionDisabled': DISABLED,
-        'WifiEncryptionWpaPsk': WPA_PSK,
-        'WifiEncryptionWpaEnt': WPA_ENT,
-        'WifiEncryptionWpa2Psk': WPA2_PSK,
-        'WifiEncryptionWpa2Ent': WPA2_ENT
-    }
+    WifiEncryptionDisabled = 0
+    WifiEncryptionWpaPsk = 1
+    WifiEncryptionWpaEnt = 2
+    WifiEncryptionWpa2Psk = 3
+    WifiEncryptionWpa2Ent = 4

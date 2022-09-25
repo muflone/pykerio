@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ConnectionDirection
 
 
 class TestCase_ConnectionDirection(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_ConnectionDirection(unittest.TestCase):
         """
         Test ConnectionDirection with ConnectionDirectionInbound
         """
-        value = pykerio.enums.ConnectionDirection(name='ConnectionDirectionInbound')
+        value = ConnectionDirection.ConnectionDirectionInbound
         self.assertEqual(value.dump(), 'ConnectionDirectionInbound')
-        self.assertEqual(value.get_name(), 'ConnectionDirectionInbound')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ConnectionDirectionInbound')
+        self.assertEqual(value.value, 0)
 
     def test_01_ConnectionDirectionOutbound(self):
         """
         Test ConnectionDirection with ConnectionDirectionOutbound
         """
-        value = pykerio.enums.ConnectionDirection(name='ConnectionDirectionOutbound')
+        value = ConnectionDirection.ConnectionDirectionOutbound
         self.assertEqual(value.dump(), 'ConnectionDirectionOutbound')
-        self.assertEqual(value.get_name(), 'ConnectionDirectionOutbound')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ConnectionDirectionOutbound')
+        self.assertEqual(value.value, 1)
 
     def test_02_ConnectionDirectionLocal(self):
         """
         Test ConnectionDirection with ConnectionDirectionLocal
         """
-        value = pykerio.enums.ConnectionDirection(name='ConnectionDirectionLocal')
+        value = ConnectionDirection.ConnectionDirectionLocal
         self.assertEqual(value.dump(), 'ConnectionDirectionLocal')
-        self.assertEqual(value.get_name(), 'ConnectionDirectionLocal')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ConnectionDirectionLocal')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ConnectionDirection with FAIL
         """
-        value = pykerio.enums.ConnectionDirection(name='FAIL')
+        value = ConnectionDirection.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

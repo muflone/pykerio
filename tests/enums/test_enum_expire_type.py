@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ExpireType
 
 
 class TestCase_ExpireType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_ExpireType(unittest.TestCase):
         """
         Test ExpireType with License
         """
-        value = pykerio.enums.ExpireType(name='License')
+        value = ExpireType.License
         self.assertEqual(value.dump(), 'License')
-        self.assertEqual(value.get_name(), 'License')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'License')
+        self.assertEqual(value.value, 0)
 
     def test_01_Subscription(self):
         """
         Test ExpireType with Subscription
         """
-        value = pykerio.enums.ExpireType(name='Subscription')
+        value = ExpireType.Subscription
         self.assertEqual(value.dump(), 'Subscription')
-        self.assertEqual(value.get_name(), 'Subscription')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Subscription')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ExpireType with FAIL
         """
-        value = pykerio.enums.ExpireType(name='FAIL')
+        value = ExpireType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

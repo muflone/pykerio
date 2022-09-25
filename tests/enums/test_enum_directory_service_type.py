@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DirectoryServiceType
 
 
 class TestCase_DirectoryServiceType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_DirectoryServiceType(unittest.TestCase):
         """
         Test DirectoryServiceType with WindowsActiveDirectory
         """
-        value = pykerio.enums.DirectoryServiceType(name='WindowsActiveDirectory')
+        value = DirectoryServiceType.WindowsActiveDirectory
         self.assertEqual(value.dump(), 'WindowsActiveDirectory')
-        self.assertEqual(value.get_name(), 'WindowsActiveDirectory')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'WindowsActiveDirectory')
+        self.assertEqual(value.value, 0)
 
     def test_01_AppleDirectoryKerberos(self):
         """
         Test DirectoryServiceType with AppleDirectoryKerberos
         """
-        value = pykerio.enums.DirectoryServiceType(name='AppleDirectoryKerberos')
+        value = DirectoryServiceType.AppleDirectoryKerberos
         self.assertEqual(value.dump(), 'AppleDirectoryKerberos')
-        self.assertEqual(value.get_name(), 'AppleDirectoryKerberos')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'AppleDirectoryKerberos')
+        self.assertEqual(value.value, 1)
 
     def test_02_AppleDirectoryPassword(self):
         """
         Test DirectoryServiceType with AppleDirectoryPassword
         """
-        value = pykerio.enums.DirectoryServiceType(name='AppleDirectoryPassword')
+        value = DirectoryServiceType.AppleDirectoryPassword
         self.assertEqual(value.dump(), 'AppleDirectoryPassword')
-        self.assertEqual(value.get_name(), 'AppleDirectoryPassword')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'AppleDirectoryPassword')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DirectoryServiceType with FAIL
         """
-        value = pykerio.enums.DirectoryServiceType(name='FAIL')
+        value = DirectoryServiceType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

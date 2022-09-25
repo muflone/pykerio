@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class CheckVersionType(BaseEnumeration):
-    CONFIG = 0
-    BETA = 1
-    FINAL = 2
-
-    VALUES = {
-        'CheckVersionConfig': CONFIG,
-        'CheckVersionBeta': BETA,
-        'CheckVersionFinal': FINAL
-    }
+    CheckVersionConfig = 0
+    CheckVersionBeta = 1
+    CheckVersionFinal = 2

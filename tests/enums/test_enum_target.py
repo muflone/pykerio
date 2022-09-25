@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import Target
 
 
 class TestCase_Target(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_Target(unittest.TestCase):
         """
         Test Target with TargetFtpServer
         """
-        value = pykerio.enums.Target(name='TargetFtpServer')
+        value = Target.TargetFtpServer
         self.assertEqual(value.dump(), 'TargetFtpServer')
-        self.assertEqual(value.get_name(), 'TargetFtpServer')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'TargetFtpServer')
+        self.assertEqual(value.value, 0)
 
     def test_01_TargetMyKerio(self):
         """
         Test Target with TargetMyKerio
         """
-        value = pykerio.enums.Target(name='TargetMyKerio')
+        value = Target.TargetMyKerio
         self.assertEqual(value.dump(), 'TargetMyKerio')
-        self.assertEqual(value.get_name(), 'TargetMyKerio')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'TargetMyKerio')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test Target with FAIL
         """
-        value = pykerio.enums.Target(name='FAIL')
+        value = Target.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

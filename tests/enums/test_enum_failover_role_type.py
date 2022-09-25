@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import FailoverRoleType
 
 
 class TestCase_FailoverRoleType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         """
         Test FailoverRoleType with None
         """
-        value = pykerio.enums.FailoverRoleType(name='None')
+        value = FailoverRoleType.NONE
         self.assertEqual(value.dump(), 'None')
-        self.assertEqual(value.get_name(), 'None')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'None')
+        self.assertEqual(value.value, 0)
 
     def test_01_Primary(self):
         """
         Test FailoverRoleType with Primary
         """
-        value = pykerio.enums.FailoverRoleType(name='Primary')
+        value = FailoverRoleType.Primary
         self.assertEqual(value.dump(), 'Primary')
-        self.assertEqual(value.get_name(), 'Primary')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Primary')
+        self.assertEqual(value.value, 1)
 
     def test_02_Secondary(self):
         """
         Test FailoverRoleType with Secondary
         """
-        value = pykerio.enums.FailoverRoleType(name='Secondary')
+        value = FailoverRoleType.Secondary
         self.assertEqual(value.dump(), 'Secondary')
-        self.assertEqual(value.get_name(), 'Secondary')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Secondary')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test FailoverRoleType with FAIL
         """
-        value = pykerio.enums.FailoverRoleType(name='FAIL')
+        value = FailoverRoleType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

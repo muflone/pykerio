@@ -31,7 +31,7 @@ class TestCase_StorageDataList(unittest.TestCase):
         testlist = pykerio.lists.StorageDataList()
         self.assertEqual(len(testlist), 0)
 
-        storage_type = pykerio.enums.StorageDataType('StorageDataUpdate')
+        storage_type = pykerio.enums.StorageDataType.StorageDataUpdate
         teststruct = pykerio.structs.StorageData({'type': storage_type,
                                                   'size': 1234567})
 

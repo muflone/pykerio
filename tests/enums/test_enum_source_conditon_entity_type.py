@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SourceConditonEntityType
 
 
 class TestCase_SourceConditonEntityType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_SourceConditonEntityType(unittest.TestCase):
         """
         Test SourceConditonEntityType with SourceConditonEntityAddressGroup
         """
-        value = pykerio.enums.SourceConditonEntityType(name='SourceConditonEntityAddressGroup')
+        value = SourceConditonEntityType.SourceConditonEntityAddressGroup
         self.assertEqual(value.dump(), 'SourceConditonEntityAddressGroup')
-        self.assertEqual(value.get_name(), 'SourceConditonEntityAddressGroup')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'SourceConditonEntityAddressGroup')
+        self.assertEqual(value.value, 0)
 
     def test_01_SourceConditonEntityUsers(self):
         """
         Test SourceConditonEntityType with SourceConditonEntityUsers
         """
-        value = pykerio.enums.SourceConditonEntityType(name='SourceConditonEntityUsers')
+        value = SourceConditonEntityType.SourceConditonEntityUsers
         self.assertEqual(value.dump(), 'SourceConditonEntityUsers')
-        self.assertEqual(value.get_name(), 'SourceConditonEntityUsers')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'SourceConditonEntityUsers')
+        self.assertEqual(value.value, 1)
 
     def test_02_SourceConditonEntityGuests(self):
         """
         Test SourceConditonEntityType with SourceConditonEntityGuests
         """
-        value = pykerio.enums.SourceConditonEntityType(name='SourceConditonEntityGuests')
+        value = SourceConditonEntityType.SourceConditonEntityGuests
         self.assertEqual(value.dump(), 'SourceConditonEntityGuests')
-        self.assertEqual(value.get_name(), 'SourceConditonEntityGuests')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'SourceConditonEntityGuests')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SourceConditonEntityType with FAIL
         """
-        value = pykerio.enums.SourceConditonEntityType(name='FAIL')
+        value = SourceConditonEntityType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import HistogramType
 
 
 class TestCase_HistogramType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_HistogramType(unittest.TestCase):
         """
         Test HistogramType with HistogramOneDay
         """
-        value = pykerio.enums.HistogramType(name='HistogramOneDay')
+        value = HistogramType.HistogramOneDay
         self.assertEqual(value.dump(), 'HistogramOneDay')
-        self.assertEqual(value.get_name(), 'HistogramOneDay')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'HistogramOneDay')
+        self.assertEqual(value.value, 0)
 
     def test_01_HistogramTwoHours(self):
         """
         Test HistogramType with HistogramTwoHours
         """
-        value = pykerio.enums.HistogramType(name='HistogramTwoHours')
+        value = HistogramType.HistogramTwoHours
         self.assertEqual(value.dump(), 'HistogramTwoHours')
-        self.assertEqual(value.get_name(), 'HistogramTwoHours')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'HistogramTwoHours')
+        self.assertEqual(value.value, 1)
 
     def test_02_HistogramOneWeek(self):
         """
         Test HistogramType with HistogramOneWeek
         """
-        value = pykerio.enums.HistogramType(name='HistogramOneWeek')
+        value = HistogramType.HistogramOneWeek
         self.assertEqual(value.dump(), 'HistogramOneWeek')
-        self.assertEqual(value.get_name(), 'HistogramOneWeek')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'HistogramOneWeek')
+        self.assertEqual(value.value, 2)
 
     def test_03_HistogramOneMonth(self):
         """
         Test HistogramType with HistogramOneMonth
         """
-        value = pykerio.enums.HistogramType(name='HistogramOneMonth')
+        value = HistogramType.HistogramOneMonth
         self.assertEqual(value.dump(), 'HistogramOneMonth')
-        self.assertEqual(value.get_name(), 'HistogramOneMonth')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'HistogramOneMonth')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test HistogramType with FAIL
         """
-        value = pykerio.enums.HistogramType(name='FAIL')
+        value = HistogramType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

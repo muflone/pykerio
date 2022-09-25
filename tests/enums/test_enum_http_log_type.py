@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import HttpLogType
 
 
 class TestCase_HttpLogType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_HttpLogType(unittest.TestCase):
         """
         Test HttpLogType with HttpLogApache
         """
-        value = pykerio.enums.HttpLogType(name='HttpLogApache')
+        value = HttpLogType.HttpLogApache
         self.assertEqual(value.dump(), 'HttpLogApache')
-        self.assertEqual(value.get_name(), 'HttpLogApache')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'HttpLogApache')
+        self.assertEqual(value.value, 0)
 
     def test_01_HttpLogSquid(self):
         """
         Test HttpLogType with HttpLogSquid
         """
-        value = pykerio.enums.HttpLogType(name='HttpLogSquid')
+        value = HttpLogType.HttpLogSquid
         self.assertEqual(value.dump(), 'HttpLogSquid')
-        self.assertEqual(value.get_name(), 'HttpLogSquid')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'HttpLogSquid')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test HttpLogType with FAIL
         """
-        value = pykerio.enums.HttpLogType(name='FAIL')
+        value = HttpLogType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import NotificationSeverity
 
 
 class TestCase_NotificationSeverity(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_NotificationSeverity(unittest.TestCase):
         """
         Test NotificationSeverity with NotificationWarning
         """
-        value = pykerio.enums.NotificationSeverity(name='NotificationWarning')
+        value = NotificationSeverity.NotificationWarning
         self.assertEqual(value.dump(), 'NotificationWarning')
-        self.assertEqual(value.get_name(), 'NotificationWarning')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'NotificationWarning')
+        self.assertEqual(value.value, 0)
 
     def test_01_NotificationError(self):
         """
         Test NotificationSeverity with NotificationError
         """
-        value = pykerio.enums.NotificationSeverity(name='NotificationError')
+        value = NotificationSeverity.NotificationError
         self.assertEqual(value.dump(), 'NotificationError')
-        self.assertEqual(value.get_name(), 'NotificationError')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'NotificationError')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test NotificationSeverity with FAIL
         """
-        value = pykerio.enums.NotificationSeverity(name='FAIL')
+        value = NotificationSeverity.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

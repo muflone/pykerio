@@ -22,22 +22,11 @@ from .base_enumeration import BaseEnumeration
 
 
 class SeverityUnit(BaseEnumeration):
-    EMERGENCY = 0
-    ALERT = 1
-    CRITICAL = 2
-    ERROR = 3
-    WARNING = 4
-    NOTICE = 5
-    INFORMATIONAL = 6
-    DEBUG = 7
-
-    VALUES = {
-        'SeverityEmergency': EMERGENCY,
-        'SeverityAlert': ALERT,
-        'SeverityCritical': CRITICAL,
-        'SeverityError': ERROR,
-        'SeverityWarning': WARNING,
-        'SeverityNotice': NOTICE,
-        'SeverityInformational': INFORMATIONAL,
-        'SeverityDebug': DEBUG
-    }
+    SeverityEmergency = 0
+    SeverityAlert = 1
+    SeverityCritical = 2
+    SeverityError = 3
+    SeverityWarning = 4
+    SeverityNotice = 5
+    SeverityInformational = 6
+    SeverityDebug = 7

@@ -22,16 +22,8 @@ from .base_enumeration import BaseEnumeration
 
 
 class VpnClientState(BaseEnumeration):
-    CONNECTING = 0
-    AUTHENTICATING = 1
-    AUTHENTICATED = 2
-    CONNECTED = 3
-    OTHER = 4
-
-    VALUES = {
-        'VpnClientConnecting': CONNECTING,
-        'VpnClientAuthenticating': AUTHENTICATING,
-        'VpnClientAuthenticated': AUTHENTICATED,
-        'VpnClientConnected': CONNECTED,
-        'VpnClientOther': OTHER
-    }
+    VpnClientConnecting = 0
+    VpnClientAuthenticating = 1
+    VpnClientAuthenticated = 2
+    VpnClientConnected = 3
+    VpnClientOther = 4

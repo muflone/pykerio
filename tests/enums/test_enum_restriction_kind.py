@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RestrictionKind
 
 
 class TestCase_RestrictionKind(unittest.TestCase):
@@ -28,62 +28,62 @@ class TestCase_RestrictionKind(unittest.TestCase):
         """
         Test RestrictionKind with Regex
         """
-        value = pykerio.enums.RestrictionKind(name='Regex')
+        value = RestrictionKind.Regex
         self.assertEqual(value.dump(), 'Regex')
-        self.assertEqual(value.get_name(), 'Regex')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Regex')
+        self.assertEqual(value.value, 0)
 
     def test_01_ByteLength(self):
         """
         Test RestrictionKind with ByteLength
         """
-        value = pykerio.enums.RestrictionKind(name='ByteLength')
+        value = RestrictionKind.ByteLength
         self.assertEqual(value.dump(), 'ByteLength')
-        self.assertEqual(value.get_name(), 'ByteLength')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ByteLength')
+        self.assertEqual(value.value, 1)
 
     def test_02_ForbiddenNameList(self):
         """
         Test RestrictionKind with ForbiddenNameList
         """
-        value = pykerio.enums.RestrictionKind(name='ForbiddenNameList')
+        value = RestrictionKind.ForbiddenNameList
         self.assertEqual(value.dump(), 'ForbiddenNameList')
-        self.assertEqual(value.get_name(), 'ForbiddenNameList')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ForbiddenNameList')
+        self.assertEqual(value.value, 2)
 
     def test_03_ForbiddenPrefixList(self):
         """
         Test RestrictionKind with ForbiddenPrefixList
         """
-        value = pykerio.enums.RestrictionKind(name='ForbiddenPrefixList')
+        value = RestrictionKind.ForbiddenPrefixList
         self.assertEqual(value.dump(), 'ForbiddenPrefixList')
-        self.assertEqual(value.get_name(), 'ForbiddenPrefixList')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'ForbiddenPrefixList')
+        self.assertEqual(value.value, 3)
 
     def test_04_ForbiddenSuffixList(self):
         """
         Test RestrictionKind with ForbiddenSuffixList
         """
-        value = pykerio.enums.RestrictionKind(name='ForbiddenSuffixList')
+        value = RestrictionKind.ForbiddenSuffixList
         self.assertEqual(value.dump(), 'ForbiddenSuffixList')
-        self.assertEqual(value.get_name(), 'ForbiddenSuffixList')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'ForbiddenSuffixList')
+        self.assertEqual(value.value, 4)
 
     def test_05_ForbiddenCharacterList(self):
         """
         Test RestrictionKind with ForbiddenCharacterList
         """
-        value = pykerio.enums.RestrictionKind(name='ForbiddenCharacterList')
+        value = RestrictionKind.ForbiddenCharacterList
         self.assertEqual(value.dump(), 'ForbiddenCharacterList')
-        self.assertEqual(value.get_name(), 'ForbiddenCharacterList')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'ForbiddenCharacterList')
+        self.assertEqual(value.value, 5)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RestrictionKind with FAIL
         """
-        value = pykerio.enums.RestrictionKind(name='FAIL')
+        value = RestrictionKind.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

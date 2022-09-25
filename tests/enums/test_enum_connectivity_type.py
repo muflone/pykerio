@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ConnectivityType
 
 
 class TestCase_ConnectivityType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_ConnectivityType(unittest.TestCase):
         """
         Test ConnectivityType with Persistent
         """
-        value = pykerio.enums.ConnectivityType(name='Persistent')
+        value = ConnectivityType.Persistent
         self.assertEqual(value.dump(), 'Persistent')
-        self.assertEqual(value.get_name(), 'Persistent')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Persistent')
+        self.assertEqual(value.value, 0)
 
     def test_01_DialOnDemand(self):
         """
         Test ConnectivityType with DialOnDemand
         """
-        value = pykerio.enums.ConnectivityType(name='DialOnDemand')
+        value = ConnectivityType.DialOnDemand
         self.assertEqual(value.dump(), 'DialOnDemand')
-        self.assertEqual(value.get_name(), 'DialOnDemand')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DialOnDemand')
+        self.assertEqual(value.value, 1)
 
     def test_02_Failover(self):
         """
         Test ConnectivityType with Failover
         """
-        value = pykerio.enums.ConnectivityType(name='Failover')
+        value = ConnectivityType.Failover
         self.assertEqual(value.dump(), 'Failover')
-        self.assertEqual(value.get_name(), 'Failover')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Failover')
+        self.assertEqual(value.value, 2)
 
     def test_03_LoadBalancing(self):
         """
         Test ConnectivityType with LoadBalancing
         """
-        value = pykerio.enums.ConnectivityType(name='LoadBalancing')
+        value = ConnectivityType.LoadBalancing
         self.assertEqual(value.dump(), 'LoadBalancing')
-        self.assertEqual(value.get_name(), 'LoadBalancing')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'LoadBalancing')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ConnectivityType with FAIL
         """
-        value = pykerio.enums.ConnectivityType(name='FAIL')
+        value = ConnectivityType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

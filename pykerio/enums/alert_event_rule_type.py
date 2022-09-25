@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class AlertEventRuleType(BaseEnumeration):
-    TRAFFIC = 0
-    CONTENT = 1
-
-    VALUES = {
-        'AlertTraffic': TRAFFIC,
-        'AlertContent': CONTENT
-    }
+    AlertTraffic = 0
+    AlertContent = 1

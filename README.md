@@ -72,25 +72,17 @@ strings when a function expects a particular constant value.
 The reason behind the PyKerio Enumerations is to limit the usage of invalid
 strings and to know the only admitted values for an argument.
 For example whenever a method requires an ```ActiveTool``` data type you can
-instance a new ```ActiveTool``` object passing its value during the object
-creation. This value will be initially checked and invalid values cannot be
-specified.
+instance a new ```ActiveTool``` object passing its value.
 
 Their usage is shown here:
 
-    >>> tool = pykerio.enums.ActiveTool('ActiveToolDns')
+    >>> tool = pykerio.enums.ActiveTool.ActiveToolDns
     >>> print(tool.dump())
     'ActiveToolDns'
-
-Invalid arguments cannot be specified during the object creation. The following
-instructions will raise an AssertionError.
-
-    >>> tool = pykerio.enums.ActiveTool('Invalid value')
-    Traceback (most recent call last):
-      File "<stdin>", line 1, in <module>
-      File "pykerio/enums/BaseEnumeration.py", line 29, in __init__
-        assert(name in self.VALUES)
-    AssertionError
+    >>> print(tool.name)
+    'ActiveToolDns'
+    >>> print(tool.value)
+    3
 
 In this way you can safely pass objects to functions without any risk for
 invalid values as they would be automatically forbidden.

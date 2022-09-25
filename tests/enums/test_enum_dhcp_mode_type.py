@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DhcpModeType
 
 
 class TestCase_DhcpModeType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_DhcpModeType(unittest.TestCase):
         """
         Test DhcpModeType with DhcpAutomatic
         """
-        value = pykerio.enums.DhcpModeType(name='DhcpAutomatic')
+        value = DhcpModeType.DhcpAutomatic
         self.assertEqual(value.dump(), 'DhcpAutomatic')
-        self.assertEqual(value.get_name(), 'DhcpAutomatic')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'DhcpAutomatic')
+        self.assertEqual(value.value, 0)
 
     def test_01_DhcpManual(self):
         """
         Test DhcpModeType with DhcpManual
         """
-        value = pykerio.enums.DhcpModeType(name='DhcpManual')
+        value = DhcpModeType.DhcpManual
         self.assertEqual(value.dump(), 'DhcpManual')
-        self.assertEqual(value.get_name(), 'DhcpManual')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DhcpManual')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DhcpModeType with FAIL
         """
-        value = pykerio.enums.DhcpModeType(name='FAIL')
+        value = DhcpModeType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

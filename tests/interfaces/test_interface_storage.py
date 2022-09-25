@@ -79,5 +79,4 @@ class TestCase_Storage(unittest.TestCase):
         """
         Test Storage remove
         """
-        self.__class__.storage.remove(pykerio.enums.StorageDataType(
-            name='StorageDataLogs'))
+        self.__class__.storage.remove(pykerio.enums.StorageDataType.StorageDataLogs)

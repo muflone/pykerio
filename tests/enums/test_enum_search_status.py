@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SearchStatus
 
 
 class TestCase_SearchStatus(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_SearchStatus(unittest.TestCase):
         """
         Test SearchStatus with ResultFound
         """
-        value = pykerio.enums.SearchStatus(name='ResultFound')
+        value = SearchStatus.ResultFound
         self.assertEqual(value.dump(), 'ResultFound')
-        self.assertEqual(value.get_name(), 'ResultFound')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ResultFound')
+        self.assertEqual(value.value, 0)
 
     def test_01_Searching(self):
         """
         Test SearchStatus with Searching
         """
-        value = pykerio.enums.SearchStatus(name='Searching')
+        value = SearchStatus.Searching
         self.assertEqual(value.dump(), 'Searching')
-        self.assertEqual(value.get_name(), 'Searching')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Searching')
+        self.assertEqual(value.value, 1)
 
     def test_02_Cancelled(self):
         """
         Test SearchStatus with Cancelled
         """
-        value = pykerio.enums.SearchStatus(name='Cancelled')
+        value = SearchStatus.Cancelled
         self.assertEqual(value.dump(), 'Cancelled')
-        self.assertEqual(value.get_name(), 'Cancelled')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Cancelled')
+        self.assertEqual(value.value, 2)
 
     def test_03_ResultNotFound(self):
         """
         Test SearchStatus with ResultNotFound
         """
-        value = pykerio.enums.SearchStatus(name='ResultNotFound')
+        value = SearchStatus.ResultNotFound
         self.assertEqual(value.dump(), 'ResultNotFound')
-        self.assertEqual(value.get_name(), 'ResultNotFound')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'ResultNotFound')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SearchStatus with FAIL
         """
-        value = pykerio.enums.SearchStatus(name='FAIL')
+        value = SearchStatus.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

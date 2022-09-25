@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class NotificationSeverity(BaseEnumeration):
-    WARNING = 0
-    ERROR = 1
-
-    VALUES = {
-        'NotificationWarning': WARNING,
-        'NotificationError': ERROR
-    }
+    NotificationWarning = 0
+    NotificationError = 1

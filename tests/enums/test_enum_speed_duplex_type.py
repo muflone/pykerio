@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SpeedDuplexType
 
 
 class TestCase_SpeedDuplexType(unittest.TestCase):
@@ -28,62 +28,62 @@ class TestCase_SpeedDuplexType(unittest.TestCase):
         """
         Test SpeedDuplexType with SpeedDuplexAuto
         """
-        value = pykerio.enums.SpeedDuplexType(name='SpeedDuplexAuto')
+        value = SpeedDuplexType.SpeedDuplexAuto
         self.assertEqual(value.dump(), 'SpeedDuplexAuto')
-        self.assertEqual(value.get_name(), 'SpeedDuplexAuto')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'SpeedDuplexAuto')
+        self.assertEqual(value.value, 0)
 
     def test_01_SpeedDuplexHalf10(self):
         """
         Test SpeedDuplexType with SpeedDuplexHalf10
         """
-        value = pykerio.enums.SpeedDuplexType(name='SpeedDuplexHalf10')
+        value = SpeedDuplexType.SpeedDuplexHalf10
         self.assertEqual(value.dump(), 'SpeedDuplexHalf10')
-        self.assertEqual(value.get_name(), 'SpeedDuplexHalf10')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'SpeedDuplexHalf10')
+        self.assertEqual(value.value, 1)
 
     def test_02_SpeedDuplexFull10(self):
         """
         Test SpeedDuplexType with SpeedDuplexFull10
         """
-        value = pykerio.enums.SpeedDuplexType(name='SpeedDuplexFull10')
+        value = SpeedDuplexType.SpeedDuplexFull10
         self.assertEqual(value.dump(), 'SpeedDuplexFull10')
-        self.assertEqual(value.get_name(), 'SpeedDuplexFull10')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'SpeedDuplexFull10')
+        self.assertEqual(value.value, 2)
 
     def test_03_SpeedDuplexHalf100(self):
         """
         Test SpeedDuplexType with SpeedDuplexHalf100
         """
-        value = pykerio.enums.SpeedDuplexType(name='SpeedDuplexHalf100')
+        value = SpeedDuplexType.SpeedDuplexHalf100
         self.assertEqual(value.dump(), 'SpeedDuplexHalf100')
-        self.assertEqual(value.get_name(), 'SpeedDuplexHalf100')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'SpeedDuplexHalf100')
+        self.assertEqual(value.value, 3)
 
     def test_04_SpeedDuplexFull100(self):
         """
         Test SpeedDuplexType with SpeedDuplexFull100
         """
-        value = pykerio.enums.SpeedDuplexType(name='SpeedDuplexFull100')
+        value = SpeedDuplexType.SpeedDuplexFull100
         self.assertEqual(value.dump(), 'SpeedDuplexFull100')
-        self.assertEqual(value.get_name(), 'SpeedDuplexFull100')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'SpeedDuplexFull100')
+        self.assertEqual(value.value, 4)
 
     def test_05_SpeedDuplexFull1000(self):
         """
         Test SpeedDuplexType with SpeedDuplexFull1000
         """
-        value = pykerio.enums.SpeedDuplexType(name='SpeedDuplexFull1000')
+        value = SpeedDuplexType.SpeedDuplexFull1000
         self.assertEqual(value.dump(), 'SpeedDuplexFull1000')
-        self.assertEqual(value.get_name(), 'SpeedDuplexFull1000')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'SpeedDuplexFull1000')
+        self.assertEqual(value.value, 5)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SpeedDuplexType with FAIL
         """
-        value = pykerio.enums.SpeedDuplexType(name='FAIL')
+        value = SpeedDuplexType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

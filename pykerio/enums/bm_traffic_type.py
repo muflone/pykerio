@@ -22,24 +22,12 @@ from .base_enumeration import BaseEnumeration
 
 
 class BMTrafficType(BaseEnumeration):
-    EMAIL = 0
-    FTP = 1
-    INSTANT_MESSAGING = 2
-    MULTIMEDIA = 3
-    P2P = 4
-    REMOTE_ACCESS = 5
-    SIP = 6
-    VPN = 7
-    WEB = 8
-
-    VALUES = {
-        'BMTrafficEmail': EMAIL,
-        'BMTrafficFtp': FTP,
-        'BMTrafficInstantMessaging': INSTANT_MESSAGING,
-        'BMTrafficMultimedia': MULTIMEDIA,
-        'BMTrafficP2p': P2P,
-        'BMTrafficRemoteAccess': REMOTE_ACCESS,
-        'BMTrafficSip': SIP,
-        'BMTrafficVpn': VPN,
-        'BMTrafficWeb': WEB
-    }
+    BMTrafficEmail = 0
+    BMTrafficFtp = 1
+    BMTrafficInstantMessaging = 2
+    BMTrafficMultimedia = 3
+    BMTrafficP2p = 4
+    BMTrafficRemoteAccess = 5
+    BMTrafficSip = 6
+    BMTrafficVpn = 7
+    BMTrafficWeb = 8

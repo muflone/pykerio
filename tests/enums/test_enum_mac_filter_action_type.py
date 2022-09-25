@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import MacFilterActionType
 
 
 class TestCase_MacFilterActionType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_MacFilterActionType(unittest.TestCase):
         """
         Test MacFilterActionType with MacFilterDeny
         """
-        value = pykerio.enums.MacFilterActionType(name='MacFilterDeny')
+        value = MacFilterActionType.MacFilterDeny
         self.assertEqual(value.dump(), 'MacFilterDeny')
-        self.assertEqual(value.get_name(), 'MacFilterDeny')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'MacFilterDeny')
+        self.assertEqual(value.value, 0)
 
     def test_01_MacFilterAllow(self):
         """
         Test MacFilterActionType with MacFilterAllow
         """
-        value = pykerio.enums.MacFilterActionType(name='MacFilterAllow')
+        value = MacFilterActionType.MacFilterAllow
         self.assertEqual(value.dump(), 'MacFilterAllow')
-        self.assertEqual(value.get_name(), 'MacFilterAllow')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'MacFilterAllow')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test MacFilterActionType with FAIL
         """
-        value = pykerio.enums.MacFilterActionType(name='FAIL')
+        value = MacFilterActionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -28,7 +28,7 @@ class TestCase_StorageData(unittest.TestCase):
         """
         Test StorageData
         """
-        storage_type = pykerio.enums.StorageDataType('StorageDataUpdate')
+        storage_type = pykerio.enums.StorageDataType.StorageDataUpdate
         teststruct = pykerio.structs.StorageData({'type': storage_type,
                                                   'size': 1234567})
 

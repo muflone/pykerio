@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import OsCodeType
 
 
 class TestCase_OsCodeType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_OsCodeType(unittest.TestCase):
         """
         Test OsCodeType with OsWindows
         """
-        value = pykerio.enums.OsCodeType(name='OsWindows')
+        value = OsCodeType.OsWindows
         self.assertEqual(value.dump(), 'OsWindows')
-        self.assertEqual(value.get_name(), 'OsWindows')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'OsWindows')
+        self.assertEqual(value.value, 0)
 
     def test_01_OsLinux(self):
         """
         Test OsCodeType with OsLinux
         """
-        value = pykerio.enums.OsCodeType(name='OsLinux')
+        value = OsCodeType.OsLinux
         self.assertEqual(value.dump(), 'OsLinux')
-        self.assertEqual(value.get_name(), 'OsLinux')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'OsLinux')
+        self.assertEqual(value.value, 1)
 
     def test_02_OsMacos(self):
         """
         Test OsCodeType with OsMacos
         """
-        value = pykerio.enums.OsCodeType(name='OsMacos')
+        value = OsCodeType.OsMacos
         self.assertEqual(value.dump(), 'OsMacos')
-        self.assertEqual(value.get_name(), 'OsMacos')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'OsMacos')
+        self.assertEqual(value.value, 2)
 
     def test_03_OsUnknown(self):
         """
         Test OsCodeType with OsUnknown
         """
-        value = pykerio.enums.OsCodeType(name='OsUnknown')
+        value = OsCodeType.OsUnknown
         self.assertEqual(value.dump(), 'OsUnknown')
-        self.assertEqual(value.get_name(), 'OsUnknown')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'OsUnknown')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test OsCodeType with FAIL
         """
-        value = pykerio.enums.OsCodeType(name='FAIL')
+        value = OsCodeType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

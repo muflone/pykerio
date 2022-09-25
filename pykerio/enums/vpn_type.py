@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class VpnType(BaseEnumeration):
-    KERIO = 0
-    IPSEC = 1
-
-    VALUES = {
-        'VpnKerio': KERIO,
-        'VpnIpsec': IPSEC
-    }
+    VpnKerio = 0
+    VpnIpsec = 1

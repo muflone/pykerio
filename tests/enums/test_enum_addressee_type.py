@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import AddresseeType
 
 
 class TestCase_AddresseeType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_AddresseeType(unittest.TestCase):
         """
         Test AddresseeType with AddresseeEmail
         """
-        value = pykerio.enums.AddresseeType(name='AddresseeEmail')
+        value = AddresseeType.AddresseeEmail
         self.assertEqual(value.dump(), 'AddresseeEmail')
-        self.assertEqual(value.get_name(), 'AddresseeEmail')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'AddresseeEmail')
+        self.assertEqual(value.value, 0)
 
     def test_01_AddresseeUser(self):
         """
         Test AddresseeType with AddresseeUser
         """
-        value = pykerio.enums.AddresseeType(name='AddresseeUser')
+        value = AddresseeType.AddresseeUser
         self.assertEqual(value.dump(), 'AddresseeUser')
-        self.assertEqual(value.get_name(), 'AddresseeUser')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'AddresseeUser')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test AddresseeType with FAIL
         """
-        value = pykerio.enums.AddresseeType(name='FAIL')
+        value = AddresseeType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

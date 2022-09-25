@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ActiveTool
 
 
 class TestCase_ActiveTool(unittest.TestCase):
@@ -28,53 +28,53 @@ class TestCase_ActiveTool(unittest.TestCase):
         """
         Test ActiveTool with ActiveToolNone
         """
-        value = pykerio.enums.ActiveTool(name='ActiveToolNone')
+        value = ActiveTool.ActiveToolNone
         self.assertEqual(value.dump(), 'ActiveToolNone')
-        self.assertEqual(value.get_name(), 'ActiveToolNone')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ActiveToolNone')
+        self.assertEqual(value.value, 0)
 
     def test_01_ActiveToolPing(self):
         """
         Test ActiveTool with ActiveToolPing
         """
-        value = pykerio.enums.ActiveTool(name='ActiveToolPing')
+        value = ActiveTool.ActiveToolPing
         self.assertEqual(value.dump(), 'ActiveToolPing')
-        self.assertEqual(value.get_name(), 'ActiveToolPing')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ActiveToolPing')
+        self.assertEqual(value.value, 1)
 
     def test_02_ActiveToolTraceRoute(self):
         """
         Test ActiveTool with ActiveToolTraceRoute
         """
-        value = pykerio.enums.ActiveTool(name='ActiveToolTraceRoute')
+        value = ActiveTool.ActiveToolTraceRoute
         self.assertEqual(value.dump(), 'ActiveToolTraceRoute')
-        self.assertEqual(value.get_name(), 'ActiveToolTraceRoute')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ActiveToolTraceRoute')
+        self.assertEqual(value.value, 2)
 
     def test_03_ActiveToolDns(self):
         """
         Test ActiveTool with ActiveToolDns
         """
-        value = pykerio.enums.ActiveTool(name='ActiveToolDns')
+        value = ActiveTool.ActiveToolDns
         self.assertEqual(value.dump(), 'ActiveToolDns')
-        self.assertEqual(value.get_name(), 'ActiveToolDns')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'ActiveToolDns')
+        self.assertEqual(value.value, 3)
 
     def test_04_ActiveToolWhois(self):
         """
         Test ActiveTool with ActiveToolWhois
         """
-        value = pykerio.enums.ActiveTool(name='ActiveToolWhois')
+        value = ActiveTool.ActiveToolWhois
         self.assertEqual(value.dump(), 'ActiveToolWhois')
-        self.assertEqual(value.get_name(), 'ActiveToolWhois')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'ActiveToolWhois')
+        self.assertEqual(value.value, 4)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ActiveTool with FAIL
         """
-        value = pykerio.enums.ActiveTool(name='FAIL')
+        value = ActiveTool.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

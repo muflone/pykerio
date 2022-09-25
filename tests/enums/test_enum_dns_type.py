@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DnsType
 
 
 class TestCase_DnsType(unittest.TestCase):
@@ -28,107 +28,107 @@ class TestCase_DnsType(unittest.TestCase):
         """
         Test DnsType with DnsTypeAny
         """
-        value = pykerio.enums.DnsType(name='DnsTypeAny')
+        value = DnsType.DnsTypeAny
         self.assertEqual(value.dump(), 'DnsTypeAny')
-        self.assertEqual(value.get_name(), 'DnsTypeAny')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'DnsTypeAny')
+        self.assertEqual(value.value, 0)
 
     def test_01_DnsTypeA(self):
         """
         Test DnsType with DnsTypeA
         """
-        value = pykerio.enums.DnsType(name='DnsTypeA')
+        value = DnsType.DnsTypeA
         self.assertEqual(value.dump(), 'DnsTypeA')
-        self.assertEqual(value.get_name(), 'DnsTypeA')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DnsTypeA')
+        self.assertEqual(value.value, 1)
 
     def test_02_DnsTypeAAAA(self):
         """
         Test DnsType with DnsTypeAAAA
         """
-        value = pykerio.enums.DnsType(name='DnsTypeAAAA')
+        value = DnsType.DnsTypeAAAA
         self.assertEqual(value.dump(), 'DnsTypeAAAA')
-        self.assertEqual(value.get_name(), 'DnsTypeAAAA')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'DnsTypeAAAA')
+        self.assertEqual(value.value, 2)
 
     def test_03_DnsTypeCname(self):
         """
         Test DnsType with DnsTypeCname
         """
-        value = pykerio.enums.DnsType(name='DnsTypeCname')
+        value = DnsType.DnsTypeCname
         self.assertEqual(value.dump(), 'DnsTypeCname')
-        self.assertEqual(value.get_name(), 'DnsTypeCname')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'DnsTypeCname')
+        self.assertEqual(value.value, 3)
 
     def test_04_DnsTypeMx(self):
         """
         Test DnsType with DnsTypeWhois
         """
-        value = pykerio.enums.DnsType(name='DnsTypeMx')
+        value = DnsType.DnsTypeMx
         self.assertEqual(value.dump(), 'DnsTypeMx')
-        self.assertEqual(value.get_name(), 'DnsTypeMx')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'DnsTypeMx')
+        self.assertEqual(value.value, 4)
 
     def test_05_DnsTypeNs(self):
         """
         Test DnsType with DnsTypeNs
         """
-        value = pykerio.enums.DnsType(name='DnsTypeNs')
+        value = DnsType.DnsTypeNs
         self.assertEqual(value.dump(), 'DnsTypeNs')
-        self.assertEqual(value.get_name(), 'DnsTypeNs')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'DnsTypeNs')
+        self.assertEqual(value.value, 5)
 
     def test_06_DnsTypePtr(self):
         """
         Test DnsType with DnsTypeWhois
         """
-        value = pykerio.enums.DnsType(name='DnsTypePtr')
+        value = DnsType.DnsTypePtr
         self.assertEqual(value.dump(), 'DnsTypePtr')
-        self.assertEqual(value.get_name(), 'DnsTypePtr')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'DnsTypePtr')
+        self.assertEqual(value.value, 6)
 
     def test_07_DnsTypeSoa(self):
         """
         Test DnsType with DnsTypeSoa
         """
-        value = pykerio.enums.DnsType(name='DnsTypeSoa')
+        value = DnsType.DnsTypeSoa
         self.assertEqual(value.dump(), 'DnsTypeSoa')
-        self.assertEqual(value.get_name(), 'DnsTypeSoa')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'DnsTypeSoa')
+        self.assertEqual(value.value, 7)
 
     def test_08_DnsTypeSpf(self):
         """
         Test DnsType with DnsTypeSpf
         """
-        value = pykerio.enums.DnsType(name='DnsTypeSpf')
+        value = DnsType.DnsTypeSpf
         self.assertEqual(value.dump(), 'DnsTypeSpf')
-        self.assertEqual(value.get_name(), 'DnsTypeSpf')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'DnsTypeSpf')
+        self.assertEqual(value.value, 8)
 
     def test_09_DnsTypeSrv(self):
         """
         Test DnsType with DnsTypeSrv
         """
-        value = pykerio.enums.DnsType(name='DnsTypeSrv')
+        value = DnsType.DnsTypeSrv
         self.assertEqual(value.dump(), 'DnsTypeSrv')
-        self.assertEqual(value.get_name(), 'DnsTypeSrv')
-        self.assertEqual(value.get_value(), 9)
+        self.assertEqual(value.name, 'DnsTypeSrv')
+        self.assertEqual(value.value, 9)
 
     def test_10_DnsTypeTxt(self):
         """
         Test DnsType with DnsTypeTxt
         """
-        value = pykerio.enums.DnsType(name='DnsTypeTxt')
+        value = DnsType.DnsTypeTxt
         self.assertEqual(value.dump(), 'DnsTypeTxt')
-        self.assertEqual(value.get_name(), 'DnsTypeTxt')
-        self.assertEqual(value.get_value(), 10)
+        self.assertEqual(value.name, 'DnsTypeTxt')
+        self.assertEqual(value.value, 10)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DnsType with FAIL
         """
-        value = pykerio.enums.DnsType(name='FAIL')
+        value = DnsType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

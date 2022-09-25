@@ -22,16 +22,8 @@ from .base_enumeration import BaseEnumeration
 
 
 class RotationPeriod(BaseEnumeration):
-    NEVER = 0
-    HOURLY = 1
-    DAILY = 2
-    WEEKLY = 3
-    MONTHLY = 4
-
-    VALUES = {
-        'RotateNever': NEVER,
-        'RotateHourly': HOURLY,
-        'RotateDaily': DAILY,
-        'RotateWeekly': WEEKLY,
-        'RotateMonthly': MONTHLY
-    }
+    RotateNever = 0
+    RotateHourly = 1
+    RotateDaily = 2
+    RotateWeekly = 3
+    RotateMonthly = 4

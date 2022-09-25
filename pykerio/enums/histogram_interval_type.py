@@ -22,14 +22,7 @@ from .base_enumeration import BaseEnumeration
 
 
 class HistogramIntervalType(BaseEnumeration):
-    INTERVAL_5M = 0
-    INTERVAL_20S = 1
-    INTERVAL_30M = 2
-    INTERVAL_2H = 3
-
-    VALUES = {
-        'HistogramInterval5m': INTERVAL_5M,
-        'HistogramInterval20s': INTERVAL_20S,
-        'HistogramInterval30m': INTERVAL_30M,
-        'HistogramInterval2h': INTERVAL_2H
-    }
+    HistogramInterval5m = 0
+    HistogramInterval20s = 1
+    HistogramInterval30m = 2
+    HistogramInterval2h = 3

@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class IpVersion(BaseEnumeration):
-    V4 = 0
-    V6 = 1
-    ANY = 2
-
-    VALUES = {
-        'IpVersion4': V4,
-        'IpVersion6': V6,
-        'IpVersionAny': ANY
-    }
+    IpVersion4 = 0
+    IpVersion6 = 1
+    IpVersionAny = 2

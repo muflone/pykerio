@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import WifiBandType
 
 
 class TestCase_WifiBandType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_WifiBandType(unittest.TestCase):
         """
         Test WifiBandType with WifiBandA
         """
-        value = pykerio.enums.WifiBandType(name='WifiBandA')
+        value = WifiBandType.WifiBandA
         self.assertEqual(value.dump(), 'WifiBandA')
-        self.assertEqual(value.get_name(), 'WifiBandA')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'WifiBandA')
+        self.assertEqual(value.value, 0)
 
     def test_01_WifiBandBG(self):
         """
         Test WifiBandType with WifiBandBG
         """
-        value = pykerio.enums.WifiBandType(name='WifiBandBG')
+        value = WifiBandType.WifiBandBG
         self.assertEqual(value.dump(), 'WifiBandBG')
-        self.assertEqual(value.get_name(), 'WifiBandBG')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'WifiBandBG')
+        self.assertEqual(value.value, 1)
 
     def test_02_WifiBandAC(self):
         """
         Test WifiBandType with WifiBandAC
         """
-        value = pykerio.enums.WifiBandType(name='WifiBandAC')
+        value = WifiBandType.WifiBandAC
         self.assertEqual(value.dump(), 'WifiBandAC')
-        self.assertEqual(value.get_name(), 'WifiBandAC')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'WifiBandAC')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test WifiBandType with FAIL
         """
-        value = pykerio.enums.WifiBandType(name='FAIL')
+        value = WifiBandType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

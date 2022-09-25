@@ -22,30 +22,15 @@ from .base_enumeration import BaseEnumeration
 
 
 class BMConditionType(BaseEnumeration):
-    TRAFFIC_TYPE = 0
-    QUOTA = 1
-    LARGE_DATA = 2
-    TRAFFIC_RULE = 3
-    CONTENT_RULE = 4
-    SERVICE = 5
-    DSCP = 6
-    USERS = 7
-    INVALID = 8
-    RULE_TYPE = 9
-    GUESTS = 10
-    APPLICATION = 11
-
-    VALUES = {
-        'BMConditionTrafficType': TRAFFIC_TYPE,
-        'BMConditionQuota': QUOTA,
-        'BMConditionLargeData': LARGE_DATA,
-        'BMConditionTrafficRule': TRAFFIC_RULE,
-        'BMConditionContentRule': CONTENT_RULE,
-        'BMConditionService': SERVICE,
-        'BMConditionDscp': DSCP,
-        'BMConditionUsers': USERS,
-        'BMConditionInvalid': INVALID,
-        'BMContentRuleType': RULE_TYPE,
-        'BMConditionGuests': GUESTS,
-        'BMConditionApplication': APPLICATION
-    }
+    BMConditionTrafficType = 0
+    BMConditionQuota = 1
+    BMConditionLargeData = 2
+    BMConditionTrafficRule = 3
+    BMConditionContentRule = 4
+    BMConditionService = 5
+    BMConditionDscp = 6
+    BMConditionUsers = 7
+    BMConditionInvalid = 8
+    BMContentRuleType = 9
+    BMConditionGuests = 10
+    BMConditionApplication = 11

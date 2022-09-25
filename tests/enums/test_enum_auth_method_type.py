@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import AuthMethodType
 
 
 class TestCase_AuthMethodType(unittest.TestCase):
@@ -28,98 +28,98 @@ class TestCase_AuthMethodType(unittest.TestCase):
         """
         Test AuthMethodType with AuthMethodWeb
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodWeb')
+        value = AuthMethodType.AuthMethodWeb
         self.assertEqual(value.dump(), 'AuthMethodWeb')
-        self.assertEqual(value.get_name(), 'AuthMethodWeb')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'AuthMethodWeb')
+        self.assertEqual(value.value, 0)
 
     def test_01_AuthMethodSslWeb(self):
         """
         Test AuthMethodType with AuthMethodSslWeb
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodSslWeb')
+        value = AuthMethodType.AuthMethodSslWeb
         self.assertEqual(value.dump(), 'AuthMethodSslWeb')
-        self.assertEqual(value.get_name(), 'AuthMethodSslWeb')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'AuthMethodSslWeb')
+        self.assertEqual(value.value, 1)
 
     def test_02_AuthMethodNtlm(self):
         """
         Test AuthMethodType with AuthMethodNtlm
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodNtlm')
+        value = AuthMethodType.AuthMethodNtlm
         self.assertEqual(value.dump(), 'AuthMethodNtlm')
-        self.assertEqual(value.get_name(), 'AuthMethodNtlm')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'AuthMethodNtlm')
+        self.assertEqual(value.value, 2)
 
     def test_03_AuthMethodProxy(self):
         """
         Test AuthMethodType with AuthMethodProxy
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodProxy')
+        value = AuthMethodType.AuthMethodProxy
         self.assertEqual(value.dump(), 'AuthMethodProxy')
-        self.assertEqual(value.get_name(), 'AuthMethodProxy')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'AuthMethodProxy')
+        self.assertEqual(value.value, 3)
 
     def test_04_AuthMethodAutomatic(self):
         """
         Test AuthMethodType with AuthMethodAutomatic
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodAutomatic')
+        value = AuthMethodType.AuthMethodAutomatic
         self.assertEqual(value.dump(), 'AuthMethodAutomatic')
-        self.assertEqual(value.get_name(), 'AuthMethodAutomatic')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'AuthMethodAutomatic')
+        self.assertEqual(value.value, 4)
 
     def test_05_AuthMethodVpnClient(self):
         """
         Test AuthMethodType with AuthMethodVpnClient
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodVpnClient')
+        value = AuthMethodType.AuthMethodVpnClient
         self.assertEqual(value.dump(), 'AuthMethodVpnClient')
-        self.assertEqual(value.get_name(), 'AuthMethodVpnClient')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'AuthMethodVpnClient')
+        self.assertEqual(value.value, 5)
 
     def test_06_AuthMethodSso(self):
         """
         Test AuthMethodType with AuthMethodSso
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodSso')
+        value = AuthMethodType.AuthMethodSso
         self.assertEqual(value.dump(), 'AuthMethodSso')
-        self.assertEqual(value.get_name(), 'AuthMethodSso')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'AuthMethodSso')
+        self.assertEqual(value.value, 6)
 
     def test_07_AuthMethodApi(self):
         """
         Test AuthMethodType with AuthMethodApi
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodApi')
+        value = AuthMethodType.AuthMethodApi
         self.assertEqual(value.dump(), 'AuthMethodApi')
-        self.assertEqual(value.get_name(), 'AuthMethodApi')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'AuthMethodApi')
+        self.assertEqual(value.value, 7)
 
     def test_08_AuthMethodRadius(self):
         """
         Test AuthMethodType with AuthMethodRadius
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodRadius')
+        value = AuthMethodType.AuthMethodRadius
         self.assertEqual(value.dump(), 'AuthMethodRadius')
-        self.assertEqual(value.get_name(), 'AuthMethodRadius')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'AuthMethodRadius')
+        self.assertEqual(value.value, 8)
 
     def test_09_AuthMethodNone(self):
         """
         Test AuthMethodType with AuthMethodNone
         """
-        value = pykerio.enums.AuthMethodType(name='AuthMethodNone')
+        value = AuthMethodType.AuthMethodNone
         self.assertEqual(value.dump(), 'AuthMethodNone')
-        self.assertEqual(value.get_name(), 'AuthMethodNone')
-        self.assertEqual(value.get_value(), 9)
+        self.assertEqual(value.name, 'AuthMethodNone')
+        self.assertEqual(value.value, 9)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test AuthMethodType with FAIL
         """
-        value = pykerio.enums.AuthMethodType(name='FAIL')
+        value = AuthMethodType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

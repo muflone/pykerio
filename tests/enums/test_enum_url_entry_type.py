@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import UrlEntryType
 
 
 class TestCase_UrlEntryType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_UrlEntryType(unittest.TestCase):
         """
         Test UrlEntryType with Url
         """
-        value = pykerio.enums.UrlEntryType(name='Url')
+        value = UrlEntryType.Url
         self.assertEqual(value.dump(), 'Url')
-        self.assertEqual(value.get_name(), 'Url')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Url')
+        self.assertEqual(value.value, 0)
 
     def test_01_UrlChildGroup(self):
         """
         Test UrlEntryType with UrlChildGroup
         """
-        value = pykerio.enums.UrlEntryType(name='UrlChildGroup')
+        value = UrlEntryType.UrlChildGroup
         self.assertEqual(value.dump(), 'UrlChildGroup')
-        self.assertEqual(value.get_name(), 'UrlChildGroup')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'UrlChildGroup')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test UrlEntryType with FAIL
         """
-        value = pykerio.enums.UrlEntryType(name='FAIL')
+        value = UrlEntryType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

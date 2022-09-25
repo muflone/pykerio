@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import UserRoleType
 
 
 class TestCase_UserRoleType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_UserRoleType(unittest.TestCase):
         """
         Test UserRoleType with Auditor
         """
-        value = pykerio.enums.UserRoleType(name='Auditor')
+        value = UserRoleType.Auditor
         self.assertEqual(value.dump(), 'Auditor')
-        self.assertEqual(value.get_name(), 'Auditor')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Auditor')
+        self.assertEqual(value.value, 0)
 
     def test_01_FullAdmin(self):
         """
         Test UserRoleType with FullAdmin
         """
-        value = pykerio.enums.UserRoleType(name='FullAdmin')
+        value = UserRoleType.FullAdmin
         self.assertEqual(value.dump(), 'FullAdmin')
-        self.assertEqual(value.get_name(), 'FullAdmin')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'FullAdmin')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test UserRoleType with FAIL
         """
-        value = pykerio.enums.UserRoleType(name='FAIL')
+        value = UserRoleType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

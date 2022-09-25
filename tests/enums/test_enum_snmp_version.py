@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import SnmpVersion
 
 
 class TestCase_SnmpVersion(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_SnmpVersion(unittest.TestCase):
         """
         Test SnmpVersion with SnmpV2c
         """
-        value = pykerio.enums.SnmpVersion(name='SnmpV2c')
+        value = SnmpVersion.SnmpV2c
         self.assertEqual(value.dump(), 'SnmpV2c')
-        self.assertEqual(value.get_name(), 'SnmpV2c')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'SnmpV2c')
+        self.assertEqual(value.value, 0)
 
     def test_01_SnmpV3(self):
         """
         Test SnmpVersion with SnmpV3
         """
-        value = pykerio.enums.SnmpVersion(name='SnmpV3')
+        value = SnmpVersion.SnmpV3
         self.assertEqual(value.dump(), 'SnmpV3')
-        self.assertEqual(value.get_name(), 'SnmpV3')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'SnmpV3')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test SnmpVersion with FAIL
         """
-        value = pykerio.enums.SnmpVersion(name='FAIL')
+        value = SnmpVersion.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class Target(BaseEnumeration):
-    FTP_SERVER = 0
-    MY_KERIO = 1
-
-    VALUES = {
-        'TargetFtpServer': FTP_SERVER,
-        'TargetMyKerio': MY_KERIO
-    }
+    TargetFtpServer = 0
+    TargetMyKerio = 1

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import IntrusionPreventionUpdatePhases as IntrusionPrevUP
 
 
 class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
@@ -28,35 +28,37 @@ class TestCase_IntrusionPreventionUpdatePhases(unittest.TestCase):
         """
         Test IntrusionPreventionUpdatePhases with IntrusionPreventionUpdateOk
         """
-        value = pykerio.enums.IntrusionPreventionUpdatePhases(name='IntrusionPreventionUpdateOk')
+        value = IntrusionPrevUP.IntrusionPreventionUpdateOk
         self.assertEqual(value.dump(), 'IntrusionPreventionUpdateOk')
-        self.assertEqual(value.get_name(), 'IntrusionPreventionUpdateOk')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'IntrusionPreventionUpdateOk')
+        self.assertEqual(value.value, 0)
 
     def test_01_IntrusionPreventionUpdateError(self):
         """
-        Test IntrusionPreventionUpdatePhases with IntrusionPreventionUpdateError
+        Test IntrusionPreventionUpdatePhases with
+        IntrusionPreventionUpdateError
         """
-        value = pykerio.enums.IntrusionPreventionUpdatePhases(name='IntrusionPreventionUpdateError')
+        value = IntrusionPrevUP.IntrusionPreventionUpdateError
         self.assertEqual(value.dump(), 'IntrusionPreventionUpdateError')
-        self.assertEqual(value.get_name(), 'IntrusionPreventionUpdateError')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'IntrusionPreventionUpdateError')
+        self.assertEqual(value.value, 1)
 
     def test_02_IntrusionPreventionUpdateProgress(self):
         """
-        Test IntrusionPreventionUpdatePhases with IntrusionPreventionUpdateProgress
+        Test IntrusionPreventionUpdatePhases with
+        IntrusionPreventionUpdateProgress
         """
-        value = pykerio.enums.IntrusionPreventionUpdatePhases(name='IntrusionPreventionUpdateProgress')
+        value = IntrusionPrevUP.IntrusionPreventionUpdateProgress
         self.assertEqual(value.dump(), 'IntrusionPreventionUpdateProgress')
-        self.assertEqual(value.get_name(), 'IntrusionPreventionUpdateProgress')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'IntrusionPreventionUpdateProgress')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test IntrusionPreventionUpdatePhases with FAIL
         """
-        value = pykerio.enums.IntrusionPreventionUpdatePhases(name='FAIL')
+        value = IntrusionPrevUP.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

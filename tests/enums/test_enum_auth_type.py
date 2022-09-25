@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import AuthType
 
 
 class TestCase_AuthType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_AuthType(unittest.TestCase):
         """
         Test AuthType with Internal
         """
-        value = pykerio.enums.AuthType(name='Internal')
+        value = AuthType.Internal
         self.assertEqual(value.dump(), 'Internal')
-        self.assertEqual(value.get_name(), 'Internal')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Internal')
+        self.assertEqual(value.value, 0)
 
     def test_01_KerberosNt(self):
         """
         Test AuthType with KerberosNt
         """
-        value = pykerio.enums.AuthType(name='KerberosNt')
+        value = AuthType.KerberosNt
         self.assertEqual(value.dump(), 'KerberosNt')
-        self.assertEqual(value.get_name(), 'KerberosNt')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'KerberosNt')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test AuthType with FAIL
         """
-        value = pykerio.enums.AuthType(name='FAIL')
+        value = AuthType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

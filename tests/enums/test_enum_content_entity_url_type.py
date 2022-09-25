@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ContentEntityUrlType
 
 
 class TestCase_ContentEntityUrlType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_ContentEntityUrlType(unittest.TestCase):
         """
         Test ContentEntityUrlType with ContentEntityUrlWildcard
         """
-        value = pykerio.enums.ContentEntityUrlType(name='ContentEntityUrlWildcard')
+        value = ContentEntityUrlType.ContentEntityUrlWildcard
         self.assertEqual(value.dump(), 'ContentEntityUrlWildcard')
-        self.assertEqual(value.get_name(), 'ContentEntityUrlWildcard')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ContentEntityUrlWildcard')
+        self.assertEqual(value.value, 0)
 
     def test_01_ContentEntityUrlRegex(self):
         """
         Test ContentEntityUrlType with ContentEntityUrlRegex
         """
-        value = pykerio.enums.ContentEntityUrlType(name='ContentEntityUrlRegex')
+        value = ContentEntityUrlType.ContentEntityUrlRegex
         self.assertEqual(value.dump(), 'ContentEntityUrlRegex')
-        self.assertEqual(value.get_name(), 'ContentEntityUrlRegex')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ContentEntityUrlRegex')
+        self.assertEqual(value.value, 1)
 
     def test_02_ContentEntityUrlHostname(self):
         """
         Test ContentEntityUrlType with ContentEntityUrlHostname
         """
-        value = pykerio.enums.ContentEntityUrlType(name='ContentEntityUrlHostname')
+        value = ContentEntityUrlType.ContentEntityUrlHostname
         self.assertEqual(value.dump(), 'ContentEntityUrlHostname')
-        self.assertEqual(value.get_name(), 'ContentEntityUrlHostname')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ContentEntityUrlHostname')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ContentEntityUrlType with FAIL
         """
-        value = pykerio.enums.ContentEntityUrlType(name='FAIL')
+        value = ContentEntityUrlType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

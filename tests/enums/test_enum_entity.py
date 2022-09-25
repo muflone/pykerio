@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import Entity
 
 
 class TestCase_Entity(unittest.TestCase):
@@ -28,107 +28,107 @@ class TestCase_Entity(unittest.TestCase):
         """
         Test Entity with EntityUser
         """
-        value = pykerio.enums.Entity(name='EntityUser')
+        value = Entity.EntityUser
         self.assertEqual(value.dump(), 'EntityUser')
-        self.assertEqual(value.get_name(), 'EntityUser')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'EntityUser')
+        self.assertEqual(value.value, 0)
 
     def test_01_EntityAlias(self):
         """
         Test Entity with EntityAlias
         """
-        value = pykerio.enums.Entity(name='EntityAlias')
+        value = Entity.EntityAlias
         self.assertEqual(value.dump(), 'EntityAlias')
-        self.assertEqual(value.get_name(), 'EntityAlias')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'EntityAlias')
+        self.assertEqual(value.value, 1)
 
     def test_02_EntityGroup(self):
         """
         Test Entity with EntityGroup
         """
-        value = pykerio.enums.Entity(name='EntityGroup')
+        value = Entity.EntityGroup
         self.assertEqual(value.dump(), 'EntityGroup')
-        self.assertEqual(value.get_name(), 'EntityGroup')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'EntityGroup')
+        self.assertEqual(value.value, 2)
 
     def test_03_EntityMailingList(self):
         """
         Test Entity with EntityMailingList
         """
-        value = pykerio.enums.Entity(name='EntityMailingList')
+        value = Entity.EntityMailingList
         self.assertEqual(value.dump(), 'EntityMailingList')
-        self.assertEqual(value.get_name(), 'EntityMailingList')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'EntityMailingList')
+        self.assertEqual(value.value, 3)
 
     def test_04_EntityResource(self):
         """
         Test Entity with EntityResource
         """
-        value = pykerio.enums.Entity(name='EntityResource')
+        value = Entity.EntityResource
         self.assertEqual(value.dump(), 'EntityResource')
-        self.assertEqual(value.get_name(), 'EntityResource')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'EntityResource')
+        self.assertEqual(value.value, 4)
 
     def test_05_EntityTimeRange(self):
         """
         Test Entity with EntityTimeRange
         """
-        value = pykerio.enums.Entity(name='EntityTimeRange')
+        value = Entity.EntityTimeRange
         self.assertEqual(value.dump(), 'EntityTimeRange')
-        self.assertEqual(value.get_name(), 'EntityTimeRange')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'EntityTimeRange')
+        self.assertEqual(value.value, 5)
 
     def test_06_EntityTimeRangeGroup(self):
         """
         Test Entity with EntityTimeRangeGroup
         """
-        value = pykerio.enums.Entity(name='EntityTimeRangeGroup')
+        value = Entity.EntityTimeRangeGroup
         self.assertEqual(value.dump(), 'EntityTimeRangeGroup')
-        self.assertEqual(value.get_name(), 'EntityTimeRangeGroup')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'EntityTimeRangeGroup')
+        self.assertEqual(value.value, 6)
 
     def test_07_EntityIpAddress(self):
         """
         Test Entity with EntityIpAddress
         """
-        value = pykerio.enums.Entity(name='EntityIpAddress')
+        value = Entity.EntityIpAddress
         self.assertEqual(value.dump(), 'EntityIpAddress')
-        self.assertEqual(value.get_name(), 'EntityIpAddress')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'EntityIpAddress')
+        self.assertEqual(value.value, 7)
 
     def test_08_EntityIpAddressGroup(self):
         """
         Test Entity with EntityIpAddressGroup
         """
-        value = pykerio.enums.Entity(name='EntityIpAddressGroup')
+        value = Entity.EntityIpAddressGroup
         self.assertEqual(value.dump(), 'EntityIpAddressGroup')
-        self.assertEqual(value.get_name(), 'EntityIpAddressGroup')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'EntityIpAddressGroup')
+        self.assertEqual(value.value, 8)
 
     def test_09_EntityService(self):
         """
         Test Entity with EntityService
         """
-        value = pykerio.enums.Entity(name='EntityService')
+        value = Entity.EntityService
         self.assertEqual(value.dump(), 'EntityService')
-        self.assertEqual(value.get_name(), 'EntityService')
-        self.assertEqual(value.get_value(), 9)
+        self.assertEqual(value.name, 'EntityService')
+        self.assertEqual(value.value, 9)
 
     def test_10_EntityDomain(self):
         """
         Test Entity with EntityDomain
         """
-        value = pykerio.enums.Entity(name='EntityDomain')
+        value = Entity.EntityDomain
         self.assertEqual(value.dump(), 'EntityDomain')
-        self.assertEqual(value.get_name(), 'EntityDomain')
-        self.assertEqual(value.get_value(), 10)
+        self.assertEqual(value.name, 'EntityDomain')
+        self.assertEqual(value.value, 10)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test Entity with FAIL
         """
-        value = pykerio.enums.Entity(name='FAIL')
+        value = Entity.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

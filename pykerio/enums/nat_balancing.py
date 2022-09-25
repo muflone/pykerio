@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class NatBalancing(BaseEnumeration):
-    PER_HOST = 0
-    PER_CONNECTION = 1
-
-    VALUES = {
-        'BalancingPerHost': PER_HOST,
-        'BalancingPerConnection': PER_CONNECTION
-    }
+    BalancingPerHost = 0
+    BalancingPerConnection = 1

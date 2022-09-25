@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ScanRuleType
 
 
 class TestCase_ScanRuleType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_ScanRuleType(unittest.TestCase):
         """
         Test ScanRuleType with ScanRuleUrl
         """
-        value = pykerio.enums.ScanRuleType(name='ScanRuleUrl')
+        value = ScanRuleType.ScanRuleUrl
         self.assertEqual(value.dump(), 'ScanRuleUrl')
-        self.assertEqual(value.get_name(), 'ScanRuleUrl')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'ScanRuleUrl')
+        self.assertEqual(value.value, 0)
 
     def test_01_ScanRuleMime(self):
         """
         Test ScanRuleType with ScanRuleMime
         """
-        value = pykerio.enums.ScanRuleType(name='ScanRuleMime')
+        value = ScanRuleType.ScanRuleMime
         self.assertEqual(value.dump(), 'ScanRuleMime')
-        self.assertEqual(value.get_name(), 'ScanRuleMime')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'ScanRuleMime')
+        self.assertEqual(value.value, 1)
 
     def test_02_ScanRuleFilename(self):
         """
         Test ScanRuleType with ScanRuleFilename
         """
-        value = pykerio.enums.ScanRuleType(name='ScanRuleFilename')
+        value = ScanRuleType.ScanRuleFilename
         self.assertEqual(value.dump(), 'ScanRuleFilename')
-        self.assertEqual(value.get_name(), 'ScanRuleFilename')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'ScanRuleFilename')
+        self.assertEqual(value.value, 2)
 
     def test_03_ScanRuleFileGroup(self):
         """
         Test ScanRuleType with ScanRuleFileGroup
         """
-        value = pykerio.enums.ScanRuleType(name='ScanRuleFileGroup')
+        value = ScanRuleType.ScanRuleFileGroup
         self.assertEqual(value.dump(), 'ScanRuleFileGroup')
-        self.assertEqual(value.get_name(), 'ScanRuleFileGroup')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'ScanRuleFileGroup')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ScanRuleType with FAIL
         """
-        value = pykerio.enums.ScanRuleType(name='FAIL')
+        value = ScanRuleType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -32,7 +32,7 @@ class TestCase_SubConditionList(unittest.TestCase):
         self.assertEqual(len(testlist), 0)
 
         fieldName = 'date'
-        comparator = pykerio.enums.CompareOperator('Like')
+        comparator = pykerio.enums.CompareOperator.Like
         value = '2'
         teststruct = pykerio.structs.SubCondition({'fieldName': fieldName,
                                                    'comparator': comparator,

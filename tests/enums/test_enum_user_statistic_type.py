@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import UserStatisticType
 
 
 class TestCase_UserStatisticType(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_UserStatisticType(unittest.TestCase):
         """
         Test UserStatisticType with UserStatisticAll
         """
-        value = pykerio.enums.UserStatisticType(name='UserStatisticAll')
+        value = UserStatisticType.UserStatisticAll
         self.assertEqual(value.dump(), 'UserStatisticAll')
-        self.assertEqual(value.get_name(), 'UserStatisticAll')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'UserStatisticAll')
+        self.assertEqual(value.value, 0)
 
     def test_01_UserStatisticUser(self):
         """
         Test UserStatisticType with UserStatisticUser
         """
-        value = pykerio.enums.UserStatisticType(name='UserStatisticUser')
+        value = UserStatisticType.UserStatisticUser
         self.assertEqual(value.dump(), 'UserStatisticUser')
-        self.assertEqual(value.get_name(), 'UserStatisticUser')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'UserStatisticUser')
+        self.assertEqual(value.value, 1)
 
     def test_02_UserStatisticOther(self):
         """
         Test UserStatisticType with UserStatisticOther
         """
-        value = pykerio.enums.UserStatisticType(name='UserStatisticOther')
+        value = UserStatisticType.UserStatisticOther
         self.assertEqual(value.dump(), 'UserStatisticOther')
-        self.assertEqual(value.get_name(), 'UserStatisticOther')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'UserStatisticOther')
+        self.assertEqual(value.value, 2)
 
     def test_03_UserStatisticGuest(self):
         """
         Test UserStatisticType with UserStatisticGuest
         """
-        value = pykerio.enums.UserStatisticType(name='UserStatisticGuest')
+        value = UserStatisticType.UserStatisticGuest
         self.assertEqual(value.dump(), 'UserStatisticGuest')
-        self.assertEqual(value.get_name(), 'UserStatisticGuest')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'UserStatisticGuest')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test UserStatisticType with FAIL
         """
-        value = pykerio.enums.UserStatisticType(name='FAIL')
+        value = UserStatisticType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

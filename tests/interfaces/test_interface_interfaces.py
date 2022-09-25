@@ -77,7 +77,7 @@ class TestCase_Interfaces(unittest.TestCase):
 
         order = pykerio.structs.SortOrder({
             'columnName': 'type',
-            'direction': pykerio.enums.SortDirection(name='Asc'),
+            'direction': pykerio.enums.SortDirection.Asc,
             'caseSensitive': False})
         orderbylist = pykerio.lists.SortOrderList()
         orderbylist.append(order)
@@ -85,7 +85,7 @@ class TestCase_Interfaces(unittest.TestCase):
         search_query = pykerio.structs.SearchQuery({
             'fields': fields,
             'conditions': conditions,
-            'combining': pykerio.enums.LogicalOperator('And'),
+            'combining': pykerio.enums.LogicalOperator.And,
             'start': 0,
             'limit': pykerio.constants.UNLIMITED,
             'orderBy': orderbylist})
@@ -102,7 +102,7 @@ class TestCase_Interfaces(unittest.TestCase):
             # Check the type for each interface
             self.assertEqual(type(iface), pykerio.structs.Interface)
             iface_type = iface['type'].dump()
-            if iface_type == pykerio.enums.InterfaceType('VpnServer').dump():
+            if iface_type == pykerio.enums.InterfaceType.VpnServer.name:
                 # Check for VpnServer config type
                 self.assertEqual(type(iface['server']),
                                  pykerio.structs.VpnServerConfig)
@@ -115,12 +115,12 @@ class TestCase_Interfaces(unittest.TestCase):
         conditions = pykerio.lists.SubConditionList()
         conditions.append(pykerio.structs.SubCondition({
             'fieldName': 'type',
-            'comparator': pykerio.enums.CompareOperator('Eq'),
+            'comparator': pykerio.enums.CompareOperator.Eq,
             'value': 'Ethernet'}))
 
         order = pykerio.structs.SortOrder({
             'columnName': 'name',
-            'direction': pykerio.enums.SortDirection(name='Asc'),
+            'direction': pykerio.enums.SortDirection.Asc,
             'caseSensitive': False})
         orderbylist = pykerio.lists.SortOrderList()
         orderbylist.append(order)
@@ -128,7 +128,7 @@ class TestCase_Interfaces(unittest.TestCase):
         search_query = pykerio.structs.SearchQuery({
             'fields': fields,
             'conditions': conditions,
-            'combining': pykerio.enums.LogicalOperator('And'),
+            'combining': pykerio.enums.LogicalOperator.And,
             'start': 0,
             'limit': pykerio.constants.UNLIMITED,
             'orderBy': orderbylist})
@@ -154,16 +154,16 @@ class TestCase_Interfaces(unittest.TestCase):
         conditions = pykerio.lists.SubConditionList()
         conditions.append(pykerio.structs.SubCondition({
             'fieldName': 'type',
-            'comparator': pykerio.enums.CompareOperator('Eq'),
+            'comparator': pykerio.enums.CompareOperator.Eq,
             'value': 'Ethernet'}))
         conditions.append(pykerio.structs.SubCondition({
             'fieldName': 'group',
-            'comparator': pykerio.enums.CompareOperator('Eq'),
+            'comparator': pykerio.enums.CompareOperator.Eq,
             'value': 'Trusted'}))
 
         order = pykerio.structs.SortOrder({
             'columnName': 'name',
-            'direction': pykerio.enums.SortDirection(name='Asc'),
+            'direction': pykerio.enums.SortDirection.Asc,
             'caseSensitive': False})
         orderbylist = pykerio.lists.SortOrderList()
         orderbylist.append(order)
@@ -171,7 +171,7 @@ class TestCase_Interfaces(unittest.TestCase):
         search_query = pykerio.structs.SearchQuery({
             'fields': fields,
             'conditions': conditions,
-            'combining': pykerio.enums.LogicalOperator('And'),
+            'combining': pykerio.enums.LogicalOperator.And,
             'start': 0,
             'limit': pykerio.constants.UNLIMITED,
             'orderBy': orderbylist})
@@ -201,8 +201,8 @@ class TestCase_Interfaces(unittest.TestCase):
         """
         Test Interfaces find
         """
-        filter_type = pykerio.enums.InterfaceType('Ethernet')
-        filter_group = pykerio.enums.InterfaceGroupType('Trusted')
+        filter_type = pykerio.enums.InterfaceType.Ethernet
+        filter_group = pykerio.enums.InterfaceGroupType.Trusted
         ifaces = self.__class__.interfaces.find(
             name=None,
             interface_type=filter_type,
@@ -211,7 +211,7 @@ class TestCase_Interfaces(unittest.TestCase):
             self.assertEqual(iface['type'].dump(), filter_type.dump())
             self.assertEqual(iface['group'].dump(), filter_group.dump())
 
-        filter_type = pykerio.enums.InterfaceType('Ethernet')
+        filter_type = pykerio.enums.InterfaceType.Ethernet
         filter_group = None
         ifaces = self.__class__.interfaces.find(
             name=None,
@@ -221,7 +221,7 @@ class TestCase_Interfaces(unittest.TestCase):
             self.assertEqual(iface['type'].dump(), filter_type.dump())
 
         filter_type = None
-        filter_group = pykerio.enums.InterfaceGroupType('Trusted')
+        filter_group = pykerio.enums.InterfaceGroupType.Trusted
         ifaces = self.__class__.interfaces.find(
             name=None,
             interface_type=filter_type,
@@ -237,7 +237,7 @@ class TestCase_Interfaces(unittest.TestCase):
         """
         ifaces = self.__class__.interfaces.find(
             name=None,
-            interface_type=pykerio.enums.InterfaceType('VpnTunnel'),
+            interface_type=pykerio.enums.InterfaceType.VpnTunnel,
             interface_group=None)
         if ifaces:
             # Create a new VPN tunnel based on the first found
@@ -265,7 +265,7 @@ class TestCase_Interfaces(unittest.TestCase):
         """
         ifaces = self.__class__.interfaces.find(
             name=None,
-            interface_type=pykerio.enums.InterfaceType('Ras'),
+            interface_type=pykerio.enums.InterfaceType.Ras,
             interface_group=None)
         if ifaces:
             # Create a new Ras connection based on the first found
@@ -291,7 +291,7 @@ class TestCase_Interfaces(unittest.TestCase):
         """
         ifaces = self.__class__.interfaces.find(
             name='Ras %s' % self.__class__.__name__,
-            interface_type=pykerio.enums.InterfaceType('Ras'),
+            interface_type=pykerio.enums.InterfaceType.Ras,
             interface_group=None)
         if ifaces:
             kid = ifaces[0]['id']
@@ -308,7 +308,7 @@ class TestCase_Interfaces(unittest.TestCase):
         """
         ifaces = self.__class__.interfaces.find(
             name='Ras %s' % self.__class__.__name__,
-            interface_type=pykerio.enums.InterfaceType('Ras'),
+            interface_type=pykerio.enums.InterfaceType.Ras,
             interface_group=None)
         if ifaces:
             kid = ifaces[0]['id']
@@ -327,7 +327,7 @@ class TestCase_Interfaces(unittest.TestCase):
         # Remove the test VPN tunnel
         ifaces = self.__class__.interfaces.find(
             name='Tunnel %s' % self.__class__.__name__,
-            interface_type=pykerio.enums.InterfaceType('VpnTunnel'),
+            interface_type=pykerio.enums.InterfaceType.VpnTunnel,
             interface_group=None)
         self.assertEqual(len(ifaces), 1)
         kid = pykerio.types.KId(ifaces[0]['id'])
@@ -335,7 +335,7 @@ class TestCase_Interfaces(unittest.TestCase):
         # Remove the test Ras connection
         ifaces = self.__class__.interfaces.find(
             name='Ras %s' % self.__class__.__name__,
-            interface_type=pykerio.enums.InterfaceType('Ras'),
+            interface_type=pykerio.enums.InterfaceType.Ras,
             interface_group=None)
         self.assertEqual(len(ifaces), 1)
         kid = pykerio.types.KId(ifaces[0]['id'])
@@ -350,12 +350,12 @@ class TestCase_Interfaces(unittest.TestCase):
         # Check for removed interface
         ifaces = self.__class__.interfaces.find(
             name='Tunnel %s' % self.__class__.__name__,
-            interface_type=pykerio.enums.InterfaceType('VpnTunnel'),
+            interface_type=pykerio.enums.InterfaceType.VpnTunnel,
             interface_group=None)
         self.assertEqual(len(ifaces), 0)
         ifaces = self.__class__.interfaces.find(
             name='Ras %s' % self.__class__.__name__,
-            interface_type=pykerio.enums.InterfaceType('Ras'),
+            interface_type=pykerio.enums.InterfaceType.Ras,
             interface_group=None)
         self.assertEqual(len(ifaces), 0)
 
@@ -381,8 +381,8 @@ class TestCase_Interfaces(unittest.TestCase):
         Test Interfaces connectivityTestStatus
         """
         status = self.__class__.interfaces.connectivityTestStatus()
-        self.assertEqual(status.dump(), pykerio.enums.ConnectivityStatus(
-            name='ConnectivityOk').dump())
+        self.assertEqual(status.dump(),
+                         pykerio.enums.ConnectivityStatus.ConnectivityOk.name)
 
     @unittest.skipIf(os.environ.get('KERIO_READONLY', 'NO').upper() == 'YES',
                      'Insufficient rights')

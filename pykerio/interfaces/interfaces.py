@@ -282,7 +282,7 @@ class Interfaces(object):
                               'value': interface_group.dump()}))
 
         order = SortOrder({'columnName': 'name',
-                           'direction': SortDirection(name='Asc'),
+                           'direction': SortDirection.Asc,
                            'caseSensitive': False})
         orderbylist = SortOrderList()
         orderbylist.append(order)

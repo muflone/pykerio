@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RasType
 
 
 class TestCase_RasType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_RasType(unittest.TestCase):
         """
         Test RasType with PPPoE
         """
-        value = pykerio.enums.RasType(name='PPPoE')
+        value = RasType.PPPoE
         self.assertEqual(value.dump(), 'PPPoE')
-        self.assertEqual(value.get_name(), 'PPPoE')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'PPPoE')
+        self.assertEqual(value.value, 0)
 
     def test_01_PPTP(self):
         """
         Test RasType with PPTP
         """
-        value = pykerio.enums.RasType(name='PPTP')
+        value = RasType.PPTP
         self.assertEqual(value.dump(), 'PPTP')
-        self.assertEqual(value.get_name(), 'PPTP')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'PPTP')
+        self.assertEqual(value.value, 1)
 
     def test_02_L2TP(self):
         """
         Test RasType with L2TP
         """
-        value = pykerio.enums.RasType(name='L2TP')
+        value = RasType.L2TP
         self.assertEqual(value.dump(), 'L2TP')
-        self.assertEqual(value.get_name(), 'L2TP')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'L2TP')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RasType with FAIL
         """
-        value = pykerio.enums.RasType(name='FAIL')
+        value = RasType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

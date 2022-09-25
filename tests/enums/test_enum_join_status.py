@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import JoinStatus
 
 
 class TestCase_JoinStatus(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_JoinStatus(unittest.TestCase):
         """
         Test JoinStatus with JoinStatusConnected
         """
-        value = pykerio.enums.JoinStatus(name='JoinStatusConnected')
+        value = JoinStatus.JoinStatusConnected
         self.assertEqual(value.dump(), 'JoinStatusConnected')
-        self.assertEqual(value.get_name(), 'JoinStatusConnected')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'JoinStatusConnected')
+        self.assertEqual(value.value, 0)
 
     def test_01_JoinStatusDisconnected(self):
         """
         Test JoinStatus with JoinStatusDisconnected
         """
-        value = pykerio.enums.JoinStatus(name='JoinStatusDisconnected')
+        value = JoinStatus.JoinStatusDisconnected
         self.assertEqual(value.dump(), 'JoinStatusDisconnected')
-        self.assertEqual(value.get_name(), 'JoinStatusDisconnected')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'JoinStatusDisconnected')
+        self.assertEqual(value.value, 1)
 
     def test_02_JoinStatusError(self):
         """
         Test JoinStatus with JoinStatusError
         """
-        value = pykerio.enums.JoinStatus(name='JoinStatusError')
+        value = JoinStatus.JoinStatusError
         self.assertEqual(value.dump(), 'JoinStatusError')
-        self.assertEqual(value.get_name(), 'JoinStatusError')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'JoinStatusError')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test JoinStatus with FAIL
         """
-        value = pykerio.enums.JoinStatus(name='FAIL')
+        value = JoinStatus.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

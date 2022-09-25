@@ -22,28 +22,14 @@ from .base_enumeration import BaseEnumeration
 
 
 class DnsType(BaseEnumeration):
-    ANY = 0
-    A = 1
-    AAAA = 2
-    CNAME = 3
-    MX = 4
-    NS = 5
-    PTR = 6
-    SOA = 7
-    SPF = 8
-    SRV = 9
-    TXT = 10
-
-    VALUES = {
-        'DnsTypeAny': ANY,
-        'DnsTypeA': A,
-        'DnsTypeAAAA': AAAA,
-        'DnsTypeCname': CNAME,
-        'DnsTypeMx': MX,
-        'DnsTypeNs': NS,
-        'DnsTypePtr': PTR,
-        'DnsTypeSoa': SOA,
-        'DnsTypeSpf': SPF,
-        'DnsTypeSrv': SRV,
-        'DnsTypeTxt': TXT
-    }
+    DnsTypeAny = 0
+    DnsTypeA = 1
+    DnsTypeAAAA = 2
+    DnsTypeCname = 3
+    DnsTypeMx = 4
+    DnsTypeNs = 5
+    DnsTypePtr = 6
+    DnsTypeSoa = 7
+    DnsTypeSpf = 8
+    DnsTypeSrv = 9
+    DnsTypeTxt = 10

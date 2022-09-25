@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import PortComparator
 
 
 class TestCase_PortComparator(unittest.TestCase):
@@ -28,62 +28,62 @@ class TestCase_PortComparator(unittest.TestCase):
         """
         Test PortComparator with Any
         """
-        value = pykerio.enums.PortComparator(name='Any')
+        value = PortComparator.Any
         self.assertEqual(value.dump(), 'Any')
-        self.assertEqual(value.get_name(), 'Any')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Any')
+        self.assertEqual(value.value, 0)
 
     def test_01_Equal(self):
         """
         Test PortComparator with Equal
         """
-        value = pykerio.enums.PortComparator(name='Equal')
+        value = PortComparator.Equal
         self.assertEqual(value.dump(), 'Equal')
-        self.assertEqual(value.get_name(), 'Equal')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Equal')
+        self.assertEqual(value.value, 1)
 
     def test_02_LessThan(self):
         """
         Test PortComparator with LessThan
         """
-        value = pykerio.enums.PortComparator(name='LessThan')
+        value = PortComparator.LessThan
         self.assertEqual(value.dump(), 'LessThan')
-        self.assertEqual(value.get_name(), 'LessThan')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'LessThan')
+        self.assertEqual(value.value, 2)
 
     def test_03_GreaterThan(self):
         """
         Test PortComparator with GreaterThan
         """
-        value = pykerio.enums.PortComparator(name='GreaterThan')
+        value = PortComparator.GreaterThan
         self.assertEqual(value.dump(), 'GreaterThan')
-        self.assertEqual(value.get_name(), 'GreaterThan')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'GreaterThan')
+        self.assertEqual(value.value, 3)
 
     def test_04_Range(self):
         """
         Test PortComparator with Range
         """
-        value = pykerio.enums.PortComparator(name='Range')
+        value = PortComparator.Range
         self.assertEqual(value.dump(), 'Range')
-        self.assertEqual(value.get_name(), 'Range')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'Range')
+        self.assertEqual(value.value, 4)
 
     def test_05_List(self):
         """
         Test PortComparator with List
         """
-        value = pykerio.enums.PortComparator(name='List')
+        value = PortComparator.List
         self.assertEqual(value.dump(), 'List')
-        self.assertEqual(value.get_name(), 'List')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'List')
+        self.assertEqual(value.value, 5)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test PortComparator with FAIL
         """
-        value = pykerio.enums.PortComparator(name='FAIL')
+        value = PortComparator.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

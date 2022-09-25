@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import DynamicDnsStatus
 
 
 class TestCase_DynamicDnsStatus(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_DynamicDnsStatus(unittest.TestCase):
         """
         Test DynamicDnsStatus with DynamicDnsOk
         """
-        value = pykerio.enums.DynamicDnsStatus(name='DynamicDnsOk')
+        value = DynamicDnsStatus.DynamicDnsOk
         self.assertEqual(value.dump(), 'DynamicDnsOk')
-        self.assertEqual(value.get_name(), 'DynamicDnsOk')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'DynamicDnsOk')
+        self.assertEqual(value.value, 0)
 
     def test_01_DynamicDnsError(self):
         """
         Test DynamicDnsStatus with DynamicDnsError
         """
-        value = pykerio.enums.DynamicDnsStatus(name='DynamicDnsError')
+        value = DynamicDnsStatus.DynamicDnsError
         self.assertEqual(value.dump(), 'DynamicDnsError')
-        self.assertEqual(value.get_name(), 'DynamicDnsError')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'DynamicDnsError')
+        self.assertEqual(value.value, 1)
 
     def test_02_DynamicDnsUpdate(self):
         """
         Test DynamicDnsStatus with DynamicDnsUpdate
         """
-        value = pykerio.enums.DynamicDnsStatus(name='DynamicDnsUpdate')
+        value = DynamicDnsStatus.DynamicDnsUpdate
         self.assertEqual(value.dump(), 'DynamicDnsUpdate')
-        self.assertEqual(value.get_name(), 'DynamicDnsUpdate')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'DynamicDnsUpdate')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test DynamicDnsStatus with FAIL
         """
-        value = pykerio.enums.DynamicDnsStatus(name='FAIL')
+        value = DynamicDnsStatus.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

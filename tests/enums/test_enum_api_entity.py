@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ApiEntity
 
 
 class TestCase_ApiEntity(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_ApiEntity(unittest.TestCase):
         """
         Test ApiEntity with PolicyWizard
         """
-        value = pykerio.enums.ApiEntity(name='PolicyWizard')
+        value = ApiEntity.PolicyWizard
         self.assertEqual(value.dump(), 'PolicyWizard')
-        self.assertEqual(value.get_name(), 'PolicyWizard')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'PolicyWizard')
+        self.assertEqual(value.value, 0)
 
     def test_01_AlertList(self):
         """
         Test ApiEntity with AlertList
         """
-        value = pykerio.enums.ApiEntity(name='AlertList')
+        value = ApiEntity.AlertList
         self.assertEqual(value.dump(), 'AlertList')
-        self.assertEqual(value.get_name(), 'AlertList')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'AlertList')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ApiEntity with FAIL
         """
-        value = pykerio.enums.ApiEntity(name='FAIL')
+        value = ApiEntity.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class ContentEntityUrlType(BaseEnumeration):
-    WILDCARD = 0
-    REGEX = 1
-    HOSTNAME = 2
-
-    VALUES = {
-        'ContentEntityUrlWildcard': WILDCARD,
-        'ContentEntityUrlRegex': REGEX,
-        'ContentEntityUrlHostname': HOSTNAME
-    }
+    ContentEntityUrlWildcard = 0
+    ContentEntityUrlRegex = 1
+    ContentEntityUrlHostname = 2

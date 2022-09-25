@@ -32,19 +32,16 @@ class TestCase_PortConfig(unittest.TestCase):
         vlans = pykerio.structs.OptionalString({'enabled': True,
                                                 'value': '0'})
         speedDuplexMayNotWork = pykerio.lists.SpeedDuplexMayNotWorkList()
-        speedDuplexMayNotWork.append(pykerio.enums.SpeedDuplexType(
-            name='SpeedDuplexHalf10'))
-        speedDuplexMayNotWork.append(pykerio.enums.SpeedDuplexType(
-            name='SpeedDuplexFull10'))
+        speedDuplexMayNotWork.append(pykerio.enums.SpeedDuplexType.SpeedDuplexHalf10)
+        speedDuplexMayNotWork.append(pykerio.enums.SpeedDuplexType.SpeedDuplexFull10)
 
         teststruct = pykerio.structs.PortConfig({
             'id': kid,
-            'type': pykerio.enums.PortType('PortEthernet'),
+            'type': pykerio.enums.PortType.PortEthernet,
             'name': 'eth0',
-            'assignment': pykerio.enums.PortAssignmentType(
-                'PortAssignmentStandalone'),
+            'assignment': pykerio.enums.PortAssignmentType.PortAssignmentStandalone,
             'vlans': vlans,
-            'speedDuplex': pykerio.enums.SpeedDuplexType('SpeedDuplexAuto'),
+            'speedDuplex': pykerio.enums.SpeedDuplexType.SpeedDuplexAuto,
             'speedDuplexMayNotWork': speedDuplexMayNotWork})
 
         self.assertEqual(len(teststruct.keys()), 7)

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import TrafficIpVersion
 
 
 class TestCase_TrafficIpVersion(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_TrafficIpVersion(unittest.TestCase):
         """
         Test TrafficIpVersion with Ipv4
         """
-        value = pykerio.enums.TrafficIpVersion(name='Ipv4')
+        value = TrafficIpVersion.Ipv4
         self.assertEqual(value.dump(), 'Ipv4')
-        self.assertEqual(value.get_name(), 'Ipv4')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Ipv4')
+        self.assertEqual(value.value, 0)
 
     def test_01_Ipv6(self):
         """
         Test TrafficIpVersion with Ipv6
         """
-        value = pykerio.enums.TrafficIpVersion(name='Ipv6')
+        value = TrafficIpVersion.Ipv6
         self.assertEqual(value.dump(), 'Ipv6')
-        self.assertEqual(value.get_name(), 'Ipv6')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Ipv6')
+        self.assertEqual(value.value, 1)
 
     def test_02_IpAll(self):
         """
         Test TrafficIpVersion with IpAll
         """
-        value = pykerio.enums.TrafficIpVersion(name='IpAll')
+        value = TrafficIpVersion.IpAll
         self.assertEqual(value.dump(), 'IpAll')
-        self.assertEqual(value.get_name(), 'IpAll')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'IpAll')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test TrafficIpVersion with FAIL
         """
-        value = pykerio.enums.TrafficIpVersion(name='FAIL')
+        value = TrafficIpVersion.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class VpnConditionType(BaseEnumeration):
-    INCOMING_CLIENT = 0
-    SELECTED_TUNNEL = 1
-    ALL_TUNNELS = 2
-
-    VALUES = {
-        'IncomingClient': INCOMING_CLIENT,
-        'SelectedTunnel': SELECTED_TUNNEL,
-        'AllTunnels': ALL_TUNNELS
-    }
+    IncomingClient = 0
+    SelectedTunnel = 1
+    AllTunnels = 2

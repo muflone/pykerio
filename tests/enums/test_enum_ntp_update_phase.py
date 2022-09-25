@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import NtpUpdatePhase
 
 
 class TestCase_NtpUpdatePhase(unittest.TestCase):
@@ -28,44 +28,44 @@ class TestCase_NtpUpdatePhase(unittest.TestCase):
         """
         Test NtpUpdatePhase with NtpUpdateDisabled
         """
-        value = pykerio.enums.NtpUpdatePhase(name='NtpUpdateDisabled')
+        value = NtpUpdatePhase.NtpUpdateDisabled
         self.assertEqual(value.dump(), 'NtpUpdateDisabled')
-        self.assertEqual(value.get_name(), 'NtpUpdateDisabled')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'NtpUpdateDisabled')
+        self.assertEqual(value.value, 0)
 
     def test_01_NtpUpdateOk(self):
         """
         Test NtpUpdatePhase with NtpUpdateOk
         """
-        value = pykerio.enums.NtpUpdatePhase(name='NtpUpdateOk')
+        value = NtpUpdatePhase.NtpUpdateOk
         self.assertEqual(value.dump(), 'NtpUpdateOk')
-        self.assertEqual(value.get_name(), 'NtpUpdateOk')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'NtpUpdateOk')
+        self.assertEqual(value.value, 1)
 
     def test_02_NtpUpdateError(self):
         """
         Test NtpUpdatePhase with NtpUpdateError
         """
-        value = pykerio.enums.NtpUpdatePhase(name='NtpUpdateError')
+        value = NtpUpdatePhase.NtpUpdateError
         self.assertEqual(value.dump(), 'NtpUpdateError')
-        self.assertEqual(value.get_name(), 'NtpUpdateError')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'NtpUpdateError')
+        self.assertEqual(value.value, 2)
 
     def test_03_NtpUpdateProgress(self):
         """
         Test NtpUpdatePhase with NtpUpdateProgress
         """
-        value = pykerio.enums.NtpUpdatePhase(name='NtpUpdateProgress')
+        value = NtpUpdatePhase.NtpUpdateProgress
         self.assertEqual(value.dump(), 'NtpUpdateProgress')
-        self.assertEqual(value.get_name(), 'NtpUpdateProgress')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'NtpUpdateProgress')
+        self.assertEqual(value.value, 3)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test NtpUpdatePhase with FAIL
         """
-        value = pykerio.enums.NtpUpdatePhase(name='FAIL')
+        value = NtpUpdatePhase.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

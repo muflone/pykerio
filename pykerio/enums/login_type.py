@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class LoginType(BaseEnumeration):
-    REGULAR = 0
-    AUTOMATIC = 1
-    REACTIVATION = 2
-
-    VALUES = {
-        'LoginRegular': REGULAR,
-        'LoginAutomatic': AUTOMATIC,
-        'LoginReactivation': REACTIVATION
-    }
+    LoginRegular = 0
+    LoginAutomatic = 1
+    LoginReactivation = 2

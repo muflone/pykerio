@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RouteType
 
 
 class TestCase_RouteType(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_RouteType(unittest.TestCase):
         """
         Test RouteType with RouteSystem
         """
-        value = pykerio.enums.RouteType(name='RouteSystem')
+        value = RouteType.RouteSystem
         self.assertEqual(value.dump(), 'RouteSystem')
-        self.assertEqual(value.get_name(), 'RouteSystem')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'RouteSystem')
+        self.assertEqual(value.value, 0)
 
     def test_01_RouteStatic(self):
         """
         Test RouteType with RouteStatic
         """
-        value = pykerio.enums.RouteType(name='RouteStatic')
+        value = RouteType.RouteStatic
         self.assertEqual(value.dump(), 'RouteStatic')
-        self.assertEqual(value.get_name(), 'RouteStatic')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'RouteStatic')
+        self.assertEqual(value.value, 1)
 
     def test_02_RouteVpn(self):
         """
         Test RouteType with RouteVpn
         """
-        value = pykerio.enums.RouteType(name='RouteVpn')
+        value = RouteType.RouteVpn
         self.assertEqual(value.dump(), 'RouteVpn')
-        self.assertEqual(value.get_name(), 'RouteVpn')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'RouteVpn')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RouteType with FAIL
         """
-        value = pykerio.enums.RouteType(name='FAIL')
+        value = RouteType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

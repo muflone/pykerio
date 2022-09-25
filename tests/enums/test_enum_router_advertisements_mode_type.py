@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import RouterAdvertisementsModeType
 
 
 class TestCase_RouterAdvertisementsModeType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_RouterAdvertisementsModeType(unittest.TestCase):
         """
         Test RouterAdvertisementsModeType with RouterAdvertisementsAutomatic
         """
-        value = pykerio.enums.RouterAdvertisementsModeType(name='RouterAdvertisementsAutomatic')
+        value = RouterAdvertisementsModeType.RouterAdvertisementsAutomatic
         self.assertEqual(value.dump(), 'RouterAdvertisementsAutomatic')
-        self.assertEqual(value.get_name(), 'RouterAdvertisementsAutomatic')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'RouterAdvertisementsAutomatic')
+        self.assertEqual(value.value, 0)
 
     def test_01_RouterAdvertisementsManual(self):
         """
         Test RouterAdvertisementsModeType with RouterAdvertisementsManual
         """
-        value = pykerio.enums.RouterAdvertisementsModeType(name='RouterAdvertisementsManual')
+        value = RouterAdvertisementsModeType.RouterAdvertisementsManual
         self.assertEqual(value.dump(), 'RouterAdvertisementsManual')
-        self.assertEqual(value.get_name(), 'RouterAdvertisementsManual')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'RouterAdvertisementsManual')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test RouterAdvertisementsModeType with FAIL
         """
-        value = pykerio.enums.RouterAdvertisementsModeType(name='FAIL')
+        value = RouterAdvertisementsModeType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

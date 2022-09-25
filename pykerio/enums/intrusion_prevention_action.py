@@ -22,12 +22,6 @@ from .base_enumeration import BaseEnumeration
 
 
 class IntrusionPreventionAction(BaseEnumeration):
-    DROP_AND_LOG = 0
-    LOG = 1
-    NOTHING = 2
-
-    VALUES = {
-        'IntrusionPreventionActionDropAndLog': DROP_AND_LOG,
-        'IntrusionPreventionActionLog': LOG,
-        'IntrusionPreventionActionNothing': NOTHING
-    }
+    IntrusionPreventionActionDropAndLog = 0
+    IntrusionPreventionActionLog = 1
+    IntrusionPreventionActionNothing = 2

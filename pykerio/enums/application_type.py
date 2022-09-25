@@ -22,10 +22,5 @@ from .base_enumeration import BaseEnumeration
 
 
 class ApplicationType(BaseEnumeration):
-    WEB_FILTER_CATEGORY = 0
-    PROTOCOL = 1
-
-    VALUES = {
-        'ApplicationWebFilterCategory': WEB_FILTER_CATEGORY,
-        'ApplicationProtocol': PROTOCOL
-    }
+    ApplicationWebFilterCategory = 0
+    ApplicationProtocol = 1

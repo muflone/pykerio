@@ -33,7 +33,7 @@ class TestCase_Restriction(unittest.TestCase):
         values = pykerio.lists.StringList()
         values.append('Something')
         values.append('Other')
-        kind = pykerio.enums.RestrictionKind('ForbiddenNameList')
+        kind = pykerio.enums.RestrictionKind.ForbiddenNameList
         tuple = pykerio.structs.RestrictionTuple({'name': 'restrictions',
                                                   'kind': kind,
                                                   'values': values})

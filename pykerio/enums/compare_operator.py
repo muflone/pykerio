@@ -22,20 +22,10 @@ from .base_enumeration import BaseEnumeration
 
 
 class CompareOperator(BaseEnumeration):
-    EQ = 0
-    NOT_EQ = 1
-    LESS_THAN = 2
-    GREATER_THAN = 3
-    LESS_EQ = 4
-    GREATER_EQ = 5
-    LIKE = 6
-
-    VALUES = {
-        'Eq': EQ,
-        'NotEq': NOT_EQ,
-        'LessThan': LESS_THAN,
-        'GreaterThan': GREATER_THAN,
-        'LessEq': LESS_EQ,
-        'GreaterEq': GREATER_EQ,
-        'Like': LIKE
-    }
+    Eq = 0
+    NotEq = 1
+    LessThan = 2
+    GreaterThan = 3
+    LessEq = 4
+    GreaterEq = 5
+    Like = 6

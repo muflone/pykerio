@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ItemName
 
 
 class TestCase_ItemName(unittest.TestCase):
@@ -28,71 +28,71 @@ class TestCase_ItemName(unittest.TestCase):
         """
         Test ItemName with Name
         """
-        value = pykerio.enums.ItemName(name='Name')
+        value = ItemName.Name
         self.assertEqual(value.dump(), 'Name')
-        self.assertEqual(value.get_name(), 'Name')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'Name')
+        self.assertEqual(value.value, 0)
 
     def test_01_Description(self):
         """
         Test ItemName with Description
         """
-        value = pykerio.enums.ItemName(name='Description')
+        value = ItemName.Description
         self.assertEqual(value.dump(), 'Description')
-        self.assertEqual(value.get_name(), 'Description')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Description')
+        self.assertEqual(value.value, 1)
 
     def test_02_Email(self):
         """
         Test ItemName with Email
         """
-        value = pykerio.enums.ItemName(name='Email')
+        value = ItemName.Email
         self.assertEqual(value.dump(), 'Email')
-        self.assertEqual(value.get_name(), 'Email')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'Email')
+        self.assertEqual(value.value, 2)
 
     def test_03_FullName(self):
         """
         Test ItemName with FullName
         """
-        value = pykerio.enums.ItemName(name='FullName')
+        value = ItemName.FullName
         self.assertEqual(value.dump(), 'FullName')
-        self.assertEqual(value.get_name(), 'FullName')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'FullName')
+        self.assertEqual(value.value, 3)
 
     def test_04_TimeItem(self):
         """
         Test ItemName with TimeItem
         """
-        value = pykerio.enums.ItemName(name='TimeItem')
+        value = ItemName.TimeItem
         self.assertEqual(value.dump(), 'TimeItem')
-        self.assertEqual(value.get_name(), 'TimeItem')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'TimeItem')
+        self.assertEqual(value.value, 4)
 
     def test_05_DateItem(self):
         """
         Test ItemName with DateItem
         """
-        value = pykerio.enums.ItemName(name='DateItem')
+        value = ItemName.DateItem
         self.assertEqual(value.dump(), 'DateItem')
-        self.assertEqual(value.get_name(), 'DateItem')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'DateItem')
+        self.assertEqual(value.value, 5)
 
     def test_06_DomainName(self):
         """
         Test ItemName with DomainName
         """
-        value = pykerio.enums.ItemName(name='DomainName')
+        value = ItemName.DomainName
         self.assertEqual(value.dump(), 'DomainName')
-        self.assertEqual(value.get_name(), 'DomainName')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'DomainName')
+        self.assertEqual(value.value, 6)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ItemName with FAIL
         """
-        value = pykerio.enums.ItemName(name='FAIL')
+        value = ItemName.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

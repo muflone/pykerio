@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import BMConditionType
 
 
 class TestCase_BMConditionType(unittest.TestCase):
@@ -28,116 +28,116 @@ class TestCase_BMConditionType(unittest.TestCase):
         """
         Test BMConditionType with BMConditionTrafficType
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionTrafficType')
+        value = BMConditionType.BMConditionTrafficType
         self.assertEqual(value.dump(), 'BMConditionTrafficType')
-        self.assertEqual(value.get_name(), 'BMConditionTrafficType')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'BMConditionTrafficType')
+        self.assertEqual(value.value, 0)
 
     def test_01_BMConditionQuota(self):
         """
         Test BMConditionType with BMConditionQuota
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionQuota')
+        value = BMConditionType.BMConditionQuota
         self.assertEqual(value.dump(), 'BMConditionQuota')
-        self.assertEqual(value.get_name(), 'BMConditionQuota')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'BMConditionQuota')
+        self.assertEqual(value.value, 1)
 
     def test_02_BMConditionLargeData(self):
         """
         Test BMConditionType with BMConditionLargeData
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionLargeData')
+        value = BMConditionType.BMConditionLargeData
         self.assertEqual(value.dump(), 'BMConditionLargeData')
-        self.assertEqual(value.get_name(), 'BMConditionLargeData')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'BMConditionLargeData')
+        self.assertEqual(value.value, 2)
 
     def test_03_BMConditionTrafficRule(self):
         """
         Test BMConditionType with BMConditionTrafficRule
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionTrafficRule')
+        value = BMConditionType.BMConditionTrafficRule
         self.assertEqual(value.dump(), 'BMConditionTrafficRule')
-        self.assertEqual(value.get_name(), 'BMConditionTrafficRule')
-        self.assertEqual(value.get_value(), 3)
+        self.assertEqual(value.name, 'BMConditionTrafficRule')
+        self.assertEqual(value.value, 3)
 
     def test_04_BMConditionContentRule(self):
         """
         Test BMConditionType with BMConditionContentRule
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionContentRule')
+        value = BMConditionType.BMConditionContentRule
         self.assertEqual(value.dump(), 'BMConditionContentRule')
-        self.assertEqual(value.get_name(), 'BMConditionContentRule')
-        self.assertEqual(value.get_value(), 4)
+        self.assertEqual(value.name, 'BMConditionContentRule')
+        self.assertEqual(value.value, 4)
 
     def test_05_BMConditionService(self):
         """
         Test BMConditionType with BMConditionService
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionService')
+        value = BMConditionType.BMConditionService
         self.assertEqual(value.dump(), 'BMConditionService')
-        self.assertEqual(value.get_name(), 'BMConditionService')
-        self.assertEqual(value.get_value(), 5)
+        self.assertEqual(value.name, 'BMConditionService')
+        self.assertEqual(value.value, 5)
 
     def test_06_BMConditionDscp(self):
         """
         Test BMConditionType with BMConditionDscp
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionDscp')
+        value = BMConditionType.BMConditionDscp
         self.assertEqual(value.dump(), 'BMConditionDscp')
-        self.assertEqual(value.get_name(), 'BMConditionDscp')
-        self.assertEqual(value.get_value(), 6)
+        self.assertEqual(value.name, 'BMConditionDscp')
+        self.assertEqual(value.value, 6)
 
     def test_07_BMConditionUsers(self):
         """
         Test BMConditionType with BMConditionUsers
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionUsers')
+        value = BMConditionType.BMConditionUsers
         self.assertEqual(value.dump(), 'BMConditionUsers')
-        self.assertEqual(value.get_name(), 'BMConditionUsers')
-        self.assertEqual(value.get_value(), 7)
+        self.assertEqual(value.name, 'BMConditionUsers')
+        self.assertEqual(value.value, 7)
 
     def test_08_BMConditionInvalid(self):
         """
         Test BMConditionType with BMConditionInvalid
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionInvalid')
+        value = BMConditionType.BMConditionInvalid
         self.assertEqual(value.dump(), 'BMConditionInvalid')
-        self.assertEqual(value.get_name(), 'BMConditionInvalid')
-        self.assertEqual(value.get_value(), 8)
+        self.assertEqual(value.name, 'BMConditionInvalid')
+        self.assertEqual(value.value, 8)
 
     def test_09_BMContentRuleType(self):
         """
         Test BMConditionType with BMContentRuleType
         """
-        value = pykerio.enums.BMConditionType(name='BMContentRuleType')
+        value = BMConditionType.BMContentRuleType
         self.assertEqual(value.dump(), 'BMContentRuleType')
-        self.assertEqual(value.get_name(), 'BMContentRuleType')
-        self.assertEqual(value.get_value(), 9)
+        self.assertEqual(value.name, 'BMContentRuleType')
+        self.assertEqual(value.value, 9)
 
     def test_10_BMConditionGuests(self):
         """
         Test BMConditionType with BMConditionGuests
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionGuests')
+        value = BMConditionType.BMConditionGuests
         self.assertEqual(value.dump(), 'BMConditionGuests')
-        self.assertEqual(value.get_name(), 'BMConditionGuests')
-        self.assertEqual(value.get_value(), 10)
+        self.assertEqual(value.name, 'BMConditionGuests')
+        self.assertEqual(value.value, 10)
 
     def test_11_BMConditionApplication(self):
         """
         Test BMConditionType with BMConditionApplication
         """
-        value = pykerio.enums.BMConditionType(name='BMConditionApplication')
+        value = BMConditionType.BMConditionApplication
         self.assertEqual(value.dump(), 'BMConditionApplication')
-        self.assertEqual(value.get_name(), 'BMConditionApplication')
-        self.assertEqual(value.get_value(), 11)
+        self.assertEqual(value.name, 'BMConditionApplication')
+        self.assertEqual(value.value, 11)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test BMConditionType with FAIL
         """
-        value = pykerio.enums.BMConditionType(name='FAIL')
+        value = BMConditionType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

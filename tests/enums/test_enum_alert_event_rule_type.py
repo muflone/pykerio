@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import AlertEventRuleType
 
 
 class TestCase_AlertEventRuleType(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_AlertEventRuleType(unittest.TestCase):
         """
         Test AlertEventRuleType with AlertTraffic
         """
-        value = pykerio.enums.AlertEventRuleType(name='AlertTraffic')
+        value = AlertEventRuleType.AlertTraffic
         self.assertEqual(value.dump(), 'AlertTraffic')
-        self.assertEqual(value.get_name(), 'AlertTraffic')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'AlertTraffic')
+        self.assertEqual(value.value, 0)
 
     def test_01_AlertContent(self):
         """
         Test AlertEventRuleType with AlertContent
         """
-        value = pykerio.enums.AlertEventRuleType(name='AlertContent')
+        value = AlertEventRuleType.AlertContent
         self.assertEqual(value.dump(), 'AlertContent')
-        self.assertEqual(value.get_name(), 'AlertContent')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'AlertContent')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test AlertEventRuleType with FAIL
         """
-        value = pykerio.enums.AlertEventRuleType(name='FAIL')
+        value = AlertEventRuleType.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

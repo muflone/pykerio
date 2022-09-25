@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import IpVersion
 
 
 class TestCase_IpVersion(unittest.TestCase):
@@ -28,35 +28,35 @@ class TestCase_IpVersion(unittest.TestCase):
         """
         Test IpVersion with IpVersion4
         """
-        value = pykerio.enums.IpVersion(name='IpVersion4')
+        value = IpVersion.IpVersion4
         self.assertEqual(value.dump(), 'IpVersion4')
-        self.assertEqual(value.get_name(), 'IpVersion4')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'IpVersion4')
+        self.assertEqual(value.value, 0)
 
     def test_01_IpVersion6(self):
         """
         Test IpVersion with IpVersion6
         """
-        value = pykerio.enums.IpVersion(name='IpVersion6')
+        value = IpVersion.IpVersion6
         self.assertEqual(value.dump(), 'IpVersion6')
-        self.assertEqual(value.get_name(), 'IpVersion6')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'IpVersion6')
+        self.assertEqual(value.value, 1)
 
     def test_02_IpVersionAny(self):
         """
         Test IpVersion with IpVersionAny
         """
-        value = pykerio.enums.IpVersion(name='IpVersionAny')
+        value = IpVersion.IpVersionAny
         self.assertEqual(value.dump(), 'IpVersionAny')
-        self.assertEqual(value.get_name(), 'IpVersionAny')
-        self.assertEqual(value.get_value(), 2)
+        self.assertEqual(value.name, 'IpVersionAny')
+        self.assertEqual(value.value, 2)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test IpVersion with FAIL
         """
-        value = pykerio.enums.IpVersion(name='FAIL')
+        value = IpVersion.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

@@ -20,7 +20,7 @@
 
 import unittest
 
-import pykerio
+from pykerio.enums import ExportFormat
 
 
 class TestCase_ExportFormat(unittest.TestCase):
@@ -28,26 +28,26 @@ class TestCase_ExportFormat(unittest.TestCase):
         """
         Test ExportFormat with PlainText
         """
-        value = pykerio.enums.ExportFormat(name='PlainText')
+        value = ExportFormat.PlainText
         self.assertEqual(value.dump(), 'PlainText')
-        self.assertEqual(value.get_name(), 'PlainText')
-        self.assertEqual(value.get_value(), 0)
+        self.assertEqual(value.name, 'PlainText')
+        self.assertEqual(value.value, 0)
 
     def test_01_Html(self):
         """
         Test ExportFormat with Html
         """
-        value = pykerio.enums.ExportFormat(name='Html')
+        value = ExportFormat.Html
         self.assertEqual(value.dump(), 'Html')
-        self.assertEqual(value.get_name(), 'Html')
-        self.assertEqual(value.get_value(), 1)
+        self.assertEqual(value.name, 'Html')
+        self.assertEqual(value.value, 1)
 
     @unittest.expectedFailure
     def test_99_FAIL(self):
         """
         Test ExportFormat with FAIL
         """
-        value = pykerio.enums.ExportFormat(name='FAIL')
+        value = ExportFormat.FAIL
         self.assertEqual(value.dump(), 'FAIL')
-        self.assertEqual(value.get_name(), 'FAIL')
-        self.assertEqual(value.get_value(), 99)
+        self.assertEqual(value.name, 'FAIL')
+        self.assertEqual(value.value, 99)

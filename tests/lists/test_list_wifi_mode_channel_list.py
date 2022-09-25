@@ -40,7 +40,7 @@ class TestCase_WifiModeChannelList(unittest.TestCase):
         channels.append(channel)
 
         teststruct = pykerio.structs.WifiModeChannelConfig({
-            'band': pykerio.enums.WifiBandType('WifiBandBG'),
+            'band': pykerio.enums.WifiBandType.WifiBandBG,
             'channels': channels})
         testlist.append(teststruct)
         self.assertEqual(len(testlist), 1)
