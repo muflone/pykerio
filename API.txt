@@ -18,7 +18,7 @@
 | ConnLimit            |     |              |         |            | API for Connection limit settings
 | ContentFilter        |     |              |         |            | API for Content Filter
 | Dhcp                 |     |              |         |            | API for DHCP
-| Dns                  |     |              |         |            | Dns API
+| Dns                  |  2  | COMPLETE     | 0.5.0   | 2022-09-27 | Dns API
 | Domains              |     |              |         |            | API for User Domains
 | Dumps                |     |              |         |            | Managing of coredumps
 | DynamicDns           |     |              |         |            | API for Dynamic Dns
