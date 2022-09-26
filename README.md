@@ -209,7 +209,7 @@ like this:
 
     >>> from pykerio.enums import HistogramType
     >>> response = api.request_rpc(method='SystemHealth.get',
-                                   params={'type': HistogramType('HistogramOneDay')})
+                                   params={'type': HistogramType.HistogramOneDay})
     >>> print(response.result['data']['diskTotal'])
     29239369728
     >>> print(response.result['data']['diskFree'])

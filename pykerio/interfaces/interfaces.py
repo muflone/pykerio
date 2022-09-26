@@ -77,7 +77,7 @@ class Interfaces(object):
         else:
             results = InterfaceList()
             results.load(response.result['list'])
-        return (results, totalItems)
+        return results, totalItems
 
     def set(self, ids: KIdList, details: Interface):
         """
@@ -178,7 +178,7 @@ class Interfaces(object):
         response = self.api.request_rpc(
             method='Interfaces.connectivityTestStatus',
             params={})
-        results = ConnectivityStatus(response.result['status'])
+        results = ConnectivityStatus.from_name(response.result['status'])
         return results
 
     def getWarnings(self):
@@ -263,17 +263,17 @@ class Interfaces(object):
         if name:
             conditions.append(
                 SubCondition({'fieldName': 'name',
-                              'comparator': CompareOperator('Eq'),
+                              'comparator': CompareOperator.Eq,
                               'value': name}))
         if interface_type:
             conditions.append(
                 SubCondition({'fieldName': 'type',
-                              'comparator': CompareOperator('Eq'),
+                              'comparator': CompareOperator.Eq,
                               'value': interface_type.dump()}))
         if interface_group:
             conditions.append(
                 SubCondition({'fieldName': 'group',
-                              'comparator': CompareOperator('Eq'),
+                              'comparator': CompareOperator.Eq,
                               'value': interface_group.dump()}))
 
         order = SortOrder({'columnName': 'name',
@@ -284,7 +284,7 @@ class Interfaces(object):
 
         search_query = SearchQuery({'fields': StringList(),
                                     'conditions': conditions,
-                                    'combining': LogicalOperator('And'),
+                                    'combining': LogicalOperator.And,
                                     'start': 0,
                                     'limit': UNLIMITED,
                                     'orderBy': orderbylist})

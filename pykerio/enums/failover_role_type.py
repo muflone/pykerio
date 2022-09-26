@@ -22,7 +22,6 @@ from pykerio.enums.base_enumeration import BaseEnumeration
 
 
 class FailoverRoleType(BaseEnumeration):
-    # FIXME: The NONE value should be None
     NONE = 0
     Primary = 1
     Secondary = 2

@@ -103,7 +103,6 @@ class TestCase_Interfaces(unittest.TestCase):
         self.assertEqual(len(ifaces), count)
         # Check for results in InterfaceList form (only for empty fields list)
         self.assertEqual(type(ifaces), pykerio.lists.InterfaceList)
-        print()
         for iface in ifaces:
             # Check the type for each interface
             self.assertEqual(type(iface), pykerio.structs.Interface)

@@ -36,7 +36,7 @@ class Server(object):
         response = self.api.request_rpc(
             method='Server.getOs',
             params={})
-        results = ServerOs(response.result['os'])
+        results = ServerOs.from_name(response.result['os'])
         return results
 
     def getRestrictionList(self):

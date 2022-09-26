@@ -91,10 +91,9 @@ class TestCase_IpTools(unittest.TestCase):
         """
         Test IpTools traceRoute
         """
-        self.__class__.iptools.traceRoute(
-            target='kerio.com',
-            ipversion=IpVersion.IpVersion4,
-            resolveHostnames=True)
+        self.__class__.iptools.traceRoute(target='kerio.com',
+                                          ipversion=IpVersion.IpVersion4,
+                                          resolveHostnames=True)
         time.sleep(3)
         active_tool, lines = self.__class__.iptools.getStatus()
         for line in lines:
