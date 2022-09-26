@@ -60,6 +60,7 @@ from .histogram_interval_type import HistogramIntervalType         # noqa: F401
 from .histogram_type import HistogramType                          # noqa: F401
 from .http_log_type import HttpLogType                             # noqa: F401
 from .https_server_mode import HttpsServerMode                     # noqa: F401
+from .importance import Importance                                 # noqa: F401
 from .interface_condition_type import InterfaceConditionType       # noqa: F401
 from .interface_encap_type import InterfaceEncapType               # noqa: F401
 from .interface_group_type import InterfaceGroupType               # noqa: F401
