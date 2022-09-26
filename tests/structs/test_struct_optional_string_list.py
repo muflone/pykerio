@@ -18,10 +18,28 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.lists.base_list import BaseList
-from pykerio.structs.optional_string import OptionalString
+import unittest
+
+import pykerio
 
 
-class OptionalStringList(BaseList):
-    def __init__(self, *args, **kwargs):
-        super().__init__(OptionalString, *args, **kwargs)
+class TestCase_OptionalStringList(unittest.TestCase):
+    def test_01_OptionalStringList(self):
+        """
+        Test OptionalStringList
+        """
+        enabled = True
+        testlist = pykerio.lists.StringList()
+        value = 'This is a test'
+        testlist.append(value)
+        teststruct = pykerio.structs.OptionalStringList({'enabled': enabled,
+                                                         'value': testlist})
+        self.assertEqual(len(teststruct.keys()), 2)
+        self.assertEqual(len(teststruct.values()), 2)
+
+        self.assertEqual(teststruct['enabled'], enabled)
+        self.assertEqual(teststruct['value'], testlist)
+        self.assertEqual(len(teststruct['value']), 1)
+
+        teststruct.clear()
+        self.assertEqual(len(teststruct.keys()), 0)

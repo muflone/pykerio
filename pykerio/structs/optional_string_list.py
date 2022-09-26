@@ -18,27 +18,18 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-import unittest
+from pykerio.lists.string_list import StringList
+from pykerio.structs.base_struct import BaseStruct
 
-import pykerio
 
-
-class TestCase_OptionalStringList(unittest.TestCase):
-    def test_01_OptionalStringList(self):
-        """
-        Test OptionalStringList
-        """
-        testlist = pykerio.lists.OptionalStringList()
-        self.assertEqual(len(testlist), 0)
-
-        enabled = True
-        value = 'This is a test'
-        teststruct = pykerio.structs.OptionalString({'enabled': enabled,
-                                                     'value': value})
-        testlist.append(teststruct)
-        self.assertEqual(len(testlist), 1)
-
-        self.assertEqual(testlist[-1], teststruct)
-
-        testlist.clear()
-        self.assertEqual(len(testlist), 0)
+class OptionalStringList(BaseStruct):
+    """
+    A string list that can be switched on/off.
+    StringList is meaningful only if switched on.
+    Note: all fields must be assigned if used in set methods
+    """
+    def __init__(self, data: dict):
+        BaseStruct.__init__(self,
+                            types={'enabled': bool,
+                                   'value': StringList},
+                            data=data)

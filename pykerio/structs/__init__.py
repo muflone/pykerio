@@ -62,6 +62,7 @@ from .optional_id_reference import OptionalIdReference             # noqa: F401
 from .optional_ip_address import OptionalIpAddress                 # noqa: F401
 from .optional_long import OptionalLong                            # noqa: F401
 from .optional_string import OptionalString                        # noqa: F401
+from .optional_string_list import OptionalStringList               # noqa: F401
 from .password import Password                                     # noqa: F401
 from .port_config import PortConfig                                # noqa: F401
 from .ras_config import RasConfig                                  # noqa: F401

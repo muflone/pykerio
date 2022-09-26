@@ -45,7 +45,6 @@ from .named_value_list import NamedValueList                       # noqa: F401
 from .notification_list import NotificationList                    # noqa: F401
 from .notification_type_list import NotificationTypeList           # noqa: F401
 from .optional_ip_address_list import OptionalIpAddressList        # noqa: F401
-from .optional_string_list import OptionalStringList
 from .port_config_list import PortConfigList                       # noqa: F401
 from .restriction_list import RestrictionList                      # noqa: F401
 from .restriction_tuple_list import RestrictionTupleList           # noqa: F401
