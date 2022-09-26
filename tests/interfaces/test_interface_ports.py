@@ -20,10 +20,12 @@
 
 import os
 import ssl
+import time
 import unittest
 
 import pykerio
-from pykerio.enums import (PortAssignmentType,
+from pykerio.enums import (InterfaceGroupType,
+                           InterfaceType,
                            SpeedDuplexType)
 
 
@@ -58,6 +60,8 @@ class TestCase_Ports(unittest.TestCase):
 
         # Ports
         cls.ports = pykerio.interfaces.Ports(api)
+        # Interaces
+        cls.interfaces = pykerio.interfaces.Interfaces(api)
 
     @classmethod
     def tearDownClass(cls):
@@ -81,11 +85,23 @@ class TestCase_Ports(unittest.TestCase):
         """
         Test Ports set
         """
+        ifaces = self.__class__.interfaces.find(
+            name=None,
+            interface_type=InterfaceType.Ethernet,
+            interface_group=InterfaceGroupType.Guest)
+
         ports_list = self.__class__.ports.get()
         for port in ports_list:
-            # Changing LAN ports speed to HalfDuplex 10 Mbit
-            if (port['assignment'].dump() ==
-                    PortAssignmentType.PortAssignmentSwitch.name):
-                port['speedDuplex'] = SpeedDuplexType.SpeedDuplexHalf10
+            if port['id'] == ifaces[0]['ports'][0]:
+                # Change Guests ports speed to FullDuplex 100 Mbits
+                port['speedDuplex'] = SpeedDuplexType.SpeedDuplexFull100
+        # Apply changes
+        self.__class__.ports.set(ports_list, 10)
+        time.sleep(3)
+        # Restore full speed
+        for port in ports_list:
+            if port['id'] == ifaces[0]['ports'][0]:
+                # Change Guests ports speed to automatic
+                port['speedDuplex'] = SpeedDuplexType.SpeedDuplexAuto
         # Apply changes
         self.__class__.ports.set(ports_list, 10)
