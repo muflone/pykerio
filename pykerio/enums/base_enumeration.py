@@ -30,7 +30,7 @@ class BaseEnumeration(JSONSerializable, Enum):
 
     def dump(self):
         """JSON serializable representation"""
-        return self.name
+        return 'None' if self.name == 'NONE' else self.name
 
     @classmethod
     def from_name(self, name):
