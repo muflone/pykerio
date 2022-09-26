@@ -137,14 +137,15 @@ You cannot put inside a PyKerio list an object of a different type.
 
 The following interfaces are implemented under ```pykerio.interfaces```:
 
-- Session
+- Dns
+- FilenameGroups
 - HardwareInfo
 - Interfaces
-- Ports
-- FilenameGroups
-- Server
-- Storage
 - IpTools
+- Ports
+- Server
+- Session
+- Storage
 
 Every needed simple type, structure, enumeration or list to implement or use
 these interfaces it's also present, ready to be used.
