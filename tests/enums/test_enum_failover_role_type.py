@@ -29,7 +29,7 @@ class TestCase_FailoverRoleType(unittest.TestCase):
         Test FailoverRoleType with None
         """
         value = FailoverRoleType.NONE
-        self.assertEqual(value.dump(), 'NONE')
+        self.assertEqual(value.dump(), 'None')
         self.assertEqual(value.name, 'NONE')
         self.assertEqual(value.value, 0)
 
