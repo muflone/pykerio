@@ -25,6 +25,7 @@ import unittest
 import pykerio
 from pykerio.enums import (CompareOperator,
                            ConnectivityStatus,
+                           ConnectivityType,
                            InterfaceGroupType,
                            InterfaceType,
                            LogicalOperator,
@@ -386,8 +387,8 @@ class TestCase_Interfaces(unittest.TestCase):
         Test Interfaces connectivityTestStatus
         """
         status = self.__class__.interfaces.connectivityTestStatus()
-        self.assertEqual(status.dump(),
-                         ConnectivityStatus.ConnectivityOk.name)
+        self.assertNotEqual(status.dump(),
+                            ConnectivityStatus.ConnectivityError.name)
 
     @unittest.skipIf(os.environ.get('KERIO_READONLY', 'NO').upper() == 'YES',
                      'Insufficient rights')
@@ -418,6 +419,7 @@ class TestCase_Interfaces(unittest.TestCase):
         Test Interfaces setConnectivityConfig
         """
         config = self.__class__.interfaces.getConnectivityConfig()
+        config['mode'] = ConnectivityType.LoadBalancing
         config['probeHosts']['enabled'] = not config['probeHosts']['enabled']
         self.__class__.interfaces.setConnectivityConfig(config=config)
         self.__class__.interfaces.apply(10)
