@@ -21,7 +21,8 @@
 from pykerio.enums.port_assignment_type import PortAssignmentType
 from pykerio.enums.port_type import PortType
 from pykerio.enums.speed_duplex_type import SpeedDuplexType
-from pykerio.lists.speed_duplex_may_not_work_list import SpeedDuplexMayNotWorkList
+from pykerio.lists.speed_duplex_may_not_work_list import (
+    SpeedDuplexMayNotWorkList)
 from pykerio.structs.base_struct import BaseStruct
 from pykerio.structs.optional_string import OptionalString
 from pykerio.types.kid import KId

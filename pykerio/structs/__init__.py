@@ -21,7 +21,7 @@
 from .add_result import AddResult                                  # noqa: F401
 from .api_application import ApiApplication                        # noqa: F401
 from .api_exception import ApiException                            # noqa: F401
-from pykerio.structs.base_struct import BaseStruct                                # noqa: F401
+from .base_struct import BaseStruct                                # noqa: F401
 from .byte_value_with_units import ByteValueWithUnits              # noqa: F401
 from .certificate_dn import CertificateDn                          # noqa: F401
 from .client_timestamp import ClientTimestamp                      # noqa: F401
