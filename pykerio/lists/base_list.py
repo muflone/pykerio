@@ -44,7 +44,7 @@ class BaseList(list, JSONSerializable):
 
     def dump(self):
         """JSON serializable representation"""
-        return [value.dump() if isinstance(value, JSONSerializable) else value
+        return [value.dump() if hasattr(value, 'dump') else value
                 for value in self]
 
     def load(self, data):

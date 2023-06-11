@@ -18,15 +18,12 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from enum import Enum
-
-from pykerio.json_serializable import JSONSerializable
+from enum import IntEnum
 
 
-class BaseEnumeration(JSONSerializable, Enum):
+class BaseEnumeration(IntEnum):
     def __init__(self, value):
-        Enum.__init__(self)
-        JSONSerializable.__init__(self)
+        IntEnum.__init__(self)
 
     def dump(self):
         """JSON serializable representation"""
