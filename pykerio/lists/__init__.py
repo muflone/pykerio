@@ -48,6 +48,7 @@ from .optional_ip_address_list import OptionalIpAddressList        # noqa: F401
 from .port_config_list import PortConfigList                       # noqa: F401
 from .restriction_list import RestrictionList                      # noqa: F401
 from .restriction_tuple_list import RestrictionTupleList           # noqa: F401
+from .reverse_proxy_rule_list import ReverseProxyRuleList          # noqa: F401
 from .sort_order_list import SortOrderList                         # noqa: F401
 from .speed_duplex_may_not_work_list import (                      # noqa: F401
     SpeedDuplexMayNotWorkList)                                     # noqa: F401

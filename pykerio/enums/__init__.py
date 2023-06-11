@@ -34,6 +34,7 @@ from .base_enumeration import BaseEnumeration                      # noqa: F401
 from .bm_condition_type import BMConditionType                     # noqa: F401
 from .bm_traffic_type import BMTrafficType                         # noqa: F401
 from .byte_units import ByteUnits                                  # noqa: F401
+from .certificate_type import CertificateType                      # noqa: F401
 from .check_version_type import CheckVersionType                   # noqa: F401
 from .compare_operator import CompareOperator                      # noqa: F401
 from .configuration_backup_phase import ConfigurationBackupPhase   # noqa: F401
@@ -120,6 +121,7 @@ from .user_condition_type import UserConditionType                 # noqa: F401
 from .user_format_type import UserFormatType                       # noqa: F401
 from .user_role_type import UserRoleType                           # noqa: F401
 from .user_statistic_type import UserStatisticType                 # noqa: F401
+from .valid_type import ValidType                                  # noqa: F401
 from .vpn_client_state import VpnClientState                       # noqa: F401
 from .vpn_condition_type import VpnConditionType                   # noqa: F401
 from .vpn_type import VpnType                                      # noqa: F401

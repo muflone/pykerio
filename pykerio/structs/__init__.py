@@ -68,6 +68,8 @@ from .port_config import PortConfig                                # noqa: F401
 from .ras_config import RasConfig                                  # noqa: F401
 from .restriction import Restriction                               # noqa: F401
 from .restriction_tuple import RestrictionTuple                    # noqa: F401
+from .reverse_proxy_config import ReverseProxyConfig               # noqa: F401
+from .reverse_proxy_rule import ReverseProxyRule                   # noqa: F401
 from .search_query import SearchQuery                              # noqa: F401
 from .size_limit import SizeLimit                                  # noqa: F401
 from .sort_order import SortOrder                                  # noqa: F401
@@ -76,6 +78,7 @@ from .sub_condition import SubCondition                            # noqa: F401
 from .time import Time                                             # noqa: F401
 from .time_hms import TimeHMS                                      # noqa: F401
 from .time_span import TimeSpan                                    # noqa: F401
+from .valid_period import ValidPeriod                              # noqa: F401
 from .vpn_route import VpnRoute                                    # noqa: F401
 from .vpn_server_config import VpnServerConfig                     # noqa: F401
 from .vpn_tunnel_config import VpnTunnelConfig                     # noqa: F401
