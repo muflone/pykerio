@@ -18,8 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.enums.notification_type import NotificationType
 from pykerio.enums.notification_severity import NotificationSeverity
+from pykerio.enums.notification_type import NotificationType
 from pykerio.structs.base_struct import BaseStruct
 
 

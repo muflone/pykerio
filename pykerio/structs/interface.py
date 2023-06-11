@@ -24,21 +24,21 @@ from pykerio.enums.interface_mode_type import InterfaceModeType
 from pykerio.enums.interface_status_type import InterfaceStatusType
 from pykerio.enums.interface_type import InterfaceType
 from pykerio.enums.store_status import StoreStatus
-from pykerio.lists.ip_address_mask_list import IpAddressMaskList
 from pykerio.lists.ip6_address_mask_list import Ip6AddressMaskList
+from pykerio.lists.ip_address_mask_list import IpAddressMaskList
 from pykerio.lists.kid_list import KIdList
 from pykerio.structs.base_struct import BaseStruct
 from pykerio.structs.details_config import DetailsConfig
 from pykerio.structs.interface_connectivity_parameters import (
-       InterfaceConnectivityParameters)
+    InterfaceConnectivityParameters)
 from pykerio.structs.interface_flags import InterfaceFlags
 from pykerio.structs.optional_long import OptionalLong
 from pykerio.structs.optional_string import OptionalString
 from pykerio.structs.ras_config import RasConfig
 from pykerio.structs.vpn_server_config import VpnServerConfig
 from pykerio.structs.vpn_tunnel_config import VpnTunnelConfig
-from pykerio.types.ip_address import IpAddress
 from pykerio.types.ip6_address import Ip6Address
+from pykerio.types.ip_address import IpAddress
 from pykerio.types.kid import KId
 
 

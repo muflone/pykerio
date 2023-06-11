@@ -18,10 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.structs.base_struct import BaseStruct
-
 from pykerio.enums.valid_type import ValidType
-
+from pykerio.structs.base_struct import BaseStruct
 from pykerio.structs.date import Date
 from pykerio.structs.time import Time
 

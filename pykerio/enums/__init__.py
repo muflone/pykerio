@@ -93,9 +93,9 @@ from .registration_finish_type import RegistrationFinishType       # noqa: F401
 from .registration_type import RegistrationType                    # noqa: F401
 from .restriction_kind import RestrictionKind                      # noqa: F401
 from .rotation_period import RotationPeriod                        # noqa: F401
+from .route_type import RouteType                                  # noqa: F401
 from .router_advertisements_mode_type import (                     # noqa: F401
     RouterAdvertisementsModeType)                                  # noqa: F401
-from .route_type import RouteType                                  # noqa: F401
 from .rule_action import RuleAction                                # noqa: F401
 from .rule_condition_type import RuleConditionType                 # noqa: F401
 from .scan_rule_type import ScanRuleType                           # noqa: F401
@@ -114,9 +114,9 @@ from .target import Target                                         # noqa: F401
 from .traffic_entity_type import TrafficEntityType                 # noqa: F401
 from .traffic_ip_version import TrafficIpVersion                   # noqa: F401
 from .traffic_statistics_type import TrafficStatisticsType         # noqa: F401
+from .update_status import UpdateStatus                            # noqa: F401
 from .url_entry_type import UrlEntryType                           # noqa: F401
 from .url_filter_status import UrlFilterStatus                     # noqa: F401
-from .update_status import UpdateStatus                            # noqa: F401
 from .user_condition_type import UserConditionType                 # noqa: F401
 from .user_format_type import UserFormatType                       # noqa: F401
 from .user_role_type import UserRoleType                           # noqa: F401

@@ -35,8 +35,8 @@ from .date import Date                                             # noqa: F401
 from .date_time_config import DateTimeConfig                       # noqa: F401
 from .details_config import DetailsConfig                          # noqa: F401
 from .dns_config import DnsConfig                                  # noqa: F401
-from .dns_host import DnsHost                                      # noqa: F401
 from .dns_forwarder import DnsForwarder                            # noqa: F401
+from .dns_host import DnsHost                                      # noqa: F401
 from .download import Download                                     # noqa: F401
 from .error import Error                                           # noqa: F401
 from .filename_group import FilenameGroup                          # noqa: F401
@@ -54,8 +54,8 @@ from .localizable_message import LocalizableMessage                # noqa: F401
 from .localizable_message_parameters import (                      # noqa: F401
     LocalizableMessageParameters)                                  # noqa: F401
 from .manipulation_error import ManipulationError                  # noqa: F401
-from .named_value import NamedValue                                # noqa: F401
 from .named_multi_value import NamedMultiValue                     # noqa: F401
+from .named_value import NamedValue                                # noqa: F401
 from .notification import Notification                             # noqa: F401
 from .optional_entity import OptionalEntity                        # noqa: F401
 from .optional_id_reference import OptionalIdReference             # noqa: F401

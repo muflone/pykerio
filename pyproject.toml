@@ -1,3 +1,7 @@
 [build-system]
 requires = ['setuptools', 'wheel']
 build-backend = 'setuptools.build_meta'
+
+[tool.isort]
+multi_line_output = 1
+use_parentheses = true

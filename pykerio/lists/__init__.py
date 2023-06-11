@@ -33,9 +33,9 @@ from .id_reference_list import IdReferenceList                     # noqa: F401
 from .integer_list import IntegerList                              # noqa: F401
 from .interface_list import InterfaceList                          # noqa: F401
 from .ip6_address_list import Ip6AddressList                       # noqa: F401
+from .ip6_address_mask_list import Ip6AddressMaskList              # noqa: F401
 from .ip_address_list import IpAddressList                         # noqa: F401
 from .ip_address_mask_list import IpAddressMaskList                # noqa: F401
-from .ip6_address_mask_list import Ip6AddressMaskList              # noqa: F401
 from .ip_collision_list import IpCollisionList                     # noqa: F401
 from .kid_list import KIdList                                      # noqa: F401
 from .localizable_message_list import LocalizableMessageList       # noqa: F401

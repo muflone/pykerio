@@ -18,8 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.enums.ras_type import RasType
 from pykerio.enums.mppe_type import MppeType
+from pykerio.enums.ras_type import RasType
 from pykerio.structs.base_struct import BaseStruct
 from pykerio.structs.credentials_config import CredentialsConfig
 from pykerio.structs.optional_entity import OptionalEntity

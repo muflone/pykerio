@@ -19,6 +19,6 @@
 ##
 
 from .date_time_stamp import DateTimeStamp                         # noqa: F401
-from .ip_address import IpAddress                                  # noqa: F401
 from .ip6_address import Ip6Address                                # noqa: F401
+from .ip_address import IpAddress                                  # noqa: F401
 from .kid import KId                                               # noqa: F401
