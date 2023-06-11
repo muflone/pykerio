@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import HttpsServerMode
 
 
 class TestCase_ReverseProxyRule(unittest.TestCase):
@@ -28,10 +29,9 @@ class TestCase_ReverseProxyRule(unittest.TestCase):
         """
         Test ReverseProxyRule
         """
-
         domain = 'domain.com'
         serverHttp = False
-        httpsMode = pykerio.enums.HttpsServerMode.HttpsServerModeCustomCertificate
+        httpsMode = HttpsServerMode.HttpsServerModeCustomCertificate
         customCertificateId = '66315de7-48b2-b844-81fa-c08f5e0f6144'
         customCertificateInvalid = False
         targetServer = '10.0.0.10'
@@ -47,20 +47,18 @@ class TestCase_ReverseProxyRule(unittest.TestCase):
             'invalid': customCertificateInvalid
         })
 
-        teststruct = pykerio.structs.ReverseProxyRule(
-            {
-                'serverHostname': domain,
-                'serverHttp': serverHttp,
-                'httpsMode': httpsMode,
-                'customCertificate': customCertificate,
-                'targetServer': targetServer,
-                'targetHttps': targetHttps,
-                'antivirus': antivirus,
-                'enabled': enabled,
-                'description': description,
-                'id': rule_id
-            })
-
+        teststruct = pykerio.structs.ReverseProxyRule({
+            'serverHostname': domain,
+            'serverHttp': serverHttp,
+            'httpsMode': httpsMode,
+            'customCertificate': customCertificate,
+            'targetServer': targetServer,
+            'targetHttps': targetHttps,
+            'antivirus': antivirus,
+            'enabled': enabled,
+            'description': description,
+            'id': rule_id
+        })
         self.assertEqual(len(teststruct.keys()), 10)
         self.assertEqual(len(teststruct.values()), 10)
 

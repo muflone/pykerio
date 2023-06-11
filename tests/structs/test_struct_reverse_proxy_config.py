@@ -21,6 +21,7 @@
 import unittest
 
 import pykerio
+from pykerio.enums import HttpsServerMode
 
 
 class TestCase_ReverseProxyConfig(unittest.TestCase):
@@ -28,11 +29,9 @@ class TestCase_ReverseProxyConfig(unittest.TestCase):
         """
         Test ReverseProxyConfig
         """
-
-        enabled = True
         domain = 'domain.com'
         serverHttp = False
-        httpsMode = pykerio.enums.HttpsServerMode.HttpsServerModeCustomCertificate
+        httpsMode = HttpsServerMode.HttpsServerModeCustomCertificate
         customCertificateId = '66315de7-48b2-b844-81fa-c08f5e0f6144'
         customCertificateInvalid = False
         targetServer = '10.0.0.10'

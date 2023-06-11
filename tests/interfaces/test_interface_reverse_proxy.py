@@ -16,7 +16,6 @@
 #
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
-## Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
 ##
 
 import os
@@ -49,8 +48,10 @@ class TestCase_ReverseProxy(unittest.TestCase):
 
         # Session login
         cls.session = pykerio.interfaces.Session(api)
-        cls.session.login(userName=os.environ.get('KERIO_USERNAME', 'admin-en'),
-                          password=os.environ.get('KERIO_PASSWORD', 'kerio'),
+        cls.session.login(userName=os.environ.get('KERIO_USERNAME',
+                                                  'admin-en'),
+                          password=os.environ.get('KERIO_PASSWORD',
+                                                  'kerio'),
                           application=application)
 
         # ReverseProxy

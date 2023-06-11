@@ -18,10 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.pykerio import PyKerio
-
 from pykerio.lists.error_list import ErrorList
-
+from pykerio.pykerio import PyKerio
 from pykerio.structs.reverse_proxy_config import ReverseProxyConfig
 
 

@@ -18,10 +18,8 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.structs.base_struct import BaseStruct
-
 from pykerio.lists.reverse_proxy_rule_list import ReverseProxyRuleList
-
+from pykerio.structs.base_struct import BaseStruct
 from pykerio.structs.id_reference import IdReference
 
 

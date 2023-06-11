@@ -28,21 +28,25 @@ class TestCase_VpnRoute(unittest.TestCase):
         """
         Test VpnRoute
         """
-
-        validFromDate = pykerio.structs.Date(
-            {'year': 2021, 'month': 5, 'day': 9})
-        validFromTime = pykerio.structs.Time({'hour': 0, 'min': 1})
-        validToDate = pykerio.structs.Date(
-            {'year': 2022, 'month': 5, 'day': 8})
-        validToTime = pykerio.structs.Time({'hour': 23, 'min': 59})
-
+        validFromDate = pykerio.structs.Date({'year': 2021,
+                                              'month': 5,
+                                              'day': 9})
+        validFromTime = pykerio.structs.Time({'hour': 0,
+                                              'min': 1})
+        validToDate = pykerio.structs.Date({'year': 2022,
+                                            'month': 5,
+                                            'day': 8})
+        validToTime = pykerio.structs.Time({'hour': 23,
+                                            'min': 59})
         validType = pykerio.enums.ValidType.Valid
 
-        teststruct = pykerio.structs.ValidPeriod({'validFromDate': validFromDate,
-                                                  'validFromTime': validFromTime,
-                                                  'validToDate': validToDate,
-                                                  'validToTime': validToTime,
-                                                  'validType': validType})
+        teststruct = pykerio.structs.ValidPeriod({
+            'validFromDate': validFromDate,
+            'validFromTime': validFromTime,
+            'validToDate': validToDate,
+            'validToTime': validToTime,
+            'validType': validType
+        })
         self.assertEqual(len(teststruct.keys()), 5)
         self.assertEqual(len(teststruct.values()), 5)
 

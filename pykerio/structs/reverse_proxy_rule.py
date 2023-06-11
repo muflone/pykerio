@@ -18,12 +18,9 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ##
 
-from pykerio.structs.base_struct import BaseStruct
-
 from pykerio.enums.https_server_mode import HttpsServerMode
-
+from pykerio.structs.base_struct import BaseStruct
 from pykerio.structs.id_reference import IdReference
-
 from pykerio.types.kid import KId
 
 
