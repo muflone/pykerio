@@ -260,17 +260,17 @@ class Interfaces(object):
         Find interfaces by name, type or group
         """
         conditions = SubConditionList()
-        if name:
+        if name is not None:
             conditions.append(
                 SubCondition({'fieldName': 'name',
                               'comparator': CompareOperator.Eq,
                               'value': name}))
-        if interface_type:
+        if interface_type is not None:
             conditions.append(
                 SubCondition({'fieldName': 'type',
                               'comparator': CompareOperator.Eq,
                               'value': interface_type.dump()}))
-        if interface_group:
+        if interface_group is not None:
             conditions.append(
                 SubCondition({'fieldName': 'group',
                               'comparator': CompareOperator.Eq,
